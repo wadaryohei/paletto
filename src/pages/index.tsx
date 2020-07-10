@@ -4,6 +4,9 @@ import { Hero } from '../components/Hero'
 import { Nav } from '../components/Nav'
 import { HeadDatas, HeroDatas, NavMenuDatas } from '../datas/IndexDatas'
 
+//----------------------------------
+// component
+//----------------------------------
 const Index = () => (
   <>
     <Head

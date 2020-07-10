@@ -1,6 +1,3 @@
-/**
- * Style
- */
 import styled from 'styled-components'
 import { NavComponent } from './dom'
 import { FontSize } from '../../const/FontSize'
@@ -8,6 +5,9 @@ import { Colors } from '../../const/Colors'
 import { Margin } from '../../const/Margin'
 import { BreakPoints, max } from '../../const/BreakPoints'
 
+//----------------------------------
+// styledComponent
+//----------------------------------
 export const NavStyle = styled(NavComponent)`
   > ul {
     display: flex;

@@ -1,12 +1,12 @@
-/**
- * Style
- */
 import styled from 'styled-components'
 import { HeroComponent } from './dom'
 import { Colors } from '../../const/Colors'
 import { BreakPoints, max } from '../../const/BreakPoints'
 import { FontSize, CopyFontSize } from '../../const/FontSize'
 
+//----------------------------------
+// styledComponent
+//----------------------------------
 export const HeroStyle = styled(HeroComponent)`
   > figure {
     width: 100%;
