@@ -12,6 +12,7 @@ export interface HeroProps {
   copyEn: string
   copyEnHighlight: string
   copyJp: string
+  children?: React.ReactNode
   className?: string
 }
 
@@ -21,7 +22,8 @@ export interface HeroProps {
 export const HeroComponent = (props: HeroProps) => (
   <Box display={'block'} className={props.className}>
     <figure style={{ backgroundImage: `url(${props.imgPath})` }}>
-      <div>
+      <Box className={'nav'}>{props.children}</Box>
+      <Box className={'hero'}>
         <Typography className="copy copyEn" component={'p'}>
           {props.copyEn}
         </Typography>
@@ -31,7 +33,7 @@ export const HeroComponent = (props: HeroProps) => (
         <Typography className="copy copyJp" component={'p'}>
           {props.copyJp}
         </Typography>
-      </div>
+      </Box>
     </figure>
   </Box>
 )
