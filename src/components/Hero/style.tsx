@@ -28,6 +28,30 @@ export const HeroStyle = styled(HeroComponent)`
       transform: translate(-50%, -50%);
     }
 
+    /**
+     * @section ロゴ
+     */
+    > .logo {
+      a {
+        font-family: Helvetica Neue;
+        color: ${Colors.primary};
+        font-weight: 800;
+        font-size: ${FontSize.md};
+        position: absolute;
+        top: 8%;
+        left: 6%;
+        z-index: 1;
+
+        @media ${max(BreakPoints.md)} {
+          top: 8%;
+          left: 10%;
+        }
+      }
+    }
+
+    /**
+     * @section ナビゲーション
+     */
     > .nav {
       position: absolute;
       top: 8%;
@@ -35,43 +59,50 @@ export const HeroStyle = styled(HeroComponent)`
       z-index: 1;
     }
 
+    /**
+     * @section ヒーロー
+     */
     > .hero {
       position: absolute;
       bottom: 6%;
       left: 6%;
       z-index: 1;
+      @media ${max(BreakPoints.md)} {
+        bottom: 8%;
+        left: 10%;
+      }
 
       > .copy {
         font-family: Helvetica Neue;
         letter-spacing: 0.1rem;
-      }
 
-      > .copyEn {
-        font-size: ${CopyFontSize.copyEn};
-        font-weight: 200;
+        &.copyEn {
+          font-size: ${CopyFontSize.copyEn};
+          font-weight: 200;
 
-        @media ${max(BreakPoints.md)} {
-          font-size: ${FontSize.lg};
+          @media ${max(BreakPoints.md)} {
+            font-size: ${FontSize.lg};
+          }
         }
-      }
 
-      > .copyEnHighlight {
-        font-size: ${CopyFontSize.copyEnHighlight};
-        color: ${Colors.primary};
-        font-weight: 800;
+        &.copyEnHighlight {
+          font-size: ${CopyFontSize.copyEnHighlight};
+          color: ${Colors.primary};
+          font-weight: 800;
 
-        @media ${max(BreakPoints.md)} {
-          font-size: ${FontSize.lg};
+          @media ${max(BreakPoints.md)} {
+            font-size: ${FontSize.lg};
+          }
         }
-      }
 
-      > .copyJp {
-        font-size: ${CopyFontSize.copyJp};
-        color: ${Colors.primary};
-        font-weight: 800;
+        &.copyJp {
+          font-size: ${CopyFontSize.copyJp};
+          color: ${Colors.primary};
+          font-weight: 800;
 
-        @media ${max(BreakPoints.md)} {
-          font-size: ${FontSize.sm};
+          @media ${max(BreakPoints.md)} {
+            font-size: ${FontSize.sm};
+          }
         }
       }
     }

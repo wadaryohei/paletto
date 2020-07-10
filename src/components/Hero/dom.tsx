@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import { Box, Typography } from '@material-ui/core'
 
 //----------------------------------
@@ -19,6 +20,11 @@ export interface HeroProps {
 export const HeroComponent = (props: HeroProps) => (
   <Box display={'block'} className={props.className}>
     <figure style={{ backgroundImage: `url(${props.imgPath})` }}>
+      <Box className={'logo'}>
+        <Typography component={'h1'}>
+          <Link href={'/'}>Palette</Link>
+        </Typography>
+      </Box>
       <Box className={'nav'}>{props.children}</Box>
       <Box className={'hero'}>
         <Typography className="copy copyEn" component={'p'}>
