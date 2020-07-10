@@ -2,23 +2,43 @@
  * pages/Indexで使用するデータ
  * - コンポーネントに渡す静的なデータを記述する
  */
-
 import { RoutingPath } from '../const/RoutingPath'
 
-// Hero
-export interface Hero {
+//----------------------------------
+// HeadDatas
+//----------------------------------
+export interface Head {
   title: string
   description: string
   pathName: string
 }
 
-export const HeroDatas: Hero = {
+export const HeadDatas: Head = {
   title: 'Paletto',
   description: '世界にエモーショナルなデザインを。',
   pathName: RoutingPath.index,
 }
 
-// NavMenu
+//----------------------------------
+// HeroDatas
+//----------------------------------
+export interface Hero {
+  imgPath: string
+  copyEn: string
+  copyEnHighlight: string
+  copyJp: string
+}
+
+export const HeroDatas: Hero = {
+  imgPath: '/hero.png',
+  copyEn: 'Design That Moves',
+  copyEnHighlight: 'Emotions',
+  copyJp: '世界にエモーショナルなデザインを。',
+}
+
+//----------------------------------
+// NavMenuDatas
+//----------------------------------
 export interface NavMenu {
   pathName: string
   menuName: string

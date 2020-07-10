@@ -2,20 +2,20 @@ import React from 'react'
 import { Head } from '../components/Head'
 import { Hero } from '../components/Hero'
 import { Nav } from '../components/Nav'
-import { HeroDatas, NavMenuDatas } from '../datas/IndexDatas'
+import { HeadDatas, HeroDatas, NavMenuDatas } from '../datas/IndexDatas'
 
 const Index = () => (
   <>
     <Head
-      title={HeroDatas.title}
-      description={HeroDatas.description}
-      pathName={HeroDatas.pathName}
+      title={HeadDatas.title}
+      description={HeadDatas.description}
+      pathName={HeadDatas.pathName}
     />
     <Hero
-      imgPath={'/hero.png'}
-      copyEn={'Design That Moves'}
-      copyEnHighlight={'Emotions'}
-      copyJp={'世界にエモーショナルなデザインを。'}
+      imgPath={HeroDatas.imgPath}
+      copyEn={HeroDatas.copyEn}
+      copyEnHighlight={HeroDatas.copyEnHighlight}
+      copyJp={HeroDatas.copyJp}
     >
       <Nav navMenus={NavMenuDatas} />
     </Hero>
