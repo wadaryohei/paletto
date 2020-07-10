@@ -3,6 +3,7 @@ import { HeroComponent } from './dom'
 import { Colors } from '../../const/Colors'
 import { BreakPoints, max } from '../../const/BreakPoints'
 import { FontSize, CopyFontSize } from '../../const/FontSize'
+import { FontWeight } from '../../const/FontWeight'
 
 //----------------------------------
 // styledComponent
@@ -39,12 +40,11 @@ export const HeroStyle = styled(HeroComponent)`
       }
 
       > .copy {
-        font-family: Helvetica Neue;
         letter-spacing: 0.1rem;
 
         &.copyEn {
           font-size: ${CopyFontSize.copyEn};
-          font-weight: 200;
+          font-weight: ${FontWeight.thin};
 
           @media ${max(BreakPoints.md)} {
             font-size: ${FontSize.lg};
@@ -53,8 +53,8 @@ export const HeroStyle = styled(HeroComponent)`
 
         &.copyEnHighlight {
           font-size: ${CopyFontSize.copyEnHighlight};
+          font-weight: ${FontWeight.bold};
           color: ${Colors.primary};
-          font-weight: 800;
 
           @media ${max(BreakPoints.md)} {
             font-size: ${FontSize.lg};
@@ -63,8 +63,8 @@ export const HeroStyle = styled(HeroComponent)`
 
         &.copyJp {
           font-size: ${CopyFontSize.copyJp};
+          font-weight: ${FontWeight.bold};
           color: ${Colors.primary};
-          font-weight: 800;
 
           @media ${max(BreakPoints.md)} {
             font-size: ${FontSize.sm};

@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { HeaderComponent } from './dom'
 import { Colors } from '../../const/Colors'
 import { FontSize } from '../../const/FontSize'
+import { FontWeight } from '../../const/FontWeight'
 
 //----------------------------------
 // styledComponent
@@ -14,10 +15,9 @@ export const HeaderStyle = styled(HeaderComponent)`
   > .logo {
     margin-right: auto;
     a {
-      font-family: Helvetica Neue;
-      color: ${Colors.primary};
-      font-weight: 800;
+      font-weight: ${FontWeight.bold};
       font-size: ${FontSize.md};
+      color: ${Colors.primary};
     }
   }
 `
