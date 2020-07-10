@@ -39,18 +39,14 @@ export const HeroStyle = styled(HeroComponent)`
       }
 
       > .copy {
-        letter-spacing: 0.1rem;
+        font-family: 'HiraginoSans-W9';
 
         &.copyEn {
           font-size: ${CopyFontSize.copyEn};
           font-weight: ${FontWeight.thin};
 
-          @media ${max(BreakPoints.lg)} {
-            font-size: ${FontSize.lg};
-          }
-
           @media ${max(BreakPoints.md)} {
-            font-size: ${FontSize.lg};
+            font-size: ${FontSize.md};
           }
         }
 
@@ -58,10 +54,7 @@ export const HeroStyle = styled(HeroComponent)`
           font-size: ${CopyFontSize.copyEnHighlight};
           font-weight: ${FontWeight.bold};
           color: ${Colors.primary};
-
-          @media ${max(BreakPoints.lg)} {
-            font-size: ${FontSize.lg};
-          }
+          line-height: 1.4;
 
           @media ${max(BreakPoints.md)} {
             font-size: ${FontSize.lg};
@@ -73,12 +66,8 @@ export const HeroStyle = styled(HeroComponent)`
           font-weight: ${FontWeight.bold};
           color: ${Colors.primary};
 
-          @media ${max(BreakPoints.lg)} {
-            font-size: ${FontSize.lg};
-          }
-
           @media ${max(BreakPoints.md)} {
-            font-size: ${FontSize.sm};
+            font-size: ${FontSize.xs};
           }
         }
       }

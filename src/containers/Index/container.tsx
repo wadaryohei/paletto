@@ -1,9 +1,10 @@
 import React from 'react'
-import { Hero } from '../../components/Hero'
-import { Header } from '../../components/Header'
 import { HeroDatas } from '../../datas/IndexDatas'
 import { Box } from '@material-ui/core'
+import { Hero } from '../../components/Hero'
+import { Header } from '../../components/Header'
 import { Text } from '../../components/Text'
+import { Section } from '../../components/Section'
 
 //----------------------------------
 // props
@@ -24,9 +25,20 @@ const IndexContainer = (props: IndexProps) => (
       copyEnHighlight={HeroDatas.copyEnHighlight}
       copyJp={HeroDatas.copyJp}
     />
-    <Text component={'h1'} textStyle={'heading'}>
-      VISION
-    </Text>
+    <Section className={'vision'}>
+      <Text component={'h2'} textStyle={'heading'} align={'center'}>
+        Vision
+      </Text>
+      <Text component={'p'} textStyle={'copy'} align={'center'}>
+        世界にエモーショナルなデザインを
+      </Text>
+      <Text component={'p'} textStyle={'lead'} align={'center'}>
+        人の感情に寄り添い、人の感情をデザインする。
+      </Text>
+      <Text component={'p'} textStyle={'lead'} align={'center'}>
+        そんな「エモーショナルなデザイン」をすることが私達のVisionです。
+      </Text>
+    </Section>
   </Box>
 )
 

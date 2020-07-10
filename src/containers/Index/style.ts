@@ -9,7 +9,7 @@ export const IndexContainerStyle = styled(IndexContainer)`
   position: relative;
   > .header {
     position: absolute;
-    top: 10%;
+    top: 6%;
     left: 6%;
     z-index: 1;
     display: flex;

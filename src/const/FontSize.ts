@@ -1,5 +1,5 @@
 export const FontSize = {
-  xs: '10px',
+  xs: '14px',
   sm: '16px',
   md: '24px',
   lg: '32px',
@@ -7,7 +7,7 @@ export const FontSize = {
 } as const
 
 export const CopyFontSize = {
-  copyEn: '88px',
-  copyEnHighlight: '88px',
-  copyJp: '40px',
+  copyEn: '28px',
+  copyEnHighlight: '58px',
+  copyJp: '20px',
 } as const
