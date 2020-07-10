@@ -19,7 +19,7 @@ export const HeaderComponent = (props: HeaderProps) => (
     <Box className={'logo'}>
       <Typography component={'h1'}>
         <Link href={{ pathname: '/' }}>
-          <a>Paletto</a>
+          <a>Paletto.</a>
         </Link>
       </Typography>
     </Box>
