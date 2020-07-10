@@ -1,7 +1,7 @@
 import React from 'react'
-import IndexContainer from '../container/Index/IndexContainer'
 import { Head } from '../components/Head'
 import { HeadDatas } from '../datas/IndexDatas'
+import { IndexContainer } from '../container/Index'
 
 //----------------------------------
 // component
