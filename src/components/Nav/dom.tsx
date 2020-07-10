@@ -1,10 +1,6 @@
-/**
- * DOM
- */
 import React from 'react'
 import Link from 'next/link'
 import { NavMenu } from '../../datas/IndexDatas'
-import { Box } from '@material-ui/core'
 
 //----------------------------------
 // props
@@ -18,7 +14,7 @@ export interface NavProps {
 // component
 //----------------------------------
 export const NavComponent = (props: NavProps) => (
-  <Box display={'block'} className={props.className}>
+  <nav className={props.className}>
     <ul>
       {props.navMenus.map((navMenu, index) => {
         return (
@@ -28,5 +24,5 @@ export const NavComponent = (props: NavProps) => (
         )
       })}
     </ul>
-  </Box>
+  </nav>
 )
