@@ -1,10 +1,18 @@
 import React from 'react'
 import { AppProps } from 'next/app'
-import '../styles/reset.css'
-import '../styles/base.css'
+import { ThemeProvider } from '@material-ui/core/styles'
+import { GlobalStyle } from '../shared/GlobalStyle'
+import { MuiGlobalStyle } from '../shared/MuiGlobalStyle'
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
-  return <Component {...pageProps} />
+  return (
+    <>
+      <GlobalStyle />
+      <ThemeProvider theme={MuiGlobalStyle}>
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </>
+  )
 }
 
 export default MyApp

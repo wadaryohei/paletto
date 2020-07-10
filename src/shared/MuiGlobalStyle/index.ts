@@ -1,0 +1,1 @@
+export { MuiGlobalStyle } from './style'

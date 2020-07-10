@@ -13,26 +13,27 @@ import { FontWeight } from '../../const/FontWeight'
 export const TextStyle = styled(TextComponent)`
   &.heading {
     font-size: ${FontSize.lg};
+    font-weight: ${FontWeight.bold};
     color: ${Colors.primary};
   }
 
   &.copy {
     font-size: ${FontSize.xl};
+    font-weight: ${FontWeight.bold};
     color: ${Colors.black};
   }
 
   &.subheading {
     font-size: ${FontSize.md};
+    font-weight: ${FontWeight.bold};
     color: ${Colors.gray};
     line-height: 2.4rem;
   }
 
   &.lead {
     font-size: ${FontSize.sm};
+    font-weight: ${FontWeight.bold};
     color: ${Colors.black};
     line-height: 4rem;
   }
-
-  font-weight: ${FontWeight.bold};
-  font-family: ${FontFamily.baseFont};
 `

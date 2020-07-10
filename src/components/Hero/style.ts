@@ -40,7 +40,6 @@ export const HeroStyle = styled(HeroComponent)`
       }
 
       > .copy {
-        font-family: Helvetica Neue;
         letter-spacing: 0.1rem;
 
         &.copyEn {
