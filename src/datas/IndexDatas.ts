@@ -9,13 +9,13 @@ import { RoutingPath } from '../const/RoutingPath'
 export interface Hero {
   title: string
   description: string
-  pathname: string
+  pathName: string
 }
 
 export const HeroDatas: Hero = {
   title: 'Paletto',
   description: '世界にエモーショナルなデザインを。',
-  pathname: RoutingPath.index,
+  pathName: RoutingPath.index,
 }
 
 // NavMenu

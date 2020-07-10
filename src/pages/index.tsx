@@ -9,7 +9,7 @@ const Index = () => (
     <Head
       title={HeroDatas.title}
       description={HeroDatas.description}
-      pathname={HeroDatas.pathname}
+      pathName={HeroDatas.pathName}
     />
     <Hero
       imgPath={'/hero.png'}

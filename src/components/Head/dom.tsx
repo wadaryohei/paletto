@@ -10,7 +10,7 @@ import Head from 'next/head'
 export interface HeadProps {
   title: string
   description: string
-  pathname: string
+  pathName: string
 }
 
 //----------------------------------
@@ -28,12 +28,12 @@ export const HeadComponent = (props: HeadProps) => (
     <meta property="og:title" content={props.title} />
     <meta property="og:description" content={props.description} />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={`https://paletto.jp${props.pathname}`} />
+    <meta property="og:url" content={`https://paletto.jp${props.pathName}`} />
     <meta property="og:image" content="https://paletto.jp/og.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={props.title} />
     <meta name="twitter:description" content={props.description} />
-    <meta name="twitter:url" content={`https://paletto.jp${props.pathname}`} />
+    <meta name="twitter:url" content={`https://paletto.jp${props.pathName}`} />
     <meta name="twitter:image" content="https://paletto.jp/og.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -42,6 +42,6 @@ export const HeadComponent = (props: HeadProps) => (
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
-    <link rel="canonical" href={`https://paletto.jp${props.pathname}`} />
+    <link rel="canonical" href={`https://paletto.jp${props.pathName}`} />
   </Head>
 )
