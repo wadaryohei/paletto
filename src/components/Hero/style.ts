@@ -28,40 +28,6 @@ export const HeroStyle = styled(HeroComponent)`
       transform: translate(-50%, -50%);
     }
 
-    /**
-     * @section ロゴ
-     */
-    > .logo {
-      a {
-        font-family: Helvetica Neue;
-        color: ${Colors.primary};
-        font-weight: 800;
-        font-size: ${FontSize.md};
-        position: absolute;
-        top: 8%;
-        left: 6%;
-        z-index: 1;
-
-        @media ${max(BreakPoints.md)} {
-          top: 8%;
-          left: 10%;
-        }
-      }
-    }
-
-    /**
-     * @section ナビゲーション
-     */
-    > .nav {
-      position: absolute;
-      top: 8%;
-      right: 6%;
-      z-index: 1;
-    }
-
-    /**
-     * @section ヒーロー
-     */
     > .hero {
       position: absolute;
       bottom: 6%;
