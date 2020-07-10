@@ -20,8 +20,8 @@ export const HeroStyle = styled(HeroComponent)`
     &::after {
       content: '';
       display: block;
-      width: 95%;
-      height: 95%;
+      width: 100%;
+      height: 100%;
       border: solid 10px ${Colors.primary};
       position: absolute;
       top: 50%;
@@ -31,11 +31,10 @@ export const HeroStyle = styled(HeroComponent)`
 
     > .hero {
       position: absolute;
-      bottom: 6%;
+      bottom: 10%;
       left: 6%;
       z-index: 1;
       @media ${max(BreakPoints.md)} {
-        bottom: 8%;
         left: 10%;
       }
 
@@ -45,6 +44,10 @@ export const HeroStyle = styled(HeroComponent)`
         &.copyEn {
           font-size: ${CopyFontSize.copyEn};
           font-weight: ${FontWeight.thin};
+
+          @media ${max(BreakPoints.lg)} {
+            font-size: ${FontSize.lg};
+          }
 
           @media ${max(BreakPoints.md)} {
             font-size: ${FontSize.lg};
@@ -56,6 +59,10 @@ export const HeroStyle = styled(HeroComponent)`
           font-weight: ${FontWeight.bold};
           color: ${Colors.primary};
 
+          @media ${max(BreakPoints.lg)} {
+            font-size: ${FontSize.lg};
+          }
+
           @media ${max(BreakPoints.md)} {
             font-size: ${FontSize.lg};
           }
@@ -65,6 +72,10 @@ export const HeroStyle = styled(HeroComponent)`
           font-size: ${CopyFontSize.copyJp};
           font-weight: ${FontWeight.bold};
           color: ${Colors.primary};
+
+          @media ${max(BreakPoints.lg)} {
+            font-size: ${FontSize.lg};
+          }
 
           @media ${max(BreakPoints.md)} {
             font-size: ${FontSize.sm};
