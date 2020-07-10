@@ -11,7 +11,7 @@ const Index = () => (
       pathname={IndexDatas.pathname}
     />
     <Hero
-      imgPath={''}
+      imgPath={'/hero.png'}
       copyEn={'Design That Moves'}
       copyEnHighlight={'Emotions'}
       copyJp={'世界にエモーショナルなデザインを。'}
