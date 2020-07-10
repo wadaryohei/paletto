@@ -3,6 +3,7 @@ import { Hero } from '../../components/Hero'
 import { Header } from '../../components/Header'
 import { HeroDatas } from '../../datas/IndexDatas'
 import { Box } from '@material-ui/core'
+import { Text } from '../../components/Text'
 
 //----------------------------------
 // props
@@ -23,6 +24,9 @@ const IndexContainer = (props: IndexProps) => (
       copyEnHighlight={HeroDatas.copyEnHighlight}
       copyJp={HeroDatas.copyJp}
     />
+    <Text component={'h1'} textStyle={'heading'}>
+      VISION
+    </Text>
   </Box>
 )
 
