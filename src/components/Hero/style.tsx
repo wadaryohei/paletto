@@ -28,7 +28,14 @@ export const HeroStyle = styled(HeroComponent)`
       transform: translate(-50%, -50%);
     }
 
-    > div {
+    > .nav {
+      position: absolute;
+      top: 8%;
+      right: 6%;
+      z-index: 1;
+    }
+
+    > .hero {
       position: absolute;
       bottom: 6%;
       left: 6%;
