@@ -18,6 +18,10 @@ export const HeroStyle = styled(HeroComponent)`
     background-repeat: no-repeat;
     position: relative;
 
+    @media ${max(BreakPoints.md)} {
+      background-position: 64% 50%;
+    }
+
     &::after {
       content: '';
       display: block;
