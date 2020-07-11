@@ -27,7 +27,7 @@ export const TextStyle = styled(TextComponent)`
     font-family: 'HiraginoSans-W9';
     text-indent: 4px;
     color: ${Colors.black};
-    margin: ${Margin.m56};
+    margin: ${Margin.m56} 0;
 
     @media ${max(BreakPoints.md)} {
       font-size: ${FontSize.md};

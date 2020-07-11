@@ -1,1 +1,1 @@
-export { SectionStyle as Section } from './style'
+export { SectionComponent as Section } from './dom'
