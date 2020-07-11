@@ -3,11 +3,11 @@ export const FontSize = {
   sm: '16px',
   md: '24px',
   lg: '32px',
-  xl: '56px',
+  xl: '48px',
+  xxl: '96px',
 } as const
 
 export const CopyFontSize = {
-  copyEn: '28px',
-  copyEnHighlight: '58px',
-  copyJp: '20px',
+  copyEn: '96px',
+  copyJp: '56px',
 } as const
