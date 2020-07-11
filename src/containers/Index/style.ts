@@ -99,7 +99,7 @@ export const SectionSerivceStyle = styled(SectionSerivceComponent)`
       background-repeat: no-repeat;
 
       @media ${max(BreakPoints.md)} {
-        width: 80%;
+        width: 95%;
         height: auto;
         padding: ${Padding.p112} ${Padding.p16};
         justify-content: flex-start;
