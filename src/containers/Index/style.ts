@@ -82,9 +82,11 @@ export const SectionSerivceStyle = styled(SectionSerivceComponent)`
     overflow: scroll;
     justify-content: flex-start;
     scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
     padding: 0 ${Padding.p16};
 
     > .card {
+      position: relative;
       width: 640px;
       height: auto;
       padding: ${Padding.p160} ${Padding.p32};
@@ -97,6 +99,16 @@ export const SectionSerivceStyle = styled(SectionSerivceComponent)`
       scroll-snap-align: center;
       background-size: cover;
       background-repeat: no-repeat;
+
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        width: ${Padding.p16};
+        height: 1px;
+      }
 
       @media ${max(BreakPoints.md)} {
         width: 95%;
