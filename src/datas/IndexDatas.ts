@@ -24,16 +24,16 @@ export const HeadDatas: Head = {
 //----------------------------------
 export interface Hero {
   imgPath: string
-  copyEn: string
-  copyEnHighlight: string
+  copyEnFirst: string
+  copyEnSecond: string
   copyJp: string
 }
 
 export const HeroDatas: Hero = {
   imgPath: '/hero.png',
-  copyEn: 'Design That Moves',
-  copyEnHighlight: 'Emotions',
-  copyJp: '世界にエモーショナルなデザインを。',
+  copyEnFirst: 'Design To Moves.',
+  copyEnSecond: 'Design To Heaert.',
+  copyJp: '感情を動かすデザインを。',
 }
 
 //----------------------------------

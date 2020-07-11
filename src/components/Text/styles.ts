@@ -2,17 +2,33 @@ import styled from 'styled-components'
 import { TextComponent } from './doms'
 import { Colors } from '../../const/Colors'
 import { Margin } from '../../const/Margin'
-import { BreakPoints, max } from '../../const/BreakPoints'
+import { BreakPoints, max, min } from '../../const/BreakPoints'
 import { FontSize } from '../../const/FontSize'
 import { FontWeight } from '../../const/FontWeight'
 
 //----------------------------------
 // styledComponent
 //----------------------------------
-// 英語の見出し文
 export const TextStyle = styled(TextComponent)`
+  /**
+   * 端末サイズの改行用クラス
+   */
+  & > span {
+    display: block;
+
+    &.sp {
+      @media ${max(BreakPoints.md)} {
+        display: block;
+      }
+
+      @media ${min(BreakPoints.md)} {
+        display: inline;
+      }
+    }
+  }
+
   &.heading {
-    font-size: ${FontSize.lg};
+    font-size: ${FontSize.md};
     font-weight: ${FontWeight.bold};
     color: ${Colors.primary};
 
@@ -24,14 +40,12 @@ export const TextStyle = styled(TextComponent)`
   &.copy {
     font-size: ${FontSize.xl};
     font-weight: ${FontWeight.bold};
-    font-family: 'HiraginoSans-W9';
-    text-indent: 4px;
     color: ${Colors.black};
     margin: ${Margin.m56} 0;
 
     @media ${max(BreakPoints.md)} {
       font-size: ${FontSize.md};
-      margin: ${Margin.m32};
+      margin: ${Margin.m32} 0;
     }
   }
 
@@ -39,6 +53,17 @@ export const TextStyle = styled(TextComponent)`
     font-size: ${FontSize.md};
     font-weight: ${FontWeight.bold};
     color: ${Colors.gray};
+    line-height: 3.2rem;
+
+    @media ${max(BreakPoints.md)} {
+      font-size: ${FontSize.md};
+    }
+  }
+
+  &.accentheading {
+    font-size: ${FontSize.xl};
+    font-weight: ${FontWeight.bold};
+    color: ${Colors.secondary};
     line-height: 2.4rem;
 
     @media ${max(BreakPoints.md)} {

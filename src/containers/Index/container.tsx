@@ -1,11 +1,13 @@
 import React from 'react'
 import { HeroDatas } from '../../datas/IndexDatas'
-import { Box } from '@material-ui/core'
+import { Box, Container } from '@material-ui/core'
 import { Hero } from '../../components/Hero'
 import { Header } from '../../components/Header'
-import { Text } from '../../components/Text'
-import { Section } from '../../components/Section'
-import { Padding } from '../../const/Padding'
+import {
+  SectionVision,
+  SectionWhyEmotionalBg,
+  SectionWhyEmotional,
+} from './index'
 
 //----------------------------------
 // props
@@ -23,24 +25,21 @@ const IndexContainer = (props: IndexProps) => (
       <Header className={'header'} />
       <Hero
         imgPath={HeroDatas.imgPath}
-        copyEn={HeroDatas.copyEn}
-        copyEnHighlight={HeroDatas.copyEnHighlight}
+        copyEnFirst={HeroDatas.copyEnFirst}
+        copyEnSecond={HeroDatas.copyEnSecond}
         copyJp={HeroDatas.copyJp}
       />
-      <Section p={Padding.p112} textAlign="center">
-        <Text component={'h2'} textStyle={'heading'}>
-          Vision
-        </Text>
-        <Text component={'p'} textStyle={'copy'}>
-          世界にエモーショナルなデザインを
-        </Text>
-        <Text component={'p'} textStyle={'lead'}>
-          人の感情に寄り添い、人の感情をデザインする。
-        </Text>
-        <Text component={'p'} textStyle={'lead'}>
-          そんな「エモーショナルなデザイン」をすることが私達のVisionです。
-        </Text>
-      </Section>
+
+      <main>
+        {/** @section Vision */}
+        <SectionVision />
+
+        {/** @section Why Emotional Bg */}
+        <SectionWhyEmotionalBg />
+
+        {/** @section Why Emotional */}
+        <SectionWhyEmotional />
+      </main>
     </Box>
   </>
 )
