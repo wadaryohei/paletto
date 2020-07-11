@@ -1,12 +1,13 @@
 import React from 'react'
 import { HeroDatas } from '../../datas/IndexDatas'
-import { Box, Container } from '@material-ui/core'
+import { Box } from '@material-ui/core'
 import { Hero } from '../../components/Hero'
 import { Header } from '../../components/Header'
 import {
   SectionVision,
   SectionWhyEmotionalBg,
   SectionWhyEmotional,
+  SectionSerivce
 } from './index'
 
 //----------------------------------
@@ -39,6 +40,9 @@ const IndexContainer = (props: IndexProps) => (
 
         {/** @section Why Emotional */}
         <SectionWhyEmotional />
+
+        {/** @section Service */}
+        <SectionSerivce />
       </main>
     </Box>
   </>

@@ -3,6 +3,7 @@ import { Box, Container } from '@material-ui/core'
 import { Section } from '../../components/Section'
 import { Text } from '../../components/Text'
 import { Margin } from '../../const/Margin'
+import { Services, ServicesDatas } from '../../datas/IndexDatas'
 
 //----------------------------------
 // props
@@ -16,6 +17,10 @@ export interface SectionWhyEmotionalBgProps {
 }
 
 export interface SectionWhyEmotionalProps {
+  className?: string
+}
+
+export interface SectionServiceProps {
   className?: string
 }
 
@@ -113,4 +118,29 @@ export const SectionWhyEmotionalComponent = (
       </Section>
     </Container>
   </Box>
+)
+
+/** @section Why Emotional */
+export const SectionSerivceComponent = (props: SectionServiceProps) => (
+  <Section className={props.className}>
+    <Text component={'h2'} textStyle={'heading'} align={'center'}>
+      Serivces
+    </Text>
+    <Box component={'div'} className={'cardWrapper'} mt={Margin.m56}>
+      {ServicesDatas.map((SerivcesData, index) => {
+        return (
+          <Box
+            key={index}
+            className={'card'}
+            style={{ backgroundImage: `url(${SerivcesData.bgPathName})` }}
+          >
+            <p className={'cardNum'}>{SerivcesData.num}</p>
+            <p className={'cardTitle'}>{SerivcesData.title}</p>
+            <h1 className={'cardCopy'}>{SerivcesData.copy}</h1>
+            <p className={'cardLead'}>{SerivcesData.lead}</p>
+          </Box>
+        )
+      })}
+    </Box>
+  </Section>
 )
