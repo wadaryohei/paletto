@@ -64,7 +64,8 @@ export const SectionWhyEmotionalStyle = styled(SectionWhyEmotionalComponent)`
   background-repeat: no-repeat;
   background-position: 90% 50%;
 
-  @media ${max(BreakPoints.md)} {
-    background-position: 60% 50%;
+  @media ${max(BreakPoints.lg)} {
+    background-position: 50% 20%;
+    background-size: contain;
   }
 `
