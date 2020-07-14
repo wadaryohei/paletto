@@ -41,7 +41,7 @@ export const SectionVisionStyle = styled(SectionVisionComponent)`
 
     @media ${max(BreakPoints.md)} {
       padding: ${Padding.p32} ${Padding.p24};
-      margin: 0;
+      margin: ${Margin.m72} 0;
     }
 
     &::before {

@@ -5,6 +5,7 @@ import { Margin } from '../../const/Margin'
 import { BreakPoints, max, min } from '../../const/BreakPoints'
 import { FontSize } from '../../const/FontSize'
 import { FontWeight } from '../../const/FontWeight'
+import { Padding } from '../../const/Padding'
 
 //----------------------------------
 // styledComponent
@@ -28,24 +29,40 @@ export const TextStyle = styled(TextComponent)`
   }
 
   &.heading {
-    font-size: ${FontSize.md};
+    font-size: ${FontSize.xxl};
     font-weight: ${FontWeight.bold};
-    color: ${Colors.primary};
+    color: ${Colors.white};
 
     @media ${max(BreakPoints.md)} {
       font-size: ${FontSize.lg};
     }
+
+    span {
+      display: inline-block;
+      background-color: ${Colors.black};
+      padding: 0 ${Padding.p16};
+    }
   }
 
   &.copy {
+    display: block;
     font-size: ${FontSize.xl};
     font-weight: ${FontWeight.bold};
-    color: ${Colors.black};
-    margin: ${Margin.m56} 0;
+    color: ${Colors.white};
+    margin-top: ${Margin.m16};
 
     @media ${max(BreakPoints.md)} {
       font-size: ${FontSize.md};
-      margin: ${Margin.m32} 0;
+    }
+
+    span {
+      display: inline-block;
+      background-color: ${Colors.black};
+      padding: ${Padding.p16};
+
+      @media ${max(BreakPoints.md)} {
+        padding: ${Padding.p8};
+      }
     }
   }
 
@@ -73,13 +90,16 @@ export const TextStyle = styled(TextComponent)`
 
   &.lead {
     font-size: ${FontSize.sm};
-    font-weight: ${FontWeight.bold};
     color: ${Colors.black};
-    line-height: 4rem;
+    line-height: 4.8rem;
 
     @media ${max(BreakPoints.md)} {
       font-size: ${FontSize.xs};
       line-height: 3.2rem;
+    }
+
+    span {
+      display: block;
     }
   }
 `

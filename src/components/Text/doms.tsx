@@ -25,6 +25,6 @@ export const TextComponent = (props: TextProps) => (
     align={props.align}
     className={`${props.className} ${props.textStyle}`}
   >
-    {props.children}
+    <span>{props.children}</span>
   </Typography>
 )
