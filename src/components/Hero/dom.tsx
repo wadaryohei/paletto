@@ -6,8 +6,8 @@ import { Box, Typography } from '@material-ui/core'
 //----------------------------------
 export interface HeroProps {
   imgPath: string
-  copyEnFirst: string
-  copyEnSecond: string
+  siteName: string
+  copyEn: string
   copyJp: string
   className?: string
 }
@@ -19,14 +19,14 @@ export const HeroComponent = (props: HeroProps) => (
   <Box className={props.className}>
     <figure style={{ backgroundImage: `url(${props.imgPath})` }}>
       <Box className={'hero'}>
+        <Typography className="siteName" component={'h2'}>
+          {props.siteName}
+        </Typography>
+        <Typography className="copy copyEn" component={'p'}>
+          {props.copyEn}
+        </Typography>
         <Typography className="copy copyJp" component={'p'}>
           {props.copyJp}
-        </Typography>
-        <Typography className="copy copyEn" component={'h2'}>
-          {props.copyEnFirst}
-        </Typography>
-        <Typography className="copy copyEn" component={'h2'}>
-          {props.copyEnSecond}
         </Typography>
       </Box>
     </figure>

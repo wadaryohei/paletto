@@ -27,8 +27,8 @@ const IndexContainer = (props: IndexProps) => (
       <Header className={'header'} />
       <Hero
         imgPath={HeroDatas.imgPath}
-        copyEnFirst={HeroDatas.copyEnFirst}
-        copyEnSecond={HeroDatas.copyEnSecond}
+        siteName={HeroDatas.siteName}
+        copyEn={HeroDatas.copyEn}
         copyJp={HeroDatas.copyJp}
       />
 
