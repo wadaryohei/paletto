@@ -139,6 +139,22 @@ export const SectionWhyEmotionalComponent = (
 /** @section Serivce */
 export const SectionServiceComponent = (props: SectionServiceProps) => (
   <Section className={props.className}>
+    <Container>
+      <Text component={'h2'} textStyle={'heading'}>
+        Serivces
+      </Text>
+      <Text component={'p'} textStyle={'copy'}>
+        私達ができること
+      </Text>
+      <Box mt={Margin.m72}>
+        <Text component={'p'} textStyle={'lead'}>
+          <span>デザインから制作・運用までを一気貫通で担当いたします。</span>
+          <span>
+            デザインだけでなく、WordPressやJasmStackといった制作手法を用いた幅広い制作が可能です。
+          </span>
+        </Text>
+      </Box>
+    </Container>
     <Box className={'cardWrapper'} mt={Margin.m56}>
       {ServicesDatas.map((ServicesData: Services, index: number) => {
         return <ServiceCard key={index} ServicesData={ServicesData} />
