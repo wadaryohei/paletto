@@ -17,6 +17,7 @@ export const HeaderStyle = styled(HeaderComponent)`
     a {
       font-weight: ${FontWeight.bold};
       font-size: ${FontSize.md};
+      font-family: 'Renner*', sans-serif;
       color: ${Colors.primary};
     }
   }
