@@ -4,14 +4,12 @@ import {
   SectionVisionComponent,
   SectionWhyEmotionalBgComponent,
   SectionWhyEmotionalComponent,
-  SectionSerivceComponent,
+  SectionServiceComponent,
 } from './doms'
 import { BreakPoints, max } from '../../const/BreakPoints'
 import { Padding } from '../../const/Padding'
-import { Margin } from '../../const/Margin'
 import { Colors } from '../../const/Colors'
-import { FontWeight } from '../../const/FontWeight'
-import { FontSize } from '../../const/FontSize'
+import { Margin } from '../../const/Margin'
 
 //----------------------------------
 // styledComponent
@@ -74,7 +72,7 @@ export const SectionWhyEmotionalStyle = styled(SectionWhyEmotionalComponent)`
   }
 `
 
-export const SectionSerivceStyle = styled(SectionSerivceComponent)`
+export const SectionServiceStyle = styled(SectionServiceComponent)`
   > .cardWrapper {
     width: 100%;
     display: flex;
@@ -84,81 +82,6 @@ export const SectionSerivceStyle = styled(SectionSerivceComponent)`
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     padding: 0 ${Padding.p16};
-
-    > .card {
-      position: relative;
-      width: 640px;
-      height: auto;
-      padding: ${Padding.p160} ${Padding.p32};
-      flex-shrink: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      margin-right: ${Margin.m16};
-      border-radius: 10px;
-      scroll-snap-align: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-
-      &::after {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 100%;
-        width: ${Padding.p16};
-        height: 1px;
-      }
-
-      @media ${max(BreakPoints.md)} {
-        width: 95%;
-        height: auto;
-        padding: ${Padding.p112} ${Padding.p16};
-        justify-content: flex-start;
-      }
-
-      > p,
-      h1 {
-        color: ${Colors.white};
-      }
-
-      > .cardNum {
-        font-size: ${FontSize.xl};
-        font-weight: ${FontWeight.bold};
-
-        @media ${max(BreakPoints.lg)} {
-          font-size: ${FontSize.lg};
-        }
-      }
-
-      > .cardTitle {
-        font-size: ${FontSize.md};
-        font-weight: ${FontWeight.bold};
-        margin-top: ${Margin.m72};
-
-        @media ${max(BreakPoints.lg)} {
-          font-size: ${FontSize.sm};
-          margin-top: ${Margin.m40};
-        }
-      }
-
-      > .cardCopy {
-        font-size: ${FontSize.lg};
-        font-weight: ${FontWeight.bold};
-        margin-top: ${Margin.m16};
-        line-height: 1.4;
-
-        @media ${max(BreakPoints.lg)} {
-          font-size: ${FontSize.md};
-        }
-      }
-
-      > .cardLead {
-        font-size: ${FontSize.xs};
-        font-weight: ${FontWeight.bold};
-        margin-top: ${Margin.m24};
-        line-height: 3.2rem;
-      }
-    }
+    margin: ${Margin.m56} 0 0;
   }
 `

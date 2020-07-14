@@ -70,7 +70,7 @@ export const NavMenuDatas: NavMenu[] = [
 //----------------------------------
 // ServicesDatas
 //----------------------------------
-export interface Serivces {
+export interface Services {
   num: string
   title: string
   copy: string
@@ -78,7 +78,7 @@ export interface Serivces {
   bgPathName: string
 }
 
-export const ServicesDatas: Serivces[] = [
+export const ServicesDatas: Services[] = [
   {
     num: '01',
     title: 'Solved',
