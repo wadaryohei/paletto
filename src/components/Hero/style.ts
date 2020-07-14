@@ -36,8 +36,7 @@ export const HeroStyle = styled(HeroComponent)`
 
     > .hero {
       position: absolute;
-      top: 60%;
-      transform: translateY(-50%);
+      bottom: 10%;
       left: 6%;
       z-index: 1;
       @media ${max(BreakPoints.md)} {

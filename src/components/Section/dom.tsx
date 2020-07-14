@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, BoxProps } from '@material-ui/core'
+import { BoxProps } from '@material-ui/core'
 
 //----------------------------------
 // props
@@ -14,5 +14,5 @@ export interface SectionProps extends BoxProps {
 export const SectionComponent = (props: SectionProps) => {
   // MuiのBoxPropsを継承したSectionコンポーネントを返す
   const { ...rest } = props
-  return <Box {...rest}>{props.children}</Box>
+  return <section {...rest}>{props.children}</section>
 }

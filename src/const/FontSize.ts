@@ -8,6 +8,6 @@ export const FontSize = {
 } as const
 
 export const CopyFontSize = {
-  copyEn: '96px',
-  copyJp: '56px',
+  copyEn: '72px',
+  copyJp: '40px',
 } as const

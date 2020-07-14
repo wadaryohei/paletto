@@ -5,6 +5,7 @@ import {
   SectionWhyEmotionalBgComponent,
   SectionWhyEmotionalComponent,
   SectionServiceComponent,
+  SectionPartnerShipComponent,
 } from './doms'
 import { BreakPoints, max } from '../../const/BreakPoints'
 import { Padding } from '../../const/Padding'
@@ -18,7 +19,7 @@ export const IndexContainerStyle = styled(IndexContainer)`
   position: relative;
   > .header {
     position: absolute;
-    top: 3%;
+    top: 2%;
     left: 6%;
     z-index: 1;
     display: flex;
@@ -32,7 +33,33 @@ export const IndexContainerStyle = styled(IndexContainer)`
 
 export const SectionVisionStyle = styled(SectionVisionComponent)`
   padding: ${Padding.p160} ${Padding.p16};
-  text-align: center;
+
+  .visionWrapper {
+    padding: ${Padding.p112} ${Padding.p32};
+    margin: ${Margin.m72} ${Margin.m32};
+    position: relative;
+
+    @media ${max(BreakPoints.md)} {
+      padding: ${Padding.p32} ${Padding.p24};
+      margin: 0;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      width: 1px;
+      height: 100%;
+      background-color: ${Colors.black};
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: rotate(180deg);
+
+      @media ${max(BreakPoints.md)} {
+        height: 100%;
+      }
+    }
+  }
 `
 
 export const SectionWhyEmotionalBgStyle = styled(
@@ -81,7 +108,18 @@ export const SectionServiceStyle = styled(SectionServiceComponent)`
     justify-content: flex-start;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-    padding: 0 ${Padding.p16};
-    margin: ${Margin.m56} 0 0;
+    padding: ${Padding.p32} ${Padding.p16};
+
+    &::after {
+      content: '';
+      display: block;
+      width: 1px;
+      height: ${Padding.p32};
+    }
   }
+`
+
+export const SectionPartnerShipStyle = styled(SectionPartnerShipComponent)`
+  text-align: center;
+  padding: ${Padding.p160} ${Padding.p16};
 `
