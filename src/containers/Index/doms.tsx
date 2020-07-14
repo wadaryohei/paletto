@@ -139,9 +139,6 @@ export const SectionWhyEmotionalComponent = (
 /** @section Serivce */
 export const SectionServiceComponent = (props: SectionServiceProps) => (
   <Section className={props.className}>
-    <Text component={'h2'} textStyle={'heading'} align={'center'}>
-      Serivces
-    </Text>
     <Box className={'cardWrapper'} mt={Margin.m56}>
       {ServicesDatas.map((ServicesData: Services, index: number) => {
         return <ServiceCard key={index} ServicesData={ServicesData} />
