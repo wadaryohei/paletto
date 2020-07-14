@@ -89,14 +89,6 @@ export const SectionWhyEmotionalBgStyle = styled(
 
 export const SectionWhyEmotionalStyle = styled(SectionWhyEmotionalComponent)`
   padding: ${Padding.p160} ${Padding.p16};
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 90% 50%;
-
-  @media ${max(BreakPoints.lg)} {
-    background-position: 50% 20%;
-    background-size: contain;
-  }
 `
 
 export const SectionServiceStyle = styled(SectionServiceComponent)`

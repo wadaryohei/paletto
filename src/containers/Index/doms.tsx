@@ -83,10 +83,7 @@ export const SectionWhyEmotionalBgComponent = (
 export const SectionWhyEmotionalComponent = (
   props: SectionWhyEmotionalProps,
 ) => (
-  <Section
-    className={props.className}
-    style={{ backgroundImage: 'url(/whyemotional.png)' }}
-  >
+  <Section className={props.className}>
     <Container>
       <div>
         <Text component={'h2'} textStyle={'heading'}>
