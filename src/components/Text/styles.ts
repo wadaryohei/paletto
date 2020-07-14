@@ -29,7 +29,7 @@ export const TextStyle = styled(TextComponent)`
   }
 
   &.heading {
-    font-size: ${FontSize.xxl};
+    font-size: ${FontSize.xl};
     font-weight: ${FontWeight.bold};
     color: ${Colors.white};
 
@@ -46,7 +46,7 @@ export const TextStyle = styled(TextComponent)`
 
   &.copy {
     display: block;
-    font-size: ${FontSize.xl};
+    font-size: ${FontSize.lg};
     font-weight: ${FontWeight.bold};
     color: ${Colors.white};
     margin-top: ${Margin.m16};

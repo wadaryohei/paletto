@@ -42,7 +42,7 @@ export interface SectionPartnerShipProps {
 /** @section Vision */
 export const SectionVisionComponent = (props: SectionVisionProps) => (
   <Section className={props.className}>
-    <Container>
+    <Container maxWidth={'md'}>
       <Text component={'h2'} textStyle={'heading'}>
         Vision
       </Text>
@@ -84,7 +84,7 @@ export const SectionWhyEmotionalComponent = (
   props: SectionWhyEmotionalProps,
 ) => (
   <Section className={props.className}>
-    <Container>
+    <Container maxWidth={'md'}>
       <div>
         <Text component={'h2'} textStyle={'heading'}>
           Why Emotional
@@ -136,7 +136,7 @@ export const SectionWhyEmotionalComponent = (
 /** @section Serivce */
 export const SectionServiceComponent = (props: SectionServiceProps) => (
   <Section className={props.className}>
-    <Container>
+    <Container maxWidth={'md'}>
       <Text component={'h2'} textStyle={'heading'}>
         Serivces
       </Text>
@@ -163,7 +163,7 @@ export const SectionServiceComponent = (props: SectionServiceProps) => (
 /** @section Partner Ship */
 export const SectionPartnerShipComponent = (props: SectionPartnerShipProps) => (
   <Section className={props.className}>
-    <Container>
+    <Container maxWidth={'md'}>
       <Text component={'h2'} textStyle={'heading'}>
         Partner Ship
       </Text>
