@@ -2,6 +2,7 @@ import React from 'react'
 import { Box, Container } from '@material-ui/core'
 import { Section } from '../../components/Section'
 import { Text } from '../../components/Text'
+import { Card } from '../../components/Card'
 import { Margin } from '../../const/Margin'
 import { Services, ServicesDatas } from '../../datas/IndexDatas'
 
@@ -120,27 +121,16 @@ export const SectionWhyEmotionalComponent = (
   </Box>
 )
 
-/** @section Why Emotional */
-export const SectionSerivceComponent = (props: SectionServiceProps) => (
-  <Section className={props.className}>
+/** @section Serivce */
+export const SectionServiceComponent = (props: SectionServiceProps) => (
+  <div className={props.className}>
     <Text component={'h2'} textStyle={'heading'} align={'center'}>
       Serivces
     </Text>
-    <Box component={'div'} className={'cardWrapper'} mt={Margin.m56}>
-      {ServicesDatas.map((SerivcesData, index) => {
-        return (
-          <Box
-            key={index}
-            className={'card'}
-            style={{ backgroundImage: `url(${SerivcesData.bgPathName})` }}
-          >
-            <p className={'cardNum'}>{SerivcesData.num}</p>
-            <p className={'cardTitle'}>{SerivcesData.title}</p>
-            <h1 className={'cardCopy'}>{SerivcesData.copy}</h1>
-            <p className={'cardLead'}>{SerivcesData.lead}</p>
-          </Box>
-        )
+    <Box component={'div'} className={'cardWrapper'}>
+      {ServicesDatas.map((ServicesData: Services, index: number) => {
+        return <Card key={index} ServicesData={ServicesData} />
       })}
     </Box>
-  </Section>
+  </div>
 )

@@ -7,7 +7,7 @@ import {
   SectionVision,
   SectionWhyEmotionalBg,
   SectionWhyEmotional,
-  SectionSerivce
+  SectionService,
 } from './index'
 
 //----------------------------------
@@ -42,7 +42,7 @@ const IndexContainer = (props: IndexProps) => (
         <SectionWhyEmotional />
 
         {/** @section Service */}
-        <SectionSerivce />
+        <SectionService />
       </main>
     </Box>
   </>
