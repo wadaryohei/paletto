@@ -159,9 +159,11 @@ export const SectionPartnerShipComponent = (props: SectionPartnerShipProps) => (
         パートナーとデザインで<span className={'sp'}>未来を作る</span>
       </Text>
 
-      <Text component={'p'} textStyle={'subheading'}>
-        なぜサブスクリプションなのか？
-      </Text>
+      <Box mt={Margin.m72}>
+        <Text component={'p'} textStyle={'subheading'}>
+          なぜサブスクリプションなのか？
+        </Text>
+      </Box>
 
       <Box mt={Margin.m32}>
         <Text component={'p'} textStyle={'lead'}>

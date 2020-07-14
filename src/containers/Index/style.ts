@@ -120,6 +120,5 @@ export const SectionServiceStyle = styled(SectionServiceComponent)`
 `
 
 export const SectionPartnerShipStyle = styled(SectionPartnerShipComponent)`
-  text-align: center;
   padding: ${Padding.p160} ${Padding.p16};
 `
