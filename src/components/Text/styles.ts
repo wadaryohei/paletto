@@ -61,7 +61,7 @@ export const TextStyle = styled(TextComponent)`
       padding: ${Padding.p16};
 
       @media ${max(BreakPoints.md)} {
-        padding: ${Padding.p8};
+        padding: ${Padding.p8} ${Padding.p16};
       }
     }
   }
