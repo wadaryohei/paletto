@@ -75,7 +75,6 @@ export interface Services {
   title: string
   copy: string
   lead: string
-  bgPathName: string
 }
 
 export const ServicesDatas: Services[] = [
@@ -85,7 +84,6 @@ export const ServicesDatas: Services[] = [
     copy: 'デザインで多種多様なビジネス課題を解決します。',
     lead:
       '私達はパートナーのプロダクト開発、新規事業立ち上げ、ブランド構築、組織支援など、クライアント企業の様々なビジネス課題をデザインの力で解決します。',
-    bgPathName: '/card_bg_a.png',
   },
   {
     num: '02',
@@ -93,7 +91,6 @@ export const ServicesDatas: Services[] = [
     copy: '一貫したクオリティと多岐に渡るクリエイティブを提供。',
     lead:
       '私達はデザイン企業ですが、それだけではありません。開発、映像制作、広告も。VIの制作から、印刷物、ウェブサイト制作などワンストップで制作致します。',
-    bgPathName: '/card_bg_b.png',
   },
   {
     num: '03',
@@ -101,7 +98,6 @@ export const ServicesDatas: Services[] = [
     copy: '更新・管理・運用。すべてを任せられるパートナー。',
     lead:
       '制作したものを長期的な更新・管理・運用のすべてを承ります。ウェブや印刷物といった多岐に渡る媒体全てでの運用をすることが可能です。',
-    bgPathName: '/card_bg_c.png',
   },
 ]
 

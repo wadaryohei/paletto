@@ -19,8 +19,8 @@ export const ServiceCardStyle = styled(ServiceCardComponent)`
   margin-right: ${Margin.m16};
   border-radius: 10px;
   scroll-snap-align: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-color: ${Colors.primary};
+  color: ${Colors.white};
   box-shadow: 0px 3px 33px -6px rgba(0, 0, 0, 0.15);
 
   @media ${max(BreakPoints.md)} {
