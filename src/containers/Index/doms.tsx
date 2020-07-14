@@ -172,7 +172,7 @@ export const SectionPartnerShipComponent = (props: SectionPartnerShipProps) => (
       </Text>
 
       <Text component={'p'} textStyle={'copy'}>
-        パートナーとデザインで<span className={'sp'}>未来を作る</span>
+        パートナーとデザインで未来を作る
       </Text>
 
       <Box mt={Margin.m72}>
