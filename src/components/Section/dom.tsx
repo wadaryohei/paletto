@@ -1,18 +1,16 @@
 import React from 'react'
-import { BoxProps } from '@material-ui/core'
 
 //----------------------------------
 // props
 //----------------------------------
-export interface SectionProps extends BoxProps {
+export interface SectionProps {
+  className?: string
   children: React.ReactNode
 }
 
 //----------------------------------
 // component
 //----------------------------------
-export const SectionComponent = (props: SectionProps) => {
-  // MuiのBoxPropsを継承したSectionコンポーネントを返す
-  const { ...rest } = props
-  return <section {...rest}>{props.children}</section>
-}
+export const SectionComponent = (props: SectionProps) => (
+  <section className={props.className}>{props.children}</section>
+)
