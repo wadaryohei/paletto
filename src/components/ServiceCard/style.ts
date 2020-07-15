@@ -51,6 +51,7 @@ export const ServiceCardStyle = styled(ServiceCardComponent)`
     .cardNum {
       font-size: ${FontSize.xl};
       font-weight: ${FontWeight.bold};
+      font-family: 'Renner*', sans-serif;
       margin-bottom: ${Margin.m32};
       color: ${Colors.white};
     }
