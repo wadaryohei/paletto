@@ -42,10 +42,10 @@ export const SectionVisionStyle = styled(SectionVisionComponent)`
     padding-bottom: 0;
   }
 
-  .visionWrapper {
+  .visionLeadWrapper {
+    position: relative;
     padding: ${Padding.p112} ${Padding.p72} 0;
     margin: ${Margin.m72} ${Margin.m32};
-    position: relative;
 
     @media ${max(BreakPoints.md)} {
       padding: ${Padding.p32} ${Padding.p16};
@@ -55,14 +55,14 @@ export const SectionVisionStyle = styled(SectionVisionComponent)`
     &::before {
       content: '';
       display: block;
-      width: 1px;
-      height: 140%;
-      background-color: ${Colors.black};
       position: absolute;
       top: 0;
       left: 0;
-      z-index: 1;
       transform: rotate(180deg);
+      z-index: 1;
+      width: 1px;
+      height: 140%;
+      background-color: ${Colors.black};
 
       @media ${max(BreakPoints.md)} {
         height: 140%;
@@ -84,7 +84,7 @@ export const SectionAnnounceStyle = styled(SectionAnnounceComponent)`
     padding: ${Padding.p112} ${Padding.p16};
   }
 
-  > .announceWrapper {
+  .announceWrapper {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -137,6 +137,10 @@ export const SectionAnnounceStyle = styled(SectionAnnounceComponent)`
       }
     }
 
+    .annouceLeadWrapper {
+      margin-top: ${Margin.m32};
+    }
+
     .announceLead {
       color: ${Colors.white};
     }
@@ -148,15 +152,21 @@ export const SectionAnnounceStyle = styled(SectionAnnounceComponent)`
 //--------------------------------------
 export const SectionServiceStyle = styled(SectionServiceComponent)`
   margin-top: ${Margin.m160};
-  > .cardWrapper {
+
+  .serviceLeadWrapper {
+    margin-top: ${Margin.m72};
+  }
+
+  .serviceCardWrapper {
     width: 100%;
     display: flex;
     flex-wrap: nowrap;
     overflow: scroll;
     justify-content: flex-start;
     padding: ${Padding.p32} ${Padding.p16};
+    margin-top: ${Margin.m56};
 
-    .card {
+    .serviceCard {
       height: 100%;
     }
 
@@ -175,8 +185,18 @@ export const SectionServiceStyle = styled(SectionServiceComponent)`
 export const SectionPlansStyle = styled(SectionPlansComponent)`
   padding: ${Padding.p160} ${Padding.p16};
 
-  .cardWrapper {
-    .card {
+  .plansSubHeadingWrapper {
+    margin-top: ${Margin.m72};
+  }
+
+  .plansLeadWrapper {
+    margin-top: ${Margin.m32};
+  }
+
+  .plansCardWrapper {
+    margin-top: ${Margin.m72};
+
+    .plansCard {
       height: 100%;
       padding: ${Padding.p56} ${Padding.p24};
 

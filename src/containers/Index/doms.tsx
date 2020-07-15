@@ -47,7 +47,7 @@ export const SectionVisionComponent = (props: SectionVisionProps) => (
         感情を動かすデザインを
       </Text>
 
-      <Box className={'visionWrapper'}>
+      <div className={'visionLeadWrapper'}>
         <Text component={'p'} textStyle={'lead'}>
           <span>人の感情に寄り添い、人の感情をデザインする。</span>
           <span>
@@ -58,7 +58,7 @@ export const SectionVisionComponent = (props: SectionVisionProps) => (
             「Paletto.」では課題の解決だけでなく、事業やサービスやプロダクトの思いをデザインでカタチにします。
           </span>
         </Text>
-      </Box>
+      </div>
     </Container>
   </Section>
 )
@@ -66,12 +66,12 @@ export const SectionVisionComponent = (props: SectionVisionProps) => (
 /** @section Announce */
 export const SectionAnnounceComponent = (props: SectionAnnounceProps) => (
   <Section className={props.className}>
-    <Grid className={'announceWrapper'} container spacing={4}>
+    <Grid container spacing={4} className={'announceWrapper'}>
       <Grid item md={6} sm={12} xs={12}>
         <Text
-          className={'announceHeading'}
           component={'h2'}
           textStyle={'accentheading'}
+          className={'announceHeading'}
         >
           Approach.
         </Text>
@@ -80,8 +80,8 @@ export const SectionAnnounceComponent = (props: SectionAnnounceProps) => (
         <Text component={'h2'} textStyle={'accentheading'}>
           当たり前のその先へ
         </Text>
-        <Box mt={Margin.m32}>
-          <Text className={'announceLead'} component={'p'} textStyle={'lead'}>
+        <div className={'annouceLeadWrapper'}>
+          <Text component={'p'} textStyle={'lead'} className={'announceLead'}>
             <span>
               ビジネス的なゴールや課題解決はもはや当たり前の時代になりました。
             </span>
@@ -92,7 +92,7 @@ export const SectionAnnounceComponent = (props: SectionAnnounceProps) => (
               このプロダクト、このお店、このサービスだからこそ使いたいと思えるデザインを作っていきます。
             </span>
           </Text>
-        </Box>
+        </div>
       </Grid>
     </Grid>
   </Section>
@@ -108,25 +108,29 @@ export const SectionServiceComponent = (props: SectionServiceProps) => (
       <Text component={'p'} textStyle={'copy'}>
         私達ができること
       </Text>
-      <Box mt={Margin.m72}>
+      <div className={'serviceLeadWrapper'}>
         <Text component={'p'} textStyle={'lead'}>
           <span>
             デジタル領域の課題に対して、システム開発、マーケティング、データ解析など一気通貫のデジタルコンサルティングサービスと、デジタルプロフェッショナルとプロジェクトをマッチングするプラットフォームを展開しています。
           </span>
         </Text>
-      </Box>
+      </div>
     </Container>
-    <Box className={'cardWrapper'} mt={Margin.m56}>
+
+    <div className={'serviceCardWrapper'}>
       <Grid container spacing={2} alignItems={'stretch'}>
         {ServicesDatas.map((ServicesData: Services, index: number) => {
           return (
             <Grid key={index} item md={6} xs={12}>
-              <ServiceCard className={'card'} ServicesData={ServicesData} />
+              <ServiceCard
+                ServicesData={ServicesData}
+                className={'serviceCard'}
+              />
             </Grid>
           )
         })}
       </Grid>
-    </Box>
+    </div>
   </Section>
 )
 
@@ -142,13 +146,13 @@ export const SectionPlansComponent = (props: SectionPlansProps) => (
         パートナーとデザインで未来を作る
       </Text>
 
-      <Box mt={Margin.m72}>
+      <div className={'plansSubHeadingWrapper'}>
         <Text component={'p'} textStyle={'subheading'}>
           なぜサブスクリプションなのか？
         </Text>
-      </Box>
+      </div>
 
-      <Box mt={Margin.m32}>
+      <div className={'plansLeadWrapper'}>
         <Text component={'p'} textStyle={'lead'}>
           <span>
             デザインは「課題解決」と「価値創造」の側面を持っています。
@@ -163,22 +167,15 @@ export const SectionPlansComponent = (props: SectionPlansProps) => (
             納品するだけの制作会社が何十万という金額で制作する中、私達はデザインのパワーをサブスクという形式で最大限発揮していきます。
           </span>
         </Text>
-      </Box>
+      </div>
 
-      <Box mt={Margin.m72}>
+      <div className={'plansCardWrapper'}>
         <Grid container spacing={2}>
           {PartnerShipDatas.map(
             (PartnerShipData: PartnerShip, index: number) => {
               return (
-                <Grid
-                  className={'cardWrapper'}
-                  key={index}
-                  item
-                  md={6}
-                  sm={12}
-                  xs={12}
-                >
-                  <Card className={'card'}>
+                <Grid key={index} item md={6} sm={12} xs={12}>
+                  <Card className={'plansCard'}>
                     <p className={'planContract'}>
                       <span>サブスクリプション契約</span>
                     </p>
@@ -193,7 +190,7 @@ export const SectionPlansComponent = (props: SectionPlansProps) => (
                     <p className={'planRecommendedCopy'}>
                       {PartnerShipData.recommendedCopy}
                     </p>
-                    <Box className={'planContentWrapper'}>
+                    <div className={'planContentWrapper'}>
                       <p className={'planSubscription'}>
                         <span className={'planNum'}>
                           {PartnerShipData.monthlyFee}
@@ -205,7 +202,7 @@ export const SectionPlansComponent = (props: SectionPlansProps) => (
                         </span>
                         <span className={'planMonth'}>ヶ月</span>
                       </p>
-                      <Box component={'ul'} className={'planDetailWrapper'}>
+                      <ul className={'planDetailWrapper'}>
                         {PartnerShipData.planDetails.map(
                           (planDetail, index: number) => {
                             return (
@@ -216,15 +213,15 @@ export const SectionPlansComponent = (props: SectionPlansProps) => (
                             )
                           },
                         )}
-                      </Box>
-                    </Box>
+                      </ul>
+                    </div>
                   </Card>
                 </Grid>
               )
             },
           )}
         </Grid>
-      </Box>
+      </div>
     </Container>
   </Section>
 )
