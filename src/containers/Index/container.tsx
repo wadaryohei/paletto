@@ -6,9 +6,8 @@ import { Header } from '../../components/Header'
 import {
   SectionVision,
   SectionAnnounce,
-  SectionWhyEmotional,
   SectionService,
-  SectionPartnerShip,
+  SectionPlans,
 } from './index'
 
 //----------------------------------
@@ -42,8 +41,8 @@ const IndexContainer = (props: IndexProps) => (
         {/** @section Service */}
         <SectionService />
 
-        {/** @section PartnerShip */}
-        <SectionPartnerShip />
+        {/** @section Plans */}
+        <SectionPlans />
       </main>
     </Box>
   </>

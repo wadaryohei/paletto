@@ -1,5 +1,6 @@
 import React from 'react'
 import { Box, Container, Grid } from '@material-ui/core'
+import DoneIcon from '@material-ui/icons/Done';
 import { Section } from '../../components/Section'
 import { Text } from '../../components/Text'
 import { ServiceCard } from '../../components/ServiceCard'
@@ -27,7 +28,7 @@ export interface SectionServiceProps {
   className?: string
 }
 
-export interface SectionPartnerShipProps {
+export interface SectionPlansProps {
   className?: string
 }
 
@@ -129,12 +130,12 @@ export const SectionServiceComponent = (props: SectionServiceProps) => (
   </Section>
 )
 
-/** @section Partner Ship */
-export const SectionPartnerShipComponent = (props: SectionPartnerShipProps) => (
+/** @section Plans */
+export const SectionPlansComponent = (props: SectionPlansProps) => (
   <Section className={props.className}>
     <Container maxWidth={'md'}>
       <Text component={'h2'} textStyle={'heading'}>
-        Partner Ship
+        Plans
       </Text>
 
       <Text component={'p'} textStyle={'copy'}>
@@ -166,23 +167,57 @@ export const SectionPartnerShipComponent = (props: SectionPartnerShipProps) => (
 
       <Box mt={Margin.m72}>
         <Grid container spacing={4}>
-          {PartnerShipDatas.map((PartnerShipData: PartnerShip, index: number) => {
+          {PartnerShipDatas.map(
+            (PartnerShipData: PartnerShip, index: number) => {
               return (
-                <Grid key={index} item md={6} sm={12} xs={12}>
-                  <Card>
-                    <p>{PartnerShipData.planName}</p>
-                    <p>こんな方におすすめ</p>
-                    <p>{PartnerShipData.recommendedCopy}</p>
-                    <p>
-                      {PartnerShipData.monthlyFee}
-                      <span>×</span>
-                      {PartnerShipData.yearContract}ヶ月
+                <Grid
+                  className={'cardWrapper'}
+                  key={index}
+                  item
+                  md={6}
+                  sm={12}
+                  xs={12}
+                >
+                  <Card className={'card'}>
+                    <p className={'planContract'}>
+                      <span>サブスクリプション契約</span>
                     </p>
-                    {PartnerShipData.planDetails.map(
-                      (planDetail, index: number) => {
-                        return <p key={index}>{planDetail}</p>
-                      },
-                    )}
+                    <p className={'planName'}>{PartnerShipData.planName}</p>
+                    <Text
+                      className={'planRecommended'}
+                      component={'p'}
+                      textStyle={'subheading'}
+                    >
+                      こんな方におすすめ
+                    </Text>
+                    <p className={'planRecommendedCopy'}>
+                      {PartnerShipData.recommendedCopy}
+                    </p>
+                    <Box className={'planContentWrapper'}>
+                      <p className={'planSubscription'}>
+                        <span className={'planNum'}>
+                          {PartnerShipData.monthlyFee}
+                        </span>
+                        <span className={'planFee'}>万円</span>
+                        <span className={'planMultiplication'}>×</span>
+                        <span className={'planNum'}>
+                          {PartnerShipData.yearContract}
+                        </span>
+                        <span className={'planMonth'}>ヶ月</span>
+                      </p>
+                      <Box component={'ul'} className={'planDetailWrapper'}>
+                        {PartnerShipData.planDetails.map(
+                          (planDetail, index: number) => {
+                            return (
+                              <li className={'planDetailList'} key={index}>
+                                <DoneIcon className={'planDetailListIcon'} />
+                                {planDetail}
+                              </li>
+                            )
+                          },
+                        )}
+                      </Box>
+                    </Box>
                   </Card>
                 </Grid>
               )

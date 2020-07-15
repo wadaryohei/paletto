@@ -1,12 +1,10 @@
 import styled from 'styled-components'
 import { CardComponent } from './dom'
 // import { BreakPoints, max } from '../../const/BreakPoints'
-import { Padding } from '../../const/Padding'
 import { Colors } from '../../const/Colors'
 
 export const CardStyle = styled(CardComponent)`
   position: relative;
-  padding: ${Padding.p160} ${Padding.p32};
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
