@@ -4,12 +4,10 @@ import { Box } from '@material-ui/core'
 import { Hero } from '../../components/Hero'
 import { Header } from '../../components/Header'
 import { Footer } from '../../components/Footer'
-import {
-  SectionVision,
-  SectionAnnounce,
-  SectionService,
-  SectionPlans,
-} from './index'
+import { SectionVision } from './doms/SectionVision'
+import { SectionAnnounce } from './doms/SectionAnnounce'
+import { SectionService } from './doms/SectionService'
+import { SectionPlans } from './doms/SectionPlans'
 
 //----------------------------------
 // props
