@@ -156,6 +156,10 @@ export const SectionServiceStyle = styled(SectionServiceComponent)`
     justify-content: flex-start;
     padding: ${Padding.p32} ${Padding.p16};
 
+    .card {
+      height: 100%;
+    }
+
     &::after {
       content: '';
       display: block;
@@ -173,6 +177,7 @@ export const SectionPlansStyle = styled(SectionPlansComponent)`
 
   .cardWrapper {
     .card {
+      height: 100%;
       padding: ${Padding.p56} ${Padding.p24};
 
       .planContract {

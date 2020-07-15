@@ -31,6 +31,7 @@ export const TextStyle = styled(TextComponent)`
   &.heading {
     font-size: ${FontSize.xl};
     font-weight: ${FontWeight.bold};
+    font-family: 'Renner*', sans-serif;
     color: ${Colors.white};
 
     @media ${max(BreakPoints.md)} {
@@ -49,7 +50,7 @@ export const TextStyle = styled(TextComponent)`
     font-size: ${FontSize.lg};
     font-weight: ${FontWeight.bold};
     color: ${Colors.white};
-    margin-top: ${Margin.m16};
+    margin-top: ${Margin.m8};
 
     @media ${max(BreakPoints.md)} {
       font-size: ${FontSize.md};

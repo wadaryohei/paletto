@@ -117,11 +117,11 @@ export const SectionServiceComponent = (props: SectionServiceProps) => (
       </Box>
     </Container>
     <Box className={'cardWrapper'} mt={Margin.m56}>
-      <Grid container spacing={4}>
+      <Grid container spacing={2} alignItems={'stretch'}>
         {ServicesDatas.map((ServicesData: Services, index: number) => {
           return (
             <Grid key={index} item md={6} xs={12}>
-              <ServiceCard ServicesData={ServicesData} />
+              <ServiceCard className={'card'} ServicesData={ServicesData} />
             </Grid>
           )
         })}
@@ -166,7 +166,7 @@ export const SectionPlansComponent = (props: SectionPlansProps) => (
       </Box>
 
       <Box mt={Margin.m72}>
-        <Grid container spacing={4}>
+        <Grid container spacing={2}>
           {PartnerShipDatas.map(
             (PartnerShipData: PartnerShip, index: number) => {
               return (
