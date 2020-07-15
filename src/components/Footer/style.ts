@@ -74,7 +74,7 @@ export const FooterStyle = styled(FooterComponent)`
         text-align: right;
         display: flex;
 
-        @media ${max(BreakPoints.md)} {
+        @media ${max(BreakPoints.lg)} {
           width: auto;
         }
       }
