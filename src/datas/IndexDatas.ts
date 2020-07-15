@@ -37,6 +37,47 @@ export const HeroDatas: Hero = {
 }
 
 //----------------------------------
+// SectionHeadingDatas
+//----------------------------------
+export interface SectionHeading {
+  SectionVision: {
+    headingEn: string
+    headingJp: string
+  }
+  sectionAnnounce: {
+    headingEn: string
+    headingJp: string
+  }
+  sectionService: {
+    headingEn: string
+    headingJp: string
+  }
+  sectionPlans: {
+    headingEn: string
+    headingJp: string
+  }
+}
+
+export const SectionHeadingDatas: SectionHeading = {
+  SectionVision: {
+    headingEn: 'Vision',
+    headingJp: '感情を動かすデザインを',
+  },
+  sectionAnnounce: {
+    headingEn: 'Approach.',
+    headingJp: '当たり前のその先へ',
+  },
+  sectionService: {
+    headingEn: 'Serivces',
+    headingJp: '私達ができること',
+  },
+  sectionPlans: {
+    headingEn: 'Plans',
+    headingJp: 'パートナーとデザインで未来を作る',
+  },
+}
+
+//----------------------------------
 // ServicesDatas
 //----------------------------------
 export interface Services {

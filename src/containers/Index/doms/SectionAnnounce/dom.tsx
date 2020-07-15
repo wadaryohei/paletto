@@ -2,6 +2,7 @@ import React from 'react'
 import { Grid } from '@material-ui/core'
 import { Section } from '../../../../components/Section'
 import { Text } from '../../../../components/Text'
+import { SectionHeadingDatas } from '../../../../datas/IndexDatas'
 
 //----------------------------------
 // props
@@ -22,12 +23,12 @@ export const SectionAnnounceComponent = (props: SectionAnnounceProps) => (
           textStyle={'accentheading'}
           className={'announceHeading'}
         >
-          Approach.
+          {SectionHeadingDatas.sectionAnnounce.headingEn}
         </Text>
       </Grid>
       <Grid item md={6} sm={12} xs={12}>
         <Text component={'h2'} textStyle={'accentheading'}>
-          当たり前のその先へ
+          {SectionHeadingDatas.sectionAnnounce.headingJp}
         </Text>
         <div className={'annouceLeadWrapper'}>
           <Text component={'p'} textStyle={'lead'} className={'announceLead'}>

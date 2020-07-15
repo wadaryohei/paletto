@@ -2,6 +2,7 @@ import React from 'react'
 import { Container } from '@material-ui/core'
 import { Section } from '../../../../components/Section'
 import { Text } from '../../../../components/Text'
+import { SectionHeadingDatas } from '../../../../datas/IndexDatas'
 
 //----------------------------------
 // props
@@ -17,10 +18,10 @@ export const SectionVisionComponent = (props: SectionVisionProps) => (
   <Section className={props.className}>
     <Container maxWidth={'md'}>
       <Text component={'h2'} textStyle={'heading'}>
-        Vision
+        {SectionHeadingDatas.SectionVision.headingEn}
       </Text>
       <Text component={'p'} textStyle={'copy'}>
-        感情を動かすデザインを
+      {SectionHeadingDatas.SectionVision.headingJp}
       </Text>
 
       <div className={'visionLeadWrapper'}>

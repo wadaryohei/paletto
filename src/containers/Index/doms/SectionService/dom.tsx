@@ -3,12 +3,16 @@ import { Grid, Container } from '@material-ui/core'
 import { Section } from '../../../../components/Section'
 import { Text } from '../../../../components/Text'
 import { ServiceCard } from '../../../../components/ServiceCard'
-import { Services, ServicesDatas } from '../../../../datas/IndexDatas'
+import {
+  Services,
+  ServicesDatas,
+  SectionHeadingDatas,
+} from '../../../../datas/IndexDatas'
 
 //----------------------------------
 // props
 //----------------------------------
-export interface SectionAnnounceProps {
+export interface SectionServiceProps {
   className?: string
 }
 
@@ -19,10 +23,10 @@ export const SectionServiceComponent = (props: SectionServiceProps) => (
   <Section className={props.className}>
     <Container maxWidth={'md'}>
       <Text component={'h2'} textStyle={'heading'}>
-        Serivces
+        {SectionHeadingDatas.sectionService.headingEn}
       </Text>
       <Text component={'p'} textStyle={'copy'}>
-        私達ができること
+        {SectionHeadingDatas.sectionService.headingJp}
       </Text>
       <div className={'serviceLeadWrapper'}>
         <Text component={'p'} textStyle={'lead'}>

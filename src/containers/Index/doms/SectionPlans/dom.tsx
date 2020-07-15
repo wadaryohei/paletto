@@ -4,7 +4,11 @@ import DoneIcon from '@material-ui/icons/Done'
 import { Section } from '../../../../components/Section'
 import { Text } from '../../../../components/Text'
 import { Card } from '../../../../components/Card'
-import { Plan, PlanDatas } from '../../../../datas/IndexDatas'
+import {
+  Plan,
+  PlanDatas,
+  SectionHeadingDatas,
+} from '../../../../datas/IndexDatas'
 
 //----------------------------------
 // props
@@ -20,11 +24,11 @@ export const SectionPlansComponent = (props: SectionPlansProps) => (
   <Section className={props.className}>
     <Container maxWidth={'md'}>
       <Text component={'h2'} textStyle={'heading'}>
-        Plans
+        {SectionHeadingDatas.sectionPlans.headingEn}
       </Text>
 
       <Text component={'p'} textStyle={'copy'}>
-        パートナーとデザインで未来を作る
+        {SectionHeadingDatas.sectionPlans.headingJp}
       </Text>
 
       <div className={'plansSubHeadingWrapper'}>
