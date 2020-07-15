@@ -3,12 +3,12 @@ import { HeroDatas } from '../../datas/IndexDatas'
 import { Box } from '@material-ui/core'
 import { Hero } from '../../components/Hero'
 import { Header } from '../../components/Header'
+import { Footer } from '../../components/Footer'
 import {
   SectionVision,
-  SectionWhyEmotionalBg,
-  SectionWhyEmotional,
+  SectionAnnounce,
   SectionService,
-  SectionPartnerShip,
+  SectionPlans,
 } from './index'
 
 //----------------------------------
@@ -27,8 +27,8 @@ const IndexContainer = (props: IndexProps) => (
       <Header className={'header'} />
       <Hero
         imgPath={HeroDatas.imgPath}
-        copyEnFirst={HeroDatas.copyEnFirst}
-        copyEnSecond={HeroDatas.copyEnSecond}
+        siteName={HeroDatas.siteName}
+        copyEn={HeroDatas.copyEn}
         copyJp={HeroDatas.copyJp}
       />
 
@@ -36,18 +36,17 @@ const IndexContainer = (props: IndexProps) => (
         {/** @section Vision */}
         <SectionVision />
 
-        {/** @section Why Emotional Bg */}
-        <SectionWhyEmotionalBg />
-
-        {/** @section Why Emotional */}
-        <SectionWhyEmotional />
+        {/** @section Announce */}
+        <SectionAnnounce />
 
         {/** @section Service */}
         <SectionService />
 
-        {/** @section PartnerShip */}
-        <SectionPartnerShip />
+        {/** @section Plans */}
+        <SectionPlans />
       </main>
+
+      <Footer />
     </Box>
   </>
 )

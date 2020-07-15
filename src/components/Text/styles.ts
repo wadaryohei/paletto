@@ -5,6 +5,7 @@ import { Margin } from '../../const/Margin'
 import { BreakPoints, max, min } from '../../const/BreakPoints'
 import { FontSize } from '../../const/FontSize'
 import { FontWeight } from '../../const/FontWeight'
+import { Padding } from '../../const/Padding'
 
 //----------------------------------
 // styledComponent
@@ -28,24 +29,41 @@ export const TextStyle = styled(TextComponent)`
   }
 
   &.heading {
-    font-size: ${FontSize.md};
+    font-size: ${FontSize.xl};
     font-weight: ${FontWeight.bold};
-    color: ${Colors.primary};
+    font-family: 'Renner*', sans-serif;
+    color: ${Colors.white};
 
     @media ${max(BreakPoints.md)} {
       font-size: ${FontSize.lg};
     }
+
+    span {
+      display: inline-block;
+      background-color: ${Colors.black};
+      padding: 0 ${Padding.p16};
+    }
   }
 
   &.copy {
-    font-size: ${FontSize.xl};
+    display: block;
+    font-size: ${FontSize.lg};
     font-weight: ${FontWeight.bold};
-    color: ${Colors.black};
-    margin: ${Margin.m56} 0;
+    color: ${Colors.white};
+    margin-top: ${Margin.m8};
 
     @media ${max(BreakPoints.md)} {
       font-size: ${FontSize.md};
-      margin: ${Margin.m32} 0;
+    }
+
+    span {
+      display: inline-block;
+      background-color: ${Colors.black};
+      padding: ${Padding.p16};
+
+      @media ${max(BreakPoints.md)} {
+        padding: ${Padding.p8} ${Padding.p16};
+      }
     }
   }
 
@@ -61,9 +79,9 @@ export const TextStyle = styled(TextComponent)`
   }
 
   &.accentheading {
-    font-size: ${FontSize.xl};
+    font-size: ${FontSize.lg};
     font-weight: ${FontWeight.bold};
-    color: ${Colors.secondary};
+    color: ${Colors.white};
     line-height: 2.4rem;
 
     @media ${max(BreakPoints.md)} {
@@ -73,13 +91,16 @@ export const TextStyle = styled(TextComponent)`
 
   &.lead {
     font-size: ${FontSize.sm};
-    font-weight: ${FontWeight.bold};
     color: ${Colors.black};
-    line-height: 4rem;
+    line-height: 4.4rem;
 
     @media ${max(BreakPoints.md)} {
       font-size: ${FontSize.xs};
       line-height: 3.2rem;
+    }
+
+    span {
+      display: block;
     }
   }
 `

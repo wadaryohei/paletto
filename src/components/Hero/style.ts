@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 import { HeroComponent } from './dom'
 import { Colors } from '../../const/Colors'
-import { Margin } from '../../const/Margin'
 import { BreakPoints, max } from '../../const/BreakPoints'
-import { FontSize, CopyFontSize } from '../../const/FontSize'
+import { FontSize } from '../../const/FontSize'
 import { FontWeight } from '../../const/FontWeight'
+import { Margin } from '../../const/Margin'
 
 //----------------------------------
 // styledComponent
@@ -19,7 +19,7 @@ export const HeroStyle = styled(HeroComponent)`
     position: relative;
 
     @media ${max(BreakPoints.md)} {
-      background-position: 64% 50%;
+      background-position: 50% 50%;
     }
 
     &::after {
@@ -39,31 +39,47 @@ export const HeroStyle = styled(HeroComponent)`
       bottom: 10%;
       left: 6%;
       z-index: 1;
+
       @media ${max(BreakPoints.md)} {
         left: 10%;
       }
 
+      > .siteName {
+        font-size: ${FontSize.xxxl};
+        font-family: 'Renner*', sans-serif;
+        font-weight: 700;
+        color: ${Colors.primary};
+
+        @media ${max(BreakPoints.md)} {
+          font-size: ${FontSize.xl};
+        }
+      }
+
       > .copy {
         &.copyEn {
-          font-size: ${CopyFontSize.copyEn};
+          font-size: ${FontSize.lg};
+          font-family: 'Renner*', sans-serif;
           font-weight: ${FontWeight.bold};
           color: ${Colors.primary};
           line-height: 1.3;
+          letter-spacing: 12px;
 
           @media ${max(BreakPoints.lg)} {
-            font-size: ${FontSize.xl};
-            margin-top: ${Margin.m24};
+            font-size: ${FontSize.md};
+            margin: ${Margin.m32} 0;
           }
         }
 
         &.copyJp {
-          font-size: ${CopyFontSize.copyJp};
+          font-size: ${FontSize.md};
           font-weight: ${FontWeight.bold};
           color: ${Colors.primary};
-          margin-bottom: ${Margin.m24};
+          letter-spacing: 8px;
+          margin-top: ${Margin.m16};
 
           @media ${max(BreakPoints.lg)} {
-            font-size: ${FontSize.md};
+            font-size: ${FontSize.sm};
+            margin-top: 0;
           }
         }
       }

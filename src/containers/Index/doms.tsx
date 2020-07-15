@@ -1,5 +1,6 @@
 import React from 'react'
 import { Box, Container, Grid } from '@material-ui/core'
+import DoneIcon from '@material-ui/icons/Done';
 import { Section } from '../../components/Section'
 import { Text } from '../../components/Text'
 import { ServiceCard } from '../../components/ServiceCard'
@@ -19,11 +20,7 @@ export interface SectionVisionProps {
   className?: string
 }
 
-export interface SectionWhyEmotionalBgProps {
-  className?: string
-}
-
-export interface SectionWhyEmotionalProps {
+export interface SectionAnnounceProps {
   className?: string
 }
 
@@ -31,7 +28,7 @@ export interface SectionServiceProps {
   className?: string
 }
 
-export interface SectionPartnerShipProps {
+export interface SectionPlansProps {
   className?: string
 }
 
@@ -42,7 +39,7 @@ export interface SectionPartnerShipProps {
 /** @section Vision */
 export const SectionVisionComponent = (props: SectionVisionProps) => (
   <Section className={props.className}>
-    <Container>
+    <Container maxWidth={'md'}>
       <Text component={'h2'} textStyle={'heading'}>
         Vision
       </Text>
@@ -66,105 +63,90 @@ export const SectionVisionComponent = (props: SectionVisionProps) => (
   </Section>
 )
 
-/** @section Why Emotional Bg */
-export const SectionWhyEmotionalBgComponent = (
-  props: SectionWhyEmotionalBgProps,
-) => (
+/** @section Announce */
+export const SectionAnnounceComponent = (props: SectionAnnounceProps) => (
   <Section className={props.className}>
-    <Box className={'box'}>
-      <Text component={'h2'} textStyle={'accentheading'}>
-        Why Emotional
-      </Text>
-    </Box>
-  </Section>
-)
-
-/** @section Why Emotional */
-export const SectionWhyEmotionalComponent = (
-  props: SectionWhyEmotionalProps,
-) => (
-  <Section
-    className={props.className}
-    style={{ backgroundImage: 'url(/whyemotional.png)' }}
-  >
-    <Container>
-      <div>
-        <Text component={'h2'} textStyle={'heading'}>
-          Why Emotional
+    <Grid className={'announceWrapper'} container spacing={4}>
+      <Grid item md={6} sm={12} xs={12}>
+        <Text
+          className={'announceHeading'}
+          component={'h2'}
+          textStyle={'accentheading'}
+        >
+          Approach.
         </Text>
-        <Text component={'p'} textStyle={'copy'}>
-          感情をデザインするということ
+      </Grid>
+      <Grid item md={6} sm={12} xs={12}>
+        <Text component={'h2'} textStyle={'accentheading'}>
+          当たり前のその先へ
         </Text>
-
-        <Box mt={Margin.m72}>
-          <Text component={'p'} textStyle={'subheading'}>
-            なぜエモーショナルなのか？
+        <Box mt={Margin.m32}>
+          <Text className={'announceLead'} component={'p'} textStyle={'lead'}>
+            <span>
+              ビジネス的なゴールや課題解決はもはや当たり前の時代になりました。
+            </span>
+            <span>
+              私達は「当たり前のその先」にあるユーザーの感情を動かすデザインに取り組みます。
+            </span>
+            <span>
+              このプロダクト、このお店、このサービスだからこそ使いたいと思えるデザインを作っていきます。
+            </span>
           </Text>
-          <Box mt={Margin.m40}>
-            <Text component={'p'} textStyle={'lead'}>
-              <span>
-                デザインにおいて「課題解決」や「ユーザビリティ」が大事なのは明白です。
-              </span>
-              <span>
-                ですが、そういったことが当たり前になりつつある世界ではどうでしょうか？
-              </span>
-              <span>それだけでは充分と言えません。</span>
-              <span>
-                また、人が物やサービスを使おうと思うのは何故でしょうか？
-              </span>
-              <span>そこには必ず「感情」が存在します。</span>
-            </Text>
-          </Box>
         </Box>
-
-        <Box mt={Margin.m72}>
-          <Text component={'p'} textStyle={'subheading'}>
-            感情をデザインすること
-          </Text>
-          <Box mt={Margin.m40}>
-            <Text component={'p'} textStyle={'lead'}>
-              <span>人は「感情」に基づき行動する生き物です。</span>
-              <span>感情が変われば、思考と行動が変わります。</span>
-              <span>
-                感情をデザインすることで、「人や組織、プロダクトやサービス」を最高のモノへと変えていくことが可能だと考えています。
-              </span>
-            </Text>
-          </Box>
-        </Box>
-      </div>
-    </Container>
+      </Grid>
+    </Grid>
   </Section>
 )
 
 /** @section Serivce */
 export const SectionServiceComponent = (props: SectionServiceProps) => (
   <Section className={props.className}>
-    <Text component={'h2'} textStyle={'heading'} align={'center'}>
-      Serivces
-    </Text>
+    <Container maxWidth={'md'}>
+      <Text component={'h2'} textStyle={'heading'}>
+        Serivces
+      </Text>
+      <Text component={'p'} textStyle={'copy'}>
+        私達ができること
+      </Text>
+      <Box mt={Margin.m72}>
+        <Text component={'p'} textStyle={'lead'}>
+          <span>
+            デジタル領域の課題に対して、システム開発、マーケティング、データ解析など一気通貫のデジタルコンサルティングサービスと、デジタルプロフェッショナルとプロジェクトをマッチングするプラットフォームを展開しています。
+          </span>
+        </Text>
+      </Box>
+    </Container>
     <Box className={'cardWrapper'} mt={Margin.m56}>
-      {ServicesDatas.map((ServicesData: Services, index: number) => {
-        return <ServiceCard key={index} ServicesData={ServicesData} />
-      })}
+      <Grid container spacing={2} alignItems={'stretch'}>
+        {ServicesDatas.map((ServicesData: Services, index: number) => {
+          return (
+            <Grid key={index} item md={6} xs={12}>
+              <ServiceCard className={'card'} ServicesData={ServicesData} />
+            </Grid>
+          )
+        })}
+      </Grid>
     </Box>
   </Section>
 )
 
-/** @section Partner Ship */
-export const SectionPartnerShipComponent = (props: SectionPartnerShipProps) => (
+/** @section Plans */
+export const SectionPlansComponent = (props: SectionPlansProps) => (
   <Section className={props.className}>
-    <Container>
+    <Container maxWidth={'md'}>
       <Text component={'h2'} textStyle={'heading'}>
-        Partner Ship
+        Plans
       </Text>
 
       <Text component={'p'} textStyle={'copy'}>
-        パートナーとデザインで<span className={'sp'}>未来を作る</span>
+        パートナーとデザインで未来を作る
       </Text>
 
-      <Text component={'p'} textStyle={'subheading'}>
-        なぜサブスクリプションなのか？
-      </Text>
+      <Box mt={Margin.m72}>
+        <Text component={'p'} textStyle={'subheading'}>
+          なぜサブスクリプションなのか？
+        </Text>
+      </Box>
 
       <Box mt={Margin.m32}>
         <Text component={'p'} textStyle={'lead'}>
@@ -184,24 +166,58 @@ export const SectionPartnerShipComponent = (props: SectionPartnerShipProps) => (
       </Box>
 
       <Box mt={Margin.m72}>
-        <Grid container spacing={4}>
-          {PartnerShipDatas.map((PartnerShipData: PartnerShip, index: number) => {
+        <Grid container spacing={2}>
+          {PartnerShipDatas.map(
+            (PartnerShipData: PartnerShip, index: number) => {
               return (
-                <Grid key={index} item md={6} sm={12} xs={12}>
-                  <Card>
-                    <p>{PartnerShipData.planName}</p>
-                    <p>こんな方におすすめ</p>
-                    <p>{PartnerShipData.recommendedCopy}</p>
-                    <p>
-                      {PartnerShipData.monthlyFee}
-                      <span>×</span>
-                      {PartnerShipData.yearContract}ヶ月
+                <Grid
+                  className={'cardWrapper'}
+                  key={index}
+                  item
+                  md={6}
+                  sm={12}
+                  xs={12}
+                >
+                  <Card className={'card'}>
+                    <p className={'planContract'}>
+                      <span>サブスクリプション契約</span>
                     </p>
-                    {PartnerShipData.planDetails.map(
-                      (planDetail, index: number) => {
-                        return <p key={index}>{planDetail}</p>
-                      },
-                    )}
+                    <p className={'planName'}>{PartnerShipData.planName}</p>
+                    <Text
+                      className={'planRecommended'}
+                      component={'p'}
+                      textStyle={'subheading'}
+                    >
+                      こんな方におすすめ
+                    </Text>
+                    <p className={'planRecommendedCopy'}>
+                      {PartnerShipData.recommendedCopy}
+                    </p>
+                    <Box className={'planContentWrapper'}>
+                      <p className={'planSubscription'}>
+                        <span className={'planNum'}>
+                          {PartnerShipData.monthlyFee}
+                        </span>
+                        <span className={'planFee'}>万円</span>
+                        <span className={'planMultiplication'}>×</span>
+                        <span className={'planNum'}>
+                          {PartnerShipData.yearContract}
+                        </span>
+                        <span className={'planMonth'}>ヶ月</span>
+                      </p>
+                      <Box component={'ul'} className={'planDetailWrapper'}>
+                        {PartnerShipData.planDetails.map(
+                          (planDetail, index: number) => {
+                            return (
+                              <li className={'planDetailList'} key={index}>
+                                <DoneIcon className={'planDetailListIcon'} />
+                                {planDetail}
+                              </li>
+                            )
+                          },
+                        )}
+                      </Box>
+                    </Box>
                   </Card>
                 </Grid>
               )
