@@ -3,6 +3,7 @@ import { MembersComponent } from './dom'
 import { FontSize } from '../../../const/FontSize'
 import { FontWeight } from '../../../const/FontWeight'
 import { Margin } from '../../../const/Margin'
+import { Colors } from '../../../const/Colors'
 
 //----------------------------------
 // styledComponent
@@ -25,5 +26,6 @@ export const MembersStyle = styled(MembersComponent)`
   .footerMembersSocialsIcon {
     line-height: 2;
     margin-left: ${Margin.m4};
+    color: ${Colors.white};
   }
 `

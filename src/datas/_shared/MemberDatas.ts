@@ -16,14 +16,13 @@ export interface Member {
 export const MemberDatas: Member[] = [
   {
     name: 'RYOHEI WADA',
-    webSitePath: '',
-    twitterPath: '',
-    facebookPath: '',
+    twitterPath: '//twitter.com/ryoppei_/',
+    facebookPath: '//www.facebook.com/wada.ryohei.3/',
   },
   {
     name: 'MASATO NAKAMURA',
-    webSitePath: '',
-    twitterPath: '',
-    facebookPath: '',
+    webSitePath: '//masatonakamura.work/',
+    twitterPath: '//twitter.com/_masatojpn/',
+    facebookPath: '//www.facebook.com/masato.nakamura.jpn/',
   },
 ]

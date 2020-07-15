@@ -1,6 +1,8 @@
 import React from 'react'
+import Link from 'next/link'
 import TwitterIcon from '@material-ui/icons/Twitter'
 import FacebookIcon from '@material-ui/icons/Facebook'
+import LanguageIcon from '@material-ui/icons/Language'
 import { Member } from '../../../datas/_shared/MemberDatas'
 
 //----------------------------------
@@ -19,10 +21,25 @@ export const MembersComponent = (props: MembersProps) => (
     {props.MemberData.name}
     <span className={'footerMembersSocialsIconWrapper'}>
       {props.MemberData.twitterPath !== undefined && (
-        <TwitterIcon className={'footerMembersSocialsIcon'} />
+        <Link href={{ pathname: props.MemberData.twitterPath }}>
+          <a target="_blank">
+            <TwitterIcon className={'footerMembersSocialsIcon'} />
+          </a>
+        </Link>
       )}
       {props.MemberData.facebookPath !== undefined && (
-        <FacebookIcon className={'footerMembersSocialsIcon'} />
+        <Link href={{ pathname: props.MemberData.facebookPath }}>
+          <a target="_blank">
+            <FacebookIcon className={'footerMembersSocialsIcon'} />
+          </a>
+        </Link>
+      )}
+      {props.MemberData.webSitePath !== undefined && (
+        <Link href={{ pathname: props.MemberData.webSitePath }}>
+          <a target="_blank">
+            <LanguageIcon className={'footerMembersSocialsIcon'} />
+          </a>
+        </Link>
       )}
     </span>
   </p>
