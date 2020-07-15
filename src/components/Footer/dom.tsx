@@ -2,6 +2,8 @@ import React from 'react'
 import { Box, Grid } from '@material-ui/core'
 import TwitterIcon from '@material-ui/icons/Twitter'
 import FacebookIcon from '@material-ui/icons/Facebook'
+import { Members } from './Members'
+import { Member, MemberDatas } from '../../datas/_shared/MemberDatas'
 
 //----------------------------------
 // props
@@ -17,7 +19,7 @@ export const FooterComponent = (props: FooterProps) => (
   <footer className={props.className}>
     <Grid container spacing={2}>
       <Grid item md={6} sm={12} xs={12}>
-        <Box className={'footerContactWrapper'}>
+        <div className={'footerContactWrapper'}>
           <h2 className={'footerContactHeading'}>Contact</h2>
           <p className={'footerContactLead'}>
             <span>パートナー様のデザイン課題をお待ちしております。</span>
@@ -25,38 +27,29 @@ export const FooterComponent = (props: FooterProps) => (
               プロダクトの開発やブランドの構築などなんでもお気軽にご相談ください。
             </span>
           </p>
-        </Box>
+        </div>
       </Grid>
 
       <Grid item md={6} sm={12} xs={12}>
-        <Box className={'footerSocialWrapper'}>
+        <div className={'footerSocialWrapper'}>
           <p className={'footerSocials'}>
             <span className={'footerSocialsHeading'}>Social</span>
             <hr />
-            <Box component={'span'} className={'footerSocialIconsWrapper'}>
+            <span className={'footerSocialIconsWrapper'}>
               <TwitterIcon className={'footerSocialsIcon'} />
               <FacebookIcon className={'footerSocialsIcon'} />
-            </Box>
+            </span>
           </p>
-        </Box>
+        </div>
 
-        <Box className={'footerMembersWrapper'}>
+        <div className={'footerMembersWrapper'}>
           <p className={'footerMembersHeading'}>Paletto Members</p>
-          <Box className={'footerMembers'}>
-            <p>
-              RYOHEI WADA
-              <span className={'footerMembersSocialsIconWrapper'}>
-                <TwitterIcon className={'footerMembersSocialsIcon'} />
-              </span>
-            </p>
-            <p>
-              MASATO NAKAMURA
-              <span className={'footerMembersSocialsIconWrapper'}>
-                <TwitterIcon className={'footerMembersSocialsIcon'} />
-              </span>
-            </p>
-          </Box>
-        </Box>
+          <div className={'footerMembers'}>
+            {MemberDatas.map((MemberData: Member, index: number) => {
+              return <Members key={index} MemberData={MemberData} />
+            })}
+          </div>
+        </div>
       </Grid>
 
       <Box className={'footerCopyWrapper'}>

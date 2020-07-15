@@ -1,8 +1,10 @@
 import styled from 'styled-components'
 import { CardComponent } from './dom'
-// import { BreakPoints, max } from '../../const/BreakPoints'
 import { Colors } from '../../const/Colors'
 
+//----------------------------------
+// styledComponent
+//----------------------------------
 export const CardStyle = styled(CardComponent)`
   position: relative;
   display: flex;

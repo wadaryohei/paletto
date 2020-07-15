@@ -37,35 +37,45 @@ export const HeroDatas: Hero = {
 }
 
 //----------------------------------
-// NavMenuDatas
+// SectionHeadingDatas
 //----------------------------------
-export interface NavMenu {
-  pathName: string
-  menuName: string
+export interface SectionHeading {
+  SectionVision: {
+    headingEn: string
+    headingJp: string
+  }
+  sectionAnnounce: {
+    headingEn: string
+    headingJp: string
+  }
+  sectionService: {
+    headingEn: string
+    headingJp: string
+  }
+  sectionPlans: {
+    headingEn: string
+    headingJp: string
+  }
 }
 
-export const NavMenuDatas: NavMenu[] = [
-  {
-    pathName: '/',
-    menuName: 'Vision',
+export const SectionHeadingDatas: SectionHeading = {
+  SectionVision: {
+    headingEn: 'Vision',
+    headingJp: '感情を動かすデザインを',
   },
-  {
-    pathName: '/',
-    menuName: 'Why Emotional',
+  sectionAnnounce: {
+    headingEn: 'Approach.',
+    headingJp: '当たり前のその先へ',
   },
-  {
-    pathName: '/',
-    menuName: 'Services',
+  sectionService: {
+    headingEn: 'Serivces',
+    headingJp: '私達ができること',
   },
-  {
-    pathName: '/',
-    menuName: 'PartnerShip',
+  sectionPlans: {
+    headingEn: 'Plans',
+    headingJp: 'パートナーとデザインで未来を作る',
   },
-  {
-    pathName: '/',
-    menuName: 'Contact',
-  },
-]
+}
 
 //----------------------------------
 // ServicesDatas
@@ -100,9 +110,9 @@ export const ServicesDatas: Services[] = [
 ]
 
 //----------------------------------
-// PartnerShipDatas
+// PlanDatas
 //----------------------------------
-export interface PartnerShip {
+export interface Plan {
   planName: string
   recommendedCopy: string
   monthlyFee: number
@@ -111,7 +121,7 @@ export interface PartnerShip {
   leadTime: number
 }
 
-export const PartnerShipDatas: PartnerShip[] = [
+export const PlanDatas: Plan[] = [
   {
     planName: 'スタンダードプラン',
     recommendedCopy: 'スピード重視でプロトタイプやリサーチを行いたい方',

@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { NavMenu } from '../../datas/IndexDatas'
+import { NavMenu } from '../../datas/_shared/NavMenuDatas'
 
 //----------------------------------
 // props

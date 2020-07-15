@@ -1,5 +1,1 @@
 export { IndexContainerStyle as IndexContainer } from './style'
-export { SectionVisionStyle as SectionVision } from './style'
-export { SectionAnnounceStyle as SectionAnnounce } from './style'
-export { SectionServiceStyle as SectionService } from './style'
-export { SectionPlansStyle as SectionPlans } from './style'
