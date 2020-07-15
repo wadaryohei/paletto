@@ -124,6 +124,19 @@ export const FooterStyle = styled(FooterComponent)`
         font-weight: ${FontWeight.thin};
         letter-spacing: 4px;
       }
+
+      .footerMembersSocialsIconWrapper {
+        vertical-align: middle;
+        margin-left: ${Margin.m8};
+        svg {
+          width: 16px;
+          height: 16px;
+        }
+      }
+
+      .footerMembersSocialsIcon {
+        line-height: 2;
+      }
     }
   }
 `

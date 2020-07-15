@@ -41,10 +41,20 @@ export const FooterComponent = (props: FooterProps) => (
         </Box>
 
         <Box className={'footerMembersWrapper'}>
-          <p className={'footerMembersHeading'}>MEMBERS</p>
+          <p className={'footerMembersHeading'}>Paletto Members</p>
           <Box className={'footerMembers'}>
-            <p>RYOHEI WADA</p>
-            <p>MASATO NAKAMURA</p>
+            <p>
+              RYOHEI WADA
+              <span className={'footerMembersSocialsIconWrapper'}>
+                <TwitterIcon className={'footerMembersSocialsIcon'} />
+              </span>
+            </p>
+            <p>
+              MASATO NAKAMURA
+              <span className={'footerMembersSocialsIconWrapper'}>
+                <TwitterIcon className={'footerMembersSocialsIcon'} />
+              </span>
+            </p>
           </Box>
         </Box>
       </Grid>
