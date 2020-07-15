@@ -72,7 +72,9 @@ export const NavMenuDatas: NavMenu[] = [
 //----------------------------------
 export interface Services {
   num: string
-  title: string
+  bgPathName: string
+  titleEn: string
+  titleJp: string
   copy: string
   lead: string
 }
@@ -80,24 +82,20 @@ export interface Services {
 export const ServicesDatas: Services[] = [
   {
     num: '01',
-    title: 'Solved',
+    bgPathName: '/cardbg_01.jpg',
+    titleEn: 'Design partnerships',
+    titleJp: 'デザインパートナー事業',
     copy: 'デザインで多種多様なビジネス課題を解決します。',
-    lead:
-      '私達はパートナーのプロダクト開発、新規事業立ち上げ、ブランド構築、組織支援など、クライアント企業の様々なビジネス課題をデザインの力で解決します。',
+    lead: `デジタルプロダクト開発（UI/UXデザイン）を強みに置き、新規事業立ち上げ、ブランド構築、デザイン組織支援などあらゆるビジネス課題にコミットします。\nクライアントと一緒に一つのチームとなり並走するデザインパートナーです。\nアウトプットの納品だけでなく、デザインの文化がクライアント組織に根付いてゆくことを目指します。`,
   },
   {
     num: '02',
-    title: 'Creative',
+    bgPathName: '/cardbg_02.jpg',
+    titleEn: 'Web Creative PartnerShips',
+    titleJp: 'Web制作パートナー事業',
     copy: '一貫したクオリティと多岐に渡るクリエイティブを提供。',
     lead:
-      '私達はデザイン企業ですが、それだけではありません。開発、映像制作、広告も。VIの制作から、印刷物、ウェブサイト制作などワンストップで制作致します。',
-  },
-  {
-    num: '03',
-    title: 'Maintenable',
-    copy: '更新・管理・運用。すべてを任せられるパートナー。',
-    lead:
-      '制作したものを長期的な更新・管理・運用のすべてを承ります。ウェブや印刷物といった多岐に渡る媒体全てでの運用をすることが可能です。',
+      '私達はデザイン企業ですが、それだけではありません。開発、映像制作、広告も。VIの制作から、印刷物、ウェブサイト制作などワンストップで制作致します。\nWordPressのようなCMS構築からJamStackのようなモダンな技術での制作をしていきます。',
   },
 ]
 

@@ -35,7 +35,7 @@ export const SectionVisionStyle = styled(SectionVisionComponent)`
   padding: ${Padding.p160} ${Padding.p16} 0;
 
   .visionWrapper {
-    padding: ${Padding.p112} ${Padding.p32} 0;
+    padding: ${Padding.p112} ${Padding.p72} 0;
     margin: ${Margin.m72} ${Margin.m32};
     position: relative;
 
@@ -67,7 +67,11 @@ export const SectionAnnounceStyle = styled(SectionAnnounceComponent)`
   position: relative;
   background-color: ${Colors.primary};
   width: 100%;
-  padding: ${Padding.p72};
+  padding: ${Padding.p112} ${Padding.p72};
+
+  @media ${max(BreakPoints.md)} {
+    padding: ${Padding.p112} ${Padding.p24};
+  }
 
   > .announceWrapper {
     display: flex;
@@ -88,7 +92,7 @@ export const SectionAnnounceStyle = styled(SectionAnnounceComponent)`
 
       @media ${max(BreakPoints.md)} {
         font-size: ${FontSize.lg};
-        text-indent: -16px;
+        text-indent: -32px;
       }
     }
 

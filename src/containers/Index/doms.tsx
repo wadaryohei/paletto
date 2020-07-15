@@ -116,9 +116,15 @@ export const SectionServiceComponent = (props: SectionServiceProps) => (
       </Box>
     </Container>
     <Box className={'cardWrapper'} mt={Margin.m56}>
-      {ServicesDatas.map((ServicesData: Services, index: number) => {
-        return <ServiceCard key={index} ServicesData={ServicesData} />
-      })}
+      <Grid container spacing={4}>
+        {ServicesDatas.map((ServicesData: Services, index: number) => {
+          return (
+            <Grid key={index} item md={6} xs={12}>
+              <ServiceCard ServicesData={ServicesData} />
+            </Grid>
+          )
+        })}
+      </Grid>
     </Box>
   </Section>
 )
