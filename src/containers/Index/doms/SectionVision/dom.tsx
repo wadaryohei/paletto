@@ -21,7 +21,7 @@ export const SectionVisionComponent = (props: SectionVisionProps) => (
         {SectionHeadingDatas.SectionVision.headingEn}
       </Text>
       <Text component={'p'} textStyle={'copy'}>
-      {SectionHeadingDatas.SectionVision.headingJp}
+        {SectionHeadingDatas.SectionVision.headingJp}
       </Text>
 
       <div className={'visionLeadWrapper'}>
