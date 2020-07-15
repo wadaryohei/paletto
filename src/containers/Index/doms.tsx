@@ -7,8 +7,8 @@ import { ServiceCard } from '../../components/ServiceCard'
 import {
   Services,
   ServicesDatas,
-  PartnerShip,
-  PartnerShipDatas,
+  Plan,
+  PlanDatas,
 } from '../../datas/IndexDatas'
 import { Card } from '../../components/Card'
 
@@ -170,55 +170,47 @@ export const SectionPlansComponent = (props: SectionPlansProps) => (
 
       <div className={'plansCardWrapper'}>
         <Grid container spacing={2}>
-          {PartnerShipDatas.map(
-            (PartnerShipData: PartnerShip, index: number) => {
-              return (
-                <Grid key={index} item md={6} sm={12} xs={12}>
-                  <Card className={'plansCard'}>
-                    <p className={'planContract'}>
-                      <span>サブスクリプション契約</span>
+          {PlanDatas.map((PlanData: Plan, index: number) => {
+            return (
+              <Grid key={index} item md={6} sm={12} xs={12}>
+                <Card className={'plansCard'}>
+                  <p className={'planContract'}>
+                    <span>サブスクリプション契約</span>
+                  </p>
+                  <p className={'planName'}>{PlanData.planName}</p>
+                  <Text
+                    className={'planRecommended'}
+                    component={'p'}
+                    textStyle={'subheading'}
+                  >
+                    こんな方におすすめ
+                  </Text>
+                  <p className={'planRecommendedCopy'}>
+                    {PlanData.recommendedCopy}
+                  </p>
+                  <div className={'planContentWrapper'}>
+                    <p className={'planSubscription'}>
+                      <span className={'planNum'}>{PlanData.monthlyFee}</span>
+                      <span className={'planFee'}>万円</span>
+                      <span className={'planMultiplication'}>×</span>
+                      <span className={'planNum'}>{PlanData.yearContract}</span>
+                      <span className={'planMonth'}>ヶ月</span>
                     </p>
-                    <p className={'planName'}>{PartnerShipData.planName}</p>
-                    <Text
-                      className={'planRecommended'}
-                      component={'p'}
-                      textStyle={'subheading'}
-                    >
-                      こんな方におすすめ
-                    </Text>
-                    <p className={'planRecommendedCopy'}>
-                      {PartnerShipData.recommendedCopy}
-                    </p>
-                    <div className={'planContentWrapper'}>
-                      <p className={'planSubscription'}>
-                        <span className={'planNum'}>
-                          {PartnerShipData.monthlyFee}
-                        </span>
-                        <span className={'planFee'}>万円</span>
-                        <span className={'planMultiplication'}>×</span>
-                        <span className={'planNum'}>
-                          {PartnerShipData.yearContract}
-                        </span>
-                        <span className={'planMonth'}>ヶ月</span>
-                      </p>
-                      <ul className={'planDetailWrapper'}>
-                        {PartnerShipData.planDetails.map(
-                          (planDetail, index: number) => {
-                            return (
-                              <li className={'planDetailList'} key={index}>
-                                <DoneIcon className={'planDetailListIcon'} />
-                                {planDetail}
-                              </li>
-                            )
-                          },
-                        )}
-                      </ul>
-                    </div>
-                  </Card>
-                </Grid>
-              )
-            },
-          )}
+                    <ul className={'planDetailWrapper'}>
+                      {PlanData.planDetails.map((planDetail, index: number) => {
+                        return (
+                          <li className={'planDetailList'} key={index}>
+                            <DoneIcon className={'planDetailListIcon'} />
+                            {planDetail}
+                          </li>
+                        )
+                      })}
+                    </ul>
+                  </div>
+                </Card>
+              </Grid>
+            )
+          })}
         </Grid>
       </div>
     </Container>

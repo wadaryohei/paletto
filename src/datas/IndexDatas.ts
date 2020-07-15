@@ -100,9 +100,9 @@ export const ServicesDatas: Services[] = [
 ]
 
 //----------------------------------
-// PartnerShipDatas
+// PlanDatas
 //----------------------------------
-export interface PartnerShip {
+export interface Plan {
   planName: string
   recommendedCopy: string
   monthlyFee: number
@@ -111,7 +111,7 @@ export interface PartnerShip {
   leadTime: number
 }
 
-export const PartnerShipDatas: PartnerShip[] = [
+export const PlanDatas: Plan[] = [
   {
     planName: 'スタンダードプラン',
     recommendedCopy: 'スピード重視でプロトタイプやリサーチを行いたい方',
