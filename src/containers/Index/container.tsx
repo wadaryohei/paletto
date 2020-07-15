@@ -3,6 +3,7 @@ import { HeroDatas } from '../../datas/IndexDatas'
 import { Box } from '@material-ui/core'
 import { Hero } from '../../components/Hero'
 import { Header } from '../../components/Header'
+import { Footer } from '../../components/Footer'
 import {
   SectionVision,
   SectionAnnounce,
@@ -44,6 +45,8 @@ const IndexContainer = (props: IndexProps) => (
         {/** @section Plans */}
         <SectionPlans />
       </main>
+
+      <Footer />
     </Box>
   </>
 )
