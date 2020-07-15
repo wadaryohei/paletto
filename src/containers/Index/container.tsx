@@ -24,7 +24,7 @@ export interface IndexProps {
 const IndexContainer = (props: IndexProps) => (
   <>
     <Box className={props.className}>
-      <Header className={'header'} />
+      <Header />
       <Hero
         imgPath={HeroDatas.imgPath}
         siteName={HeroDatas.siteName}
@@ -34,16 +34,16 @@ const IndexContainer = (props: IndexProps) => (
 
       <main>
         {/** @section Vision */}
-        <SectionVision />
+        <SectionVision className={'l-vision'} />
 
         {/** @section Announce */}
-        <SectionAnnounce />
+        <SectionAnnounce className={'l-announce'} />
 
         {/** @section Service */}
-        <SectionService />
+        <SectionService className={'l-service'} />
 
         {/** @section Plans */}
-        <SectionPlans />
+        <SectionPlans className={'l-plans'} />
       </main>
 
       <Footer />

@@ -1,10 +1,9 @@
 import React from 'react'
-import { Box, Container, Grid } from '@material-ui/core'
-import DoneIcon from '@material-ui/icons/Done';
+import { Container, Grid } from '@material-ui/core'
+import DoneIcon from '@material-ui/icons/Done'
 import { Section } from '../../components/Section'
 import { Text } from '../../components/Text'
 import { ServiceCard } from '../../components/ServiceCard'
-import { Margin } from '../../const/Margin'
 import {
   Services,
   ServicesDatas,

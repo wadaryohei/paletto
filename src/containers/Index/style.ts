@@ -18,17 +18,35 @@ import { FontWeight } from '../../const/FontWeight'
 //--------------------------------------
 export const IndexContainerStyle = styled(IndexContainer)`
   position: relative;
-  > .header {
-    position: absolute;
-    top: 2%;
-    left: 6%;
-    z-index: 1;
-    display: flex;
-    align-items: center;
+
+  /**
+   * 各レイアウトのスタイル
+   */
+  .l-vision {
+    padding: ${Padding.p160} 0 0;
 
     @media ${max(BreakPoints.md)} {
-      left: 10%;
+      padding-bottom: 0;
     }
+  }
+
+  .l-announce {
+    position: relative;
+    background-color: ${Colors.primary};
+    width: 100%;
+    padding: ${Padding.p112} ${Padding.p72};
+
+    @media ${max(BreakPoints.md)} {
+      padding: ${Padding.p112} ${Padding.p16};
+    }
+  }
+
+  .l-service {
+    margin-top: ${Margin.m160};
+  }
+
+  .l-plans {
+    padding: ${Padding.p160} ${Padding.p16};
   }
 `
 
@@ -36,12 +54,6 @@ export const IndexContainerStyle = styled(IndexContainer)`
 // IndexページのVisionセクションのスタイル
 //--------------------------------------
 export const SectionVisionStyle = styled(SectionVisionComponent)`
-  padding: ${Padding.p160} 0 0;
-
-  @media ${max(BreakPoints.md)} {
-    padding-bottom: 0;
-  }
-
   .visionLeadWrapper {
     position: relative;
     padding: ${Padding.p112} ${Padding.p72} 0;
@@ -75,15 +87,6 @@ export const SectionVisionStyle = styled(SectionVisionComponent)`
 // IndexページのAnnounceセクションのスタイル
 //--------------------------------------
 export const SectionAnnounceStyle = styled(SectionAnnounceComponent)`
-  position: relative;
-  background-color: ${Colors.primary};
-  width: 100%;
-  padding: ${Padding.p112} ${Padding.p72};
-
-  @media ${max(BreakPoints.md)} {
-    padding: ${Padding.p112} ${Padding.p16};
-  }
-
   .announceWrapper {
     display: flex;
     align-items: center;
@@ -151,8 +154,6 @@ export const SectionAnnounceStyle = styled(SectionAnnounceComponent)`
 // IndexページのServicesセクションのスタイル
 //--------------------------------------
 export const SectionServiceStyle = styled(SectionServiceComponent)`
-  margin-top: ${Margin.m160};
-
   .serviceLeadWrapper {
     margin-top: ${Margin.m72};
   }
@@ -183,8 +184,6 @@ export const SectionServiceStyle = styled(SectionServiceComponent)`
 // IndexページのPlansセクションのスタイル
 //--------------------------------------
 export const SectionPlansStyle = styled(SectionPlansComponent)`
-  padding: ${Padding.p160} ${Padding.p16};
-
   .plansSubHeadingWrapper {
     margin-top: ${Margin.m72};
   }
