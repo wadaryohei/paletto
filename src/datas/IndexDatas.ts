@@ -37,37 +37,6 @@ export const HeroDatas: Hero = {
 }
 
 //----------------------------------
-// NavMenuDatas
-//----------------------------------
-export interface NavMenu {
-  pathName: string
-  menuName: string
-}
-
-export const NavMenuDatas: NavMenu[] = [
-  {
-    pathName: '/',
-    menuName: 'Vision',
-  },
-  {
-    pathName: '/',
-    menuName: 'Why Emotional',
-  },
-  {
-    pathName: '/',
-    menuName: 'Services',
-  },
-  {
-    pathName: '/',
-    menuName: 'PartnerShip',
-  },
-  {
-    pathName: '/',
-    menuName: 'Contact',
-  },
-]
-
-//----------------------------------
 // ServicesDatas
 //----------------------------------
 export interface Services {

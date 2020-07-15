@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import { Box, Typography } from '@material-ui/core'
 import { Nav } from '../Nav'
-import { NavMenuDatas } from '../../datas/IndexDatas'
+import { NavMenuDatas } from '../../datas/_shared/NavMenuDatas'
 
 //----------------------------------
 // props
