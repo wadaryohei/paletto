@@ -58,6 +58,10 @@ export const FooterComponent = (props: FooterProps) => (
           </Box>
         </Box>
       </Grid>
+
+      <Box className={'footerCopyWrapper'}>
+        <p>2020 Paletto.</p>
+      </Box>
     </Grid>
   </footer>
 )

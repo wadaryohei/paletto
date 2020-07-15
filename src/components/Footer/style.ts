@@ -139,4 +139,13 @@ export const FooterStyle = styled(FooterComponent)`
       }
     }
   }
+
+  .footerCopyWrapper {
+    display: block;
+    width: 100%;
+    font-size: ${FontSize.md};
+    font-family: 'Renner*', sans-serif;
+    text-align: center;
+    color: ${Colors.white};
+  }
 `
