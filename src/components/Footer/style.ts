@@ -38,6 +38,8 @@ export const FooterStyle = styled(FooterComponent)`
     .footerContactLead {
       margin-top: ${Margin.m16};
       font-size: ${FontSize.sm};
+      font-weight: ${FontWeight.bold};
+      color: ${Colors.primary};
       line-height: 1.6;
       span {
         display: block;
