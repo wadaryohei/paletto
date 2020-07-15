@@ -2,8 +2,7 @@ import styled from 'styled-components'
 import IndexContainer from './container'
 import {
   SectionVisionComponent,
-  SectionWhyEmotionalBgComponent,
-  SectionWhyEmotionalComponent,
+  SectionAnnounceComponent,
   SectionServiceComponent,
   SectionPartnerShipComponent,
 } from './doms'
@@ -11,6 +10,7 @@ import { BreakPoints, max } from '../../const/BreakPoints'
 import { Padding } from '../../const/Padding'
 import { Colors } from '../../const/Colors'
 import { Margin } from '../../const/Margin'
+import { FontSize } from '../../const/FontSize'
 
 //----------------------------------
 // styledComponent
@@ -32,10 +32,10 @@ export const IndexContainerStyle = styled(IndexContainer)`
 `
 
 export const SectionVisionStyle = styled(SectionVisionComponent)`
-  padding: ${Padding.p160} ${Padding.p16};
+  padding: ${Padding.p160} ${Padding.p16} 0;
 
   .visionWrapper {
-    padding: ${Padding.p112} ${Padding.p32};
+    padding: ${Padding.p112} ${Padding.p32} 0;
     margin: ${Margin.m72} ${Margin.m32};
     position: relative;
 
@@ -48,11 +48,12 @@ export const SectionVisionStyle = styled(SectionVisionComponent)`
       content: '';
       display: block;
       width: 1px;
-      height: 100%;
+      height: 140%;
       background-color: ${Colors.black};
       position: absolute;
       top: 0;
       left: 0;
+      z-index: 1;
       transform: rotate(180deg);
 
       @media ${max(BreakPoints.md)} {
@@ -62,36 +63,43 @@ export const SectionVisionStyle = styled(SectionVisionComponent)`
   }
 `
 
-export const SectionWhyEmotionalBgStyle = styled(
-  SectionWhyEmotionalBgComponent,
-)`
+export const SectionAnnounceStyle = styled(SectionAnnounceComponent)`
+  position: relative;
+  background-color: ${Colors.primary};
   width: 100%;
+  padding: ${Padding.p72};
 
-  > .box {
-    margin-left: auto;
-    position: relative;
-    text-align: right;
-    max-width: calc(100% - 100% / 4);
-    background-color: ${Colors.primary};
-    height: 320px;
+  > .announceWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    @media ${max(BreakPoints.md)} {
-      height: 160px;
+    .announceHeading {
+      border: solid 8px ${Colors.white};
+      padding: ${Padding.p112};
+      font-size: ${FontSize.xl};
+      font-family: 'Renner*', sans-serif;
+      text-align: center;
+
+      @media ${max(BreakPoints.xl)} {
+        font-size: ${FontSize.xl};
+        text-indent: -10px;
+      }
+
+      @media ${max(BreakPoints.md)} {
+        font-size: ${FontSize.lg};
+        text-indent: -16px;
+      }
     }
 
-    > h2 {
-      position: absolute;
-      bottom: -8px;
-      right: 32px;
+    .announceLead {
+      color: ${Colors.white};
     }
   }
 `
 
-export const SectionWhyEmotionalStyle = styled(SectionWhyEmotionalComponent)`
-  padding: ${Padding.p160} ${Padding.p16};
-`
-
 export const SectionServiceStyle = styled(SectionServiceComponent)`
+  padding: ${Padding.p160} ${Padding.p16};
   > .cardWrapper {
     width: 100%;
     display: flex;

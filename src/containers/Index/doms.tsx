@@ -19,11 +19,7 @@ export interface SectionVisionProps {
   className?: string
 }
 
-export interface SectionWhyEmotionalBgProps {
-  className?: string
-}
-
-export interface SectionWhyEmotionalProps {
+export interface SectionAnnounceProps {
   className?: string
 }
 
@@ -66,70 +62,38 @@ export const SectionVisionComponent = (props: SectionVisionProps) => (
   </Section>
 )
 
-/** @section Why Emotional Bg */
-export const SectionWhyEmotionalBgComponent = (
-  props: SectionWhyEmotionalBgProps,
-) => (
+/** @section Announce */
+export const SectionAnnounceComponent = (props: SectionAnnounceProps) => (
   <Section className={props.className}>
-    <Box className={'box'}>
-      <Text component={'h2'} textStyle={'accentheading'}>
-        Why Emotional
-      </Text>
-    </Box>
-  </Section>
-)
-
-/** @section Why Emotional */
-export const SectionWhyEmotionalComponent = (
-  props: SectionWhyEmotionalProps,
-) => (
-  <Section className={props.className}>
-    <Container maxWidth={'md'}>
-      <div>
-        <Text component={'h2'} textStyle={'heading'}>
-          Why Emotional
+    <Grid className={'announceWrapper'} container spacing={4}>
+      <Grid item md={6} sm={12} xs={12}>
+        <Text
+          className={'announceHeading'}
+          component={'h2'}
+          textStyle={'accentheading'}
+        >
+          Approach.
         </Text>
-        <Text component={'p'} textStyle={'copy'}>
-          感情をデザインするということ
+      </Grid>
+      <Grid item md={6} sm={12} xs={12}>
+        <Text component={'h2'} textStyle={'accentheading'}>
+          当たり前のその先へ
         </Text>
-
-        <Box mt={Margin.m72}>
-          <Text component={'p'} textStyle={'subheading'}>
-            なぜエモーショナルなのか？
+        <Box mt={Margin.m32}>
+          <Text className={'announceLead'} component={'p'} textStyle={'lead'}>
+            <span>
+              ビジネス的なゴールや課題解決はもはや当たり前の時代になりました。
+            </span>
+            <span>
+              私達は「当たり前のその先」にあるユーザーの感情を動かすデザインに取り組みます。
+            </span>
+            <span>
+              このプロダクト、このお店、このサービスだからこそ使いたいと思えるデザインを作っていきます。
+            </span>
           </Text>
-          <Box mt={Margin.m40}>
-            <Text component={'p'} textStyle={'lead'}>
-              <span>
-                デザインにおいて「課題解決」や「ユーザビリティ」が大事なのは明白です。
-              </span>
-              <span>
-                ですが、そういったことが当たり前になりつつある世界ではどうでしょうか？
-              </span>
-              <span>それだけでは充分と言えません。</span>
-              <span>
-                また、人が物やサービスを使おうと思うのは何故でしょうか？
-              </span>
-              <span>そこには必ず「感情」が存在します。</span>
-            </Text>
-          </Box>
         </Box>
-
-        <Box mt={Margin.m72}>
-          <Text component={'p'} textStyle={'subheading'}>
-            感情をデザインすること
-          </Text>
-          <Box mt={Margin.m40}>
-            <Text component={'p'} textStyle={'lead'}>
-              <span>人は「感情」に基づき行動する生き物です。</span>
-              <span>感情が変われば、思考と行動が変わります。</span>
-              <span>
-                感情をデザインすることで、「人や組織、プロダクトやサービス」を最高のモノへと変えていくことが可能だと考えています。
-              </span>
-            </Text>
-          </Box>
-        </Box>
-      </div>
-    </Container>
+      </Grid>
+    </Grid>
   </Section>
 )
 
@@ -145,9 +109,8 @@ export const SectionServiceComponent = (props: SectionServiceProps) => (
       </Text>
       <Box mt={Margin.m72}>
         <Text component={'p'} textStyle={'lead'}>
-          <span>デザインから制作・運用までを一気貫通で担当いたします。</span>
           <span>
-            デザインだけでなく、WordPressやJasmStackといった制作手法を用いた幅広い制作が可能です。
+            デジタル領域の課題に対して、システム開発、マーケティング、データ解析など一気通貫のデジタルコンサルティングサービスと、デジタルプロフェッショナルとプロジェクトをマッチングするプラットフォームを展開しています。
           </span>
         </Text>
       </Box>

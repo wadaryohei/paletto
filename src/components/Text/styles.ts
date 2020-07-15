@@ -78,9 +78,9 @@ export const TextStyle = styled(TextComponent)`
   }
 
   &.accentheading {
-    font-size: ${FontSize.xl};
+    font-size: ${FontSize.lg};
     font-weight: ${FontWeight.bold};
-    color: ${Colors.secondary};
+    color: ${Colors.white};
     line-height: 2.4rem;
 
     @media ${max(BreakPoints.md)} {
@@ -91,7 +91,7 @@ export const TextStyle = styled(TextComponent)`
   &.lead {
     font-size: ${FontSize.sm};
     color: ${Colors.black};
-    line-height: 4.8rem;
+    line-height: 4.4rem;
 
     @media ${max(BreakPoints.md)} {
       font-size: ${FontSize.xs};
