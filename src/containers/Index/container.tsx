@@ -1,13 +1,11 @@
 import React from 'react'
 import { HeroDatas } from '../../datas/IndexDatas'
-import { Box } from '@material-ui/core'
 import { Hero } from '../../components/Hero'
-import { Header } from '../../components/Header'
-import { Footer } from '../../components/Footer'
 import { SectionVision } from './doms/SectionVision'
 import { SectionAnnounce } from './doms/SectionAnnounce'
 import { SectionService } from './doms/SectionService'
 import { SectionPlans } from './doms/SectionPlans'
+import { BaseLayout } from '../../components/_shared/BaseLayout'
 
 //----------------------------------
 // props
@@ -20,33 +18,26 @@ export interface IndexProps {
 // component
 //----------------------------------
 const IndexContainer = (props: IndexProps) => (
-  <>
-    <Box className={props.className}>
-      <Header />
-      <Hero
-        imgPath={HeroDatas.imgPath}
-        siteName={HeroDatas.siteName}
-        copyEn={HeroDatas.copyEn}
-        copyJp={HeroDatas.copyJp}
-      />
+  <BaseLayout className={props.className}>
+    {/** @section Hero */}
+    <Hero
+      imgPath={HeroDatas.imgPath}
+      siteName={HeroDatas.siteName}
+      copyEn={HeroDatas.copyEn}
+      copyJp={HeroDatas.copyJp}
+    />
+    {/** @section Vision */}
+    <SectionVision className={'l-vision'} />
 
-      <main>
-        {/** @section Vision */}
-        <SectionVision className={'l-vision'} />
+    {/** @section Announce */}
+    <SectionAnnounce className={'l-announce'} />
 
-        {/** @section Announce */}
-        <SectionAnnounce className={'l-announce'} />
+    {/** @section Service */}
+    <SectionService className={'l-service'} />
 
-        {/** @section Service */}
-        <SectionService className={'l-service'} />
-
-        {/** @section Plans */}
-        <SectionPlans className={'l-plans'} />
-      </main>
-
-      <Footer />
-    </Box>
-  </>
+    {/** @section Plans */}
+    <SectionPlans className={'l-plans'} />
+  </BaseLayout>
 )
 
 export default IndexContainer
