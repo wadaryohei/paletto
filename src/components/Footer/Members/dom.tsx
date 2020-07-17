@@ -29,15 +29,15 @@ export const MembersComponent = (props: MembersProps) => (
       )}
       {props.MemberData.facebookPath !== undefined && (
         <Link href={{ pathname: props.MemberData.facebookPath }}>
-          <a target="_blank">
-            <FacebookIcon className={'footerMembersSocialsIcon'} />
+          <a target="_blank" className={'footerMembersSocialsIcon'}>
+            <FacebookIcon />
           </a>
         </Link>
       )}
       {props.MemberData.webSitePath !== undefined && (
         <Link href={{ pathname: props.MemberData.webSitePath }}>
-          <a target="_blank">
-            <LanguageIcon className={'footerMembersSocialsIcon'} />
+          <a target="_blank" className={'footerMembersSocialsIcon'}>
+            <LanguageIcon />
           </a>
         </Link>
       )}

@@ -4,6 +4,7 @@ import { FontSize } from '../../../const/FontSize'
 import { FontWeight } from '../../../const/FontWeight'
 import { Margin } from '../../../const/Margin'
 import { Colors } from '../../../const/Colors'
+import { hover, unHover } from '../../../const/Transition'
 
 //----------------------------------
 // styledComponent
@@ -17,6 +18,7 @@ export const MembersStyle = styled(MembersComponent)`
   .footerMembersSocialsIconWrapper {
     vertical-align: middle;
     margin-left: ${Margin.m8};
+
     svg {
       width: 16px;
       height: 16px;
@@ -27,5 +29,11 @@ export const MembersStyle = styled(MembersComponent)`
     line-height: 2;
     margin-left: ${Margin.m4};
     color: ${Colors.white};
+    transition: ${unHover(240)};
+
+    &:hover {
+      color: ${Colors.secondary};
+      transition: ${hover(80)};
+    }
   }
 `
