@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import { Box, Grid } from '@material-ui/core'
 import TwitterIcon from '@material-ui/icons/Twitter'
 import FacebookIcon from '@material-ui/icons/Facebook'
@@ -19,15 +20,19 @@ export const FooterComponent = (props: FooterProps) => (
   <footer className={props.className}>
     <Grid container spacing={2}>
       <Grid item md={6} sm={12} xs={12}>
-        <div className={'footerContactWrapper'}>
-          <h2 className={'footerContactHeading'}>Contact</h2>
-          <p className={'footerContactLead'}>
-            <span>パートナー様のデザイン課題をお待ちしております。</span>
-            <span>
-              プロダクトの開発やブランドの構築などなんでもお気軽にご相談ください。
-            </span>
-          </p>
-        </div>
+        <Link href={{ pathname: '/contact' }}>
+          <a className={'footerContactLink'}>
+            <div className={'footerContactWrapper'}>
+              <h2 className={'footerContactHeading'}>Contact</h2>
+              <p className={'footerContactLead'}>
+                <span>パートナー様のデザイン課題をお待ちしております。</span>
+                <span>
+                  プロダクトの開発やブランドの構築などなんでもお気軽にご相談ください。
+                </span>
+              </p>
+            </div>
+          </a>
+        </Link>
       </Grid>
 
       <Grid item md={6} sm={12} xs={12}>
