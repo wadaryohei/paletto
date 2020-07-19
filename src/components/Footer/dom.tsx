@@ -37,14 +37,16 @@ export const FooterComponent = (props: FooterProps) => (
 
       <Grid item md={6} sm={12} xs={12}>
         <div className={'footerSocialWrapper'}>
-          <p className={'footerSocials'}>
+          <div className={'footerSocials'}>
             <span className={'footerSocialsHeading'}>Social</span>
             <hr />
-            <span className={'footerSocialIconsWrapper'}>
-              <TwitterIcon className={'footerSocialsIcon'} />
-              <FacebookIcon className={'footerSocialsIcon'} />
-            </span>
-          </p>
+            <p className={'footerSocials'}>
+              <span className={'footerSocialIconsWrapper'}>
+                <TwitterIcon className={'footerSocialsIcon'} />
+                <FacebookIcon className={'footerSocialsIcon'} />
+              </span>
+            </p>
+          </div>
         </div>
 
         <div className={'footerMembersWrapper'}>
