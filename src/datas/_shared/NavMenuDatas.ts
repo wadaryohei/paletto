@@ -18,15 +18,7 @@ export const NavMenuDatas: NavMenu[] = [
   },
   {
     pathName: '/',
-    menuName: 'Why Emotional',
-  },
-  {
-    pathName: '/',
     menuName: 'Services',
-  },
-  {
-    pathName: '/',
-    menuName: 'PartnerShip',
   },
   {
     pathName: '/',

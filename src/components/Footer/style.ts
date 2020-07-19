@@ -13,7 +13,7 @@ import { hover, unHover } from '../../const/Transition'
 //----------------------------------
 export const FooterStyle = styled(FooterComponent)`
   width: 100%;
-  background-color: ${Colors.primary};
+  background-color: ${Colors.black};
   padding: ${Padding.p64};
 
   @media ${max(BreakPoints.md)} {
@@ -24,38 +24,14 @@ export const FooterStyle = styled(FooterComponent)`
     position: relative;
     display: block;
     background-color: ${Colors.white};
-    color: ${Colors.primary};
-    padding: ${Padding.p64} ${Padding.p32};
+    color: ${Colors.black};
     text-align: center;
-    border-radius: 10px;
+    padding: ${Padding.p64} ${Padding.p32};
     transition: ${hover(400)};
     overflow: hidden;
 
     @media ${max(BreakPoints.md)} {
       padding: ${Padding.p64} ${Padding.p16};
-    }
-
-    &::after {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 0;
-      transition: ${unHover(400)};
-      transform: translateY(100%);
-      width: 100%;
-      height: 100%;
-      background-color: ${Colors.secondary};
-    }
-
-    &:hover {
-      color: ${Colors.white};
-
-      &::after {
-        transition: ${hover(120)};
-        transform: translateY(0);
-      }
     }
 
     .footerContactWrapper {
@@ -64,6 +40,7 @@ export const FooterStyle = styled(FooterComponent)`
       .footerContactHeading {
         font-size: ${FontSize.lg};
         font-weight: ${FontWeight.bold};
+        font-family: 'EB Garamond', serif;
       }
 
       .footerContactLead {
@@ -84,6 +61,7 @@ export const FooterStyle = styled(FooterComponent)`
       justify-content: space-between;
       align-items: center;
       width: 100%;
+      font-family: 'EB Garamond', serif;
 
       hr {
         width: 100%;
@@ -157,7 +135,7 @@ export const FooterStyle = styled(FooterComponent)`
     display: block;
     width: 100%;
     font-size: ${FontSize.md};
-    font-family: 'Renner*', sans-serif;
+    font-family: 'EB Garamond', serif;
     text-align: center;
     color: ${Colors.white};
   }

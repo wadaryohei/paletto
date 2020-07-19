@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200" viewBox="0 0 200 200">
+  <defs>
+    <clipPath id="clip-thins_icn_01">
+      <rect width="200" height="200"/>
+    </clipPath>
+  </defs>
+  <g id="thins_icn_01" clip-path="url(#clip-thins_icn_01)">
+    <path id="合体_1" data-name="合体 1" d="M-6609-1018h-153v-4h32v-26h4v26h35v-42h4v42h35v-58h4v58h35v-74h4v74h34v4Z" transform="translate(6769.001 1157)" fill="#bfbfbf"/>
+  </g>
+</svg>

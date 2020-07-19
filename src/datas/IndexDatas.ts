@@ -24,16 +24,12 @@ export const HeadDatas: Head = {
 //----------------------------------
 export interface Hero {
   imgPath: string
-  siteName: string
-  copyEn: string
-  copyJp: string
+  copy: string
 }
 
 export const HeroDatas: Hero = {
-  imgPath: '/hero.png',
-  siteName: 'Paletto.',
-  copyEn: 'DESIGN TO MOVES EMOTIONS.',
-  copyJp: '感情を動かすデザインを',
+  imgPath: '/hero.jpg',
+  copy: `DESIGN\nTO MOVES\nEMOTIONS.`,
 }
 
 //----------------------------------
@@ -41,39 +37,56 @@ export const HeroDatas: Hero = {
 //----------------------------------
 export interface SectionHeading {
   SectionVision: {
-    headingEn: string
-    headingJp: string
+    heading: string
+    subHeading: string
+    copy: string
   }
-  sectionAnnounce: {
-    headingEn: string
-    headingJp: string
+  sectionApproach: {
+    heading: string
+    subHeading?: string
+    copy: string
   }
   sectionService: {
-    headingEn: string
-    headingJp: string
+    heading: string
+    subHeading: string
+    copy: string
+  }
+  sectionThink: {
+    heading: string
+    subHeading: string
+    copy: string
   }
   sectionPlans: {
-    headingEn: string
-    headingJp: string
+    heading: string
+    subHeading: string
+    copy: string
   }
 }
 
 export const SectionHeadingDatas: SectionHeading = {
   SectionVision: {
-    headingEn: 'Vision',
-    headingJp: '感情を動かすデザインを',
+    heading: 'OUR VISION.',
+    subHeading: '私達のビジョン',
+    copy: '感情を動かすデザインを',
   },
-  sectionAnnounce: {
-    headingEn: 'Approach.',
-    headingJp: '当たり前のその先へ',
+  sectionApproach: {
+    heading: 'APPROACH.',
+    copy: '当たり前のその先へ',
   },
   sectionService: {
-    headingEn: 'Serivces',
-    headingJp: '私達ができること',
+    heading: 'OUR SERVICE.',
+    subHeading: '私達ができること',
+    copy: 'デザインから制作まで幅広く',
+  },
+  sectionThink: {
+    heading: 'OUR THINK.',
+    subHeading: '私達の考え',
+    copy: 'サブスクリプションを採用',
   },
   sectionPlans: {
-    headingEn: 'Plans',
-    headingJp: 'パートナーとデザインで未来を作る',
+    heading: 'OUR THINK.',
+    subHeading: '私達の考え',
+    copy: 'サブスクリプションを採用',
   },
 }
 
@@ -85,7 +98,6 @@ export interface Services {
   bgPathName: string
   titleEn: string
   titleJp: string
-  copy: string
   lead: string
 }
 
@@ -93,19 +105,59 @@ export const ServicesDatas: Services[] = [
   {
     num: '01',
     bgPathName: '/cardbg_01.jpg',
-    titleEn: 'Design partnerships',
+    titleEn: 'Design partnerShips',
     titleJp: 'デザインパートナー事業',
-    copy: 'デザインで多種多様なビジネス課題を解決します。',
-    lead: `デジタルプロダクト開発（UI/UXデザイン）を強みに置き、新規事業立ち上げ、ブランド構築、デザイン組織支援などあらゆるビジネス課題にコミットします。\nクライアントと一緒に一つのチームとなり並走するデザインパートナーです。\nアウトプットの納品だけでなく、デザインの文化がクライアント組織に根付いてゆくことを目指します。`,
+    lead: `デジタルプロダクト開発（UI/UXデザイン）に強みを置き、既存事業の改善、新規事業立ち上げ、ブランド構築、デザイン組織支援などワンストップであらゆるビジネス課題にフルコミットする事業です。`,
   },
   {
     num: '02',
     bgPathName: '/cardbg_02.jpg',
     titleEn: 'Web Creative PartnerShips',
-    titleJp: 'Web制作パートナー事業',
-    copy: '一貫したクオリティと多岐に渡るクリエイティブを提供。',
+    titleJp: '制作パートナー事業',
     lead:
-      '私達はデザイン企業ですが、それだけではありません。開発、映像制作、広告も。VIの制作から、印刷物、ウェブサイト制作などワンストップで制作致します。\nWordPressのようなCMS構築からJamStackのようなモダンな技術での制作をしていきます。',
+      'フルスクラッチでの開発を前提とした、WordPressに代表されるCMS構築や、JamStackのようなモダンな技術でのSPA制作など状況に応じた、フレキシブルでハイクオリティな制作を行う事業です。',
+  },
+  {
+    num: '03',
+    bgPathName: '/cardbg_03.jpg',
+    titleEn: 'Starter Business PartnerShips',
+    titleJp: 'スケーラブルパートナー事業',
+    lead:
+      'STUDIOなどのノーコード系ツールを用い、コーディング工程を省くことでスピード重視のビジネス課題の解決とデザインのみの制作を行います。小さく初め素早く仮設検証しスケールしていくための事業です。',
+  },
+]
+
+//----------------------------------
+// ThinkDatas
+//----------------------------------
+export interface Think {
+  num: string
+  copy: string
+  imgPathName: string
+  lead: string
+}
+
+export const ThinkDatas: Think[] = [
+  {
+    num: '01',
+    copy: '長期的なパートナー戦略',
+    imgPathName: '/think_icn_01.svg',
+    lead:
+      '長期的なパートナーシップを取ることにより、戦略立案からプロダクト開発、グロースまで可能です。',
+  },
+  {
+    num: '02',
+    copy: 'デザイン戦略の調整',
+    imgPathName: '/think_icn_02.svg',
+    lead:
+      '目まぐるしく変わる状況に合わせて、課題解決や価値創造へのアプローチを的確に日々調整します。',
+  },
+  {
+    num: '03',
+    copy: '一貫したデザインと制作',
+    imgPathName: '/think_icn_03.svg',
+    lead:
+      'デザインから制作までを一気通貫で担当するので、クオリティの担保と運用・保守までを実現します。',
   },
 ]
 

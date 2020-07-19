@@ -1,24 +1,34 @@
 import styled from 'styled-components'
 import { SectionServiceComponent } from './dom'
 import { Padding } from '../../../../const/Padding'
-import { Margin } from '../../../../const/Margin'
+import { Colors } from '../../../../const/Colors'
 
 //----------------------------------
 // styledComponent
 //----------------------------------
 export const SectionServiceStyle = styled(SectionServiceComponent)`
   .serviceLeadWrapper {
-    margin-top: ${Margin.m72};
+    padding: ${Padding.p96} 0;
   }
 
   .serviceCardWrapper {
+    position: relative;
     width: 100%;
     display: flex;
-    flex-wrap: nowrap;
-    overflow: scroll;
     justify-content: flex-start;
-    padding: ${Padding.p32} ${Padding.p16};
-    margin-top: ${Margin.m56};
+    padding: ${Padding.p32} ${Padding.p16} ${Padding.p160};
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 80%;
+      background-color: ${Colors.smokeGray};
+    }
 
     .serviceCard {
       height: 100%;

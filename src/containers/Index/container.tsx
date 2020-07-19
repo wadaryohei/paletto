@@ -1,11 +1,11 @@
 import React from 'react'
-import { HeroDatas } from '../../datas/IndexDatas'
+import { BaseLayout } from '../../components/_shared/BaseLayout'
 import { Hero } from '../../components/Hero'
 import { SectionVision } from './doms/SectionVision'
-import { SectionAnnounce } from './doms/SectionAnnounce'
+import { SectionApproach } from './doms/SectionApproach'
 import { SectionService } from './doms/SectionService'
-import { SectionPlans } from './doms/SectionPlans'
-import { BaseLayout } from '../../components/_shared/BaseLayout'
+import { SectionThink } from './doms/SectionThink'
+import { useIndexPresenter } from './presenter/useIndexPresenter'
 
 //----------------------------------
 // props
@@ -17,27 +17,36 @@ export interface IndexProps {
 //----------------------------------
 // component
 //----------------------------------
-const IndexContainer = (props: IndexProps) => (
-  <BaseLayout className={props.className}>
-    {/** @section Hero */}
-    <Hero
-      imgPath={HeroDatas.imgPath}
-      siteName={HeroDatas.siteName}
-      copyEn={HeroDatas.copyEn}
-      copyJp={HeroDatas.copyJp}
-    />
-    {/** @section Vision */}
-    <SectionVision className={'l-vision'} />
+const IndexContainer = (props: IndexProps) => {
+  //----------------------------------
+  // hooks
+  //----------------------------------
+  const presenter = useIndexPresenter()
 
-    {/** @section Announce */}
-    <SectionAnnounce className={'l-announce'} />
+  //----------------------------------
+  // render
+  //----------------------------------
+  return (
+    <BaseLayout className={props.className}>
+      {/** @section Hero */}
+      <Hero
+        imgPath={presenter.heroViewDatas().heroImgPath}
+        copies={presenter.heroViewDatas().heroCopy}
+      />
 
-    {/** @section Service */}
-    <SectionService className={'l-service'} />
+      {/** @section Vision */}
+      <SectionVision className={'l-vision'} />
 
-    {/** @section Plans */}
-    <SectionPlans className={'l-plans'} />
-  </BaseLayout>
-)
+      {/** @section Approach */}
+      <SectionApproach className={'l-approach'} />
+
+      {/** @section Service */}
+      <SectionService className={'l-service'} />
+
+      {/** @section Think */}
+      <SectionThink className={'l-think'} />
+    </BaseLayout>
+  )
+}
 
 export default IndexContainer

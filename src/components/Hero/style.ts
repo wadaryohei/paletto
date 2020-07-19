@@ -10,9 +10,10 @@ import { Margin } from '../../const/Margin'
 // styledComponent
 //----------------------------------
 export const HeroStyle = styled(HeroComponent)`
-  > figure {
-    width: 100%;
-    height: 100vh;
+  figure {
+    margin: ${Margin.m104} auto 0;
+    width: calc(100% - ${Margin.m48});
+    height: calc(100vh - ${Margin.m48});
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -22,19 +23,7 @@ export const HeroStyle = styled(HeroComponent)`
       background-position: 50% 50%;
     }
 
-    &::after {
-      content: '';
-      display: block;
-      width: 100%;
-      height: 100%;
-      border: solid 10px ${Colors.primary};
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-
-    > .hero {
+    .hero {
       position: absolute;
       bottom: 10%;
       left: 6%;
@@ -44,43 +33,21 @@ export const HeroStyle = styled(HeroComponent)`
         left: 10%;
       }
 
-      > .siteName {
-        font-size: ${FontSize.xxxl};
-        font-family: 'Renner*', sans-serif;
-        font-weight: 700;
-        color: ${Colors.primary};
+      .copy {
+        font-size: ${FontSize.xl};
+        font-family: 'Helvetica Neue', sans-serif;
+        font-weight: ${FontWeight.thin};
+        color: ${Colors.white};
+        line-height: 1.3;
+        letter-spacing: 4px;
 
-        @media ${max(BreakPoints.md)} {
-          font-size: ${FontSize.xl};
-        }
-      }
-
-      > .copy {
-        &.copyEn {
-          font-size: ${FontSize.lg};
-          font-family: 'Renner*', sans-serif;
-          font-weight: ${FontWeight.bold};
-          color: ${Colors.primary};
-          line-height: 1.3;
-          letter-spacing: 12px;
-
-          @media ${max(BreakPoints.lg)} {
-            font-size: ${FontSize.md};
-            margin: ${Margin.m32} 0;
-          }
-        }
-
-        &.copyJp {
+        @media ${max(BreakPoints.lg)} {
           font-size: ${FontSize.md};
-          font-weight: ${FontWeight.bold};
-          color: ${Colors.primary};
-          letter-spacing: 8px;
-          margin-top: ${Margin.m16};
+          margin: ${Margin.m32} 0;
+        }
 
-          @media ${max(BreakPoints.lg)} {
-            font-size: ${FontSize.sm};
-            margin-top: 0;
-          }
+        &:nth-of-type(3) {
+          font-weight: ${FontWeight.bold};
         }
       }
     }

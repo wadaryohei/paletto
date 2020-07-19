@@ -16,6 +16,7 @@ export interface Member {
 export const MemberDatas: Member[] = [
   {
     name: 'RYOHEI WADA',
+    webSitePath: '//yu-ra-gi.com/',
     twitterPath: '//twitter.com/ryoppei_/',
     facebookPath: '//www.facebook.com/wada.ryohei.3/',
   },

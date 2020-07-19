@@ -1,7 +1,8 @@
 export const Colors = {
-  white: '#fff',
-  black: '#1A1B1F',
+  white: '#ffffff',
+  black: '#0A0A0A',
   primary: '#2746F2',
   secondary: '#FF3198',
-  gray: '#ADADAD',
+  gray: '#B4B4B4',
+  smokeGray: '#F7F7F7',
 } as const

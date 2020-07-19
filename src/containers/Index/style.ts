@@ -22,9 +22,9 @@ export const IndexContainerStyle = styled(IndexContainer)`
     }
   }
 
-  .l-announce {
+  .l-approach {
     position: relative;
-    background-color: ${Colors.primary};
+    background-color: ${Colors.black};
     width: 100%;
     padding: ${Padding.p112} ${Padding.p72};
 
@@ -37,7 +37,8 @@ export const IndexContainerStyle = styled(IndexContainer)`
     margin-top: ${Margin.m160};
   }
 
-  .l-plans {
+  .l-think {
+    background-color: ${Colors.black};
     padding: ${Padding.p160} ${Padding.p16};
   }
 `
