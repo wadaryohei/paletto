@@ -10,7 +10,6 @@ export const CardStyle = styled(CardComponent)`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  border-radius: 10px;
   background-color: ${Colors.white};
   box-shadow: 0px 3px 33px -6px rgba(0, 0, 0, 0.15);
 `

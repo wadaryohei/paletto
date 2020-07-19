@@ -16,15 +16,18 @@ export interface SectionVisionProps {
 //----------------------------------
 export const SectionVisionComponent = (props: SectionVisionProps) => (
   <Section className={props.className}>
-    <Container maxWidth={'md'}>
+    <Container>
       <Text component={'h2'} textStyle={'heading'}>
-        {SectionHeadingDatas.SectionVision.headingEn}
+        {SectionHeadingDatas.SectionVision.heading}
       </Text>
-      <Text component={'p'} textStyle={'copy'}>
-        {SectionHeadingDatas.SectionVision.headingJp}
+      <Text component={'p'} textStyle={'subheading'}>
+        {SectionHeadingDatas.SectionVision.subHeading}
       </Text>
 
       <div className={'visionLeadWrapper'}>
+        <Text component={'p'} textStyle={'copy'}>
+          {SectionHeadingDatas.SectionVision.copy}
+        </Text>
         <Text component={'p'} textStyle={'lead'}>
           <span>人の感情に寄り添い、人の感情をデザインする。</span>
           <span>

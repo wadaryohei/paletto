@@ -5,7 +5,6 @@ import { Margin } from '../../const/Margin'
 import { BreakPoints, max, min } from '../../const/BreakPoints'
 import { FontSize } from '../../const/FontSize'
 import { FontWeight } from '../../const/FontWeight'
-import { Padding } from '../../const/Padding'
 
 //----------------------------------
 // styledComponent
@@ -30,74 +29,47 @@ export const TextStyle = styled(TextComponent)`
 
   &.heading {
     font-size: ${FontSize.xl};
-    font-weight: ${FontWeight.bold};
-    font-family: 'Renner*', sans-serif;
-    color: ${Colors.white};
+    font-weight: ${FontWeight.normal};
+    font-family: 'Crimson Text', serif;
+    color: ${Colors.black};
 
     @media ${max(BreakPoints.md)} {
       font-size: ${FontSize.lg};
-    }
-
-    span {
-      display: inline-block;
-      background-color: ${Colors.black};
-      padding: 0 ${Padding.p16};
-    }
-  }
-
-  &.copy {
-    display: block;
-    font-size: ${FontSize.lg};
-    font-weight: ${FontWeight.bold};
-    color: ${Colors.white};
-    margin-top: ${Margin.m8};
-
-    @media ${max(BreakPoints.md)} {
-      font-size: ${FontSize.md};
-    }
-
-    span {
-      display: inline-block;
-      background-color: ${Colors.black};
-      padding: ${Padding.p16};
-
-      @media ${max(BreakPoints.md)} {
-        padding: ${Padding.p8} ${Padding.p16};
-      }
     }
   }
 
   &.subheading {
     font-size: ${FontSize.md};
     font-weight: ${FontWeight.bold};
+    font-family: 'EB Garamond', serif;
     color: ${Colors.gray};
-    line-height: 3.2rem;
 
     @media ${max(BreakPoints.md)} {
       font-size: ${FontSize.md};
     }
   }
 
-  &.accentheading {
-    font-size: ${FontSize.lg};
+  &.copy {
+    display: block;
+    font-size: ${FontSize.xl};
     font-weight: ${FontWeight.bold};
-    color: ${Colors.white};
-    line-height: 2.4rem;
+    font-family: 'EB Garamond', serif;
+    color: ${Colors.black};
+    margin-top: ${Margin.m8};
 
     @media ${max(BreakPoints.md)} {
       font-size: ${FontSize.md};
+    }
+
+    & + p {
+      margin-top: ${Margin.m16};
     }
   }
 
   &.lead {
-    font-size: ${FontSize.sm};
+    font-size: ${FontSize.xs};
     color: ${Colors.black};
-    line-height: 4.4rem;
-
-    @media ${max(BreakPoints.md)} {
-      font-size: ${FontSize.xs};
-      line-height: 3.2rem;
-    }
+    line-height: 3.6rem;
 
     span {
       display: block;

@@ -14,5 +14,7 @@ export const Margin = {
   m96: '96px',
   m104: '104px',
   m112: '112px',
+  m120: '120px',
+  m128: '128px',
   m160: '160px',
 } as const

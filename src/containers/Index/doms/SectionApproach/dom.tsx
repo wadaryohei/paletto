@@ -7,31 +7,31 @@ import { SectionHeadingDatas } from '../../../../datas/IndexDatas'
 //----------------------------------
 // props
 //----------------------------------
-export interface SectionAnnounceProps {
+export interface SectionApproachProps {
   className?: string
 }
 
 //----------------------------------
 // component
 //----------------------------------
-export const SectionAnnounceComponent = (props: SectionAnnounceProps) => (
+export const SectionApproachComponent = (props: SectionApproachProps) => (
   <Section className={props.className}>
-    <Grid container spacing={4} className={'announceWrapper'}>
+    <Grid container spacing={4} className={'approachWrapper'}>
       <Grid item md={6} sm={12} xs={12}>
         <Text
           component={'h2'}
-          textStyle={'accentheading'}
-          className={'announceHeading'}
+          textStyle={'heading'}
+          className={'approachHeading'}
         >
-          {SectionHeadingDatas.sectionAnnounce.headingEn}
+          {SectionHeadingDatas.sectionApproach.heading}
         </Text>
       </Grid>
       <Grid item md={6} sm={12} xs={12}>
-        <Text component={'h2'} textStyle={'accentheading'}>
-          {SectionHeadingDatas.sectionAnnounce.headingJp}
+        <Text component={'h2'} textStyle={'copy'} className={'approachCopy'}>
+          {SectionHeadingDatas.sectionApproach.copy}
         </Text>
-        <div className={'annouceLeadWrapper'}>
-          <Text component={'p'} textStyle={'lead'} className={'announceLead'}>
+        <div className={'approachLeadWrapper'}>
+          <Text component={'p'} textStyle={'lead'} className={'approachLead'}>
             <span>
               ビジネス的なゴールや課題解決はもはや当たり前の時代になりました。
             </span>

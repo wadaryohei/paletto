@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200" viewBox="0 0 200 200">
+  <defs>
+    <clipPath id="clip-thins_icn_02">
+      <rect width="200" height="200"/>
+    </clipPath>
+  </defs>
+  <g id="thins_icn_02" clip-path="url(#clip-thins_icn_02)">
+    <g id="グループ_251" data-name="グループ 251" transform="translate(-843.5 -4769)">
+      <g id="楕円形_4" data-name="楕円形 4" transform="translate(881 4807)" fill="none" stroke="#bfbfbf" stroke-width="4">
+        <circle cx="62.5" cy="62.5" r="62.5" stroke="none"/>
+        <circle cx="62.5" cy="62.5" r="60.5" fill="none"/>
+      </g>
+      <circle id="楕円形_6" data-name="楕円形 6" cx="38.5" cy="38.5" r="38.5" transform="translate(905 4831)" fill="#e3e3e3"/>
+      <g id="楕円形_5" data-name="楕円形 5" transform="translate(929 4855)" fill="#bfbfbf" stroke="#bfbfbf" stroke-width="4">
+        <circle cx="15" cy="15" r="15" stroke="none"/>
+        <circle cx="15" cy="15" r="13" fill="none"/>
+      </g>
+      <line id="線_5" data-name="線 5" x2="202" transform="translate(842.5 4869.5)" fill="none" stroke="#bfbfbf" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

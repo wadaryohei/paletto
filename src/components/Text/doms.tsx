@@ -12,7 +12,7 @@ export interface TextProps {
   className?: string
   component: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'p' | 'span'
   align?: 'center' | 'right' | 'left'
-  textStyle: 'heading' | 'subheading' | 'accentheading' | 'copy' | 'lead'
+  textStyle: 'heading' | 'subheading' | 'copy' | 'lead' | 'figcaption'
   children: React.ReactNode
 }
 
