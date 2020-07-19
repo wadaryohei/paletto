@@ -5,6 +5,7 @@ import { FontSize } from '../../const/FontSize'
 import { FontWeight } from '../../const/FontWeight'
 import { Padding } from '../../const/Padding'
 import { BreakPoints, max } from '../../const/BreakPoints'
+import { Margin } from '../../const/Margin'
 
 //----------------------------------
 // styledComponent
@@ -19,21 +20,19 @@ export const HeaderStyle = styled(HeaderComponent)`
   z-index: 10;
   max-width: 100%;
   width: 100%;
+  height: 120px;
   background-color: ${Colors.white};
-  padding: ${Padding.p16};
 
   .headerInner {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: 0 auto;
-    max-width: 100%;
+    max-width: calc(100% - 240px);
     width: 100%;
-    padding: ${Padding.p16};
 
     @media ${max(BreakPoints.md)} {
-      padding-right: 0;
-      padding-left: 0;
+      max-width: calc(100% - ${Margin.m32});
     }
   }
 

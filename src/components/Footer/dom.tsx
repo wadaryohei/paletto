@@ -25,9 +25,9 @@ export const FooterComponent = (props: FooterProps) => (
             <div className={'footerContactWrapper'}>
               <h2 className={'footerContactHeading'}>Contact</h2>
               <p className={'footerContactLead'}>
-                <span>パートナー様のデザイン課題をお待ちしております。</span>
+                <span>ビジネス課題をお待ちしております。</span>
                 <span>
-                  プロダクトの開発やブランドの構築などなんでもお気軽にご相談ください。
+                  BtoB、BtoC、CtoC事業の皆様へ、パートナーとしてぜひお手伝い致しますますので、まずはご連絡くださいませ。
                 </span>
               </p>
             </div>

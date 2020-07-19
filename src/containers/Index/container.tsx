@@ -32,6 +32,7 @@ const IndexContainer = (props: IndexProps) => {
       <Hero
         imgPath={presenter.heroViewDatas().heroImgPath}
         copies={presenter.heroViewDatas().heroCopy}
+        descs={presenter.heroViewDatas().heroDesc}
       />
 
       {/** @section Vision */}

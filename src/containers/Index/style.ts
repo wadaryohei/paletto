@@ -16,6 +16,7 @@ export const IndexContainerStyle = styled(IndexContainer)`
    */
   .l-vision {
     padding: ${Padding.p160} 0 0;
+    background-color: ${Colors.white};
 
     @media ${max(BreakPoints.md)} {
       padding-bottom: 0;
@@ -34,7 +35,8 @@ export const IndexContainerStyle = styled(IndexContainer)`
   }
 
   .l-service {
-    margin-top: ${Margin.m160};
+    padding-top: ${Margin.m160};
+    background-color: ${Colors.white};
   }
 
   .l-think {
