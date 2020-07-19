@@ -20,6 +20,7 @@ export const HeroStyle = styled(HeroComponent)`
     position: relative;
 
     @media ${max(BreakPoints.md)} {
+      width: calc(100% - ${Margin.m32});
       background-position: 10% 50%;
     }
 
