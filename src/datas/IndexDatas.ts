@@ -25,11 +25,13 @@ export const HeadDatas: Head = {
 export interface Hero {
   imgPath: string
   copy: string
+  desc: string
 }
 
 export const HeroDatas: Hero = {
   imgPath: '/hero.jpg',
-  copy: `DESIGN\nTO MOVES\nEMOTIONS.`,
+  copy: 'DESIGN\nTO MOVES\nEMOTIONS.',
+  desc: '感情を動かすデザインを。\nデザインを動かす感情を。',
 }
 
 //----------------------------------
@@ -107,7 +109,7 @@ export const ServicesDatas: Services[] = [
     bgPathName: '/cardbg_01.jpg',
     titleEn: 'Design partnerShips',
     titleJp: 'デザインパートナー事業',
-    lead: `デジタルプロダクト開発（UI/UXデザイン）に強みを置き、既存事業の改善、新規事業立ち上げ、ブランド構築、デザイン組織支援などワンストップであらゆるビジネス課題にフルコミットする事業です。`,
+    lead: 'デジタルプロダクト開発（UI/UXデザイン）に強みを置き、既存事業の改善、新規事業立ち上げ、ブランド構築、デザイン組織支援などワンストップであらゆるビジネス課題にフルコミットする事業です。',
   },
   {
     num: '02',

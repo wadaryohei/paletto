@@ -45,7 +45,7 @@ export const TextStyle = styled(TextComponent)`
     color: ${Colors.gray};
 
     @media ${max(BreakPoints.md)} {
-      font-size: ${FontSize.md};
+      font-size: ${FontSize.sm};
     }
   }
 

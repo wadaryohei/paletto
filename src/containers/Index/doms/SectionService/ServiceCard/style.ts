@@ -20,7 +20,6 @@ export const ServiceCardStyle = styled(ServiceCardComponent)`
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    border-radius: 10px 10px 0 0;
     height: 264px;
 
     @media ${max(BreakPoints.lg)} {
