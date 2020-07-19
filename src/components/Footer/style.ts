@@ -60,7 +60,7 @@ export const FooterStyle = styled(FooterComponent)`
       display: flex;
       justify-content: space-between;
       align-items: center;
-      width: 100%;
+      width: auto;
       font-family: 'EB Garamond', serif;
 
       hr {

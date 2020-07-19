@@ -4,6 +4,7 @@ import { Colors } from '../../const/Colors'
 import { FontSize } from '../../const/FontSize'
 import { FontWeight } from '../../const/FontWeight'
 import { Padding } from '../../const/Padding'
+import { BreakPoints, max } from '../../const/BreakPoints'
 
 //----------------------------------
 // styledComponent
@@ -29,6 +30,11 @@ export const HeaderStyle = styled(HeaderComponent)`
     max-width: 100%;
     width: 100%;
     padding: ${Padding.p16};
+
+    @media ${max(BreakPoints.md)} {
+      padding-right: 0;
+      padding-left: 0;
+    }
   }
 
   .logo {
