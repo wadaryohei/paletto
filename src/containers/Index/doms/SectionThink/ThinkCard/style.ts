@@ -37,7 +37,7 @@ export const ThinkCardStyle = styled(ThinkCardComponent)`
     .cardNum {
       font-size: ${FontSize.xl};
       font-weight: ${FontWeight.normal};
-      font-family: 'EB Garamond', serif;
+      font-family: 'Gilroy-Bold', sans-serif;
       margin-bottom: ${Margin.m32};
       color: ${Colors.gray};
     }
@@ -45,7 +45,7 @@ export const ThinkCardStyle = styled(ThinkCardComponent)`
     .cardTitle {
       font-size: ${FontSize.sm};
       font-weight: ${FontWeight.normal};
-      font-family: 'EB Garamond', serif;
+      font-family: 'Gilroy-Bold', sans-serif;
       color: ${Colors.gray};
 
       @media ${max(BreakPoints.lg)} {

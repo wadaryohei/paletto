@@ -54,8 +54,6 @@ export const HeroStyle = styled(HeroComponent)`
     .copyWrapper {
       .copy {
         font-size: ${FontSize.s72};
-        font-family: 'Helvetica Neue', sans-serif;
-        font-weight: ${FontWeight.thin};
         color: ${Colors.white};
         line-height: 1.2;
         letter-spacing: 8px;
@@ -65,14 +63,17 @@ export const HeroStyle = styled(HeroComponent)`
         }
 
         &:nth-of-type(1) {
+          font-family: 'Helvetica Neue', sans-serif;
           font-weight: 100;
         }
 
         &:nth-of-type(2) {
+          font-family: 'Helvetica Neue', sans-serif;
           font-weight: 100;
         }
 
         &:nth-of-type(3) {
+          font-family: 'Gilroy-Bold', sans-serif;
           font-weight: ${FontWeight.bold};
         }
       }

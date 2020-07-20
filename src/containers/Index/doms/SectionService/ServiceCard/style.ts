@@ -42,7 +42,7 @@ export const ServiceCardStyle = styled(ServiceCardComponent)`
       .cardNum {
         font-size: ${FontSize.md};
         font-weight: ${FontWeight.normal};
-        font-family: 'EB Garamond', serif;
+        font-family: 'Gilroy-Bold', sans-serif;
         margin-bottom: ${Margin.m32};
         color: ${Colors.gray};
       }
@@ -50,7 +50,7 @@ export const ServiceCardStyle = styled(ServiceCardComponent)`
       .cardTitle {
         font-size: ${FontSize.sm};
         font-weight: ${FontWeight.normal};
-        font-family: 'EB Garamond', serif;
+        font-family: 'Gilroy-Bold', sans-serif;
         color: ${Colors.gray};
 
         &:nth-of-type(2) {
