@@ -10,7 +10,12 @@ export const FontSize = {
   s16: '16px',
   s24: '24px',
   s32: '32px',
+  s40: '40px',
   s48: '48px',
+  s56: '56px',
+  s64: '64px',
   s72: '72px',
+  s80: '80px',
+  s88: '88px',
   s96: '96px',
 } as const

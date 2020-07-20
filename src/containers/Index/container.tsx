@@ -36,7 +36,10 @@ const IndexContainer = (props: IndexProps) => {
       />
 
       {/** @section Vision */}
-      <SectionVision className={'l-vision'} />
+      <SectionVision
+        className={'l-vision'}
+        imgPath={presenter.heroViewDatas().heroImgPath}
+      />
 
       {/** @section Approach */}
       <SectionApproach className={'l-approach'} />

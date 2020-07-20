@@ -30,8 +30,9 @@ export interface Hero {
 
 export const HeroDatas: Hero = {
   imgPath: '/hero.jpg',
-  copy: 'DESIGN\nTO MOVES\nEMOTIONS.',
-  desc: '感情を動かすデザインを。\nデザインを動かす感情を。',
+  copy: 'We design for\nDESIGN TO MOVES\nEMOTIONS.',
+  desc:
+    'We are a design team that takes shape.\nWe are a design team that takes shape.',
 }
 
 //----------------------------------
@@ -109,23 +110,24 @@ export const ServicesDatas: Services[] = [
     bgPathName: '/cardbg_01.jpg',
     titleEn: 'Design partnerShips',
     titleJp: 'デザインパートナー事業',
-    lead: 'デジタルプロダクト開発（UI/UXデザイン）に強みを置き、既存事業の改善、新規事業立ち上げ、ブランド構築、デザイン組織支援などワンストップであらゆるビジネス課題にフルコミットする事業です。',
+    lead:
+      'デジタルプロダクト開発（UI/UXデザイン）に強みを置き、既存事業の改善、新規事業立ち上げ、ブランド構築、デザイン組織支援、そしてあらゆるビジネス課題の解決を実現する「制作〜開発〜改善」のサイクルをワンストップでフルコミット・フルスクラッチを行う事業です。',
   },
   {
     num: '02',
     bgPathName: '/cardbg_02.jpg',
-    titleEn: 'Web Creative PartnerShips',
+    titleEn: 'Development PartnerShips',
     titleJp: '制作パートナー事業',
     lead:
-      'フルスクラッチでの開発を前提とした、WordPressに代表されるCMS構築や、JamStackのようなモダンな技術でのSPA制作など状況に応じた、フレキシブルでハイクオリティな制作を行う事業です。',
+      'ビジネス課題の解決へ向けて行う「制作」をベースとした、「デザイン・開発」の両方もしくはそのいずれかをパートナーとしてサポートしていく事業です。コンテンツの制作やコンサルティング、開発から運用・保守までを幅広く対応して行う事業です。',
   },
   {
     num: '03',
     bgPathName: '/cardbg_03.jpg',
-    titleEn: 'Starter Business PartnerShips',
-    titleJp: 'スケーラブルパートナー事業',
+    titleEn: 'Starter PartnerShips',
+    titleJp: 'スターターパートナー事業',
     lead:
-      'STUDIOなどのノーコード系ツールを用い、コーディング工程を省くことでスピード重視のビジネス課題の解決とデザインのみの制作を行います。小さく初め素早く仮設検証しスケールしていくための事業です。',
+      '予算や時間や人をあまり配置できない方へSTUDIOなどのノーコード系ツールを用い、いくつかの制作工程を省くことでスピード重視のビジネス課題の解決を行います。小さく始めて、素早く仮設を検証しながら実行→改善→スケールしていくための事業です。',
   },
 ]
 
