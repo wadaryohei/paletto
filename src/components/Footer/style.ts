@@ -6,7 +6,7 @@ import { FontSize } from '../../const/FontSize'
 import { FontWeight } from '../../const/FontWeight'
 import { Margin } from '../../const/Margin'
 import { BreakPoints, max } from '../../const/BreakPoints'
-import { hover, unHover } from '../../const/Transition'
+import { hover } from '../../const/Transition'
 
 //----------------------------------
 // styledComponent
@@ -40,7 +40,7 @@ export const FooterStyle = styled(FooterComponent)`
       .footerContactHeading {
         font-size: ${FontSize.lg};
         font-weight: ${FontWeight.bold};
-        font-family: 'EB Garamond', serif;
+        font-family: 'Gilroy-Bold', sans-serif;
       }
 
       .footerContactLead {
@@ -60,7 +60,7 @@ export const FooterStyle = styled(FooterComponent)`
       justify-content: space-between;
       align-items: center;
       width: auto;
-      font-family: 'EB Garamond', serif;
+      font-family: 'Gilroy-Bold', sans-serif;
 
       hr {
         width: 100%;
@@ -134,7 +134,7 @@ export const FooterStyle = styled(FooterComponent)`
     display: block;
     width: 100%;
     font-size: ${FontSize.md};
-    font-family: 'EB Garamond', serif;
+    font-family: 'Gilroy-Bold', sans-serif;
     text-align: center;
     color: ${Colors.white};
   }

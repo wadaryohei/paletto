@@ -30,7 +30,7 @@ export const TextStyle = styled(TextComponent)`
   &.heading {
     font-size: ${FontSize.xl};
     font-weight: ${FontWeight.normal};
-    font-family: 'Crimson Text', serif;
+    font-family: 'Gilroy-Bold', sans-serif;
     color: ${Colors.black};
 
     @media ${max(BreakPoints.md)} {
@@ -41,7 +41,6 @@ export const TextStyle = styled(TextComponent)`
   &.subheading {
     font-size: ${FontSize.md};
     font-weight: ${FontWeight.bold};
-    font-family: 'EB Garamond', serif;
     color: ${Colors.gray};
 
     @media ${max(BreakPoints.md)} {
@@ -53,7 +52,6 @@ export const TextStyle = styled(TextComponent)`
     display: block;
     font-size: ${FontSize.xl};
     font-weight: ${FontWeight.bold};
-    font-family: 'EB Garamond', serif;
     color: ${Colors.black};
     margin-top: ${Margin.m8};
 

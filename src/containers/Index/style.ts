@@ -15,9 +15,6 @@ export const IndexContainerStyle = styled(IndexContainer)`
    * 各レイアウトのスタイル
    */
   .l-vision {
-    padding: ${Padding.p160} 0 0;
-    background-color: ${Colors.white};
-
     @media ${max(BreakPoints.md)} {
       padding-bottom: 0;
     }

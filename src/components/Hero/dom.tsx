@@ -17,7 +17,6 @@ export interface HeroProps {
 export const HeroComponent = (props: HeroProps) => (
   <div className={props.className}>
     <div className={'heroWrapper'}>
-      <figure style={{ backgroundImage: `url(${props.imgPath})` }}></figure>
       <div className={'hero'}>
         <div className={'copyWrapper'}>
           {props.copies.map((copy: string, index: number) => {
