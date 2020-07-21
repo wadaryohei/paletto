@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { PagesLayoutComponent } from './dom'
 import { Colors } from '../../../const/Colors'
 import { FontSize } from '../../../const/FontSize'
+import { BreakPoints, max } from '../../../const/BreakPoints'
 
 //----------------------------------
 // styledComponent
@@ -30,6 +31,10 @@ export const PagesLayoutStyle = styled(PagesLayoutComponent)`
       font-family: 'Gilroy-Bold', sans-serif;
       text-transform: uppercase;
       letter-spacing: 16px;
+
+      @media ${max(BreakPoints.md)} {
+        font-size: ${FontSize.lg};
+      }
     }
   }
 `
