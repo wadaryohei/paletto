@@ -1,6 +1,7 @@
 import React from 'react'
 import { Head } from '../components/Head'
 import { HeadDatas } from '../datas/IndexDatas'
+import { AboutContainer } from '../containers/About'
 
 //----------------------------------
 // component
@@ -12,7 +13,7 @@ const About = () => (
       description={HeadDatas.description}
       pathName={HeadDatas.pathName}
     />
-    <h1>About Page</h1>
+    <AboutContainer />
   </>
 )
 
