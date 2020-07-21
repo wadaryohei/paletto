@@ -18,16 +18,19 @@ export interface PagesLayoutProps {
 //----------------------------------
 export const PagesLayoutComponent = (props: PagesLayoutProps) => (
   <section className={props.className}>
-    <div
-      className={'pageHeaderWrapper'}
-      style={{ backgroundImage: `url(${props.pageHeaderBgPathname})` }}
-    >
+    <Header />
+    <div className={'pageHeaderBgWrapper'}>
+      <div
+        className={'pageHeaderBg'}
+        style={{ backgroundImage: `url(${props.pageHeaderBgPathname})` }}
+      ></div>
       <Container>
-        <p className={'pageHeader'}>{props.pageName}</p>
+        <div className={'pageHeaderWrapper'}>
+          <p className={'pageHeader'}>{props.pageName}</p>
+        </div>
       </Container>
-      <Header />
-      <main>{props.children}</main>
-      <Footer />
     </div>
+    <main>{props.children}</main>
+    <Footer />
   </section>
 )

@@ -31,8 +31,8 @@ const ServicesContainer = (props: ServicesProps) => {
       {/** @section ServicesIntro */}
       <Section className={'l-services'}>
         <Container>
-          <Grid container spacing={8}>
-            <Grid item md={6}>
+          <Grid container spacing={4}>
+            <Grid item md={6} className={'servicesGrid'}>
               <Text component={'p'} textStyle={'copy'}>
                 感情を動かすデザインを
               </Text>
@@ -49,7 +49,7 @@ const ServicesContainer = (props: ServicesProps) => {
                 </Text>
               </div>
             </Grid>
-            <Grid item md={6}>
+            <Grid item md={6} className={'servicesGrid'}>
               <div className={'servicesIntroImageWrapper'}>
                 <figure
                   className={'servicesIntroImage'}

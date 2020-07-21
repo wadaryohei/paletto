@@ -42,7 +42,6 @@ export const TextStyle = styled(TextComponent)`
   &.subheading {
     font-size: ${FontSize.md};
     font-weight: ${FontWeight.bold};
-    font-family: '游ゴシック体', 'Yu Gothic';
     text-indent: 6px;
     color: ${Colors.gray};
 
@@ -55,12 +54,15 @@ export const TextStyle = styled(TextComponent)`
     display: inline-block;
     font-size: ${FontSize.xl};
     font-weight: ${FontWeight.bold};
-    font-family: '游ゴシック体', 'Yu Gothic';
     color: ${Colors.white};
     text-indent: 14px;
     background-color: ${Colors.black};
     padding: ${Padding.p16};
     margin-top: ${Margin.m8};
+
+    @media ${max(BreakPoints.lg)} {
+      font-size: ${FontSize.lg};
+    }
 
     @media ${max(BreakPoints.md)} {
       font-size: ${FontSize.md};
@@ -73,7 +75,6 @@ export const TextStyle = styled(TextComponent)`
 
   &.lead {
     font-size: ${FontSize.sm};
-    font-family: '游ゴシック体', 'Yu Gothic';
     color: ${Colors.black};
     line-height: 3.6rem;
 

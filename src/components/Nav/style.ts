@@ -11,7 +11,8 @@ import { BreakPoints, max } from '../../const/BreakPoints'
 export const NavStyle = styled(NavComponent)`
   &.pages {
     ul > li > a {
-      color: ${Colors.white};
+      /* color: ${Colors.white}; */
+      color: ${Colors.black};
     }
   }
 

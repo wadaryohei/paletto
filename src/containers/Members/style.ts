@@ -13,6 +13,7 @@ export const MembersContainerStyle = styled(MembersContainer)`
   position: relative;
 
   .l-members {
+    background-color: ${Colors.white};
     padding: ${Padding.p160} 0;
 
     .membersGrid {
