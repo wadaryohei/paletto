@@ -49,9 +49,20 @@ export const MembersContainerStyle = styled(MembersContainer)`
 
     .membersSocialWrapper {
       figcaption {
-        font-size: ${FontSize.md};
+        display: inline-block;
+        font-size: ${FontSize.sm};
         font-family: 'Gilroy-Bold', sans-serif;
+        background-color: ${Colors.black};
+        padding: ${Padding.p8} ${Padding.p16};
+        color: ${Colors.white};
+        text-indent: 6px;
+        text-align: left;
         letter-spacing: 8px;
+        line-height: 2;
+
+        @media ${max(BreakPoints.lg)} {
+          text-indent: 0;
+        }
 
         @media ${max(BreakPoints.md)} {
           margin-top: ${Margin.m32};

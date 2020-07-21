@@ -40,7 +40,7 @@ export const SectionApproachComponent = (props: SectionApproachProps) => (
                 私達は「当たり前のその先」にあるユーザーの感情を動かすデザインに取り組みます。
               </span>
               <span>
-                このプロダクト、このお店、このサービスだからこそ使いたいと思えるデザインを作ることに全力を注ぎます。
+                このプロダクト、このお店、このサービスだからこそ使いたいと思えるデザインをカタチにしていくことに全力を注ぎます。
               </span>
             </Text>
           </div>

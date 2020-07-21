@@ -34,9 +34,7 @@ export const SectionServiceComponent = (props: SectionServiceProps) => (
           {SectionHeadingDatas.sectionService.copy}
         </Text>
         <Text component={'p'} textStyle={'lead'}>
-          <span>
-            感情をデザインする上で大前提としてビジネス課題の解決は勿論今でも必要です。
-          </span>
+          <span>感情をデザインする上でビジネス課題の解決は勿論必要です。</span>
           <span>
             「Paletto.」が手掛けるデザインは、見た目を整えるだけのデザインではありません。
           </span>
