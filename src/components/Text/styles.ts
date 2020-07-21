@@ -61,11 +61,11 @@ export const TextStyle = styled(TextComponent)`
     margin-top: ${Margin.m8};
 
     @media ${max(BreakPoints.lg)} {
-      font-size: ${FontSize.lg};
+      font-size: ${FontSize.md};
     }
 
     @media ${max(BreakPoints.md)} {
-      font-size: ${FontSize.md};
+      font-size: ${FontSize.sm};
     }
 
     & + p {
