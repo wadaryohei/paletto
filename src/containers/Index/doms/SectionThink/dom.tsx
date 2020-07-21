@@ -22,21 +22,25 @@ export interface SectionThinkProps {
 export const SectionThinkComponent = (props: SectionThinkProps) => (
   <Section className={props.className}>
     <Container>
-      <Text component={'h2'} textStyle={'heading'} className={'heading'}>
+      <Text component={'h2'} textStyle={'heading'} className={'thinkHeading'}>
         {SectionHeadingDatas.sectionThink.heading}
       </Text>
 
-      <Text component={'h2'} textStyle={'subheading'} className={'subheading'}>
+      <Text
+        component={'h2'}
+        textStyle={'subheading'}
+        className={'thinkSubheading'}
+      >
         {SectionHeadingDatas.sectionThink.subHeading}
       </Text>
 
-      <div className={'copy'}>
+      <div className={'thinkCopyWrapper'}>
         <Text component={'p'} textStyle={'copy'} className={'thinkCopy'}>
           {SectionHeadingDatas.sectionThink.copy}
         </Text>
       </div>
 
-      <div className={'lead'}>
+      <div className={'thinkLeadWrapper'}>
         <Text component={'p'} textStyle={'lead'}>
           <span>
             デザインは「課題解決」と「価値創造」の側面を持っています。
@@ -44,6 +48,8 @@ export const SectionThinkComponent = (props: SectionThinkProps) => (
           <span>
             プロダクトやサービス、人や組織では継続的なデザイン戦略のアプローチが必要となります。
           </span>
+        </Text>
+        <Text component={'p'} textStyle={'lead'}>
           <span>
             そういったパートナーとしてのデザイン戦略では、クライアントと同じ熱量での長期戦略を作り実施していく必要があるため、私達はサブスク型のサービスを提供しています。
           </span>
@@ -55,7 +61,7 @@ export const SectionThinkComponent = (props: SectionThinkProps) => (
     </Container>
 
     <div className={'thinkCardWrapper'}>
-      <Grid container spacing={2}>
+      <Grid container spacing={4}>
         {ThinkDatas.map((ThinkData: Think, index: number) => {
           return (
             <Grid key={index} item md={4} xs={12} className={'thinkCardGrid'}>

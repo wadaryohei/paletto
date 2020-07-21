@@ -31,7 +31,9 @@ export const SectionApproachStyle = styled(SectionApproachComponent)`
     }
 
     .approachCopy {
-      color: ${Colors.white};
+      color: ${Colors.black};
+      background-color: ${Colors.white};
+      padding: ${Padding.p16};
     }
 
     .approachLeadWrapper {
