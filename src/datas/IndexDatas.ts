@@ -29,7 +29,7 @@ export interface Hero {
 }
 
 export const HeroDatas: Hero = {
-  imgPath: '/hero.jpg',
+  imgPath: '/top/hero.jpg',
   copy: 'We design for\nDESIGN TO MOVES\nEMOTIONS.',
   desc:
     'We are a design team that takes shape.\nWe are a design team that takes shape.',
@@ -107,7 +107,7 @@ export interface Services {
 export const ServicesDatas: Services[] = [
   {
     num: '01',
-    bgPathName: '/cardbg_01.jpg',
+    bgPathName: '/top/services/cardbg_01.jpg',
     titleEn: 'Design partnerShips',
     titleJp: 'デザインパートナー事業',
     lead:
@@ -115,7 +115,7 @@ export const ServicesDatas: Services[] = [
   },
   {
     num: '02',
-    bgPathName: '/cardbg_02.jpg',
+    bgPathName: '/top/services/cardbg_02.jpg',
     titleEn: 'Development PartnerShips',
     titleJp: '制作パートナー事業',
     lead:
@@ -123,7 +123,7 @@ export const ServicesDatas: Services[] = [
   },
   {
     num: '03',
-    bgPathName: '/cardbg_03.jpg',
+    bgPathName: '/top/services/cardbg_03.jpg',
     titleEn: 'Starter PartnerShips',
     titleJp: 'スターターパートナー事業',
     lead:
@@ -145,21 +145,21 @@ export const ThinkDatas: Think[] = [
   {
     num: '01',
     copy: '長期的なパートナー戦略',
-    imgPathName: '/think_icn_01.svg',
+    imgPathName: '/top/think/think_icn_01.svg',
     lead:
       '長期的なパートナーシップを取ることにより、戦略立案からプロダクト開発、グロースまで可能です。',
   },
   {
     num: '02',
     copy: 'デザイン戦略の調整',
-    imgPathName: '/think_icn_02.svg',
+    imgPathName: '/top/think/think_icn_02.svg',
     lead:
       '目まぐるしく変わる状況に合わせて、課題解決や価値創造へのアプローチを的確に日々調整します。',
   },
   {
     num: '03',
     copy: '一貫したデザインと制作',
-    imgPathName: '/think_icn_03.svg',
+    imgPathName: '/top/think/think_icn_03.svg',
     lead:
       'デザインから制作までを一気通貫で担当するので、クオリティの担保と運用・保守までを実現します。',
   },
