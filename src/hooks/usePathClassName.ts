@@ -8,7 +8,7 @@ export interface PathClassName {
 //----------------------------------
 // custom hooks
 //----------------------------------
-export const usePathClassName = (pathName: string) => {
+export const usePathClassName = (pathName: string): PathClassName => {
   /**
    * 現在のアクティブなパスのスラッシュを削除してクラス名を付与する
    */

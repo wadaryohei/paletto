@@ -1,5 +1,6 @@
 import { HeroDatas } from '../../../datas/IndexDatas'
 import { HeroViewDatas } from './viewDatas/HeroViewDatas'
+import { useStringProcessing } from '../../../hooks/useStringProcessing'
 
 //----------------------------------
 // presenter
@@ -12,6 +13,11 @@ export interface IndexPresenter {
 // cutom hooks
 //----------------------------------
 export const useIndexPresenter = () => {
+  //----------------------------------
+  // hooks
+  //----------------------------------
+  const stringProcessing = useStringProcessing()
+
   //----------------------------------
   // HeroViewDatas
   //----------------------------------
@@ -37,16 +43,14 @@ export const useIndexPresenter = () => {
    * HeroCopyの文字列を改行コード区切りで配列に変換して返す
    */
   const heroCopy = (): string[] => {
-    const copies = HeroDatas.copy.split('\n')
-    return copies
+    return stringProcessing.strToSplit(HeroDatas.copy)
   }
 
   /**
    * HeroDescの文字列を改行コード区切りで配列に変換して返す
    */
   const heroDesc = (): string[] => {
-    const descs = HeroDatas.desc.split('\n')
-    return descs
+    return stringProcessing.strToSplit(HeroDatas.desc)
   }
 
   return { heroViewDatas }
