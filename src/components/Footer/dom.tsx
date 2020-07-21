@@ -54,7 +54,7 @@ export const FooterComponent = (props: FooterProps) => (
             <p className={'footerMembersHeading'}>Paletto Members</p>
             <div className={'footerMembers'}>
               {MemberDatas.map((MemberData: Member, index: number) => {
-                return <Members key={index} MemberData={MemberData} />
+                return <Members key={index} memberData={MemberData} />
               })}
             </div>
           </div>

@@ -29,7 +29,7 @@ export const MemberDatas: Member[] = [
         path: '//www.facebook.com/wada.ryohei.3/',
       },
       {
-        name: 'webSite',
+        name: 'website',
         path: '//yu-ra-gi.com/',
       },
     ],
@@ -48,7 +48,7 @@ export const MemberDatas: Member[] = [
         path: '//www.facebook.com/masato.nakamura.jpn/',
       },
       {
-        name: 'webSite',
+        name: 'website',
         path: '//masatonakamura.work/',
       },
     ],

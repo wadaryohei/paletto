@@ -4,36 +4,35 @@ import { FontSize } from '../../../const/FontSize'
 import { FontWeight } from '../../../const/FontWeight'
 import { Margin } from '../../../const/Margin'
 import { Colors } from '../../../const/Colors'
-import { hover, unHover } from '../../../const/Transition'
 
 //----------------------------------
 // styledComponent
 //----------------------------------
 export const MembersStyle = styled(MembersComponent)`
+  display: flex;
+  align-items: center;
+  justify-content: start;
   font-size: ${FontSize.xs};
-  line-height: 1.6;
   font-weight: ${FontWeight.thin};
   letter-spacing: 4px;
+  line-height: 1.6;
 
-  .footerMembersSocialsIconWrapper {
-    vertical-align: middle;
+  .membersSocialsList {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-left: ${Margin.m8};
+    line-height: 0.6px;
 
-    svg {
-      width: 16px;
-      height: 16px;
-    }
-  }
-
-  .footerMembersSocialsIcon {
-    line-height: 2;
-    margin-left: ${Margin.m4};
-    color: ${Colors.white};
-    transition: ${unHover(240)};
-
-    &:hover {
-      color: ${Colors.secondary};
-      transition: ${hover(80)};
+    li {
+      margin-right: ${Margin.m8};
+      a {
+        color: ${Colors.white};
+        svg {
+          width: 16px;
+          height: 16px;
+        }
+      }
     }
   }
 `
