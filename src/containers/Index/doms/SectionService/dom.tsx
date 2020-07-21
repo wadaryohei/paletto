@@ -34,15 +34,15 @@ export const SectionServiceComponent = (props: SectionServiceProps) => (
           {SectionHeadingDatas.sectionService.copy}
         </Text>
         <Text component={'p'} textStyle={'lead'}>
-          <span>
-            感情をデザインする上で大前提としてビジネス課題の解決は勿論今でも必要です。
-          </span>
+          <span>感情をデザインする上でビジネス課題の解決は勿論必要です。</span>
           <span>
             「Paletto.」が手掛けるデザインは、見た目を整えるだけのデザインではありません。
           </span>
           <span>
             本来デザインが持つ「設計」にイチから取り組み、ビジネスにおける課題を解決し、それがユーザーの感情を動かすことです。
           </span>
+        </Text>
+        <Text component={'p'} textStyle={'lead'}>
           <span>
             「Paletto.」ではデジタル領域の課題に対して、Webサイト/サービス、アプリの企画・制作、CI・VI構築や、各種分析・改善活動を、
           </span>
@@ -54,7 +54,7 @@ export const SectionServiceComponent = (props: SectionServiceProps) => (
     </Container>
 
     <div className={'serviceCardWrapper'}>
-      <Grid container spacing={2}>
+      <Grid container spacing={4}>
         {ServicesDatas.map((ServicesData: Services, index: number) => {
           return (
             <Grid key={index} item md={4} xs={12}>

@@ -3,24 +3,28 @@ import { SectionThinkComponent } from './dom'
 import { Margin } from '../../../../const/Margin'
 import { Colors } from '../../../../const/Colors'
 import { BreakPoints, max } from '../../../../const/BreakPoints'
+import { Padding } from '../../../../const/Padding'
 
 //----------------------------------
 // styledComponent
 //----------------------------------
 export const SectionThinkStyle = styled(SectionThinkComponent)`
-  .heading {
+  .thinkHeading {
     color: ${Colors.white};
   }
 
-  .copy {
+  .thinkCopyWrapper {
     margin-top: ${Margin.m72};
 
-    p {
-      color: ${Colors.white};
+    .thinkCopy {
+      color: ${Colors.black};
+      background-color: ${Colors.white};
+      padding: ${Padding.p16};
+      text-indent: -2px;
     }
   }
 
-  .lead {
+  .thinkLeadWrapper {
     margin-top: ${Margin.m32};
 
     p {
@@ -43,8 +47,6 @@ export const SectionThinkStyle = styled(SectionThinkComponent)`
           margin-top: ${Margin.m32};
         }
       }
-    }
-    .thinkCard {
     }
   }
 `

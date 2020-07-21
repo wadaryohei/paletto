@@ -21,7 +21,21 @@ export const HeaderStyle = styled(HeaderComponent)`
   max-width: 100%;
   width: 100%;
   height: 120px;
-  background-color: ${Colors.white};
+
+  &.index {
+    background-color: ${Colors.white};
+  }
+
+  &.pages {
+    background-color: ${Colors.white};
+
+    .logo {
+      a {
+        /* color: ${Colors.white}; */
+        color: ${Colors.black};
+      }
+    }
+  }
 
   .headerInner {
     display: flex;
@@ -31,7 +45,7 @@ export const HeaderStyle = styled(HeaderComponent)`
     max-width: calc(100% - 200px);
     width: 100%;
 
-    @media ${max(BreakPoints.md)} {
+    @media ${max(BreakPoints.xl)} {
       max-width: calc(100% - ${Margin.m32});
     }
   }

@@ -38,9 +38,11 @@ export const SectionVisionComponent = (props: SectionVisionProps) => (
             <span>
               そんな「エモーショナルなデザイン」をすることが私達「Paletto.」のVisionです。
             </span>
+          </Text>
+          <Text component={'p'} textStyle={'lead'} className={'visionText'}>
             <span>感情を揺さぶるデザインでこそ、人の心は動きます。</span>
             <span>
-              「Paletto.」では課題の解決のその先の、事業やサービスやプロダクトのの思いをデザインでカタチにします。
+              「Paletto.」では課題の解決の先の「事業やサービスやプロダクト」の思いをデザインでカタチにします。
             </span>
           </Text>
         </div>
