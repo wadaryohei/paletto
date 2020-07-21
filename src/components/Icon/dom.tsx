@@ -7,7 +7,7 @@ import LanguageIcon from '@material-ui/icons/Language'
 // props
 //----------------------------------
 export interface IconProps {
-  icon: string
+  icon: string | undefined
 }
 
 //----------------------------------
@@ -22,6 +22,6 @@ export const IconComponent = (props: IconProps) => {
     case 'website':
       return <LanguageIcon />
     default:
-      return <LanguageIcon />
+      return <></>
   }
 }

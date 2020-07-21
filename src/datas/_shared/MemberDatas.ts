@@ -11,7 +11,7 @@ import { SocialDatas } from './SocialDatas'
 export interface Member {
   name: string
   imgPath: string
-  socials?: SocialDatas[]
+  socials: SocialDatas[]
   introduce: string
 }
 
