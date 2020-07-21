@@ -21,12 +21,15 @@ export const PagesLayoutStyle = styled(PagesLayoutComponent)`
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+
     .pageHeader {
       position: absolute;
       top: 50%;
       color: ${Colors.white};
       font-size: ${FontSize.xl};
       font-family: 'Gilroy-Bold', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 16px;
     }
   }
 `
