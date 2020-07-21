@@ -2,7 +2,7 @@
  * pages/Indexで使用するデータ
  * - コンポーネントに渡す静的なデータを記述する
  */
-import { RoutingPath } from '../const/RoutingPath'
+import { RouteDatas } from './_shared/RouteDatas'
 
 //----------------------------------
 // HeadDatas
@@ -16,7 +16,7 @@ export interface Head {
 export const HeadDatas: Head = {
   title: 'Paletto',
   description: '世界にエモーショナルなデザインを。',
-  pathName: RoutingPath.index,
+  pathName: RouteDatas.index.pathName,
 }
 
 //----------------------------------

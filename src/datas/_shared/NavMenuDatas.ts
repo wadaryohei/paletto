@@ -6,7 +6,7 @@
 //----------------------------------
 // NavMenuDatas
 //----------------------------------
-import { RoutingPath } from  '../../const/RoutingPath'
+import { RouteDatas } from './RouteDatas'
 
 export interface NavMenu {
   pathName: string
@@ -15,19 +15,19 @@ export interface NavMenu {
 
 export const NavMenuDatas: NavMenu[] = [
   {
-    pathName: RoutingPath.about,
-    menuName: 'About',
+    pathName: RouteDatas.about.pathName,
+    menuName: RouteDatas.about.path,
   },
   {
-    pathName: RoutingPath.services,
-    menuName: 'Services',
+    pathName: RouteDatas.services.pathName,
+    menuName: RouteDatas.services.path,
   },
   {
-    pathName: RoutingPath.mebers,
-    menuName: 'Members',
+    pathName: RouteDatas.members.pathName,
+    menuName: RouteDatas.members.path,
   },
   {
-    pathName: RoutingPath.contact,
-    menuName: 'Contact',
+    pathName: RouteDatas.contact.pathName,
+    menuName: RouteDatas.contact.path,
   },
 ]
