@@ -9,6 +9,12 @@ import { BreakPoints, max } from '../../const/BreakPoints'
 // styledComponent
 //----------------------------------
 export const NavStyle = styled(NavComponent)`
+  &.pages {
+    ul > li > a {
+      color: ${Colors.white};
+    }
+  }
+
   ul {
     display: flex;
     flex-wrap: wrap;

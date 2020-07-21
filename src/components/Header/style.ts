@@ -27,7 +27,13 @@ export const HeaderStyle = styled(HeaderComponent)`
   }
 
   &.pages {
-    background-color: red;
+    background-color: none;
+
+    .logo {
+      a {
+        color: ${Colors.white};
+      }
+    }
   }
 
   .headerInner {

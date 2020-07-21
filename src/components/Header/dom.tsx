@@ -35,7 +35,10 @@ export const HeaderComponent = (props: HeaderProps) => {
             </Link>
           </Typography>
         </div>
-        <Nav navMenus={NavMenuDatas} />
+        <Nav
+          navMenus={NavMenuDatas}
+          pathClassName={pathClassName.activePathClassName()}
+        />
       </div>
     </header>
   )

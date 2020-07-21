@@ -8,13 +8,14 @@ import { NavMenu } from '../../datas/_shared/NavMenuDatas'
 export interface NavProps {
   navMenus: NavMenu[]
   className?: string
+  pathClassName?: string
 }
 
 //----------------------------------
 // component
 //----------------------------------
 export const NavComponent = (props: NavProps) => (
-  <nav className={props.className}>
+  <nav className={`${props.className} ${props.pathClassName}`}>
     <ul>
       {props.navMenus.map((navMenu, index) => {
         return (
