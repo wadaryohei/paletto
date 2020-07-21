@@ -19,9 +19,9 @@ const MembersContainer = (props: MembersProps) => {
   return (
     <PagesLayout
       className={props.className}
+      pageName={PageDatas.members.pathname}
       pageHeaderBgPathname={PageDatas.members.pageHeaderBgPathname}
     >
-      <h1>Members Page</h1>
     </PagesLayout>
   )
 }

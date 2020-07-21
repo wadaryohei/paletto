@@ -23,6 +23,9 @@ export const HeaderComponent = (props: HeaderProps) => {
   const router = useRouter()
   const pathClassName = usePathClassName(router.pathname)
 
+  //----------------------------------
+  // render
+  //----------------------------------
   return (
     <header
       className={`${props.className} ${pathClassName.activePathClassName()}`}

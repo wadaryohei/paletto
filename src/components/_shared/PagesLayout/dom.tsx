@@ -1,6 +1,7 @@
 import React from 'react'
 import { Header } from '../../Header'
 import { Footer } from '../../Footer'
+import { Container } from '@material-ui/core'
 
 //----------------------------------
 // props
@@ -8,6 +9,7 @@ import { Footer } from '../../Footer'
 export interface PagesLayoutProps {
   className?: string
   children: React.ReactNode
+  pageName: string
   pageHeaderBgPathname: string
 }
 
@@ -15,12 +17,17 @@ export interface PagesLayoutProps {
 // component
 //----------------------------------
 export const PagesLayoutComponent = (props: PagesLayoutProps) => (
-  <div
-    className={props.className}
-    style={{ backgroundImage: `url(${props.pageHeaderBgPathname})` }}
-  >
-    <Header />
-    <main>{props.children}</main>
-    <Footer />
-  </div>
+  <section className={props.className}>
+    <div
+      className={'pageHeaderWrapper'}
+      style={{ backgroundImage: `url(${props.pageHeaderBgPathname})` }}
+    >
+      <Container>
+        <p className={'pageHeader'}>{props.pageName}</p>
+      </Container>
+      <Header />
+      <main>{props.children}</main>
+      <Footer />
+    </div>
+  </section>
 )

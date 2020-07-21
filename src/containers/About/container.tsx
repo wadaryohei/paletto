@@ -20,8 +20,8 @@ const AboutContainer = (props: AboutProps) => {
     <PagesLayout
       className={props.className}
       pageHeaderBgPathname={PageDatas.about.pageHeaderBgPathname}
+      pageName={PageDatas.about.pathname}
     >
-      <h1>About Page</h1>
     </PagesLayout>
   )
 }

@@ -19,9 +19,9 @@ const ServicesContainer = (props: ServicesProps) => {
   return (
     <PagesLayout
       className={props.className}
+      pageName={PageDatas.services.pathname}
       pageHeaderBgPathname={PageDatas.services.pageHeaderBgPathname}
     >
-      <h1>Services Page</h1>
     </PagesLayout>
   )
 }
