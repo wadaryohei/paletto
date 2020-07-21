@@ -17,7 +17,7 @@ export interface PagesLayoutProps {
 export const PagesLayoutComponent = (props: PagesLayoutProps) => (
   <div
     className={props.className}
-    style={{ backgroundImage: `${props.pageHeaderBgPathname}` }}
+    style={{ backgroundImage: `url(${props.pageHeaderBgPathname})` }}
   >
     <Header />
     <main>{props.children}</main>
