@@ -42,6 +42,8 @@ export const TextStyle = styled(TextComponent)`
   &.subheading {
     font-size: ${FontSize.md};
     font-weight: ${FontWeight.bold};
+    font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo,
+      sans-serif;
     text-indent: 6px;
     color: ${Colors.gray};
 
@@ -54,10 +56,9 @@ export const TextStyle = styled(TextComponent)`
     display: inline-block;
     font-size: ${FontSize.xl};
     font-weight: ${FontWeight.bold};
-    color: ${Colors.white};
-    text-indent: 14px;
-    background-color: ${Colors.black};
-    padding: ${Padding.p16};
+    font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo,
+      sans-serif;
+    color: ${Colors.black};
     margin-top: ${Margin.m8};
 
     @media ${max(BreakPoints.lg)} {
@@ -65,7 +66,7 @@ export const TextStyle = styled(TextComponent)`
     }
 
     @media ${max(BreakPoints.md)} {
-      font-size: ${FontSize.sm};
+      font-size: ${FontSize.md};
     }
 
     & + p {
@@ -75,8 +76,15 @@ export const TextStyle = styled(TextComponent)`
 
   &.lead {
     font-size: ${FontSize.sm};
+    font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo,
+      sans-serif;
     color: ${Colors.black};
-    line-height: 3.6rem;
+    line-height: 3.2rem;
+
+    @media ${max(BreakPoints.md)} {
+      font-size: ${FontSize.s13};
+      line-height: 2.8rem;
+    }
 
     & + &.lead {
       margin-top: ${Margin.m24};
