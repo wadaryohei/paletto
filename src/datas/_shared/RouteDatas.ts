@@ -31,7 +31,7 @@ export interface Route {
 
 export const RouteDatas: Route = {
   index: {
-    path: 'index',
+    path: 'Index',
     pathName: '/',
   },
   about: {
