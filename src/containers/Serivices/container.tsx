@@ -7,6 +7,7 @@ import { Container, Grid } from '@material-ui/core'
 import { ServicesData } from '../../datas/ServicesDatas'
 import { ServicesDatas, Services } from '../../datas/IndexDatas'
 import { ServiceCard } from '../Index/doms/SectionService/ServiceCard'
+import { More } from '../../components/More'
 
 //----------------------------------
 // props
@@ -25,13 +26,14 @@ const ServicesContainer = (props: ServicesProps) => {
   return (
     <PagesLayout
       className={props.className}
-      pageName={PageDatas.services.pathname}
+      pathname={PageDatas.services.pathname}
       pageHeaderBgPathname={PageDatas.services.pageHeaderBgPathname}
+      pageHeading={PageDatas.services.pageHeading}
     >
       {/** @section ServicesIntro */}
       <Section className={'l-services'}>
         <Container>
-          <Grid container spacing={4}>
+          <Grid container spacing={4} className={'servicesContainer'}>
             <Grid item md={6} className={'servicesGrid'}>
               <Text component={'p'} textStyle={'copy'}>
                 感情を動かすデザインを

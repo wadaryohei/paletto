@@ -19,8 +19,9 @@ const ContactContainer = (props: ContactProps) => {
   return (
     <PagesLayout
       className={props.className}
-      pageName={PageDatas.contact.pathname}
+      pathname={PageDatas.contact.pathname}
       pageHeaderBgPathname={PageDatas.contact.pageHeaderBgPathname}
+      pageHeading={PageDatas.contact.pageHeading}
     >
     </PagesLayout>
   )
