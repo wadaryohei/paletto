@@ -3,11 +3,12 @@ import { PagesLayout } from '../../components/_shared/PagesLayout'
 import { PageDatas } from '../../datas/_shared/PageDatas'
 import { Section } from '../../components/Section'
 import { Text } from '../../components/Text'
+import { Link } from '../../components/Link'
+import { More } from '../../components/More'
 import { Container, Grid } from '@material-ui/core'
 import { ServicesData } from '../../datas/ServicesDatas'
-import { ServicesDatas, Services } from '../../datas/IndexDatas'
+import { ServicesDatas, Services } from '../../datas/_shared/ServiceDatas'
 import { ServiceCard } from '../Index/doms/SectionService/ServiceCard'
-import { More } from '../../components/More'
 
 //----------------------------------
 // props
@@ -34,7 +35,7 @@ const ServicesContainer = (props: ServicesProps) => {
       <Section className={'l-services'}>
         <Container>
           <Grid container spacing={4} className={'servicesContainer'}>
-            <Grid item md={6} className={'servicesGrid'}>
+            <Grid item md={6} className={'servicesIntroGrid'}>
               <Text component={'p'} textStyle={'copy'}>
                 感情を動かすデザインを
               </Text>
@@ -51,7 +52,7 @@ const ServicesContainer = (props: ServicesProps) => {
                 </Text>
               </div>
             </Grid>
-            <Grid item md={6} className={'servicesGrid'}>
+            <Grid item md={6} className={'servicesIntroGrid'}>
               <div className={'servicesIntroImageWrapper'}>
                 <figure
                   className={'servicesIntroImage'}
@@ -67,18 +68,29 @@ const ServicesContainer = (props: ServicesProps) => {
 
       {/** @section ServicesCard */}
       <div className={'servicesCardWrapper'}>
-        <Grid container spacing={4}>
-          {ServicesDatas.map((ServicesData: Services, index: number) => {
-            return (
-              <Grid key={index} item md={4} xs={12}>
-                <ServiceCard
-                  ServicesData={ServicesData}
-                  className={'serviceCard'}
-                />
-              </Grid>
-            )
-          })}
-        </Grid>
+        <Container disableGutters={true}>
+          <Grid container spacing={2}>
+            {ServicesDatas.map((ServicesData: Services, index: number) => {
+              return (
+                <Grid
+                  key={index}
+                  item
+                  md={6}
+                  xs={12}
+                  className={'servicesCardGrid'}
+                >
+                  <Link href={ServicesData.viewMorePath}>
+                    <ServiceCard
+                      ServicesData={ServicesData}
+                      className={'serviceCard'}
+                    />
+                    <More />
+                  </Link>
+                </Grid>
+              )
+            })}
+          </Grid>
+        </Container>
       </div>
     </PagesLayout>
   )

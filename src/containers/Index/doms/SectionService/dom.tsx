@@ -3,11 +3,8 @@ import { Grid, Container } from '@material-ui/core'
 import { Section } from '../../../../components/Section'
 import { Text } from '../../../../components/Text'
 import { ServiceCard } from './ServiceCard'
-import {
-  Services,
-  ServicesDatas,
-  SectionHeadingDatas,
-} from '../../../../datas/IndexDatas'
+import { SectionHeadingDatas } from '../../../../datas/IndexDatas'
+import { Services, ServicesDatas } from '../../../../datas/_shared/ServiceDatas'
 
 //----------------------------------
 // props
@@ -54,10 +51,10 @@ export const SectionServiceComponent = (props: SectionServiceProps) => (
     </Container>
 
     <div className={'serviceCardWrapper'}>
-      <Grid container spacing={4}>
+      <Grid container spacing={2}>
         {ServicesDatas.map((ServicesData: Services, index: number) => {
           return (
-            <Grid key={index} item md={4} xs={12}>
+            <Grid key={index} item md={6} xs={12} className={'serviceCardGrid'}>
               <ServiceCard
                 ServicesData={ServicesData}
                 className={'serviceCard'}

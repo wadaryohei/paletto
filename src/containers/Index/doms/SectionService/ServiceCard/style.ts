@@ -18,9 +18,11 @@ export const ServiceCardStyle = styled(ServiceCardComponent)`
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    height: 240px;
+    height: 320px;
+    border-radius: 8px;
 
     @media ${max(BreakPoints.lg)} {
+      height: 200px;
       padding: ${Padding.p32} ${Padding.p16};
     }
   }
@@ -31,10 +33,10 @@ export const ServiceCardStyle = styled(ServiceCardComponent)`
     justify-content: space-between;
     flex-grow: 1;
     color: ${Colors.black};
-    padding: ${Padding.p24} ${Padding.p24};
+    padding: ${Padding.p24} 0;
 
     @media ${max(BreakPoints.md)} {
-      padding: ${Padding.p32} ${Padding.p16};
+      padding: ${Padding.p32} 0 ${Padding.p8};
     }
 
     .cardContentsInner {
@@ -43,21 +45,25 @@ export const ServiceCardStyle = styled(ServiceCardComponent)`
 
       .cardNum {
         font-size: ${FontSize.md};
-        font-weight: ${FontWeight.normal};
         font-family: 'Gilroy-Bold', sans-serif;
         margin-bottom: ${Margin.m32};
         color: ${Colors.gray};
       }
 
-      .cardTitle {
-        font-size: ${FontSize.sm};
-        font-weight: ${FontWeight.normal};
+      .cardTitleEn {
+        font-size: ${FontSize.lg};
         font-family: 'Gilroy-Bold', sans-serif;
-        color: ${Colors.gray};
-
-        &:nth-of-type(2) {
-          margin-bottom: ${Margin.m16};
+        color: ${Colors.primary};
+        @media ${max(BreakPoints.md)} {
+          font-size: ${FontSize.md};
         }
+      }
+
+      .cardTitleJp {
+        font-size: ${FontSize.xs};
+        font-weight: ${FontWeight.bold};
+        color: ${Colors.gray};
+        margin-top: ${Margin.m8};
 
         @media ${max(BreakPoints.lg)} {
           font-size: ${FontSize.sm};
@@ -65,8 +71,13 @@ export const ServiceCardStyle = styled(ServiceCardComponent)`
       }
 
       .cardLead {
+        font-size: ${FontSize.xs};
         margin-top: ${Margin.m24};
       }
+    }
+
+    .cardViewMore {
+      margin-top: ${Margin.m16};
     }
   }
 `

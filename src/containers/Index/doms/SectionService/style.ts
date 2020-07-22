@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { SectionServiceComponent } from './dom'
 import { Padding } from '../../../../const/Padding'
 import { Colors } from '../../../../const/Colors'
+import { Margin } from '../../../../const/Margin'
 
 //----------------------------------
 // styledComponent
@@ -28,6 +29,10 @@ export const SectionServiceStyle = styled(SectionServiceComponent)`
       width: 100%;
       height: 80%;
       background-color: ${Colors.smokeGray};
+    }
+
+    .serviceCardGrid {
+      margin: ${Margin.m24} auto 0;
     }
 
     .serviceCard {

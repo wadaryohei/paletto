@@ -24,16 +24,11 @@ export const ServiceCardComponent = (props: ServiceCardProps) => (
 
     <div className={'cardContentsWrapper'}>
       <div className={'cardContentsInner'}>
-        <p className={'cardNum'}>{props.ServicesData.num}</p>
-        <p className={'cardTitle'}>{props.ServicesData.titleEn}</p>
-        <p className={'cardTitle'}>{props.ServicesData.titleJp}</p>
+        <p className={'cardTitleEn'}>{props.ServicesData.titleEn}</p>
+        <p className={'cardTitleJp'}>{props.ServicesData.titleJp}</p>
         <Text component={'p'} textStyle={'lead'} className={'cardLead'}>
           {props.ServicesData.lead}
         </Text>
-      </div>
-
-      <div className={'cardViewMore'}>
-        <More pathname={'/'} />
       </div>
     </div>
   </Card>

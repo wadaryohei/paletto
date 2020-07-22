@@ -1,5 +1,4 @@
 import React from 'react'
-import { Box } from '@material-ui/core'
 
 //----------------------------------
 // props
@@ -13,5 +12,5 @@ export interface CardProps {
 // component
 //----------------------------------
 export const CardComponent = (props: CardProps) => {
-  return <Box className={`${props.className}`}>{props.children}</Box>
+  return <div className={`${props.className}`}>{props.children}</div>
 }

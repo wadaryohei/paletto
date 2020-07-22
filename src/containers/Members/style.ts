@@ -16,6 +16,10 @@ export const MembersContainerStyle = styled(MembersContainer)`
     background-color: ${Colors.white};
     padding: ${Padding.p160} 0;
 
+    @media ${max(BreakPoints.md)} {
+      padding: ${Padding.p80} 0;
+    }
+
     .membersGrid {
       @media ${max(BreakPoints.md)} {
         margin-top: ${Margin.m64};
