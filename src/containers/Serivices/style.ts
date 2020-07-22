@@ -16,20 +16,25 @@ export const ServicesContainerStyle = styled(ServicesContainer)`
     background-color: ${Colors.white};
   }
 
+  .servicesContainer {
+    align-items: center;
+  }
+
   .servicesGrid {
     width: 100%;
     margin: 0 auto;
   }
 
   .servicesIntroImage {
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
     background-size: cover;
     margin: 0 auto;
 
     @media ${max(BreakPoints.md)} {
-      width: 80%;
-      height: 80%;
+      width: 90%;
+      height: 90%;
+      margin-top: ${Margin.m32};
     }
 
     &::before {
