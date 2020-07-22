@@ -16,6 +16,10 @@ export const AboutContainerStyle = styled(AboutContainer)`
     padding: ${Padding.p160} 0;
     background-color: ${Colors.white};
 
+    @media ${max(BreakPoints.md)} {
+      padding: ${Padding.p80} 0;
+    }
+
     .aboutWrapper {
       padding: ${Padding.p112};
       border: solid 4px ${Colors.black};

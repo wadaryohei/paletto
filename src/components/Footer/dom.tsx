@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { Box, Grid, Container } from '@material-ui/core'
+import { Grid, Container } from '@material-ui/core'
 import TwitterIcon from '@material-ui/icons/Twitter'
 import FacebookIcon from '@material-ui/icons/Facebook'
 import { Members } from './Members'
@@ -18,7 +18,7 @@ export interface FooterProps {
 //----------------------------------
 export const FooterComponent = (props: FooterProps) => (
   <footer className={props.className}>
-    <Container>
+    <Container disableGutters={true}>
       <Grid container spacing={4}>
         <Grid item md={6} sm={12} xs={12}>
           <Link href={{ pathname: '/contact' }}>
@@ -60,9 +60,9 @@ export const FooterComponent = (props: FooterProps) => (
           </div>
         </Grid>
 
-        <Box className={'footerCopyWrapper'}>
+        <div className={'footerCopyWrapper'}>
           <p>2020 Paletto.</p>
-        </Box>
+        </div>
       </Grid>
     </Container>
   </footer>

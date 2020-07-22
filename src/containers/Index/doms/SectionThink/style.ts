@@ -4,6 +4,7 @@ import { Margin } from '../../../../const/Margin'
 import { Colors } from '../../../../const/Colors'
 import { BreakPoints, max } from '../../../../const/BreakPoints'
 import { Padding } from '../../../../const/Padding'
+import { FontSize } from '../../../../const/FontSize'
 
 //----------------------------------
 // styledComponent
@@ -19,8 +20,8 @@ export const SectionThinkStyle = styled(SectionThinkComponent)`
     .thinkCopy {
       color: ${Colors.black};
       background-color: ${Colors.white};
-      padding: ${Padding.p16};
-      text-indent: -2px;
+      padding: ${Padding.p16} ${Padding.p8};
+      font-size: ${FontSize.sm};
     }
   }
 

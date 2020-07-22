@@ -39,7 +39,6 @@ export const FooterStyle = styled(FooterComponent)`
       z-index: 1;
       .footerContactHeading {
         font-size: ${FontSize.lg};
-        font-weight: ${FontWeight.bold};
         font-family: 'Gilroy-Bold', sans-serif;
       }
 

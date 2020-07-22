@@ -1,44 +1,34 @@
 import styled from 'styled-components'
 import { MoreComponent } from './dom'
 import { Colors } from '../../const/Colors'
-import { FontSize } from '../../const/FontSize'
-import { FontWeight } from '../../const/FontWeight'
 import { Margin } from '../../const/Margin'
+import { FontSize } from '../../const/FontSize'
 
 //----------------------------------
 // styledComponent
 //----------------------------------
 export const MoreStyle = styled(MoreComponent)`
-  position: relative;
-  display: inline-block;
-  background-color: ${Colors.white};
-  margin-top: ${Margin.m16};
+  display: flex;
+  align-items: center;
 
-  a {
-    position: relative;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    text-align: center;
+  span {
     font-size: ${FontSize.sm};
-    font-weight: ${FontWeight.bold};
+    font-family: 'Gilroy-Medium', sans-serif;
     line-height: 1.4;
     letter-spacing: 0;
     color: ${Colors.black};
     overflow: hidden;
+    position: relative;
 
-    span {
-      position: relative;
-      &::after {
-        position: absolute;
-        top: 0;
-        right: -12px;
-        display: block;
-        content: '';
-        background-color: ${Colors.white};
-        width: 10px;
-        height: 100%;
-      }
+    &::after {
+      position: absolute;
+      top: 0;
+      right: -12px;
+      display: block;
+      content: '';
+      background-color: ${Colors.white};
+      width: 10px;
+      height: 100%;
     }
   }
 

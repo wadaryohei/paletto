@@ -45,7 +45,7 @@ export const HeroStyle = styled(HeroComponent)`
 
       .copyWrapper {
         .copy {
-          font-size: ${FontSize.s72};
+          font-size: ${FontSize.xxl};
           color: ${Colors.black};
           line-height: 1.2;
           letter-spacing: 4px;
@@ -57,7 +57,7 @@ export const HeroStyle = styled(HeroComponent)`
           &:nth-of-type(1) {
             font-family: 'Helvetica Neue', sans-serif;
             font-weight: 100;
-            font-size: ${FontSize.s24};
+            font-size: ${FontSize.md};
             margin-bottom: ${Margin.m24};
           }
 
@@ -68,7 +68,6 @@ export const HeroStyle = styled(HeroComponent)`
 
           &:nth-of-type(3) {
             font-family: 'Gilroy-Bold', sans-serif;
-            font-weight: ${FontWeight.bold};
             margin-top: ${Margin.m8};
           }
         }
@@ -79,7 +78,7 @@ export const HeroStyle = styled(HeroComponent)`
           margin-top: ${Margin.m16};
         }
         .desc {
-          font-size: ${FontSize.s14};
+          font-size: ${FontSize.xs};
           color: ${Colors.gray};
           line-height: 1.8;
 

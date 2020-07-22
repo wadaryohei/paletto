@@ -1,7 +1,7 @@
 import React from 'react'
 import { Head } from '../components/Head'
 import { HeadDatas } from '../datas/IndexDatas'
-import { ServicesContainer } from '../containers/Serivices'
+import { ServicesContainer } from '../containers/Services'
 
 //----------------------------------
 // component

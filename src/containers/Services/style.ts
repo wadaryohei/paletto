@@ -14,15 +14,18 @@ export const ServicesContainerStyle = styled(ServicesContainer)`
   .l-services {
     padding: ${Padding.p160} 0;
     background-color: ${Colors.white};
+
+    @media ${max(BreakPoints.md)} {
+      padding: ${Padding.p80} 0;
+    }
   }
 
   .servicesContainer {
     align-items: center;
   }
 
-  .servicesGrid {
+  .servicesIntroGrid {
     width: 100%;
-    margin: 0 auto;
   }
 
   .servicesIntroImage {
@@ -55,6 +58,11 @@ export const ServicesContainerStyle = styled(ServicesContainer)`
     justify-content: flex-start;
     padding: ${Padding.p32} ${Padding.p16} ${Padding.p160};
     background-color: ${Colors.white};
+  }
+
+  .servicesCardGrid {
+    width: 100%;
+    margin: ${Margin.m24} auto 0;
   }
 
   .serviceCard {

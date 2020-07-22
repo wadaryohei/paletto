@@ -30,7 +30,6 @@ export const TextStyle = styled(TextComponent)`
 
   &.heading {
     font-size: ${FontSize.xxl};
-    font-weight: ${FontWeight.normal};
     font-family: 'Gilroy-Bold', sans-serif;
     color: ${Colors.black};
 
@@ -44,7 +43,6 @@ export const TextStyle = styled(TextComponent)`
     font-weight: ${FontWeight.bold};
     font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo,
       sans-serif;
-    text-indent: 6px;
     color: ${Colors.gray};
 
     @media ${max(BreakPoints.md)} {
@@ -82,7 +80,7 @@ export const TextStyle = styled(TextComponent)`
     line-height: 3.2rem;
 
     @media ${max(BreakPoints.md)} {
-      font-size: ${FontSize.s13};
+      font-size: ${FontSize.xs};
       line-height: 2.8rem;
     }
 

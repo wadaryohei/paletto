@@ -21,7 +21,7 @@ export interface SectionThinkProps {
 //----------------------------------
 export const SectionThinkComponent = (props: SectionThinkProps) => (
   <Section className={props.className}>
-    <Container>
+    <Container disableGutters={true}>
       <Text component={'h2'} textStyle={'heading'} className={'thinkHeading'}>
         {SectionHeadingDatas.sectionThink.heading}
       </Text>

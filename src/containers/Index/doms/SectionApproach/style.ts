@@ -34,6 +34,10 @@ export const SectionApproachStyle = styled(SectionApproachComponent)`
       color: ${Colors.black};
       background-color: ${Colors.white};
       padding: ${Padding.p16};
+
+      @media ${max(BreakPoints.md)} {
+        font-size: ${FontSize.sm};
+      }
     }
 
     .approachLeadWrapper {
