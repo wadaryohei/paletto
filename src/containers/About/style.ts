@@ -14,7 +14,7 @@ export const AboutContainerStyle = styled(AboutContainer)`
 
   .l-about {
     padding: ${Padding.p160} 0;
-    background-color: ${Colors.smokeGray};
+    background-color: ${Colors.white};
 
     .aboutWrapper {
       padding: ${Padding.p112};
