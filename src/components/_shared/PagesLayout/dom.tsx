@@ -7,10 +7,11 @@ import { Container } from '@material-ui/core'
 // props
 //----------------------------------
 export interface PagesLayoutProps {
+  pathname: string
+  pageHeaderBgPathname: string
+  pageHeading: string
   className?: string
   children: React.ReactNode
-  pageName: string
-  pageHeaderBgPathname: string
 }
 
 //----------------------------------
@@ -20,13 +21,14 @@ export const PagesLayoutComponent = (props: PagesLayoutProps) => (
   <section className={props.className}>
     <Header />
     <div className={'pageHeaderBgWrapper'}>
-      <div
+      <figure
         className={'pageHeaderBg'}
         style={{ backgroundImage: `url(${props.pageHeaderBgPathname})` }}
-      ></div>
+      ></figure>
       <Container>
         <div className={'pageHeaderWrapper'}>
-          <p className={'pageHeader'}>{props.pageName}</p>
+          <p className={'pagename'}>{props.pathname}</p>
+          <p className={'pageHeader'}>{props.pageHeading}</p>
         </div>
       </Container>
     </div>

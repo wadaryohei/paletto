@@ -13,45 +13,38 @@ export const PagesLayoutStyle = styled(PagesLayoutComponent)`
   .pageHeaderBgWrapper {
     position: relative;
     width: 100%;
-    height: 540px;
-    max-height: 540px;
+    height: 420px;
+    max-height: 420px;
 
     .pageHeaderBg {
       position: fixed;
-      top: 0;
-      left: 0;
+      bottom: 0;
+      right: 0;
       z-index: -1;
-      width: 100%;
+      width: 60%;
       height: 100vh;
-      max-height: 100vh;
+      max-height: 480px;
       background-position: center center;
       background-repeat: no-repeat;
       background-size: cover;
-
-      &::after {
-        content: '';
-        display: block;
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        width: 100%;
-        height: 100vh;
-        max-height: 100vh;
-        background-color: ${Colors.black};
-        opacity: 0.9;
-      }
     }
 
     .pageHeaderWrapper {
       position: absolute;
-      top: calc(50% + 40px);
-      .pageHeader {
-        color: ${Colors.white};
-        font-size: ${FontSize.xl};
+      top: calc(46%);
+      .pagename {
+        color: ${Colors.black};
+        font-size: ${FontSize.xxl};
         font-family: 'Gilroy-Bold', sans-serif;
-        text-transform: uppercase;
-        letter-spacing: 16px;
+        width: 100%;
+        line-height: 1.4;
+      }
+      .pageHeader {
+        color: ${Colors.black};
+        font-size: ${FontSize.lg};
+        font-family: 'Gilroy-Bold', sans-serif;
+        width: 60%;
+        line-height: 1.4;
 
         @media ${max(BreakPoints.md)} {
           font-size: ${FontSize.lg};
