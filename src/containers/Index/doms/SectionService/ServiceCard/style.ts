@@ -9,8 +9,6 @@ import { FontSize } from '../../../../../const/FontSize'
 
 export const ServiceCardStyle = styled(ServiceCardComponent)`
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
   background-color: ${Colors.white};
   color: ${Colors.white};
 
@@ -20,7 +18,7 @@ export const ServiceCardStyle = styled(ServiceCardComponent)`
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    height: 264px;
+    height: 240px;
 
     @media ${max(BreakPoints.lg)} {
       padding: ${Padding.p32} ${Padding.p16};
@@ -28,6 +26,10 @@ export const ServiceCardStyle = styled(ServiceCardComponent)`
   }
 
   .cardContentsWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
     color: ${Colors.black};
     padding: ${Padding.p24} ${Padding.p24};
 

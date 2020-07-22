@@ -2,6 +2,7 @@ import React from 'react'
 import { Services } from '../../../../../datas/IndexDatas'
 import { Text } from '../../../../../components/Text'
 import { Card } from '../../../../../components/Card'
+import { More } from '../../../../../components/More'
 
 //----------------------------------
 // props
@@ -29,6 +30,10 @@ export const ServiceCardComponent = (props: ServiceCardProps) => (
         <Text component={'p'} textStyle={'lead'} className={'cardLead'}>
           {props.ServicesData.lead}
         </Text>
+      </div>
+
+      <div className={'cardViewMore'}>
+        <More pathname={'/'} />
       </div>
     </div>
   </Card>
