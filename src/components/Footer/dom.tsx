@@ -18,50 +18,52 @@ export interface FooterProps {
 //----------------------------------
 export const FooterComponent = (props: FooterProps) => (
   <footer className={props.className}>
-    <Grid container spacing={4}>
-      <Grid item md={6} sm={12} xs={12}>
-        <Link href={{ pathname: '/contact' }}>
-          <a className={'footerContactLink'}>
-            <div className={'footerContactWrapper'}>
-              <h2 className={'footerContactHeading'}>Contact</h2>
-              <p className={'footerContactLead'}>
-                <span>ビジネス課題をお待ちしております。</span>
-                <span>
-                  BtoB、BtoC、CtoC事業の皆様へ、パートナーとしてぜひお手伝い致しますますので、まずはご連絡くださいませ。
+    <Container>
+      <Grid container spacing={4}>
+        <Grid item md={6} sm={12} xs={12}>
+          <Link href={{ pathname: '/contact' }}>
+            <a className={'footerContactLink'}>
+              <div className={'footerContactWrapper'}>
+                <h2 className={'footerContactHeading'}>Contact</h2>
+                <p className={'footerContactLead'}>
+                  <span>ビジネス課題をお待ちしております。</span>
+                  <span>
+                    BtoB、BtoC、CtoC事業の皆様へ、パートナーとしてぜひお手伝い致しますますので、まずはご連絡くださいませ。
+                  </span>
+                </p>
+              </div>
+            </a>
+          </Link>
+        </Grid>
+
+        <Grid item md={6} sm={12} xs={12}>
+          <div className={'footerSocialWrapper'}>
+            <div className={'footerSocials'}>
+              <span className={'footerSocialsHeading'}>Social</span>
+              <hr />
+              <p className={'footerSocials'}>
+                <span className={'footerSocialIconsWrapper'}>
+                  <TwitterIcon className={'footerSocialsIcon'} />
+                  <FacebookIcon className={'footerSocialsIcon'} />
                 </span>
               </p>
             </div>
-          </a>
-        </Link>
-      </Grid>
-
-      <Grid item md={6} sm={12} xs={12}>
-        <div className={'footerSocialWrapper'}>
-          <div className={'footerSocials'}>
-            <span className={'footerSocialsHeading'}>Social</span>
-            <hr />
-            <p className={'footerSocials'}>
-              <span className={'footerSocialIconsWrapper'}>
-                <TwitterIcon className={'footerSocialsIcon'} />
-                <FacebookIcon className={'footerSocialsIcon'} />
-              </span>
-            </p>
           </div>
-        </div>
 
-        <div className={'footerMembersWrapper'}>
-          <p className={'footerMembersHeading'}>Paletto Members</p>
-          <div className={'footerMembers'}>
-            {MemberDatas.map((MemberData: Member, index: number) => {
-              return <Members key={index} memberData={MemberData} />
-            })}
+          <div className={'footerMembersWrapper'}>
+            <p className={'footerMembersHeading'}>Paletto Members</p>
+            <div className={'footerMembers'}>
+              {MemberDatas.map((MemberData: Member, index: number) => {
+                return <Members key={index} memberData={MemberData} />
+              })}
+            </div>
           </div>
-        </div>
-      </Grid>
+        </Grid>
 
-      <Box className={'footerCopyWrapper'}>
-        <p>2020 Paletto.</p>
-      </Box>
-    </Grid>
+        <Box className={'footerCopyWrapper'}>
+          <p>2020 Paletto.</p>
+        </Box>
+      </Grid>
+    </Container>
   </footer>
 )

@@ -23,8 +23,9 @@ const AboutContainer = (props: AboutProps) => {
   return (
     <PagesLayout
       className={props.className}
+      pathname={PageDatas.about.pathname}
       pageHeaderBgPathname={PageDatas.about.pageHeaderBgPathname}
-      pageName={PageDatas.about.pathname}
+      pageHeading={PageDatas.about.pageHeading}
     >
       {/** @section About */}
       <Section className={'l-about'}>

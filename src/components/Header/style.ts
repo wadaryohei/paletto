@@ -31,7 +31,6 @@ export const HeaderStyle = styled(HeaderComponent)`
 
     .logo {
       a {
-        /* color: ${Colors.white}; */
         color: ${Colors.black};
       }
     }
@@ -41,9 +40,6 @@ export const HeaderStyle = styled(HeaderComponent)`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 auto;
-    max-width: calc(100% - 200px);
-    width: 100%;
 
     @media ${max(BreakPoints.xl)} {
       max-width: calc(100% - ${Margin.m32});

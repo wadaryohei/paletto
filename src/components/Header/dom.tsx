@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { Typography } from '@material-ui/core'
+import { Typography, Container } from '@material-ui/core'
 import { Nav } from '../Nav'
 import { NavMenuDatas } from '../../datas/_shared/NavMenuDatas'
 import { useRouter } from 'next/router'
@@ -30,19 +30,21 @@ export const HeaderComponent = (props: HeaderProps) => {
     <header
       className={`${props.className} ${pathClassName.activePathClassName()}`}
     >
-      <div className={'headerInner'}>
-        <div className={'logo'}>
-          <Typography component={'h1'}>
-            <Link href={{ pathname: '/' }}>
-              <a>Paletto.</a>
-            </Link>
-          </Typography>
+      <Container>
+        <div className={'headerInner'}>
+          <div className={'logo'}>
+            <Typography component={'h1'}>
+              <Link href={{ pathname: '/' }}>
+                <a>Paletto.</a>
+              </Link>
+            </Typography>
+          </div>
+          <Nav
+            navMenus={NavMenuDatas}
+            pathClassName={pathClassName.activePathClassName()}
+          />
         </div>
-        <Nav
-          navMenus={NavMenuDatas}
-          pathClassName={pathClassName.activePathClassName()}
-        />
-      </div>
+      </Container>
     </header>
   )
 }

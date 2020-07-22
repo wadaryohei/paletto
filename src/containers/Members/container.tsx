@@ -33,8 +33,9 @@ const MembersContainer = (props: MembersProps) => {
   return (
     <PagesLayout
       className={props.className}
-      pageName={PageDatas.members.pathname}
+      pathname={PageDatas.members.pathname}
       pageHeaderBgPathname={PageDatas.members.pageHeaderBgPathname}
+      pageHeading={PageDatas.members.pageHeading}
     >
       {/** @section Members */}
       <Section className={'l-members'}>
