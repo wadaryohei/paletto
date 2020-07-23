@@ -3,11 +3,11 @@ import { createMuiTheme } from '@material-ui/core/styles'
 export const MuiGlobalStyle = createMuiTheme({
   typography: {
     fontFamily: [
-      '"Helvetica Neue"',
-      'Arial',
+      '"游ゴシック"',
+      'YuGothic',
+      '"ヒラギノ角ゴ ProN W3"',
       '"Hiragino Kaku Gothic ProN"',
-      '"Hiragino Sans"',
-      '"Helvetica Neue"',
+      '"メイリオ"',
       'Meiryo',
       'sans-serif',
     ].join(','),

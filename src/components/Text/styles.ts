@@ -5,7 +5,6 @@ import { Margin } from '../../const/Margin'
 import { BreakPoints, max, min } from '../../const/BreakPoints'
 import { FontSize } from '../../const/FontSize'
 import { FontWeight } from '../../const/FontWeight'
-import { Padding } from '../../const/Padding'
 
 //----------------------------------
 // styledComponent
@@ -41,8 +40,6 @@ export const TextStyle = styled(TextComponent)`
   &.subheading {
     font-size: ${FontSize.md};
     font-weight: ${FontWeight.bold};
-    font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo,
-      sans-serif;
     color: ${Colors.gray};
 
     @media ${max(BreakPoints.md)} {
@@ -54,8 +51,6 @@ export const TextStyle = styled(TextComponent)`
     display: inline-block;
     font-size: ${FontSize.xl};
     font-weight: ${FontWeight.bold};
-    font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo,
-      sans-serif;
     color: ${Colors.black};
     margin-top: ${Margin.m8};
 
@@ -74,8 +69,6 @@ export const TextStyle = styled(TextComponent)`
 
   &.lead {
     font-size: ${FontSize.sm};
-    font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo,
-      sans-serif;
     color: ${Colors.black};
     line-height: 3.2rem;
 

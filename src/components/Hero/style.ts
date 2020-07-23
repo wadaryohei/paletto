@@ -56,14 +56,14 @@ export const HeroStyle = styled(HeroComponent)`
 
           &:nth-of-type(1) {
             font-family: 'Helvetica Neue', sans-serif;
-            font-weight: 100;
+            font-weight: ${FontWeight.thin};
             font-size: ${FontSize.md};
             margin-bottom: ${Margin.m24};
           }
 
           &:nth-of-type(2) {
             font-family: 'Helvetica Neue', sans-serif;
-            font-weight: 100;
+            font-weight: ${FontWeight.thin};
           }
 
           &:nth-of-type(3) {
@@ -79,6 +79,7 @@ export const HeroStyle = styled(HeroComponent)`
         }
         .desc {
           font-size: ${FontSize.xs};
+          font-weight: ${FontWeight.light};
           color: ${Colors.gray};
           line-height: 1.8;
 

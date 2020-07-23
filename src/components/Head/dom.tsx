@@ -32,6 +32,7 @@ export const HeadComponent = (props: HeadProps) => (
     <meta name="twitter:description" content={props.description} />
     <meta name="twitter:url" content={`https://paletto.jp${props.pathName}`} />
     <meta name="twitter:image" content="https://paletto.jp/og.png" />
+    <link rel="stylesheet" href="https://use.typekit.net/tcu7jkw.css" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />

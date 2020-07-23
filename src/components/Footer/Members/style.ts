@@ -14,6 +14,7 @@ export const MembersStyle = styled(MembersComponent)`
   justify-content: start;
   font-size: ${FontSize.xs};
   font-weight: ${FontWeight.thin};
+  font-family: 'Gilroy-Bold', sans-serif;
   letter-spacing: 4px;
   line-height: 1.6;
 

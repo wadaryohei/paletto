@@ -101,6 +101,7 @@ export const FooterStyle = styled(FooterComponent)`
     .footerMembersHeading {
       font-size: ${FontSize.sm};
       font-weight: ${FontWeight.thin};
+      font-family: 'Gilroy-Bold', sans-serif;
       letter-spacing: 4px;
     }
 
