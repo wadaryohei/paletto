@@ -41,7 +41,7 @@ export const SectionServiceComponent = (props: SectionServiceProps) => (
         </Text>
         <Text component={'p'} textStyle={'lead'}>
           <span>
-            「Paletto.」ではデジタル領域の課題に対して、Webサイト/サービス、アプリの企画・制作、CI・VI構築や、各種分析・改善活動を、
+            「Paletto.」ではデジタル領域の課題に対して、Webサイト/サービス、アプリの企画・制作、CI・VI構築や、各種分析・改善活動を、
           </span>
           <span>
             クライアントや事業パートナーのビジネスの成長の支援を「デザイン、制作・運用・保守」まで多岐にわたるサポートを行います。

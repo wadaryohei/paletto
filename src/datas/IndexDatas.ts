@@ -32,7 +32,7 @@ export const HeroDatas: Hero = {
   imgPath: '/top/hero.jpg',
   copy: 'We design for\nDESIGN TO MOVES\nEMOTIONS.',
   desc:
-    'We are a design team that takes shape.\nWe are a design team that takes shape.',
+    'We solve business problems by design.\nAnd a design team that embodies our thoughts.\nビジネス課題の先の「感情を動かす」デザイン制作チームです。',
 }
 
 //----------------------------------
