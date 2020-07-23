@@ -3,10 +3,10 @@ import React from 'react'
 //----------------------------------
 // component
 //----------------------------------
-const Develop = () => (
+const Development = () => (
   <>
-    <h1>Develop</h1>
+    <h1>Development</h1>
   </>
 )
 
-export default Develop
+export default Development
