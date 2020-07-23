@@ -19,6 +19,14 @@ export interface Route {
     path: string
     pathName: string
   }
+  servicesDesign: {
+    path: string
+    pathName: string
+  }
+  servicesDevelopment: {
+    path: string
+    pathName: string
+  }
   members: {
     path: string
     pathName: string
@@ -41,6 +49,14 @@ export const RouteDatas: Route = {
   services: {
     path: 'Services',
     pathName: '/services',
+  },
+  servicesDesign: {
+    path: 'Design',
+    pathName: '/services/design',
+  },
+  servicesDevelopment: {
+    path: 'Development',
+    pathName: '/services/development',
   },
   members: {
     path: 'Members',

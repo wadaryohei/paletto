@@ -34,7 +34,7 @@ export const SectionApproachComponent = (props: SectionApproachProps) => (
           <div className={'approachLeadWrapper'}>
             <Text component={'p'} textStyle={'lead'} className={'approachLead'}>
               <span>
-                デザイン会社・制作会社におけるビジネス的な課題解決はもはや当たり前の時代になりました。
+                デザイン会社や制作会社におけるビジネス的な課題解決はもはや当たり前の時代になりつつあります。
               </span>
               <span>
                 私達は「当たり前のその先」にあるユーザーの感情を動かすデザインに取り組みます。

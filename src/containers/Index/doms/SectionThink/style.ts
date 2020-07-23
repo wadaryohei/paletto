@@ -21,7 +21,11 @@ export const SectionThinkStyle = styled(SectionThinkComponent)`
       color: ${Colors.black};
       background-color: ${Colors.white};
       padding: ${Padding.p16} ${Padding.p8};
-      font-size: ${FontSize.sm};
+      font-size: ${FontSize.lg};
+
+      @media ${max(BreakPoints.md)} {
+        font-size: ${FontSize.md};
+      }
     }
   }
 

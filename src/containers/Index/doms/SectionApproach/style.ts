@@ -34,9 +34,10 @@ export const SectionApproachStyle = styled(SectionApproachComponent)`
       color: ${Colors.black};
       background-color: ${Colors.white};
       padding: ${Padding.p16};
+      font-size: ${FontSize.lg};
 
       @media ${max(BreakPoints.md)} {
-        font-size: ${FontSize.sm};
+        font-size: ${FontSize.md};
       }
     }
 
