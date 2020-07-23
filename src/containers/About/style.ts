@@ -5,6 +5,7 @@ import { Margin } from '../../const/Margin'
 import { Colors } from '../../const/Colors'
 import { FontSize } from '../../const/FontSize'
 import { max, BreakPoints } from '../../const/BreakPoints'
+import { FontWeight } from '../../const/FontWeight'
 
 //--------------------------------------
 // Aboutページ全体のスタイル
@@ -21,25 +22,59 @@ export const AboutContainerStyle = styled(AboutContainer)`
     }
 
     .aboutWrapper {
-      padding: ${Padding.p112};
-      border: solid 4px ${Colors.black};
-      background-color: ${Colors.white};
+      position: relative;
+      padding: ${Padding.p80} ${Padding.p32} ${Padding.p120};
 
       @media ${max(BreakPoints.md)} {
         padding: ${Padding.p112} ${Padding.p16};
       }
-    }
 
-    .aboutHeaderWrapper {
-      margin-bottom: ${Margin.m64};
-    }
+      .aboutGrid {
+        margin-top: ${Margin.m64};
+      }
 
-    .aboutSubHeadingWrapper {
-      margin-top: ${Margin.m64};
-    }
+      .aboutHeading {
+        text-align: center;
+        font-size: ${FontSize.xl};
+        font-weight: ${FontWeight.bold};
+        margin-bottom: ${Margin.m64};
+        padding: ${Padding.p16};
+      }
 
-    .aboutLeadWrapper {
-      margin-top: ${Margin.m32};
+      .aboutWrite {
+        font-family: rollerscript-rough, sans-serif;
+        font-size: ${FontSize.md};
+        color: ${Colors.gray};
+      }
+
+      .aboutHeaderWrapper {
+        h2 {
+          font-size: ${FontSize.md};
+        }
+      }
+
+      .aboutLeadWrapper {
+        margin-top: ${Margin.m32};
+      }
+
+      .aboutLeadInWrapper {
+        margin-bottom: ${Margin.m48};
+        & > span:first-child {
+          margin-bottom: ${Margin.m16};
+          font-weight: ${FontWeight.bold};
+        }
+      }
+
+      .aboutHandWriteWrapper {
+        position: absolute;
+        bottom: -40px;
+        left: 50%;
+        transform: translateX(-50%);
+        img {
+          width: 420px;
+          height: 120px;
+        }
+      }
     }
 
     .aboutLinkWrapper {

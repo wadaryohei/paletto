@@ -1,6 +1,6 @@
 import React from 'react'
-import Link from 'next/link'
-import { Container } from '@material-ui/core'
+// import Link from 'next/link'
+import { Container, Grid } from '@material-ui/core'
 import { PagesLayout } from '../../components/_shared/PagesLayout'
 import { Section } from '../../components/Section'
 import { Text } from '../../components/Text'
@@ -29,78 +29,103 @@ const AboutContainer = (props: AboutProps) => {
     >
       {/** @section About */}
       <Section className={'l-about'}>
-        <Container>
+        <Container maxWidth={'md'}>
           <div className={'aboutWrapper'}>
-            <div className={'aboutHeaderWrapper'}>
-              <Text component={'p'} textStyle={'copy'} align={'center'}>
-                感情を動かすデザインを
-              </Text>
-            </div>
-            <div className={'aboutLeadWrapper'}>
-              <Text component={'p'} textStyle={'lead'} align={'left'}>
-                <span>人の感情に寄り添い、人の感情をデザインする。</span>
-                <span>
-                  そんな「エモーショナルなデザイン」をすることが私達「Paletto.」のVisionです。
-                </span>
-                <span>
-                  AppleがiPhoneを発売したように、ユーザーを常に考え、ユーザーの生活を中心にプロダクトを考えた結果Appleは世界1位の企業になりました。
-                </span>
-                <span>感情を揺さぶるデザインでこそ、人の心は動きます。</span>
-                <span>
-                  「Paletto.」では課題の解決という当たり前のその先の、事業やサービスやプロダクトの思いをデザインでカタチにします。
-                </span>
-              </Text>
-            </div>
+            <h1 className={'aboutHeading'}>Palettoが目指す未来</h1>
+            <Grid container spacing={4} className={'aboutGrid'}>
+              <Grid item md={12} className={'aboutGrid'}>
+                <div className={'aboutHeaderWrapper'}>
+                  <p className={'aboutWrite'}>Creativity.​</p>
+                  <Text component={'h2'} textStyle={'copy'}>
+                    私達が考えるデザイン
+                  </Text>
+                </div>
+                <div className={'aboutLeadWrapper'}>
+                  <Text component={'p'} textStyle={'lead'}>
+                    <span>見た目を整えるだけがデザインではありません。</span>
+                    <span>
+                      表層的なデザインはそれぞれの思いのアウトプットとしての最後のカタチに過ぎません。
+                    </span>
+                    <span>
+                      私達の考えるデザインは、課題を見つけ解決策を模索し、本質的な価値を具現化していくことです。
+                    </span>
+                    <span>
+                      つまり、本来のデザインとは課題解決のために、要件から表層までの全ての設計をすることです。
+                    </span>
+                  </Text>
+                </div>
+              </Grid>
 
-            <div className={'aboutSubHeadingWrapper'}>
-              <Text component={'p'} textStyle={'subheading'} align={'left'}>
-                なぜ今デザインなのか？
-              </Text>
-            </div>
+              <Grid item md={12} className={'aboutGrid'}>
+                <div className={'aboutHeaderWrapper'}>
+                  <p className={'aboutWrite'}>Why Do.</p>
+                  <Text component={'h2'} textStyle={'copy'}>
+                    なぜ感情をデザインするのか？
+                  </Text>
+                </div>
+                <div className={'aboutLeadWrapper'}>
+                  <Text component={'p'} textStyle={'lead'}>
+                    <span>appleがiPhoneを発表した時の事を覚えていますか？</span>
+                    <span>
+                      スペック的には決して優れていなかったiPhoneが世界中の人々の心を掴み、ワクワクを与え、未来を見せてくれるプロダクトとなりiPhoneは大成功を収めました。
+                    </span>
+                    <span>
+                      思いや感情が世界に与える影響はとても人の心を打ちます。
+                    </span>
+                    <span>
+                      appleがデザインで世界に影響を与えたように、私達もサービスやプロダクトの「感情」をデザインにして世界に影響を与えることが目指すべき姿です。
+                    </span>
+                  </Text>
+                </div>
+              </Grid>
 
-            <div className={'aboutLeadWrapper'}>
-              <Text component={'p'} textStyle={'lead'} align={'left'}>
-                <span>人の感情に寄り添い、人の感情をデザインする。</span>
-                <span>
-                  そんな「エモーショナルなデザイン」をすることが私達「Paletto.」のVisionです。
-                </span>
-                <span>
-                  AppleがiPhoneを発売したように、ユーザーを常に考え、ユーザーの生活を中心にプロダクトを考えた結果Appleは世界1位の企業になりました。
-                </span>
-                <span>感情を揺さぶるデザインでこそ、人の心は動きます。</span>
-                <span>
-                  「Paletto.」では課題の解決という当たり前のその先の、事業やサービスやプロダクトの思いをデザインでカタチにします。
-                </span>
-              </Text>
-            </div>
+              <Grid item md={12} className={'aboutGrid'}>
+                <div className={'aboutHeaderWrapper'}>
+                  <p className={'aboutWrite'}>Essence.</p>
+                  <Text component={'h2'} textStyle={'copy'}>
+                    私達が大切にしていること
+                  </Text>
+                </div>
+                <div className={'aboutLeadWrapper'}>
+                  <Text component={'p'} textStyle={'lead'}>
+                    <div className={'aboutLeadInWrapper'}>
+                      <span>1.本質を突いたデザインを</span>
+                      <span>
+                        「ドリルを買いにきた人が欲しいのはドリルではなく『穴』である」という言葉があるように、物事のコアである本質を見極め、極限まで突き詰めることで本質を突いたデザインに取り組みます。
+                      </span>
+                    </div>
 
-            <div className={'aboutSubHeadingWrapper'}>
-              <Text component={'p'} textStyle={'subheading'} align={'left'}>
-                私達が考えるデザイン
-              </Text>
-            </div>
+                    <div className={'aboutLeadInWrapper'}>
+                      <span>2.共感を呼ぶデザインを</span>
+                      <span>
+                        使ってくれるユーザーを理解し、ユーザーがどのように行動するのか、身体的および感情的なニーズは何か、世界をどのように考えているのかなどユーザーを理解することで共感を呼ぶデザインに取り組みます。
+                      </span>
+                    </div>
 
-            <div className={'aboutLeadWrapper'}>
-              <Text component={'p'} textStyle={'lead'} align={'left'}>
-                <span>人の感情に寄り添い、人の感情をデザインする。</span>
-                <span>
-                  そんな「エモーショナルなデザイン」をすることが私達「Paletto.」のVisionです。
-                </span>
-                <span>
-                  AppleがiPhoneを発売したように、ユーザーを常に考え、ユーザーの生活を中心にプロダクトを考えた結果Appleは世界1位の企業になりました。
-                </span>
-                <span>感情を揺さぶるデザインでこそ、人の心は動きます。</span>
-                <span>
-                  「Paletto.」では課題の解決という当たり前のその先の、事業やサービスやプロダクトの思いをデザインでカタチにします。
-                </span>
-              </Text>
-            </div>
+                    <div className={'aboutLeadInWrapper'}>
+                      <span>3.感情を揺さぶるデザインを</span>
+                      <span>
+                        デザインされたプロダクトやサービスに触れたユーザーが何を思い、何を感じるのかまでを考えます。ユーザーにとっての最高の体験を突き詰めることで熱狂的なファンになるような感情を揺さぶるデザインに取り組みます。
+                      </span>
+                    </div>
+                  </Text>
+                </div>
+              </Grid>
+            </Grid>
 
-            <div className={'aboutLinkWrapper'}>
+            <div className={'aboutHandWriteWrapper'}>
+              <img
+                className={'aboutHandWrite'}
+                src="pages/about/about_handwrite.svg"
+                width="420"
+                height="120"
+              />
+            </div>
+            {/* <div className={'aboutLinkWrapper'}>
               <Link href={{ pathname: '/services' }}>
                 <a>SERVICES</a>
               </Link>
-            </div>
+            </div> */}
           </div>
         </Container>
       </Section>
