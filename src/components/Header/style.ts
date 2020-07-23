@@ -21,6 +21,7 @@ export const HeaderStyle = styled(HeaderComponent)`
   max-width: 100%;
   width: 100%;
   height: 120px;
+  font-family: 'Gilroy-Bold', sans-serif;
 
   &.index {
     background-color: ${Colors.white};
@@ -51,7 +52,6 @@ export const HeaderStyle = styled(HeaderComponent)`
     a {
       font-weight: ${FontWeight.bold};
       font-size: ${FontSize.md};
-      font-family: 'Renner*', sans-serif;
       color: ${Colors.black};
     }
   }
