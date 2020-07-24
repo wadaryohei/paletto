@@ -1,11 +1,19 @@
 import React from 'react'
+import { Head } from '../../components/Head'
+import { HeadDatas } from '../../datas/IndexDatas'
+import { ServicesDevelopmentContainer } from '../../containers/Services/Development'
 
 //----------------------------------
 // component
 //----------------------------------
 const Development = () => (
   <>
-    <h1>Development</h1>
+    <Head
+      title={HeadDatas.title}
+      description={HeadDatas.description}
+      pathName={HeadDatas.pathName}
+    />
+    <ServicesDevelopmentContainer />
   </>
 )
 
