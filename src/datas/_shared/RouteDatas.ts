@@ -38,30 +38,58 @@ export interface Route {
 }
 
 export const RouteDatas: Route = {
+  //----------------------------------
+  // Index Page
+  //----------------------------------
+  // @path ---- /index
   index: {
     path: 'Index',
     pathName: '/',
   },
+
+  //----------------------------------
+  // About Page
+  //----------------------------------
+  // @path ---- /about
   about: {
     path: 'About',
     pathName: '/about',
   },
+
+  //----------------------------------
+  // Services Page
+  //----------------------------------
+  // @path ---- /service
   services: {
     path: 'Services',
     pathName: '/services',
   },
+
+  // @path ---- /services/design
   servicesDesign: {
     path: 'Design',
-    pathName: '/services/design',
+    pathName: '/design',
   },
+
+  // @path ---- /services/development
   servicesDevelopment: {
     path: 'Development',
-    pathName: '/services/development',
+    pathName: '/development',
   },
+
+  //----------------------------------
+  // Members Page
+  //----------------------------------
+  // @path ---- /members
   members: {
     path: 'Members',
     pathName: '/members',
   },
+
+  //----------------------------------
+  // Contact Page
+  //----------------------------------
+  // @path ---- /contact
   contact: {
     path: 'Contact',
     pathName: '/contact',
