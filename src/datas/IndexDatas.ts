@@ -31,7 +31,9 @@ export const HeroDatas: Hero = {
   imgPath: '/top/hero.jpg',
   copy: 'We design for\nDESIGN TO MOVES\nEMOTIONS.',
   desc:
-    'We solve business problems by design.\nAnd a design team that embodies our thoughts.\nビジネス課題の先の「感情を動かす」デザイン制作チームです。',
+    'We solve business problems by design.\nビジネス課題の先の「感情を動かす」デザイン制作チームです。',
+  // desc:
+  //   'We solve business problems by design.\nAnd a design team that embodies our thoughts.\nビジネス課題の先の「感情を動かす」デザイン制作チームです。',
 }
 
 //----------------------------------

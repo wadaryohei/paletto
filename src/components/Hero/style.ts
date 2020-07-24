@@ -19,16 +19,16 @@ export const HeroStyle = styled(HeroComponent)`
     position: relative;
     max-width: calc(100% - 200px);
     width: auto;
-    height: calc(100vh - 180px);
-    max-height: calc(100vh - 180px);
+    height: calc(100vh - 160px);
+    max-height: calc(100vh - 160px);
     margin: ${Margin.m120} auto 0;
     padding-bottom: ${Padding.p120};
 
     @media ${max(BreakPoints.lg)} {
       width: 100%;
       max-width: 100%;
-      height: calc(100vh - 280px);
-      max-height: calc(100vh - 280px);
+      height: calc(100vh - 248px);
+      max-height: calc(100vh - 248px);
       padding: 0 ${Padding.p16};
     }
 
@@ -60,6 +60,11 @@ export const HeroStyle = styled(HeroComponent)`
             font-weight: ${FontWeight.thin};
             font-size: ${FontSize.md};
             margin-bottom: ${Margin.m8};
+            letter-spacing: 0;
+
+            @media ${max(BreakPoints.md)} {
+              font-size: ${FontSize.sm};
+            }
           }
 
           &:nth-of-type(2) {
@@ -84,8 +89,12 @@ export const HeroStyle = styled(HeroComponent)`
           color: ${Colors.gray};
           line-height: 1.8;
 
+          &:nth-of-type(2) {
+            font-size: calc(${FontSize.sm} - 2px);
+          }
+
           @media ${max(BreakPoints.md)} {
-            font-size: ${FontSize.sm};
+            font-size: ${FontSize.xs};
           }
         }
       }

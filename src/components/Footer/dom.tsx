@@ -18,7 +18,7 @@ export interface FooterProps {
 //----------------------------------
 export const FooterComponent = (props: FooterProps) => (
   <footer className={props.className}>
-    <Container disableGutters={true}>
+    <Container>
       <Grid container spacing={4}>
         <Grid item md={6} sm={12} xs={12}>
           <Link

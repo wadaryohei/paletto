@@ -27,7 +27,7 @@ export const IndexContainerStyle = styled(IndexContainer)`
     padding: ${Padding.p112} ${Padding.p72};
 
     @media ${max(BreakPoints.md)} {
-      padding: ${Padding.p112} ${Padding.p16};
+      padding: ${Padding.p112} 0;
     }
   }
 
@@ -38,6 +38,6 @@ export const IndexContainerStyle = styled(IndexContainer)`
 
   .l-think {
     background-color: ${Colors.black};
-    padding: ${Padding.p160} ${Padding.p16};
+    padding: ${Padding.p160} 0;
   }
 `

@@ -54,18 +54,26 @@ export const SectionServiceComponent = (props: SectionServiceProps) => (
     </Container>
 
     <div className={'serviceCardWrapper'}>
-      <Grid container spacing={2}>
-        {ServicesDatas.map((ServicesData: Services, index: number) => {
-          return (
-            <Grid key={index} item md={6} xs={12} className={'serviceCardGrid'}>
-              <ServiceCard
-                ServicesData={ServicesData}
-                className={'serviceCard'}
-              />
-            </Grid>
-          )
-        })}
-      </Grid>
+      <Container>
+        <Grid container spacing={2}>
+          {ServicesDatas.map((ServicesData: Services, index: number) => {
+            return (
+              <Grid
+                key={index}
+                item
+                md={6}
+                xs={12}
+                className={'serviceCardGrid'}
+              >
+                <ServiceCard
+                  ServicesData={ServicesData}
+                  className={'serviceCard'}
+                />
+              </Grid>
+            )
+          })}
+        </Grid>
+      </Container>
     </div>
   </Section>
 )
