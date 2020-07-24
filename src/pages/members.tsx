@@ -11,7 +11,7 @@ const Members = () => (
     <Head
       title={HeadDatas.title}
       description={HeadDatas.description}
-      pathName={HeadDatas.pathName}
+      pathname={HeadDatas.pathname}
     />
     <MembersContainer />
   </>

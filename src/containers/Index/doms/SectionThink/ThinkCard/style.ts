@@ -4,7 +4,6 @@ import { BreakPoints, max } from '../../../../../const/BreakPoints'
 import { Margin } from '../../../../../const/Margin'
 import { Padding } from '../../../../../const/Padding'
 import { Colors } from '../../../../../const/Colors'
-import { FontWeight } from '../../../../../const/FontWeight'
 import { FontSize } from '../../../../../const/FontSize'
 
 export const ThinkCardStyle = styled(ThinkCardComponent)`
@@ -41,7 +40,7 @@ export const ThinkCardStyle = styled(ThinkCardComponent)`
       color: ${Colors.gray};
     }
 
-    .cardTitle {
+    .cardCopy{
       font-size: ${FontSize.sm};
       font-family: 'Gilroy-Bold', sans-serif;
       color: ${Colors.gray};

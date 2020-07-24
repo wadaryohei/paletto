@@ -25,11 +25,11 @@ export const MembersStyle = styled(MembersComponent)`
     margin-left: ${Margin.m8};
     line-height: 0.6px;
 
-    li {
+    > li {
       margin-right: ${Margin.m8};
-      a {
+      > a {
         color: ${Colors.white};
-        svg {
+        > svg {
           width: 16px;
           height: 16px;
         }

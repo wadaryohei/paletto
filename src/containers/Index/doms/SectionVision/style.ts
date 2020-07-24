@@ -15,7 +15,13 @@ export const SectionVisionStyle = styled(SectionVisionComponent)`
     padding: ${Padding.p80};
     margin-left: ${Margin.m56};
     overflow: hidden;
-    color: ${Colors.white};
+
+    .heading,
+    .subheading,
+    .lead,
+    .copy {
+      color: ${Colors.white};
+    }
 
     @media ${max(BreakPoints.lg)} {
       max-width: calc(100% - 40px);
@@ -50,14 +56,10 @@ export const SectionVisionStyle = styled(SectionVisionComponent)`
         width: calc(100% - 30px);
       }
     }
-  }
 
-  .visionText {
-    color: ${Colors.white};
-  }
-
-  .visionLeadWrapper {
-    position: relative;
-    padding: ${Padding.p96} 0 0;
+    .visionLeadWrapper {
+      position: relative;
+      padding: ${Padding.p96} 0 0;
+    }
   }
 `

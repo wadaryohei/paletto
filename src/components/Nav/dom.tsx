@@ -7,8 +7,8 @@ import { NavMenu } from '../../datas/_shared/NavMenuDatas'
 //----------------------------------
 export interface NavProps {
   navMenus: NavMenu[]
-  className?: string
   pathClassName?: string
+  className?: string
 }
 
 //----------------------------------
@@ -20,8 +20,8 @@ export const NavComponent = (props: NavProps) => (
       {props.navMenus.map((navMenu, index) => {
         return (
           <li key={index}>
-            <Link href={{ pathname: navMenu.pathName }}>
-              <a>{navMenu.menuName}</a>
+            <Link href={{ pathname: navMenu.path }}>
+              <a>{navMenu.menuname}</a>
             </Link>
           </li>
         )

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Think } from '../../../../../datas/IndexDatas'
-import { Text } from '../../../../../components/Text'
+import { Typography } from '../../../../../components/Typography'
 import { Card } from '../../../../../components/Card'
 
 //----------------------------------
@@ -18,21 +18,17 @@ export const ThinkCardComponent = (props: ThinkCardProps) => (
   <Card className={props.className}>
     <div className={'cardContentsWrapper'}>
       <p className={'cardNum'}>{props.ThinkData.num}</p>
-      <p className={'cardTitle'}>{props.ThinkData.copy}</p>
+      <p className={'cardCopy'}>{props.ThinkData.copy}</p>
       <figure className={'cardImg'}>
         <img
-          src={props.ThinkData.imgPathName}
+          src={props.ThinkData.imgPathname}
           alt={props.ThinkData.copy}
           width={200}
           height={200}
         />
-        <Text
-          component={'figcaption'}
-          textStyle={'lead'}
-          className={'cardLead'}
-        >
+        <Typography component={'p'} variant={'lead'}>
           {props.ThinkData.lead}
-        </Text>
+        </Typography>
       </figure>
     </div>
   </Card>

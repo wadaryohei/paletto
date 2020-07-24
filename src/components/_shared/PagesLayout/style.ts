@@ -8,8 +8,6 @@ import { BreakPoints, max } from '../../../const/BreakPoints'
 // styledComponent
 //----------------------------------
 export const PagesLayoutStyle = styled(PagesLayoutComponent)`
-  position: relative;
-
   .pageHeaderBgWrapper {
     position: relative;
     width: 100%;
@@ -28,33 +26,35 @@ export const PagesLayoutStyle = styled(PagesLayoutComponent)`
       background-repeat: no-repeat;
       background-size: cover;
     }
+  }
 
-    .pageHeaderWrapper {
-      position: absolute;
-      top: calc(46%);
-      .pagename {
-        color: ${Colors.black};
-        font-size: ${FontSize.xxl};
-        font-family: 'Gilroy-Bold', sans-serif;
+  .pageHeaderWrapper {
+    position: absolute;
+    top: calc(46%);
+
+    .pagename {
+      color: ${Colors.black};
+      font-size: ${FontSize.xxl};
+      font-family: 'Gilroy-Bold', sans-serif;
+      width: 100%;
+      line-height: 1.4;
+
+      @media ${max(BreakPoints.md)} {
+        font-size: ${FontSize.xl};
         width: 100%;
-        line-height: 1.4;
-
-        @media ${max(BreakPoints.md)} {
-          font-size: ${FontSize.xl};
-          width: 100%;
-        }
       }
-      .pageHeader {
-        color: ${Colors.black};
-        font-size: ${FontSize.lg};
-        font-family: 'Gilroy-Bold', sans-serif;
-        width: 60%;
-        line-height: 1.4;
+    }
 
-        @media ${max(BreakPoints.md)} {
-          font-size: ${FontSize.md};
-          width: 100%;
-        }
+    .pageHeader {
+      color: ${Colors.black};
+      font-size: ${FontSize.lg};
+      font-family: 'Gilroy-Bold', sans-serif;
+      width: 60%;
+      line-height: 1.4;
+
+      @media ${max(BreakPoints.md)} {
+        font-size: ${FontSize.md};
+        width: 100%;
       }
     }
   }

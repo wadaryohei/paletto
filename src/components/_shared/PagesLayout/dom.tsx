@@ -1,7 +1,8 @@
 import React from 'react'
+import { Container } from '@material-ui/core'
 import { Header } from '../../Header'
 import { Footer } from '../../Footer'
-import { Container } from '@material-ui/core'
+import { Section } from '../../Section'
 
 //----------------------------------
 // props
@@ -18,7 +19,7 @@ export interface PagesLayoutProps {
 // component
 //----------------------------------
 export const PagesLayoutComponent = (props: PagesLayoutProps) => (
-  <section className={props.className}>
+  <Section className={props.className}>
     <Header />
     <div className={'pageHeaderBgWrapper'}>
       <figure
@@ -34,5 +35,5 @@ export const PagesLayoutComponent = (props: PagesLayoutProps) => (
     </div>
     <main>{props.children}</main>
     <Footer />
-  </section>
+  </Section>
 )

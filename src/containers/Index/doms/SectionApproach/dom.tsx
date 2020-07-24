@@ -1,7 +1,7 @@
 import React from 'react'
 import { Grid, Container } from '@material-ui/core'
 import { Section } from '../../../../components/Section'
-import { Text } from '../../../../components/Text'
+import { Typography } from '../../../../components/Typography'
 import { SectionHeadingDatas } from '../../../../datas/IndexDatas'
 
 //----------------------------------
@@ -19,20 +19,28 @@ export const SectionApproachComponent = (props: SectionApproachProps) => (
     <Container>
       <Grid container spacing={4} className={'approachWrapper'}>
         <Grid item md={6} sm={12} xs={12}>
-          <Text
+          <Typography
             component={'h2'}
-            textStyle={'heading'}
+            variant={'heading'}
             className={'approachHeading'}
           >
             {SectionHeadingDatas.sectionApproach.heading}
-          </Text>
+          </Typography>
         </Grid>
         <Grid item md={6} sm={12} xs={12}>
-          <Text component={'h2'} textStyle={'copy'} className={'approachCopy'}>
+          <Typography
+            component={'h2'}
+            variant={'copy'}
+            className={'approachCopy'}
+          >
             {SectionHeadingDatas.sectionApproach.copy}
-          </Text>
+          </Typography>
           <div className={'approachLeadWrapper'}>
-            <Text component={'p'} textStyle={'lead'} className={'approachLead'}>
+            <Typography
+              component={'p'}
+              variant={'lead'}
+              className={'approachLead'}
+            >
               <span>
                 デザイン会社や制作会社におけるビジネス的な課題解決はもはや当たり前の時代になりつつあります。
               </span>
@@ -42,7 +50,7 @@ export const SectionApproachComponent = (props: SectionApproachProps) => (
               <span>
                 このプロダクト、このお店、このサービスだからこそ使いたいと思えるデザインをカタチにしていくことに全力を注ぎます。
               </span>
-            </Text>
+            </Typography>
           </div>
         </Grid>
       </Grid>

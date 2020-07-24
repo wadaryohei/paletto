@@ -1,10 +1,13 @@
 import React from 'react'
 import { Grid, Container } from '@material-ui/core'
 import { Section } from '../../../../components/Section'
-import { Text } from '../../../../components/Text'
+import { Typography } from '../../../../components/Typography'
 import { ServiceCard } from './ServiceCard'
 import { SectionHeadingDatas } from '../../../../datas/IndexDatas'
-import { Services, ServicesDatas } from '../../../../datas/_shared/ServiceDatas'
+import {
+  Services,
+  ServicesDatas,
+} from '../../../../datas/_shared/ServicesDatas'
 
 //----------------------------------
 // props
@@ -19,18 +22,18 @@ export interface SectionServiceProps {
 export const SectionServiceComponent = (props: SectionServiceProps) => (
   <Section className={props.className}>
     <Container>
-      <Text component={'h2'} textStyle={'heading'}>
+      <Typography component={'h2'} variant={'heading'}>
         {SectionHeadingDatas.sectionService.heading}
-      </Text>
-      <Text component={'p'} textStyle={'subheading'}>
+      </Typography>
+      <Typography component={'p'} variant={'subheading'}>
         {SectionHeadingDatas.sectionService.subHeading}
-      </Text>
+      </Typography>
 
       <div className={'serviceLeadWrapper'}>
-        <Text component={'p'} textStyle={'copy'}>
+        <Typography component={'p'} variant={'copy'}>
           {SectionHeadingDatas.sectionService.copy}
-        </Text>
-        <Text component={'p'} textStyle={'lead'}>
+        </Typography>
+        <Typography component={'p'} variant={'lead'}>
           <span>感情をデザインする上でビジネス課題の解決は勿論必要です。</span>
           <span>
             「Paletto.」が手掛けるデザインは、見た目を整えるだけのデザインではありません。
@@ -38,15 +41,15 @@ export const SectionServiceComponent = (props: SectionServiceProps) => (
           <span>
             本来デザインが持つ「設計」にイチから取り組み、ビジネスにおける課題を解決し、それがユーザーの感情を動かすことです。
           </span>
-        </Text>
-        <Text component={'p'} textStyle={'lead'}>
+        </Typography>
+        <Typography component={'p'} variant={'lead'}>
           <span>
-            「Paletto.」ではデジタル領域の課題に対して、Webサイト/サービス、アプリの企画・制作、CI・VI構築や、各種分析・改善活動を、
+            「Paletto.」ではデジタル領域の課題に対して、Webサイト/サービス、アプリの企画・制作、各種分析・改善活動を、
           </span>
           <span>
             クライアントや事業パートナーのビジネスの成長の支援を「デザイン、制作・運用・保守」まで多岐にわたるサポートを行います。
           </span>
-        </Text>
+        </Typography>
       </div>
     </Container>
 

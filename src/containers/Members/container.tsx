@@ -1,15 +1,15 @@
 import React from 'react'
-import Link from 'next/link'
 import { Container, Grid } from '@material-ui/core'
 import { PagesLayout } from '../../components/_shared/PagesLayout'
 import { Section } from '../../components/Section'
-import { Text } from '../../components/Text'
+import { Icon } from '../../components/Icon'
+import { Link } from '../../components/Link'
 import { useMembersPresenter } from './presenter/useMembersPresenter'
 import { MembersViewDatas } from './presenter/viewDatas/MembersViewDatas'
 import { MemberDatas } from '../../datas/_shared/MemberDatas'
 import { PageDatas } from '../../datas/_shared/PageDatas'
-import { SocialDatas } from '../../datas/_shared/SocialDatas'
-import { Icon } from '../../components/Icon'
+import { Social } from '../../datas/_shared/SocialDatas'
+import { Typography } from '../../components/Typography'
 
 //----------------------------------
 // props
@@ -49,7 +49,7 @@ const MembersContainer = (props: MembersProps) => {
                     <figure className={'membersWrapepr'}>
                       <div className={'membersImgWrapper'}>
                         <img
-                          src={membersViewData.imgPath}
+                          src={membersViewData.imgPathname}
                           alt={membersViewData.name}
                           width="120px"
                           height="120px"
@@ -60,13 +60,11 @@ const MembersContainer = (props: MembersProps) => {
                         <figcaption>{membersViewData.name}</figcaption>
                         <ul className={'membersSocialList'}>
                           {membersViewData.socials?.map(
-                            (social: SocialDatas, index: number) => {
+                            (social: Social, index: number) => {
                               return (
                                 <li key={index}>
-                                  <Link href={{ pathname: social.path }}>
-                                    <a target="_blank">
-                                      <Icon icon={social.name} />
-                                    </a>
+                                  <Link href={social.path} target={true}>
+                                    <Icon icon={social.name} />
                                   </Link>
                                 </li>
                               )
@@ -77,13 +75,13 @@ const MembersContainer = (props: MembersProps) => {
                     </figure>
 
                     <div className={'membersLeadWrapepr'}>
-                      <Text component={'p'} textStyle={'lead'}>
+                      <Typography component={'p'} variant={'lead'}>
                         {membersViewData.introduce.map(
                           (memberViewData: string, index: number) => {
                             return <span key={index}>{memberViewData}</span>
                           },
                         )}
-                      </Text>
+                      </Typography>
                     </div>
                   </Grid>
                 )

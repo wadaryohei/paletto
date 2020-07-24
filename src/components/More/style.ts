@@ -11,7 +11,7 @@ export const MoreStyle = styled(MoreComponent)`
   display: flex;
   align-items: center;
 
-  span {
+  > span {
     font-size: ${FontSize.sm};
     font-family: 'Gilroy-Medium', sans-serif;
     line-height: 1.4;

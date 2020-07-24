@@ -1,22 +1,8 @@
+import { Social } from '../../../../datas/_shared/SocialDatas'
+
 export interface MembersViewDatas {
   name: string
-  imgPath: string
-  socials?: [
-    {
-      name?: string
-      path?: string
-      icon?: string
-    },
-    {
-      name?: string
-      path?: string
-      icon?: string
-    },
-    {
-      name?: string
-      path?: string
-      icon?: string
-    },
-  ]
+  imgPathname: string
+  socials?: Social[]
   introduce: string[]
 }

@@ -1,15 +1,15 @@
 import styled from 'styled-components'
-import { TextComponent } from './doms'
+import { TypographyComponent } from './doms'
 import { Colors } from '../../const/Colors'
 import { Margin } from '../../const/Margin'
-import { BreakPoints, max, min } from '../../const/BreakPoints'
 import { FontSize } from '../../const/FontSize'
 import { FontWeight } from '../../const/FontWeight'
+import { BreakPoints, max, min } from '../../const/BreakPoints'
 
 //----------------------------------
 // styledComponent
 //----------------------------------
-export const TextStyle = styled(TextComponent)`
+export const TypographyStyle = styled(TypographyComponent)`
   /**
    * 端末サイズの改行用クラス
    */

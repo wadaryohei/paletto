@@ -5,6 +5,7 @@ export const Padding = {
   p24: '24px',
   p32: '32px',
   p40: '40px',
+  p48: '48px',
   p56: '56px',
   p64: '64px',
   p72: '72px',

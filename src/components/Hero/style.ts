@@ -43,8 +43,9 @@ export const HeroStyle = styled(HeroComponent)`
         justify-content: center;
       }
 
-      .copyWrapper {
+      .heroCopyWrapper {
         .copy {
+          display: block;
           font-size: ${FontSize.xxl};
           color: ${Colors.black};
           line-height: 1.2;
@@ -55,14 +56,14 @@ export const HeroStyle = styled(HeroComponent)`
           }
 
           &:nth-of-type(1) {
-            font-family: 'Helvetica Neue', sans-serif;
+            font-family: 'Gilroy-normal', sans-serif;
             font-weight: ${FontWeight.thin};
             font-size: ${FontSize.md};
-            margin-bottom: ${Margin.m24};
+            margin-bottom: ${Margin.m8};
           }
 
           &:nth-of-type(2) {
-            font-family: 'Helvetica Neue', sans-serif;
+            font-family: 'Gilroy-Bold', sans-serif;
             font-weight: ${FontWeight.thin};
           }
 
@@ -73,7 +74,7 @@ export const HeroStyle = styled(HeroComponent)`
         }
       }
 
-      .descWrapper {
+      .heroDescWrapper {
         @media ${max(BreakPoints.md)} {
           margin-top: ${Margin.m16};
         }
