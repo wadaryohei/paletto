@@ -43,14 +43,7 @@ export const ServiceCardStyle = styled(ServiceCardComponent)`
       position: relative;
       z-index: 1;
 
-      .cardNum {
-        font-size: ${FontSize.md};
-        font-family: 'Gilroy-Bold', sans-serif;
-        margin-bottom: ${Margin.m32};
-        color: ${Colors.gray};
-      }
-
-      .cardTitleEn {
+      .cardCopyEn {
         font-size: ${FontSize.lg};
         font-family: 'Gilroy-Bold', sans-serif;
         color: ${Colors.primary};
@@ -59,7 +52,7 @@ export const ServiceCardStyle = styled(ServiceCardComponent)`
         }
       }
 
-      .cardTitleJp {
+      .cardCopyJp {
         font-size: ${FontSize.xs};
         font-weight: ${FontWeight.bold};
         color: ${Colors.gray};

@@ -24,13 +24,13 @@ export const useMembersPresenter = (
   // MembersViewDatas
   //----------------------------------
   /**
-   * Heroに使用するViewDatas
+   * Membersに使用するViewDatas
    */
   const membersViewDatas = (): MembersViewDatas[] => {
     return memberDatas.map((memberData: Member) => {
       return {
         name: memberData.name,
-        imgPath: memberData.imgPath,
+        imgPathname: memberData.imgPathname,
         socials: memberData.socials,
         introduce: stringProcessing.strToSplit(memberData.introduce),
       }

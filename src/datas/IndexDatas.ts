@@ -1,6 +1,5 @@
 /**
- * pages/Indexで使用するデータ
- * - コンポーネントに渡す静的なデータを記述する
+ * Indexページで使用するデータ
  */
 import { RouteDatas } from './_shared/RouteDatas'
 
@@ -10,13 +9,13 @@ import { RouteDatas } from './_shared/RouteDatas'
 export interface Head {
   title: string
   description: string
-  pathName: string
+  pathname: string
 }
 
 export const HeadDatas: Head = {
   title: 'Paletto',
   description: '世界にエモーショナルなデザインを。',
-  pathName: RouteDatas.index.pathName,
+  pathname: RouteDatas.index.pathname,
 }
 
 //----------------------------------
@@ -59,11 +58,6 @@ export interface SectionHeading {
     subHeading: string
     copy: string
   }
-  sectionPlans: {
-    heading: string
-    subHeading: string
-    copy: string
-  }
 }
 
 export const SectionHeadingDatas: SectionHeading = {
@@ -86,11 +80,11 @@ export const SectionHeadingDatas: SectionHeading = {
     subHeading: '私達の考え',
     copy: 'サブスクリプションを採用',
   },
-  sectionPlans: {
-    heading: 'OUR THINK.',
-    subHeading: '私達の考え',
-    copy: 'サブスクリプションを採用',
-  },
+  // sectionPlans: {
+  //   heading: 'OUR THINK.',
+  //   subHeading: '私達の考え',
+  //   copy: 'サブスクリプションを採用',
+  // },
 }
 
 //----------------------------------
@@ -99,7 +93,7 @@ export const SectionHeadingDatas: SectionHeading = {
 export interface Think {
   num: string
   copy: string
-  imgPathName: string
+  imgPathname: string
   lead: string
 }
 
@@ -107,69 +101,22 @@ export const ThinkDatas: Think[] = [
   {
     num: '01',
     copy: '長期的なパートナー戦略',
-    imgPathName: '/top/think/think_icn_01.svg',
+    imgPathname: '/top/think/think_icn_01.svg',
     lead:
       '長期的なパートナーシップを取ることにより、戦略立案からプロダクト開発、グロースまで可能です。',
   },
   {
     num: '02',
     copy: 'デザイン戦略の調整',
-    imgPathName: '/top/think/think_icn_02.svg',
+    imgPathname: '/top/think/think_icn_02.svg',
     lead:
       '目まぐるしく変わる状況に合わせて、課題解決や価値創造へのアプローチを的確に日々調整します。',
   },
   {
     num: '03',
     copy: '一貫したデザインと制作',
-    imgPathName: '/top/think/think_icn_03.svg',
+    imgPathname: '/top/think/think_icn_03.svg',
     lead:
       'デザインから制作までを一気通貫で担当するので、クオリティの担保と運用・保守までを実現します。',
-  },
-]
-
-//----------------------------------
-// PlanDatas
-//----------------------------------
-export interface Plan {
-  planName: string
-  recommendedCopy: string
-  monthlyFee: number
-  yearContract: number
-  planDetails: string[]
-  leadTime: number
-}
-
-export const PlanDatas: Plan[] = [
-  {
-    planName: 'スタンダードプラン',
-    recommendedCopy: 'スピード重視でプロトタイプやリサーチを行いたい方',
-    monthlyFee: 5,
-    yearContract: 12,
-    planDetails: [
-      'デザイン・制作費無料',
-      'トップ＋下層５ページ',
-      '独自ドメイン',
-      '問い合わせフォーム',
-      '毎月の更新・管理',
-      'アクセス解析',
-    ],
-    leadTime: 3,
-  },
-  {
-    planName: 'プレミアムプラン',
-    recommendedCopy: '組織にデザイン思考・デザイン経営を導入したい方',
-    monthlyFee: 8,
-    yearContract: 12,
-    planDetails: [
-      'デザイン・制作費無料',
-      'トップ＋下層５ページ',
-      '独自ドメイン',
-      '問い合わせフォーム',
-      '毎月の更新・管理',
-      'アクセス解析',
-      'デザイン組織の構築',
-      'ブランディング戦略',
-    ],
-    leadTime: 3,
   },
 ]

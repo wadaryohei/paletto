@@ -10,8 +10,6 @@ import { BreakPoints, max } from '../../const/BreakPoints'
 // Membersページ全体のスタイル
 //--------------------------------------
 export const MembersContainerStyle = styled(MembersContainer)`
-  position: relative;
-
   .l-members {
     background-color: ${Colors.white};
     padding: ${Padding.p160} 0;

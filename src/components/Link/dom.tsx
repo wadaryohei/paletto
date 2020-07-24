@@ -6,11 +6,11 @@ import { useRouter } from 'next/router'
 // props
 //----------------------------------
 export interface LinkComponentProps extends LinkProps {
-  className?: string
   href: string
-  children: React.ReactNode
   target?: boolean
   routeMatch?: boolean
+  className?: string
+  children: React.ReactNode
 }
 
 //----------------------------------
@@ -44,6 +44,7 @@ export const LinkComponent = (props: LinkComponentProps) => {
     )
   }
 
+  // どの条件にも当てはまらない場合
   return (
     <div className={props.className}>
       <Link href={{ pathname: `${router.pathname}${props.href}` }}>

@@ -21,17 +21,19 @@ export const FooterStyle = styled(FooterComponent)`
   }
 
   .footerContactLink {
-    position: relative;
-    display: block;
-    background-color: ${Colors.white};
-    color: ${Colors.black};
-    text-align: center;
-    padding: ${Padding.p64} ${Padding.p32};
-    transition: ${hover(400)};
-    overflow: hidden;
+    > a {
+      position: relative;
+      display: block;
+      background-color: ${Colors.white};
+      color: ${Colors.black};
+      text-align: center;
+      padding: ${Padding.p64} ${Padding.p32};
+      transition: ${hover(400)};
+      overflow: hidden;
 
-    @media ${max(BreakPoints.md)} {
-      padding: ${Padding.p64} ${Padding.p16};
+      @media ${max(BreakPoints.md)} {
+        padding: ${Padding.p64} ${Padding.p16};
+      }
     }
 
     .footerContactWrapper {

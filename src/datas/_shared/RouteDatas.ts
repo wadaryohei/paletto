@@ -1,39 +1,37 @@
 /**
  * Routingで使用するデータ
- * - コンポーネントに渡す静的なデータを記述する
  */
-
 //----------------------------------
 // RouteDatas
 //----------------------------------
 export interface Route {
   index: {
-    path?: string
-    pathName: string
+    pathname: string
+    path: string
   }
   about: {
+    pathname: string
     path: string
-    pathName: string
   }
   services: {
+    pathname: string
     path: string
-    pathName: string
   }
   servicesDesign: {
+    pathname: string
     path: string
-    pathName: string
   }
   servicesDevelopment: {
+    pathname: string
     path: string
-    pathName: string
   }
   members: {
+    pathname: string
     path: string
-    pathName: string
   }
   contact: {
+    pathname: string
     path: string
-    pathName: string
   }
 }
 
@@ -43,8 +41,8 @@ export const RouteDatas: Route = {
   //----------------------------------
   // @path ---- /index
   index: {
-    path: 'Index',
-    pathName: '/',
+    pathname: 'Index',
+    path: '/',
   },
 
   //----------------------------------
@@ -52,8 +50,8 @@ export const RouteDatas: Route = {
   //----------------------------------
   // @path ---- /about
   about: {
-    path: 'About',
-    pathName: '/about',
+    pathname: 'About',
+    path: '/about',
   },
 
   //----------------------------------
@@ -61,20 +59,20 @@ export const RouteDatas: Route = {
   //----------------------------------
   // @path ---- /service
   services: {
-    path: 'Services',
-    pathName: '/services',
+    pathname: 'Services',
+    path: '/services',
   },
 
   // @path ---- /services/design
   servicesDesign: {
-    path: 'Design',
-    pathName: '/design',
+    pathname: 'Design',
+    path: '/design',
   },
 
   // @path ---- /services/development
   servicesDevelopment: {
-    path: 'Development',
-    pathName: '/development',
+    pathname: 'Development',
+    path: '/development',
   },
 
   //----------------------------------
@@ -82,8 +80,8 @@ export const RouteDatas: Route = {
   //----------------------------------
   // @path ---- /members
   members: {
-    path: 'Members',
-    pathName: '/members',
+    pathname: 'Members',
+    path: '/members',
   },
 
   //----------------------------------
@@ -91,7 +89,7 @@ export const RouteDatas: Route = {
   //----------------------------------
   // @path ---- /contact
   contact: {
-    path: 'Contact',
-    pathName: '/contact',
+    pathname: 'Contact',
+    path: '/contact',
   },
 }

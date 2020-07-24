@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import { Icon } from '../../Icon/'
 import { Member } from '../../../datas/_shared/MemberDatas'
-import { SocialDatas } from '../../../datas/_shared/SocialDatas'
+import { Social } from '../../../datas/_shared/SocialDatas'
 
 //----------------------------------
 // props
@@ -19,7 +19,7 @@ export const MembersComponent = (props: MembersProps) => (
   <div className={props.className}>
     {props.memberData.name}
     <ul className={'membersSocialsList'}>
-      {props.memberData.socials?.map((social: SocialDatas, index: number) => {
+      {props.memberData.socials?.map((social: Social, index: number) => {
         return (
           <li key={index}>
             <Link href={{ pathname: social.path }}>

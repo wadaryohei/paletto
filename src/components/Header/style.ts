@@ -22,22 +22,9 @@ export const HeaderStyle = styled(HeaderComponent)`
   width: 100%;
   height: 120px;
   font-family: 'Gilroy-Bold', sans-serif;
+  background-color: ${Colors.white};
 
-  &.index {
-    background-color: ${Colors.white};
-  }
-
-  &.pages {
-    background-color: ${Colors.white};
-
-    .logo {
-      a {
-        color: ${Colors.black};
-      }
-    }
-  }
-
-  .headerInner {
+  .headerWrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -47,7 +34,7 @@ export const HeaderStyle = styled(HeaderComponent)`
     }
   }
 
-  .logo {
+  .headerLogo {
     margin-right: auto;
     a {
       font-weight: ${FontWeight.bold};

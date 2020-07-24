@@ -1,15 +1,33 @@
 /**
- * pages/Servicesで使用するデータ
- * - コンポーネントに渡す静的なデータを記述する
+ * Servicesページで使用するデータ
  */
 
 //----------------------------------
-// ServicesDatas
+// ServicesDesignDatas
 //----------------------------------
-export interface Services {
-  imgIntroPath: string
+export interface ServicesDesign {
+  bgPathName: string
+  heading: string
+  subHeading: string
 }
 
-export const ServicesData: Services = {
-  imgIntroPath: '/pages/services/intro.svg',
+export const ServicesDesignDatas = {
+  bgPathName: '/top/services/cardbg_01.jpg',
+  heading: 'Design partnerShips',
+  subHeading: 'デザインパートナー事業',
+}
+
+//----------------------------------
+// ServicesDevelopmentDatas
+//----------------------------------
+export interface ServicesDevelopment {
+  bgPathName: string
+  heading: string
+  subHeading: string
+}
+
+export const ServicesDevelopmentDatas = {
+  bgPathName: '/top/services/cardbg_02.jpg',
+  heading: 'Develoment partnerShips',
+  subHeading: '制作パートナー事業',
 }

@@ -1,6 +1,5 @@
 /**
- * navMenuで使用するデータ
- * - コンポーネントに渡す静的なデータを記述する
+ * NavMenuで使用するデータ
  */
 
 //----------------------------------
@@ -9,25 +8,25 @@
 import { RouteDatas } from './RouteDatas'
 
 export interface NavMenu {
-  pathName: string
-  menuName: string
+  path: string
+  menuname: string
 }
 
 export const NavMenuDatas: NavMenu[] = [
   {
-    pathName: RouteDatas.about.pathName,
-    menuName: RouteDatas.about.path,
+    path: RouteDatas.about.path,
+    menuname: RouteDatas.about.pathname,
   },
   {
-    pathName: RouteDatas.services.pathName,
-    menuName: RouteDatas.services.path,
+    path: RouteDatas.services.path,
+    menuname: RouteDatas.services.pathname,
   },
   {
-    pathName: RouteDatas.members.pathName,
-    menuName: RouteDatas.members.path,
+    path: RouteDatas.members.path,
+    menuname: RouteDatas.members.pathname,
   },
   {
-    pathName: RouteDatas.contact.pathName,
-    menuName: RouteDatas.contact.path,
+    path: RouteDatas.contact.path,
+    menuname: RouteDatas.contact.pathname,
   },
 ]

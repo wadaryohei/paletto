@@ -9,14 +9,7 @@ import { BreakPoints, max } from '../../const/BreakPoints'
 // styledComponent
 //----------------------------------
 export const NavStyle = styled(NavComponent)`
-  &.pages {
-    ul > li > a {
-      /* color: ${Colors.white}; */
-      color: ${Colors.black};
-    }
-  }
-
-  ul {
+  > ul {
     display: flex;
     flex-wrap: wrap;
     margin-right: -${Margin.m16};
@@ -25,8 +18,8 @@ export const NavStyle = styled(NavComponent)`
       display: none;
     }
 
-    li {
-      a {
+    > li {
+      > a {
         font-size: ${FontSize.sm};
         color: ${Colors.black};
         margin-right: ${Margin.m16};

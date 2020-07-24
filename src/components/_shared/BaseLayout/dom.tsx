@@ -1,6 +1,7 @@
 import React from 'react'
 import { Header } from '../../Header'
 import { Footer } from '../../Footer'
+import { Section } from '../../Section'
 
 //----------------------------------
 // props
@@ -14,9 +15,9 @@ export interface BaseLayoutProps {
 // component
 //----------------------------------
 export const BaseLayoutComponent = (props: BaseLayoutProps) => (
-  <div className={props.className}>
+  <Section className={props.className}>
     <Header />
     <main>{props.children}</main>
     <Footer />
-  </div>
+  </Section>
 )

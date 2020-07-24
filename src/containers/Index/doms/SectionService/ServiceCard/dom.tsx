@@ -1,8 +1,7 @@
 import React from 'react'
-import { Services } from '../../../../../datas/IndexDatas'
-import { Text } from '../../../../../components/Text'
 import { Card } from '../../../../../components/Card'
-import { More } from '../../../../../components/More'
+import { Typography } from '../../../../../components/Typography'
+import { Services } from '../../../../../datas/_shared/ServicesDatas'
 
 //----------------------------------
 // props
@@ -19,16 +18,20 @@ export const ServiceCardComponent = (props: ServiceCardProps) => (
   <Card className={props.className}>
     <div
       className={'cardHeadingWrapper'}
-      style={{ backgroundImage: `url(${props.ServicesData.bgPathName})` }}
+      style={{ backgroundImage: `url(${props.ServicesData.imgPathname})` }}
     ></div>
 
     <div className={'cardContentsWrapper'}>
       <div className={'cardContentsInner'}>
-        <p className={'cardTitleEn'}>{props.ServicesData.titleEn}</p>
-        <p className={'cardTitleJp'}>{props.ServicesData.titleJp}</p>
-        <Text component={'p'} textStyle={'lead'} className={'cardLead'}>
+        <Typography component={'p'} className={'cardCopyEn'}>
+          {props.ServicesData.copyEn}
+        </Typography>
+        <Typography component={'p'} className={'cardCopyJp'}>
+          {props.ServicesData.copyJp}
+        </Typography>
+        <Typography component={'p'} variant={'lead'} className={'cardLead'}>
           {props.ServicesData.lead}
-        </Text>
+        </Typography>
       </div>
     </div>
   </Card>
