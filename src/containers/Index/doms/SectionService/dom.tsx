@@ -22,7 +22,7 @@ export interface SectionServiceProps {
 export const SectionServiceComponent = (props: SectionServiceProps) => (
   <Section className={props.className}>
     <Container>
-      <Typography component={'h2'} variant={'heading'}>
+      <Typography component={'h1'} variant={'heading'}>
         {SectionHeadingDatas.sectionService.heading}
       </Typography>
       <Typography component={'p'} variant={'subheading'}>

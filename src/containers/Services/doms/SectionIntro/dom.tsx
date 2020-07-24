@@ -18,7 +18,7 @@ export const SectionIntroComponent = (props: SectionIntroProps) => (
     <Container>
       <Grid container spacing={4} className={'servicesContainer'}>
         <Grid item md={6} className={'servicesIntroGrid'}>
-          <Typography component={'p'} variant={'copy'}>
+          <Typography component={'h1'} variant={'copy'}>
             感情を動かすデザインを
           </Typography>
           <div className={'servicesLeadWrapper'}>

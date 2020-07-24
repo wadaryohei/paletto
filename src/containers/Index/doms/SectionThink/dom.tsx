@@ -23,7 +23,7 @@ export const SectionThinkComponent = (props: SectionThinkProps) => (
   <Section className={props.className}>
     <Container disableGutters={true}>
       <Typography
-        component={'h2'}
+        component={'h1'}
         variant={'heading'}
         className={'thinkHeading'}
       >
@@ -31,7 +31,7 @@ export const SectionThinkComponent = (props: SectionThinkProps) => (
       </Typography>
 
       <Typography
-        component={'h2'}
+        component={'p'}
         variant={'subheading'}
         className={'thinkSubheading'}
       >

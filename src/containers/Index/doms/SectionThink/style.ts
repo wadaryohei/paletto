@@ -11,7 +11,7 @@ import { FontSize } from '../../../../const/FontSize'
 //----------------------------------
 export const SectionThinkStyle = styled(SectionThinkComponent)`
   .thinkHeading {
-    color: ${Colors.white};
+    color: ${Colors.white} !important;
   }
 
   .thinkCopyWrapper {
