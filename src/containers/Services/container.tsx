@@ -1,14 +1,14 @@
 import React from 'react'
+import { Container, Grid } from '@material-ui/core'
 import { PagesLayout } from '../../components/_shared/PagesLayout'
 import { PageDatas } from '../../datas/_shared/PageDatas'
 import { Section } from '../../components/Section'
 import { Text } from '../../components/Text'
 import { Link } from '../../components/Link'
 import { More } from '../../components/More'
-import { Container, Grid } from '@material-ui/core'
-import { ServicesData } from '../../datas/ServicesDatas'
 import { ServicesDatas, Services } from '../../datas/_shared/ServiceDatas'
 import { ServiceCard } from '../Index/doms/SectionService/ServiceCard'
+import { ServicesData } from '../../datas/ServicesDatas'
 
 //----------------------------------
 // props

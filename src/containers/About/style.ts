@@ -22,13 +22,6 @@ export const AboutContainerStyle = styled(AboutContainer)`
     }
 
     .aboutWrapper {
-      position: relative;
-      padding: ${Padding.p80} ${Padding.p32} ${Padding.p120};
-
-      @media ${max(BreakPoints.md)} {
-        padding: ${Padding.p112} ${Padding.p16};
-      }
-
       .aboutGrid {
         margin-top: ${Margin.m64};
       }
@@ -39,6 +32,10 @@ export const AboutContainerStyle = styled(AboutContainer)`
         font-weight: ${FontWeight.bold};
         margin-bottom: ${Margin.m64};
         padding: ${Padding.p16};
+
+        @media ${max(BreakPoints.md)} {
+          font-size: ${FontSize.md};
+        }
       }
 
       .aboutWrite {
@@ -66,37 +63,97 @@ export const AboutContainerStyle = styled(AboutContainer)`
       }
 
       .aboutHandWriteWrapper {
-        position: absolute;
-        bottom: -40px;
-        left: 50%;
-        transform: translateX(-50%);
+        text-align: center;
+
         img {
           width: 420px;
           height: 120px;
+
+          @media ${max(BreakPoints.md)} {
+            width: 100%;
+            height: auto;
+          }
         }
       }
-    }
 
-    .aboutLinkWrapper {
-      margin-top: ${Margin.m104};
-
-      @media ${max(BreakPoints.md)} {
-        margin-top: ${Margin.m64};
-      }
-
-      a {
-        display: block;
-        text-align: center;
-        background-color: ${Colors.black};
-        color: ${Colors.white};
-        padding: ${Padding.p32};
-        font-size: ${FontSize.xl};
-        font-family: 'Gilroy-Bold', sans-serif;
-        letter-spacing: 16px;
-        text-indent: 16px;
+      .aboutLinkWrapper {
+        margin-top: ${Margin.m104};
 
         @media ${max(BreakPoints.md)} {
+          margin-top: ${Margin.m64};
+        }
+
+        a {
+          display: block;
+          width: 100%;
+          font-family: 'Gilroy-Bold', sans-serif;
+          font-weight: ${FontWeight.bold};
+          color: ${Colors.black};
+        }
+
+        .aboutLinkImage {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          background-image: url('pages/about/about_services_glows.jpg');
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center center;
+          border-radius: 8px;
+          border: solid 4px ${Colors.black};
+          width: 100%;
+          height: 320px;
+          padding: ${Padding.p16};
+          text-align: center;
+
+          @media ${max(BreakPoints.md)} {
+            height: 220px;
+          }
+
+          span {
+            margin: ${Margin.m8} 0;
+            display: block;
+          }
+
+          .aboutLinkCopy {
+            font-size: ${FontSize.md};
+            @media ${max(BreakPoints.md)} {
+              font-size: ${FontSize.sm};
+            }
+          }
+
+          .aboutLinkHeading {
+            font-size: ${FontSize.xl};
+            letter-spacing: 16px;
+
+            @media ${max(BreakPoints.md)} {
+              font-size: ${FontSize.md};
+            }
+          }
+
+          .aboutLinkSubHeading {
+            font-size: ${FontSize.xs};
+            line-height: 1.6;
+          }
+        }
+      }
+
+      .aboutContactWrapper {
+        margin-top: ${Margin.m104};
+        text-align: center;
+
+        p {
+          font-size: ${FontSize.xs};
+        }
+
+        a {
+          display: inline-block;
+          margin-top: ${Margin.m32};
           font-size: ${FontSize.sm};
+          font-weight: ${FontWeight.bold};
+          color: ${Colors.black};
+          text-decoration: underline;
         }
       }
     }
