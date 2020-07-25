@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, Grid } from '@material-ui/core'
 import { PagesLayout } from '../../../components/_shared/PagesLayout'
 import { Section } from '../../../components/Section'
-import { Icon } from '../../../components/Icon'
+import { SocialIcon } from '../../../components/Icon/Social'
 import { Link } from '../../../components/Link'
 import { Typography } from '../../../components/Typography'
 import { useMembersPresenter } from './presenter/useMembersPresenter'
@@ -64,7 +64,7 @@ const MembersContainer = (props: MembersProps) => {
                               return (
                                 <li key={index}>
                                   <Link href={social.path} target={true}>
-                                    <Icon icon={social.name} />
+                                    <SocialIcon icon={social.name} />
                                   </Link>
                                 </li>
                               )
