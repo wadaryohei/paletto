@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 import { SectionBannerComponent } from './dom'
-import { Margin } from '../../../../../const/Margin'
-import { Colors } from '../../../../../const/Colors'
-import { FontWeight } from '../../../../../const/FontWeight'
-import { FontSize } from '../../../../../const/FontSize'
-import { BreakPoints, max } from '../../../../../const/BreakPoints'
+import { Margin } from '../../../../const/Margin'
+import { Colors } from '../../../../const/Colors'
+import { FontWeight } from '../../../../const/FontWeight'
+import { FontSize } from '../../../../const/FontSize'
+import { BreakPoints, max } from '../../../../const/BreakPoints'
 
 //----------------------------------
 // styledComponent
@@ -25,8 +25,8 @@ export const SectionBannerStyle = styled(SectionBannerComponent)`
   }
 
   .servicesBannerHeading {
-    font-size: ${FontSize.xl};
-    letter-spacing: 16px;
+    font-size: ${FontSize.lg};
+    letter-spacing: 2px;
     color: ${Colors.white};
 
     @media ${max(BreakPoints.md)} {

@@ -1,11 +1,11 @@
 import React from 'react'
 import { PagesServicesLayout } from '../../../components/_shared/PagesServicesLayout'
-import { SectionWrapper } from './doms/SectionWrapper'
+import { SectionWrapper } from '../_shared/SectionWrapper'
+import { SectionBanner } from '../_shared/SectionBanner'
 import { SectionIntro } from './doms/SectionIntro'
 import { SectionPartner } from './doms/SectionPartner'
 import { SectionSolution } from './doms/SectionSolution'
 import { SectionDetails } from './doms/SectionDetails'
-import { SectionBanner } from './doms/SectionBanner'
 import { ServicesDevelopmentDatas } from '../../../datas//ServicesDatas'
 
 //----------------------------------
@@ -43,7 +43,13 @@ const ServicesDevelopmentContainer = (props: ServicesDevelopmentProps) => {
         <SectionDetails className={'l-section-solution'} />
 
         {/** @section Banner */}
-        <SectionBanner className={'l-section-banner'} />
+        <SectionBanner
+          className={'l-section-banner'}
+          href={'/services/design'}
+          imgPath={'/pages/services/design.jpg'}
+          bannerCopy={'デザインパートナー事業へ'}
+          bannerHeading={'Design PartnerShips'}
+        />
       </SectionWrapper>
     </PagesServicesLayout>
   )
