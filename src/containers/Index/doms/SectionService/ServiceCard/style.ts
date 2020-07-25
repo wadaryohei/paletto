@@ -20,6 +20,10 @@ export const ServiceCardStyle = styled(ServiceCardComponent)`
     background-position: center center;
     padding-top: 54.25%;
     border-radius: 8px;
+
+    @media ${max(BreakPoints.md)} {
+      padding-top: 100%;
+    }
   }
 
   .cardContentsWrapper {

@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { SectionServicesComponent } from './dom'
 import { Margin } from '../../../../../const/Margin'
+import { Padding } from '../../../../../const/Padding'
 import { Colors } from '../../../../../const/Colors'
 
 //----------------------------------
@@ -10,6 +11,7 @@ export const SectionServicesStyle = styled(SectionServicesComponent)`
   .servicesCardWrapper {
     width: 100%;
     position: relative;
+    padding: ${Padding.p160} 0;
 
     &::before {
       content: '';

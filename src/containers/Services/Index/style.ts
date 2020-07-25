@@ -9,7 +9,7 @@ import { BreakPoints, max } from '../../../const/BreakPoints'
 //--------------------------------------
 export const ServicesContainerStyle = styled(ServicesContainer)`
   .l-services-intro {
-    padding: ${Padding.p160} 0;
+    padding: ${Padding.p160} 0 0;
     background-color: ${Colors.white};
 
     @media ${max(BreakPoints.md)} {
@@ -22,7 +22,6 @@ export const ServicesContainerStyle = styled(ServicesContainer)`
     width: 100%;
     display: flex;
     justify-content: flex-start;
-    padding: ${Padding.p32} ${Padding.p16} 0;
     background-color: ${Colors.white};
   }
 `

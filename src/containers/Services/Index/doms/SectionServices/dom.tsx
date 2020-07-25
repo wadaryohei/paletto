@@ -29,7 +29,7 @@ export const SectionServicesComponent = (props: SectionServicesProps) => (
               <Grid
                 key={index}
                 item
-                md={6}
+                md={8}
                 xs={12}
                 className={'servicesCardGrid'}
               >
