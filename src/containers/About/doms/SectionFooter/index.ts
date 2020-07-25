@@ -1,1 +1,1 @@
-export { SectionFooterComponentStyle as SectionFooter } from './style'
+export { SectionFooterStyle as SectionFooter } from './style'

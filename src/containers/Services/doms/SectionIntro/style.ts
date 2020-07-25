@@ -6,7 +6,7 @@ import { BreakPoints, max } from '../../../../const/BreakPoints'
 //----------------------------------
 // styledComponent
 //----------------------------------
-export const SectionIntroComponentStyle = styled(SectionIntroComponent)`
+export const SectionIntroStyle = styled(SectionIntroComponent)`
   .servicesContainer {
     align-items: center;
   }

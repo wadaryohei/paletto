@@ -5,7 +5,7 @@ import { Margin } from '../../../../const/Margin'
 //----------------------------------
 // styledComponent
 //----------------------------------
-export const SectionServicesComponentStyle = styled(SectionServicesComponent)`
+export const SectionServicesStyle = styled(SectionServicesComponent)`
   .servicesCardGrid {
     width: 100%;
     margin: ${Margin.m24} auto 0;

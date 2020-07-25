@@ -1,1 +1,1 @@
-export { SectionMainComponentStyle as SectionMain } from './style'
+export { SectionMainStyle as SectionMain } from './style'

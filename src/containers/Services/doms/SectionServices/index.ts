@@ -1,1 +1,1 @@
-export { SectionServicesComponentStyle as SectionServices } from './style'
+export { SectionServicesStyle as SectionServices } from './style'

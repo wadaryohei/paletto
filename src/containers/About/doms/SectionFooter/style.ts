@@ -9,7 +9,7 @@ import { Colors } from '../../../../const/Colors'
 //----------------------------------
 // styledComponent
 //----------------------------------
-export const SectionFooterComponentStyle = styled(SectionFooterComponent)`
+export const SectionFooterStyle = styled(SectionFooterComponent)`
   .aboutLinkWrapper {
     a {
       display: block;

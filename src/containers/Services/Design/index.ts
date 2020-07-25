@@ -1,1 +1,1 @@
-export { ServicesDesignContainerStyle as ServicesDesignContainer } from './style'
+export { ServicesDesignStyle as ServicesDesignContainer } from './style'

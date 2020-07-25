@@ -4,9 +4,9 @@ import { Colors } from '../../../const/Colors'
 import { Margin } from '../../../const/Margin'
 
 //--------------------------------------
-// Servicesページ全体のスタイル
+// Services/Designページ全体のスタイル
 //--------------------------------------
-export const ServicesDesignContainerStyle = styled(ServicesDesignContainer)`
+export const ServicesDesignStyle = styled(ServicesDesignContainer)`
   position: relative;
   background-color: ${Colors.smokeGray};
 

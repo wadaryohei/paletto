@@ -10,7 +10,7 @@ import { Colors } from '../../../../const/Colors'
 //----------------------------------
 // styledComponent
 //----------------------------------
-export const SectionMainComponentStyle = styled(SectionMainComponent)`
+export const SectionMainStyle = styled(SectionMainComponent)`
   .aboutWrapper {
     .aboutGrid {
       margin-top: ${Margin.m64};
