@@ -6,14 +6,14 @@ import LanguageIcon from '@material-ui/icons/Language'
 //----------------------------------
 // props
 //----------------------------------
-export interface IconProps {
+export interface SocialIconProps {
   icon: string | undefined
 }
 
 //----------------------------------
 // component
 //----------------------------------
-export const IconComponent = (props: IconProps) => {
+export const SocialIconComponent = (props: SocialIconProps) => {
   switch (props.icon) {
     case 'twitter':
       return <TwitterIcon />
