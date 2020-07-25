@@ -1,4 +1,4 @@
-import { Social } from '../../../../datas/_shared/SocialDatas'
+import { Social } from '../../../../../datas/_shared/SocialDatas'
 
 export interface MembersViewDatas {
   name: string

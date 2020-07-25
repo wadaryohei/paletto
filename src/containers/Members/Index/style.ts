@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 import MembersContainer from './container'
-import { Padding } from '../../const/Padding'
-import { Margin } from '../../const/Margin'
-import { FontSize } from '../../const/FontSize'
-import { Colors } from '../../const/Colors'
-import { BreakPoints, max } from '../../const/BreakPoints'
+import { Padding } from '../../../const/Padding'
+import { Margin } from '../../../const/Margin'
+import { FontSize } from '../../../const/FontSize'
+import { Colors } from '../../../const/Colors'
+import { BreakPoints, max } from '../../../const/BreakPoints'
 
 //--------------------------------------
 // Membersページ全体のスタイル

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Head } from '../components/Head'
 import { HeadDatas } from '../datas/IndexDatas'
-import { ContactContainer } from '../containers/Contact'
+import { ContactContainer } from '../containers/Contact/Index'
 
 //----------------------------------
 // component

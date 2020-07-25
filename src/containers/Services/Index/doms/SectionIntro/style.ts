@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { SectionIntroComponent } from './dom'
-import { Margin } from '../../../../const/Margin'
-import { BreakPoints, max } from '../../../../const/BreakPoints'
+import { Margin } from '../../../../../const/Margin'
+import { BreakPoints, max } from '../../../../../const/BreakPoints'
 
 //----------------------------------
 // styledComponent

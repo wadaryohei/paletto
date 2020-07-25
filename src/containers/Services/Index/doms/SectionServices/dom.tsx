@@ -1,13 +1,13 @@
 import React from 'react'
 import { Container, Grid } from '@material-ui/core'
-import { Section } from '../../../../components/Section'
-import { Link } from '../../../../components/Link'
-import { More } from '../../../../components/More'
-import { ServiceCard } from '../../../Index/doms/SectionService/ServiceCard'
+import { Section } from '../../../../../components/Section'
+import { Link } from '../../../../../components/Link'
+import { More } from '../../../../../components/More'
+import { ServiceCard } from '../../../../Index/doms/SectionService/ServiceCard'
 import {
   ServicesDatas,
   Services,
-} from '../../../../datas/_shared/ServicesDatas'
+} from '../../../../../datas/_shared/ServicesDatas'
 
 //----------------------------------
 // props

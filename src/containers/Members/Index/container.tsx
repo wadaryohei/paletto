@@ -1,15 +1,15 @@
 import React from 'react'
 import { Container, Grid } from '@material-ui/core'
-import { PagesLayout } from '../../components/_shared/PagesLayout'
-import { Section } from '../../components/Section'
-import { Icon } from '../../components/Icon'
-import { Link } from '../../components/Link'
+import { PagesLayout } from '../../../components/_shared/PagesLayout'
+import { Section } from '../../../components/Section'
+import { Icon } from '../../../components/Icon'
+import { Link } from '../../../components/Link'
+import { Typography } from '../../../components/Typography'
 import { useMembersPresenter } from './presenter/useMembersPresenter'
 import { MembersViewDatas } from './presenter/viewDatas/MembersViewDatas'
-import { MemberDatas } from '../../datas/_shared/MemberDatas'
-import { PageDatas } from '../../datas/_shared/PageDatas'
-import { Social } from '../../datas/_shared/SocialDatas'
-import { Typography } from '../../components/Typography'
+import { MemberDatas } from '../../../datas/_shared/MemberDatas'
+import { PageDatas } from '../../../datas/_shared/PageDatas'
+import { Social } from '../../../datas/_shared/SocialDatas'
 
 //----------------------------------
 // props

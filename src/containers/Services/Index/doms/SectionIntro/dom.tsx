@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Grid } from '@material-ui/core'
-import { Section } from '../../../../components/Section'
-import { Typography } from '../../../../components/Typography'
+import { Section } from '../../../../../components/Section'
+import { Typography } from '../../../../../components/Typography'
 
 //----------------------------------
 // props

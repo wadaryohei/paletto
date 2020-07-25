@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { SectionServicesComponent } from './dom'
-import { Margin } from '../../../../const/Margin'
+import { Margin } from '../../../../../const/Margin'
 
 //----------------------------------
 // styledComponent

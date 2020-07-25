@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 import ServicesContainer from './container'
-import { Padding } from '../../const/Padding'
-import { Colors } from '../../const/Colors'
-import { BreakPoints, max } from '../../const/BreakPoints'
+import { Padding } from '../../../const/Padding'
+import { Colors } from '../../../const/Colors'
+import { BreakPoints, max } from '../../../const/BreakPoints'
 
 //--------------------------------------
 // Servicesページ全体のスタイル

@@ -1,6 +1,6 @@
 import { MembersViewDatas } from './viewDatas/MembersViewDatas'
-import { useStringProcessing } from '../../../hooks/useStringProcessing'
-import { Member } from '../../../datas/_shared/MemberDatas'
+import { useStringProcessing } from '../../../../hooks/useStringProcessing'
+import { Member } from '../../../../datas/_shared/MemberDatas'
 
 //----------------------------------
 // presenter
