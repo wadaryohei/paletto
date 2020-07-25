@@ -31,9 +31,7 @@ export const HeroDatas: Hero = {
   imgPath: '/top/hero.jpg',
   copy: 'We design for\nDESIGN TO MOVES\nEMOTIONS.',
   desc:
-    'We solve business problems by design.\nビジネス課題の先の「感情を動かす」デザイン制作チームです。',
-  // desc:
-  //   'We solve business problems by design.\nAnd a design team that embodies our thoughts.\nビジネス課題の先の「感情を動かす」デザイン制作チームです。',
+    'テクノロジーとデザインで、\n課題解決のその先の「感情を動かす」チームです',
 }
 
 //----------------------------------
@@ -82,11 +80,6 @@ export const SectionHeadingDatas: SectionHeading = {
     subHeading: '私達の考え',
     copy: 'サブスクリプションを採用',
   },
-  // sectionPlans: {
-  //   heading: 'OUR THINK.',
-  //   subHeading: '私達の考え',
-  //   copy: 'サブスクリプションを採用',
-  // },
 }
 
 //----------------------------------

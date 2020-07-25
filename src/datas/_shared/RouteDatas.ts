@@ -17,11 +17,7 @@ export interface Route {
     pathname: string
     path: string
   }
-  servicesDesign: {
-    pathname: string
-    path: string
-  }
-  servicesDevelopment: {
+  servicesPartner: {
     pathname: string
     path: string
   }
@@ -63,16 +59,10 @@ export const RouteDatas: Route = {
     path: '/services',
   },
 
-  // @path ---- /services/design
-  servicesDesign: {
-    pathname: 'Design',
-    path: '/design',
-  },
-
-  // @path ---- /services/development
-  servicesDevelopment: {
-    pathname: 'Development',
-    path: '/development',
+  // @path ---- /services/partner
+  servicesPartner: {
+    pathname: 'Partner',
+    path: '/partner',
   },
 
   //----------------------------------

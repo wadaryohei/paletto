@@ -22,7 +22,7 @@ export const ServicesContainerStyle = styled(ServicesContainer)`
     width: 100%;
     display: flex;
     justify-content: flex-start;
-    padding: ${Padding.p32} ${Padding.p16} ${Padding.p160};
+    padding: ${Padding.p32} ${Padding.p16} 0;
     background-color: ${Colors.white};
   }
 `

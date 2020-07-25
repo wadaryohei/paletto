@@ -1,12 +1,12 @@
 import styled from 'styled-components'
-import ServicesDesignContainer from './container'
+import ServicesPartnerContainer from './container'
 import { Colors } from '../../../const/Colors'
 import { Margin } from '../../../const/Margin'
 
 //--------------------------------------
 // Services/Designページ全体のスタイル
 //--------------------------------------
-export const ServicesDesignStyle = styled(ServicesDesignContainer)`
+export const ServicesPartnerStyle = styled(ServicesPartnerContainer)`
   position: relative;
   background-color: ${Colors.smokeGray};
 
@@ -15,7 +15,7 @@ export const ServicesDesignStyle = styled(ServicesDesignContainer)`
   }
 
   .l-section-solution {
-    margin-top: ${Margin.m160};
+    margin-top: ${Margin.m64};
   }
 
   .l-section-banner {

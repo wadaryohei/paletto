@@ -2,8 +2,8 @@ import React from 'react'
 import { Section } from '../../../../../components/Section'
 import { Typography } from '../../../../../components/Typography'
 import {
-  ServicesDesignActionDatas,
-  ServicesDesignAction,
+  ServicesDesignPartnersDatas,
+  ServicesDesignPartners,
 } from '../../../../../datas/ServicesDatas'
 
 //----------------------------------
@@ -31,12 +31,15 @@ export const SectionPartnerComponent = (props: SectionPartnerProps) => (
       </Typography>
 
       <ul className={'servicesDesignPartnerList'}>
-        {ServicesDesignActionDatas.map(
-          (ServicesDesignActionData: ServicesDesignAction, index: number) => {
+        {ServicesDesignPartnersDatas.map(
+          (
+            ServicesDesignPartnersData: ServicesDesignPartners,
+            index: number,
+          ) => {
             return (
               <li key={index}>
                 <span className={'servicesDesignPartnerListNum'}>
-                  {ServicesDesignActionData.num}
+                  {ServicesDesignPartnersData.num}
                 </span>
                 <div className={'servicesDesignPartnerListLeadWrapper'}>
                   <Typography
@@ -44,21 +47,21 @@ export const SectionPartnerComponent = (props: SectionPartnerProps) => (
                     variant={'heading'}
                     className={'servicesDesignPartnerListHeading'}
                   >
-                    {ServicesDesignActionData.copyEn}
+                    {ServicesDesignPartnersData.copyEn}
                   </Typography>
                   <Typography
                     component={'p'}
                     variant={'subheading'}
                     className={'servicesDesignPartnerListSubHeading'}
                   >
-                    {ServicesDesignActionData.copyJp}
+                    {ServicesDesignPartnersData.copyJp}
                   </Typography>
                   <Typography
                     component={'p'}
                     variant={'lead'}
                     className={'servicesDesignPartnerListLead'}
                   >
-                    {ServicesDesignActionData.lead}
+                    {ServicesDesignPartnersData.lead}
                   </Typography>
                 </div>
               </li>

@@ -2,9 +2,6 @@
  * Servicesページで使用するデータ
  */
 
-//--------------------------------------------------------------------
-// ServicesDesign
-//--------------------------------------------------------------------
 //----------------------------------
 // ServicesDesignDatas
 //----------------------------------
@@ -16,21 +13,21 @@ export interface ServicesDesign {
 
 export const ServicesDesignDatas = {
   bgPathName: '/top/services/cardbg_01.jpg',
-  heading: 'Design partnerShips',
-  subHeading: 'デザインパートナー事業',
+  heading: 'Design/Development partnerShips',
+  subHeading: 'デザイン/開発パートナー事業',
 }
 
 //----------------------------------
-// ServicesDesignActionDatas
+// ServicesDesignPartnersDatas
 //----------------------------------
-export interface ServicesDesignAction {
+export interface ServicesDesignPartners {
   num: string
   copyEn: string
   copyJp: string
   lead: string
 }
 
-export const ServicesDesignActionDatas: ServicesDesignAction[] = [
+export const ServicesDesignPartnersDatas: ServicesDesignPartners[] = [
   {
     num: '01',
     copyEn: 'Having ownership.',
@@ -62,9 +59,9 @@ export const ServicesDesignActionDatas: ServicesDesignAction[] = [
 ]
 
 //----------------------------------
-// ServicesDesignActionDatas
+// ServicesDesignSolutionDatas
 //----------------------------------
-export interface ServicesDesignPartners {
+export interface ServicesDesignSolution {
   num: string
   copyEn: string
   copyJp: string
@@ -72,7 +69,7 @@ export interface ServicesDesignPartners {
   solution: string
 }
 
-export const ServicesDesignPartnersDatas: ServicesDesignPartners[] = [
+export const ServicesDesignSolutionDatas: ServicesDesignSolution[] = [
   {
     num: '01',
     copyEn: 'Glow up.',
@@ -92,21 +89,3 @@ export const ServicesDesignPartnersDatas: ServicesDesignPartners[] = [
       '戦略思考でビジョンを描き、ブランドのコアを内側からデザインします。企業や事業の成り立ち、原体験を紐解き、事業・業界・社会的文脈などを一貫したブランドの思想として言語化・可視化します。アウトプットは、ビジョン、ミッション、ロゴデザイン、プロダクトデザインなど多岐に渡ります。',
   },
 ]
-
-//--------------------------------------------------------------------
-// ServicesDevelopment
-//--------------------------------------------------------------------
-//----------------------------------
-// ServicesDevelopmentDatas
-//----------------------------------
-export interface ServicesDevelopment {
-  bgPathName: string
-  heading: string
-  subHeading: string
-}
-
-export const ServicesDevelopmentDatas = {
-  bgPathName: '/top/services/cardbg_02.jpg',
-  heading: 'Develoment partnerShips',
-  subHeading: '制作パートナー事業',
-}

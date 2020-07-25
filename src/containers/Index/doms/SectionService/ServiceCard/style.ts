@@ -18,13 +18,8 @@ export const ServiceCardStyle = styled(ServiceCardComponent)`
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    height: 320px;
+    padding-top: 54.25%;
     border-radius: 8px;
-
-    @media ${max(BreakPoints.lg)} {
-      height: 200px;
-      padding: ${Padding.p32} ${Padding.p16};
-    }
   }
 
   .cardContentsWrapper {

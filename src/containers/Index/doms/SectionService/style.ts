@@ -31,9 +31,9 @@ export const SectionServiceStyle = styled(SectionServiceComponent)`
       position: absolute;
       bottom: 0;
       left: 0;
-      z-index: -1;
+      z-index: 1;
       width: 100%;
-      height: 80%;
+      height: 72.5%;
       background-color: ${Colors.smokeGray};
     }
 

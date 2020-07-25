@@ -1,7 +1,10 @@
 import React from 'react'
 import { Section } from '../../../../../components/Section'
 import { Typography } from '../../../../../components/Typography'
-import { ServicesDesignPartnersDatas, ServicesDesignPartners } from '../../../../../datas/ServicesDatas'
+import {
+  ServicesDesignSolutionDatas,
+  ServicesDesignSolution,
+} from '../../../../../datas/ServicesDatas'
 
 //----------------------------------
 // props
@@ -27,12 +30,12 @@ export const SectionSolutionComponent = (props: SectionSolutionProps) => (
     </Typography>
 
     <ul className={'servicesDesignSolutionList'}>
-      {ServicesDesignPartnersDatas.map(
-        (ServicesDesignPartnersData: ServicesDesignPartners, index: number) => {
+      {ServicesDesignSolutionDatas.map(
+        (ServicesDesignSolutionData: ServicesDesignSolution, index: number) => {
           return (
             <li key={index}>
               <span className={'servicesDesignSolutionListNum'}>
-                {ServicesDesignPartnersData.num}
+                {ServicesDesignSolutionData.num}
               </span>
               <div className={'servicesDesignSolutionListWrapper'}>
                 <Typography
@@ -40,21 +43,21 @@ export const SectionSolutionComponent = (props: SectionSolutionProps) => (
                   variant={'heading'}
                   className={'servicesDesignSolutionListHeading'}
                 >
-                  {ServicesDesignPartnersData.copyEn}
+                  {ServicesDesignSolutionData.copyEn}
                 </Typography>
                 <Typography
                   component={'p'}
                   variant={'subheading'}
                   className={'servicesDesignSolutionListSubHeading'}
                 >
-                  {ServicesDesignPartnersData.copyJp}
+                  {ServicesDesignSolutionData.copyJp}
                 </Typography>
                 <Typography
                   component={'p'}
                   variant={'lead'}
                   className={'servicesDesignSolutionListLead'}
                 >
-                  {ServicesDesignPartnersData.lead}
+                  {ServicesDesignSolutionData.lead}
                 </Typography>
 
                 <Typography
@@ -69,7 +72,7 @@ export const SectionSolutionComponent = (props: SectionSolutionProps) => (
                   variant={'lead'}
                   className={'servicesDesignSolutionListNotes'}
                 >
-                  {ServicesDesignPartnersData.solution}
+                  {ServicesDesignSolutionData.solution}
                 </Typography>
               </div>
             </li>

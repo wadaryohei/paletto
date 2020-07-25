@@ -6,28 +6,28 @@ import { SectionIntro } from './doms/SectionIntro'
 import { SectionPartner } from './doms/SectionPartner'
 import { SectionSolution } from './doms/SectionSolution'
 import { SectionDetails } from './doms/SectionDetails'
-import { ServicesDevelopmentDatas } from '../../../datas//ServicesDatas'
+import { ServicesDesignDatas } from '../../../datas/ServicesDatas'
 
 //----------------------------------
 // props
 //----------------------------------
-export interface ServicesDevelopmentProps {
+export interface ServicesPartnerProps {
   className?: string
 }
 
 //----------------------------------
 // component
 //----------------------------------
-const ServicesDevelopmentContainer = (props: ServicesDevelopmentProps) => {
+const ServicesPartnerContainer = (props: ServicesPartnerProps) => {
   //----------------------------------
   // render
   //----------------------------------
   return (
     <PagesServicesLayout
       className={props.className}
-      pageHeaderBgPathname={ServicesDevelopmentDatas.bgPathName}
-      pageHeading={ServicesDevelopmentDatas.heading}
-      pageSubHeading={ServicesDevelopmentDatas.subHeading}
+      pageHeaderBgPathname={ServicesDesignDatas.bgPathName}
+      pageHeading={ServicesDesignDatas.heading}
+      pageSubHeading={ServicesDesignDatas.subHeading}
     >
       <SectionWrapper>
         {/** @section Intro */}
@@ -43,16 +43,16 @@ const ServicesDevelopmentContainer = (props: ServicesDevelopmentProps) => {
         <SectionDetails className={'l-section-solution'} />
 
         {/** @section Banner */}
-        <SectionBanner
+        {/* <SectionBanner
           className={'l-section-banner'}
-          href={'/services/design'}
-          imgPath={'/pages/services/design.jpg'}
-          bannerCopy={'デザインパートナー事業へ'}
-          bannerHeading={'Design PartnerShips'}
-        />
+          href={'/services/development'}
+          imgPath={'/pages/services/development.jpg'}
+          bannerCopy={'制作パートナー事業へ'}
+          bannerHeading={'Development PartnerShips'}
+        /> */}
       </SectionWrapper>
     </PagesServicesLayout>
   )
 }
 
-export default ServicesDevelopmentContainer
+export default ServicesPartnerContainer
