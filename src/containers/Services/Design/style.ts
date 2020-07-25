@@ -10,10 +10,6 @@ export const ServicesDesignContainerStyle = styled(ServicesDesignContainer)`
   position: relative;
   background-color: ${Colors.smokeGray};
 
-  .l-section-intro {
-    margin-top: ${Margin.m112};
-  }
-
   .l-section-partner {
     margin-top: ${Margin.m160};
   }
