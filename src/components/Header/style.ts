@@ -4,7 +4,6 @@ import { Colors } from '../../const/Colors'
 import { FontSize } from '../../const/FontSize'
 import { FontWeight } from '../../const/FontWeight'
 import { BreakPoints, max } from '../../const/BreakPoints'
-import { Margin } from '../../const/Margin'
 
 //----------------------------------
 // styledComponent
@@ -28,10 +27,6 @@ export const HeaderStyle = styled(HeaderComponent)`
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    @media ${max(BreakPoints.xl)} {
-      max-width: calc(100% - ${Margin.m32});
-    }
   }
 
   .headerLogo {
@@ -40,6 +35,22 @@ export const HeaderStyle = styled(HeaderComponent)`
       font-weight: ${FontWeight.bold};
       font-size: ${FontSize.md};
       color: ${Colors.black};
+    }
+  }
+
+  .headerNav {
+    display: block;
+
+    @media ${max(BreakPoints.md)} {
+      display: none;
+    }
+  }
+
+  .headerNavIcon {
+    display: none;
+
+    @media ${max(BreakPoints.md)} {
+      display: block;
     }
   }
 `

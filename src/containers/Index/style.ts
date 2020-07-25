@@ -24,7 +24,7 @@ export const IndexContainerStyle = styled(IndexContainer)`
     position: relative;
     background-color: ${Colors.black};
     width: 100%;
-    padding: ${Padding.p112} ${Padding.p72};
+    padding: ${Padding.p112} 0;
 
     @media ${max(BreakPoints.md)} {
       padding: ${Padding.p112} 0;

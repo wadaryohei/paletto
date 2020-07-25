@@ -11,8 +11,8 @@ export const PagesLayoutStyle = styled(PagesLayoutComponent)`
   .pageHeaderBgWrapper {
     position: relative;
     width: 100%;
-    height: 420px;
-    max-height: 420px;
+    height: 480px;
+    max-height: 480px;
 
     .pageHeaderBg {
       position: fixed;
@@ -21,16 +21,23 @@ export const PagesLayoutStyle = styled(PagesLayoutComponent)`
       z-index: -1;
       width: 60%;
       height: 100vh;
-      max-height: 480px;
+      max-height: 600px;
       background-position: center center;
       background-repeat: no-repeat;
       background-size: cover;
+
+      @media ${max(BreakPoints.md)} {
+        top: 0;
+        width: 100%;
+        right: -40px;
+        max-height: 260px;
+      }
     }
   }
 
   .pageHeaderWrapper {
     position: absolute;
-    top: calc(46%);
+    top: calc(48%);
 
     .pagename {
       color: ${Colors.black};

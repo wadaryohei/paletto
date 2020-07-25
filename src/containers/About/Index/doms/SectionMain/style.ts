@@ -20,6 +20,7 @@ export const SectionMainStyle = styled(SectionMainComponent)`
       text-align: center;
       font-size: ${FontSize.xl};
       font-weight: ${FontWeight.bold};
+      font-family: '游ゴシック', YuGothic, sans-serif;
       margin-bottom: ${Margin.m64};
       padding: ${Padding.p16};
 

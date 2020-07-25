@@ -3,6 +3,7 @@ import { SectionServicesComponent } from './dom'
 import { Margin } from '../../../../../const/Margin'
 import { Padding } from '../../../../../const/Padding'
 import { Colors } from '../../../../../const/Colors'
+import { BreakPoints, max } from '../../../../../const/BreakPoints'
 
 //----------------------------------
 // styledComponent
@@ -12,6 +13,10 @@ export const SectionServicesStyle = styled(SectionServicesComponent)`
     width: 100%;
     position: relative;
     padding: ${Padding.p160} 0;
+
+    @media ${max(BreakPoints.md)} {
+      padding: ${Padding.p160} ${Padding.p16};
+    }
 
     &::before {
       content: '';

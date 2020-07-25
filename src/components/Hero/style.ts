@@ -57,7 +57,6 @@ export const HeroStyle = styled(HeroComponent)`
 
           &:nth-of-type(1) {
             font-family: 'Gilroy-normal', sans-serif;
-            font-weight: ${FontWeight.thin};
             font-size: ${FontSize.md};
             margin-bottom: ${Margin.m8};
             letter-spacing: 0;
@@ -69,7 +68,6 @@ export const HeroStyle = styled(HeroComponent)`
 
           &:nth-of-type(2) {
             font-family: 'Gilroy-Bold', sans-serif;
-            font-weight: ${FontWeight.thin};
           }
 
           &:nth-of-type(3) {
