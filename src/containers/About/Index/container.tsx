@@ -1,6 +1,6 @@
 import React from 'react'
-import { PagesLayout } from '../../components/_shared/PagesLayout'
-import { PageDatas } from '../../datas/_shared/PageDatas'
+import { PagesLayout } from '../../../components/_shared/PagesLayout'
+import { PageDatas } from '../../../datas/_shared/PageDatas'
 import { SectionMain } from './doms/SectionMain'
 import { SectionFooter } from './doms/SectionFooter'
 
