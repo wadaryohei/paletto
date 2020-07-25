@@ -22,7 +22,7 @@ export const SectionVisionComponent = (props: SectionVisionProps) => (
         <div style={{ backgroundImage: `url(${props.imgPath})` }}></div>
       </figure>
       <Container>
-        <Typography component={'h2'} variant={'heading'}>
+        <Typography component={'h1'} variant={'heading'}>
           {SectionHeadingDatas.SectionVision.heading}
         </Typography>
         <Typography component={'p'} variant={'subheading'}>

@@ -17,7 +17,7 @@ export const FooterStyle = styled(FooterComponent)`
   padding: ${Padding.p64};
 
   @media ${max(BreakPoints.md)} {
-    padding: ${Padding.p64} ${Padding.p16};
+    padding: ${Padding.p64} 0;
   }
 
   .footerContactLink {

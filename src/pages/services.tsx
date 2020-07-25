@@ -1,6 +1,6 @@
 import React from 'react'
 import { Head } from '../components/Head'
-import { ServicesContainer } from '../containers/Services'
+import { ServicesContainer } from '../containers/Services/Index'
 import { HeadDatas } from '../datas/IndexDatas'
 
 //----------------------------------

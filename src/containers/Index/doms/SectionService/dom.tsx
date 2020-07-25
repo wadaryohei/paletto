@@ -22,7 +22,7 @@ export interface SectionServiceProps {
 export const SectionServiceComponent = (props: SectionServiceProps) => (
   <Section className={props.className}>
     <Container>
-      <Typography component={'h2'} variant={'heading'}>
+      <Typography component={'h1'} variant={'heading'}>
         {SectionHeadingDatas.sectionService.heading}
       </Typography>
       <Typography component={'p'} variant={'subheading'}>
@@ -54,18 +54,26 @@ export const SectionServiceComponent = (props: SectionServiceProps) => (
     </Container>
 
     <div className={'serviceCardWrapper'}>
-      <Grid container spacing={2}>
-        {ServicesDatas.map((ServicesData: Services, index: number) => {
-          return (
-            <Grid key={index} item md={6} xs={12} className={'serviceCardGrid'}>
-              <ServiceCard
-                ServicesData={ServicesData}
-                className={'serviceCard'}
-              />
-            </Grid>
-          )
-        })}
-      </Grid>
+      <Container>
+        <Grid container spacing={4}>
+          {ServicesDatas.map((ServicesData: Services, index: number) => {
+            return (
+              <Grid
+                key={index}
+                item
+                md={8}
+                xs={12}
+                className={'serviceCardGrid'}
+              >
+                <ServiceCard
+                  ServicesData={ServicesData}
+                  className={'serviceCard'}
+                />
+              </Grid>
+            )
+          })}
+        </Grid>
+      </Container>
     </div>
   </Section>
 )

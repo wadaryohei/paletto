@@ -21,9 +21,9 @@ export interface SectionThinkProps {
 //----------------------------------
 export const SectionThinkComponent = (props: SectionThinkProps) => (
   <Section className={props.className}>
-    <Container disableGutters={true}>
+    <Container>
       <Typography
-        component={'h2'}
+        component={'h1'}
         variant={'heading'}
         className={'thinkHeading'}
       >
@@ -31,7 +31,7 @@ export const SectionThinkComponent = (props: SectionThinkProps) => (
       </Typography>
 
       <Typography
-        component={'h2'}
+        component={'p'}
         variant={'subheading'}
         className={'thinkSubheading'}
       >
@@ -65,15 +65,17 @@ export const SectionThinkComponent = (props: SectionThinkProps) => (
     </Container>
 
     <div className={'thinkCardWrapper'}>
-      <Grid container spacing={4}>
-        {ThinkDatas.map((ThinkData: Think, index: number) => {
-          return (
-            <Grid key={index} item md={4} xs={12} className={'thinkCardGrid'}>
-              <ThinkCard ThinkData={ThinkData} className={'thinkCard'} />
-            </Grid>
-          )
-        })}
-      </Grid>
+      <Container>
+        <Grid container spacing={4}>
+          {ThinkDatas.map((ThinkData: Think, index: number) => {
+            return (
+              <Grid key={index} item md={4} xs={12} className={'thinkCardGrid'}>
+                <ThinkCard ThinkData={ThinkData} className={'thinkCard'} />
+              </Grid>
+            )
+          })}
+        </Grid>
+      </Container>
     </div>
   </Section>
 )

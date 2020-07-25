@@ -20,7 +20,7 @@ export const SectionApproachComponent = (props: SectionApproachProps) => (
       <Grid container spacing={4} className={'approachWrapper'}>
         <Grid item md={6} sm={12} xs={12}>
           <Typography
-            component={'h2'}
+            component={'h1'}
             variant={'heading'}
             className={'approachHeading'}
           >
@@ -29,7 +29,7 @@ export const SectionApproachComponent = (props: SectionApproachProps) => (
         </Grid>
         <Grid item md={6} sm={12} xs={12}>
           <Typography
-            component={'h2'}
+            component={'p'}
             variant={'copy'}
             className={'approachCopy'}
           >

@@ -17,18 +17,22 @@ export interface Services {
 export const ServicesDatas: Services[] = [
   {
     imgPathname: '/top/services/cardbg_01.jpg',
-    copyEn: 'Design partnerShips',
-    copyJp: 'デザインパートナー事業',
+    copyEn: 'Design/Development partnerShips',
+    copyJp: 'デザイン/開発パートナー事業',
     lead:
       'デジタルプロダクト開発（UI/UXデザイン）に強みを置き、既存事業の改善、新規事業立ち上げ、ブランド構築、デザイン組織支援、そしてあらゆるビジネス課題の解決を実現する「制作〜開発〜改善」のサイクルをワンストップでフルコミット・フルスクラッチを行う事業です。',
-    viewMorePath: RouteDatas.servicesDesign.path,
+    viewMorePath: RouteDatas.servicesPartner.path,
   },
-  {
-    imgPathname: '/top/services/cardbg_02.jpg',
-    copyEn: 'Development PartnerShips',
-    copyJp: '制作パートナー事業',
-    lead:
-      'ビジネス課題の解決へ向けて行う「制作」をベースとした、「デザイン・開発」の両方もしくはそのいずれかをパートナーとしてサポートしていく事業です。コンテンツの制作やコンサルティング、開発から運用・保守までを幅広く対応して行う事業です。',
-    viewMorePath: RouteDatas.servicesDevelopment.path,
-  },
+
+  /**
+   * @todo 事業をひとつに統一する予定なので一旦コメントアウト
+   */
+  // {
+  //   imgPathname: '/top/services/cardbg_02.jpg',
+  //   copyEn: 'Development PartnerShips',
+  //   copyJp: '制作パートナー事業',
+  //   lead:
+  //     'ビジネス課題の解決へ向けて行う「制作」をベースとした、「デザイン・開発」の両方もしくはそのいずれかをパートナーとしてサポートしていく事業です。コンテンツの制作やコンサルティング、開発から運用・保守までを幅広く対応して行う事業です。',
+  //   viewMorePath: RouteDatas.servicesDevelopment.path,
+  // },
 ]

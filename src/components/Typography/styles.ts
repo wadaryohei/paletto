@@ -10,23 +10,6 @@ import { BreakPoints, max, min } from '../../const/BreakPoints'
 // styledComponent
 //----------------------------------
 export const TypographyStyle = styled(TypographyComponent)`
-  /**
-   * 端末サイズの改行用クラス
-   */
-  & > span {
-    display: block;
-
-    &.sp {
-      @media ${max(BreakPoints.md)} {
-        display: block;
-      }
-
-      @media ${min(BreakPoints.md)} {
-        display: inline;
-      }
-    }
-  }
-
   &.heading {
     font-size: ${FontSize.xxl};
     font-family: 'Gilroy-Bold', sans-serif;
