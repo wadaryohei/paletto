@@ -23,7 +23,7 @@ export const SectionSolutionComponent = (props: SectionSolutionProps) => (
       variant={'heading'}
       className={'servicesDesignPartnerHeading'}
     >
-      What we can do as partners.
+      What we can do for partners.
     </Typography>
     <Typography component={'p'} variant={'subheading'}>
       私達がパートナーとしてできること
@@ -62,7 +62,6 @@ export const SectionSolutionComponent = (props: SectionSolutionProps) => (
 
                 <Typography
                   component={'h2'}
-                  variant={'subheading'}
                   className={'servicesDesignSolutionListDescription'}
                 >
                   Design Solution.

@@ -22,7 +22,9 @@ export const SectionIntroComponent = (props: SectionIntroProps) => (
       We are design partners who change the world through design.
     </Typography>
     <Typography component={'p'} variant={'lead'}>
-      デジタルプロダクト開発（UI/UXデザイン）に強みを置き、既存事業の改善、新規事業立ち上げ、ブランド構築、デザイン組織支援、そしてあらゆるビジネス課題の解決を実現する「制作〜開発〜改善」のサイクルをワンストップでフルコミット・フルスクラッチで行う事業です。
+      <span>
+        デジタルプロダクト開発（UI/UXデザイン）をベースに、既存事業の改善、新規事業立ち上げ、ブランド構築、デザイン組織支援、そしてあらゆるビジネス課題の解決を実現する「戦略〜開発〜改善」のサイクルをワンストップでフルコミット・フルスクラッチで行う事業です。
+      </span>
     </Typography>
   </Section>
 )
