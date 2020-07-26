@@ -17,4 +17,9 @@ export const SectionSubscriptionStyle = styled(SectionSubscriptionComponent)`
   .subscriptionLeadWrapper {
     margin-top: ${Margin.m32};
   }
+
+  .subscriptionButtonWrapper {
+    margin-top: ${Margin.m64};
+    text-align: center;
+  }
 `

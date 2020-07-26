@@ -1,6 +1,7 @@
 import React from 'react'
 import { Section } from '../../../../../components/Section'
 import { Typography } from '../../../../../components/Typography'
+import { Button } from '../../../../../components/Button'
 
 //----------------------------------
 // props
@@ -45,6 +46,12 @@ export const SectionSubscriptionComponent = (
         <Typography component={'p'} variant={'lead'}>
           長期的なパートナーシップによりビジネス課題の解決を実現する「戦略〜開発〜改善」のサイクルをワンストップで行うことができます。
         </Typography>
+      </div>
+
+      <div className={'subscriptionButtonWrapper'}>
+        <Button href={'/contact'} color={'primary'} size={'md'}>
+          こちらからご依頼する
+        </Button>
       </div>
     </div>
   </Section>

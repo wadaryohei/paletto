@@ -3,6 +3,7 @@ import { Container } from '@material-ui/core'
 import { Section } from '../../../../components/Section'
 import { Typography } from '../../../../components/Typography'
 import { SectionHeadingDatas } from '../../../../datas/IndexDatas'
+import { Button } from '../../../../components/Button'
 
 //----------------------------------
 // props
@@ -45,6 +46,12 @@ export const SectionVisionComponent = (props: SectionVisionProps) => (
               「Paletto.」では課題の解決の先の「事業やサービスやプロダクト」の思いをデザインでカタチにします。
             </span>
           </Typography>
+        </div>
+
+        <div className={'visionButtonWrapper'}>
+          <Button href={'/about'} color={'primary'} size={'md'}>
+            View More
+          </Button>
         </div>
       </Container>
     </div>

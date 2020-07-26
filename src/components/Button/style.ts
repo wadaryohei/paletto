@@ -18,6 +18,7 @@ export const ButtonStyle = styled(ButtonComponent)`
     border-radius: 99rem;
     color: ${Colors.white};
     font-size: ${FontSize.sm};
+    font-family: 'Gilroy-Bold', sans-serif;
 
     &.primary {
       transition: ${unHover(200)};
@@ -30,18 +31,21 @@ export const ButtonStyle = styled(ButtonComponent)`
     }
 
     &.lg {
+      min-width: 320px;
       padding: ${Padding.p16} ${Padding.p32};
       font-weight: ${FontWeight.bold};
       font-size: ${FontSize.sm};
     }
 
     &.md {
+      min-width: 240px;
       padding: ${Padding.p16} ${Padding.p32};
       font-weight: ${FontWeight.normal};
       font-size: ${FontSize.sm};
     }
 
     &.sm {
+      min-width: 220px;
       padding: ${Padding.p16} ${Padding.p32};
       font-size: ${FontSize.sm};
     }
