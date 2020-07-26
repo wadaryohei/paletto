@@ -39,11 +39,6 @@ export const SectionFooterStyle = styled(SectionFooterComponent)`
         font-size: ${FontSize.md};
       }
     }
-
-    .aboutLinkSubHeading {
-      font-size: ${FontSize.xs};
-      line-height: 1.6;
-    }
   }
 
   .aboutContactWrapper {
