@@ -1,10 +1,10 @@
 import React from 'react'
-import { Section } from '../../../../components/Section'
+import { Section } from '../Section'
 
 //----------------------------------
 // props
 //----------------------------------
-export interface SectionWrapperProps {
+export interface WrapperProps {
   className?: string
   children: React.ReactNode
 }
@@ -12,6 +12,6 @@ export interface SectionWrapperProps {
 //----------------------------------
 // component
 //----------------------------------
-export const SectionWrapperComponent = (props: SectionWrapperProps) => (
+export const WrapperComponent = (props: WrapperProps) => (
   <Section className={props.className}>{props.children}</Section>
 )

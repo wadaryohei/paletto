@@ -1,13 +1,13 @@
 import styled from 'styled-components'
-import { SectionWrapperComponent } from './dom'
-import { Padding } from '../../../../const/Padding'
-import { Colors } from '../../../../const/Colors'
-import { BreakPoints, max } from '../../../../const/BreakPoints'
+import { WrapperComponent } from './dom'
+import { Padding } from '../../const/Padding'
+import { Colors } from '../../const/Colors'
+import { BreakPoints, max } from '../../const/BreakPoints'
 
 //----------------------------------
 // styledComponent
 //----------------------------------
-export const SectionWrapperStyle = styled(SectionWrapperComponent)`
+export const WrapperStyle = styled(WrapperComponent)`
   max-width: 72%;
   width: 72%;
   margin-left: auto;
