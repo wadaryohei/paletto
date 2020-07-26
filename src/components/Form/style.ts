@@ -72,6 +72,10 @@ export const FormStyle = styled(FormComponent)`
     width: 100%;
   }
 
+  .formButton {
+    text-align: center;
+  }
+
   /**
    * @memo dataImageの背景画像読み込みを最後にしないとそれ以下のスタイルが全て崩れるので最後に読み込む
    */

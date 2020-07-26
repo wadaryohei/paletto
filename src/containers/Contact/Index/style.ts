@@ -17,5 +17,4 @@ export const ContactContainerStyle = styled(ContactContainer)`
       padding: 0;
     }
   }
-}
 `

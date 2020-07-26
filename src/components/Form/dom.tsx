@@ -1,5 +1,5 @@
 import React from 'react'
-import { Typography } from '@material-ui/core'
+import { Button } from '../Button'
 
 //----------------------------------
 // props
@@ -39,7 +39,7 @@ export const FormComponent = (props: FormProps) => (
         <label>
           <p>メールアドレス</p>
           <input
-            type="text"
+            type="email"
             placeholder="yourmail@example.com"
             name="【メールアドレス】"
             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
@@ -218,8 +218,11 @@ export const FormComponent = (props: FormProps) => (
         </li>
       </div>
     </ul>
-    {/* <button type="submit" className={styles.button}>
-      <Button language="ja" displayText="送信" buttonStyle="primary" />
-    </button> */}
+
+    <div className={'formButton'}>
+      <Button color={'primary'} size={'md'} href={'/'} disabled={true}>
+        この内容でお問い合わせする
+      </Button>
+    </div>
   </form>
 )
