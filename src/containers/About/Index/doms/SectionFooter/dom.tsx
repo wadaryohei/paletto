@@ -23,9 +23,6 @@ export const SectionFooterComponent = (props: SectionFooterProps) => (
           <Banner imgPath={'pages/about/about_services_glows.jpg'}>
             <span className={'aboutLinkCopy'}>私達ができること</span>
             <span className={'aboutLinkHeading'}>SERVICES</span>
-            <span className={'aboutLinkSubHeading'}>
-              あなたの事業をパートナーとしグロースする２つの事業
-            </span>
           </Banner>
         </Link>
       </div>
