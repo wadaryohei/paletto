@@ -11,7 +11,7 @@ export interface ButtonProps
   children?: React.ReactNode
   color?: 'primary'
   size?: 'sm' | 'md' | 'lg'
-  disabled: boolean
+  disabled?: boolean
 }
 
 //----------------------------------
