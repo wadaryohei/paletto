@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import { BannerComponent } from './dom'
 import { BreakPoints, max } from '../../const/BreakPoints'
-import { FontWeight } from '../../const/FontWeight'
 import { Colors } from '../../const/Colors'
 import { Padding } from '../../const/Padding'
 

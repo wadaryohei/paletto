@@ -14,14 +14,27 @@ export interface SectionDetailsProps {
 //----------------------------------
 export const SectionDetailsComponent = (props: SectionDetailsProps) => (
   <Section className={props.className}>
-    <Typography component={'h2'} variant={'subheading'}>
-      デザイン戦略詳細
-    </Typography>
-    <Typography component={'p'} variant={'lead'}>
-      サイト・アプリ(iOS・Android)デザイン制作 /
-      Webコンサルティング・アクセス解析 / プロトタイプ制作・開発 /
-      マーケティング戦略 / UXリサーチ / UI/UX改善 / 戦略構築 / 企業理念の策定 /
-      ブランディング コンテンツ企画・インタビュー制作 / その他
-    </Typography>
+    <div className={'detailsSolution'}>
+      <Typography component={'h2'} variant={'subheading'}>
+        デザイン詳細
+      </Typography>
+      <Typography component={'p'} variant={'lead'}>
+        サイト・アプリ(iOS・Android)デザイン / プロトタイプ制作 /
+        Webコンサルティング・アクセス解析 / マーケティング戦略 / UXリサーチ /
+        UI/UX改善 / 戦略構築 / 企業理念の策定 / ブランディング /
+        コンテンツ企画・インタビュー制作
+      </Typography>
+    </div>
+    <div className={'detailsSolution'}>
+      <Typography component={'h2'} variant={'subheading'}>
+        開発詳細
+      </Typography>
+      <Typography component={'p'} variant={'lead'}>
+        企業サイト / 採用サイト / LP・キャンペーンサイト / スマートフォンサイト
+        / オウンドメディア / CMS開発（WordPress/MicroCMS） / SPA開発 /
+        JamStack開発 / Webサイト・サービス運用 / 予約システム開発 /
+        チャットボット開発 / プロトタイプ開発
+      </Typography>
+    </div>
   </Section>
 )

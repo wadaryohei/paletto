@@ -9,9 +9,9 @@ import { BreakPoints, max } from '../../../../../const/BreakPoints'
 //----------------------------------
 export const SectionIntroStyle = styled(SectionIntroComponent)`
   .servicesIntroHeader {
-    font-size: ${FontSize.xl};
+    font-size: ${FontSize.md};
     text-align: center;
-    margin-bottom: ${Margin.m64};
+    margin-bottom: ${Margin.m32};
     @media ${max(BreakPoints.md)} {
       font-size: ${FontSize.md};
     }

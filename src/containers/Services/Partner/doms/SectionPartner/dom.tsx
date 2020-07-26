@@ -24,7 +24,7 @@ export const SectionPartnerComponent = (props: SectionPartnerProps) => (
         variant={'heading'}
         className={'servicesDesignPartnerHeading'}
       >
-        Initiatives with partners.
+        How to work with partners.
       </Typography>
       <Typography component={'p'} variant={'subheading'}>
         パートナーとの取り組み方

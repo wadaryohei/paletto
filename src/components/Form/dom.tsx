@@ -1,0 +1,303 @@
+import React from 'react'
+import { Button } from '../Button'
+import { Formik, Field, Form } from 'formik'
+import {
+  initValue,
+  validationSchema,
+} from '../../datas/_shared/ValidationDatas'
+
+//----------------------------------
+// props
+//----------------------------------
+export interface FormProps {
+  className?: string
+  formAction: string
+  formName: string
+}
+
+//----------------------------------
+// component
+//----------------------------------
+export const FormComponent = (componentProps: FormProps) => (
+  <>
+    <Formik
+      initialValues={initValue}
+      onSubmit={(values) => {
+        console.log(values)
+      }}
+      validationSchema={validationSchema}
+      render={(props) => (
+        <Form
+          className={componentProps.className}
+          onSubmit={props.handleSubmit}
+        >
+          <ul>
+            {/** @named お名前 */}
+            <li>
+              <fieldset>
+                <p>お名前</p>
+                <Field
+                  name="firstName"
+                  type="text"
+                  placeholder="姓"
+                  onBlur={props.handleBlur}
+                  required
+                />
+                {props.touched.firstName && props.errors.firstName && (
+                  <span className={'error'}>{props.errors.firstName}</span>
+                )}
+                <Field
+                  name="lastName"
+                  type="text"
+                  placeholder="名"
+                  onBlur={props.handleBlur}
+                  required
+                />
+                {props.touched.lastName && props.errors.lastName && (
+                  <span className={'error'}>{props.errors.lastName}</span>
+                )}
+              </fieldset>
+            </li>
+
+            {/** @mailAddress メールアドレス */}
+            <li>
+              <label>
+                <p>メールアドレス</p>
+                <Field
+                  name="email"
+                  type="email"
+                  placeholder="yourmail@example.com"
+                  onBlur={props.handleBlur}
+                  required
+                />
+                {props.touched.email && props.errors.email && (
+                  <span className={'error'}>{props.errors.email}</span>
+                )}
+              </label>
+            </li>
+
+            {/** @details ご相談内容 */}
+            <li>
+              <label>
+                <p>ご相談内容</p>
+                <Field
+                  as="select"
+                  name="details"
+                  onChange={props.handleChange}
+                  onBlur={props.handleBlur}
+                >
+                  <option value="">選択してください</option>
+                  <option value="デザインについて">デザインについて</option>
+                  <option value="開発・制作について">開発・制作について</option>
+                  <option value="デザインと開発・制作について">
+                    デザインと開発・制作について
+                  </option>
+                </Field>
+              </label>
+              {props.touched.details && props.errors.details && (
+                <span className={'error'}>{props.errors.details}</span>
+              )}
+            </li>
+
+            {/** @budget 予算 */}
+            <li>
+              <label>
+                <p>ご予算の上限</p>
+                <Field
+                  as="select"
+                  name="budget"
+                  onChange={props.handleChange}
+                  onBlur={props.handleBlur}
+                >
+                  <option defaultValue="">選択してください</option>
+                  <option value="100万円未満">100万円未満</option>
+                  <option value="100万円">100万円</option>
+                  <option value="200万円">200万円</option>
+                  <option value="300万円">300万円</option>
+                  <option value="400万円">500万円</option>
+                  <option value="600万円">600万円</option>
+                  <option value="700万円">700万円</option>
+                  <option value="800万円">800万円</option>
+                  <option value="900万円">900万円</option>
+                  <option value="1000万円">1000万円</option>
+                  <option value="1000万円以上">1000万円以上</option>
+                </Field>
+              </label>
+              {props.touched.budget && props.errors.budget && (
+                <span className={'error'}>{props.errors.budget}</span>
+              )}
+            </li>
+
+            {/** @contract - ご契約形態 */}
+            <li>
+              <label>
+                <p>
+                  ご契約形態
+                  <span>
+                    *
+                    サブスクリプション契約を採用の場合は「ご予算上限/月12回」を月々お支払いを目安とした契約となります。
+                  </span>
+                  <span>* 単発受注契約の場合は通常の契約となります。</span>
+                </p>
+                <Field
+                  as="select"
+                  name="contract"
+                  onChange={props.handleChange}
+                  onBlur={props.handleBlur}
+                >
+                  <option defaultValue="">選択してください</option>
+                  <option value="サブスクリプション契約">
+                    サブスクリプション契約
+                  </option>
+                  <option value="単発受注契約">単発受注契約</option>
+                </Field>
+              </label>
+              {props.touched.contract && props.errors.contract && (
+                <span className={'error'}>{props.errors.contract}</span>
+              )}
+            </li>
+
+            {/** @categories - お問い合わせ種別 */}
+            <li>
+              <label>
+                <p>お問い合わせ種別</p>
+                <Field
+                  as="select"
+                  name="categories"
+                  onChange={props.handleChange}
+                  onBlur={props.handleBlur}
+                >
+                  <option defaultValue="">選択してください</option>
+                  <option value="新規事業立ち上げのご相談">
+                    新規事業立ち上げのご相談
+                  </option>
+                  <option value="既存サービスの改善のご相談">
+                    既存サービスの改善のご相談
+                  </option>
+                  <option value="業務提携・アライアンスのご相談">
+                    業務提携・アライアンスのご相談
+                  </option>
+                  <option value="取材・講演・イベント登壇などのご依頼">
+                    取材・講演・イベント登壇などのご依頼
+                  </option>
+                </Field>
+              </label>
+              {props.touched.categories && props.errors.categories && (
+                <span className={'error'}>{props.errors.categories}</span>
+              )}
+            </li>
+
+            {/** お問い合わせ種別の内容によって表示する */}
+            <div className={'activeForm'}>
+              {/** @company - 会社名 */}
+              <li>
+                <label>
+                  <p>会社名</p>
+                  <Field
+                    name="company"
+                    type="text"
+                    placeholder="株式会社〇〇〇〇"
+                    onChange={props.handleChange}
+                    required
+                  />
+                </label>
+                {props.touched.company && props.errors.company && (
+                  <span className={'error'}>{props.errors.company}</span>
+                )}
+              </li>
+
+              {/** @background - 知った経緯 */}
+              <li>
+                <label>
+                  <p>弊社をお知りになった経緯を教えてください</p>
+                  <Field
+                    as="select"
+                    name="background"
+                    onChange={props.handleChange}
+                    onBlur={props.handleBlur}
+                  >
+                    <option value="検索で見つけた">検索で見つけた</option>
+                    <option value="Twitterで知った">Twitterで知った</option>
+                    <option value="Facebookで知った">Facebookで知った</option>
+                    <option value="知人の紹介で知った">
+                      知人の紹介で知った
+                    </option>
+                  </Field>
+                </label>
+                {props.touched.background && props.errors.background && (
+                  <span className={'error'}>{props.errors.background}</span>
+                )}
+              </li>
+
+              {/** @request - ご依頼予定のWebサイト、またはアプリストアのURL */}
+              <li>
+                <label>
+                  <p>
+                    ご依頼予定のWebサイトやサービス、またはアプリストアのURL
+                    ※任意
+                  </p>
+                  <Field
+                    name="request"
+                    type="text"
+                    placeholder="https://"
+                    onChange={props.handleChange}
+                    required
+                  />
+                </label>
+              </li>
+
+              {/** @fixed - 完了期日 */}
+              <li>
+                <label>
+                  <p>完了期日の目安(概ねで構いません) ※任意</p>
+                  <Field
+                    name="fixed"
+                    type="text"
+                    placeholder="20xx年 xx月 xx日"
+                    onChange={props.handleChange}
+                    required
+                  />
+                </label>
+                {props.touched.fixed && props.errors.fixed && (
+                  <span className={'error'}>{props.errors.fixed}</span>
+                )}
+              </li>
+            </div>
+
+            {/** @inquery  お問い合わせ内容 */}
+            <li>
+              <label>
+                <p>お問い合わせ内容</p>
+                <Field
+                  as="textarea"
+                  rows={6}
+                  maxLength={4000}
+                  name="inquery"
+                  placeholder="最大4000文字まで"
+                  onChange={props.handleChange}
+                  required
+                />
+              </label>
+              {props.touched.inquery && props.errors.inquery && (
+                <span className={'error'}>{props.errors.inquery}</span>
+              )}
+            </li>
+          </ul>
+
+          <div className={'formButton'}>
+            <Button
+              onClick={(e) => {
+                e.preventDefault()
+              }}
+              color={'primary'}
+              size={'md'}
+              disabled={false}
+            >
+              この内容でお問い合わせする
+            </Button>
+          </div>
+        </Form>
+      )}
+    />
+  </>
+)

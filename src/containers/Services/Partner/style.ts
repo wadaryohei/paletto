@@ -21,4 +21,8 @@ export const ServicesPartnerStyle = styled(ServicesPartnerContainer)`
   .l-section-banner {
     margin-top: ${Margin.m64};
   }
+
+  .l-section-subscription {
+    margin-top: ${Margin.m112};
+  }
 `

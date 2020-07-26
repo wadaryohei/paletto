@@ -8,6 +8,7 @@ import {
   Services,
   ServicesDatas,
 } from '../../../../datas/_shared/ServicesDatas'
+import { Button } from '../../../../components/Button'
 
 //----------------------------------
 // props
@@ -73,6 +74,12 @@ export const SectionServiceComponent = (props: SectionServiceProps) => (
             )
           })}
         </Grid>
+
+        <div className={'servicesButtonWrapper'}>
+          <Button href={'/services'} color={'primary'} size={'md'}>
+            View More
+          </Button>
+        </div>
       </Container>
     </div>
   </Section>

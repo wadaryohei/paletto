@@ -37,6 +37,13 @@ export const SectionServiceStyle = styled(SectionServiceComponent)`
       background-color: ${Colors.smokeGray};
     }
 
+    &::after {
+      content: '';
+      display: block;
+      width: 1px;
+      height: ${Padding.p32};
+    }
+
     .serviceCardGrid {
       margin: ${Margin.m24} auto 0;
     }
@@ -45,11 +52,15 @@ export const SectionServiceStyle = styled(SectionServiceComponent)`
       height: 100%;
     }
 
-    &::after {
-      content: '';
-      display: block;
-      width: 1px;
-      height: ${Padding.p32};
+    .servicesButtonWrapper {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+
+      @media ${max(BreakPoints.md)} {
+        text-align: left;
+        margin-top: ${Margin.m32};
+      }
     }
   }
 `

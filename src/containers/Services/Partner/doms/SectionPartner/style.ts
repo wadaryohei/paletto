@@ -72,12 +72,11 @@ export const SectionPartnerStyle = styled(SectionPartnerComponent)`
         }
 
         .servicesDesignPartnerListSubHeading {
-          font-weight: ${FontWeight.bold};
+          font-weight: ${FontWeight.normal};
         }
 
         .servicesDesignPartnerListLead {
           margin-top: ${Margin.m16};
-          font-weight: ${FontWeight.bold};
         }
       }
     }
