@@ -50,7 +50,7 @@ export const SectionSubscriptionComponent = (
 
       <div className={'subscriptionButtonWrapper'}>
         <Button href={'/contact'} color={'primary'} size={'md'}>
-          こちらからご依頼する
+          こちらから依頼する
         </Button>
       </div>
     </div>
