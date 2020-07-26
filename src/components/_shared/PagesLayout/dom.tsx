@@ -9,7 +9,7 @@ import { Section } from '../../Section'
 //----------------------------------
 export interface PagesLayoutProps {
   pathname: string
-  pageHeaderBgPathname: string
+  pageHeaderBgPathname?: string
   pageHeading: string
   className?: string
   children: React.ReactNode

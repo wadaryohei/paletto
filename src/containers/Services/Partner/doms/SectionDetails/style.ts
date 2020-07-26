@@ -6,7 +6,11 @@ import { Margin } from '../../../../../const/Margin'
 // styledComponent
 //----------------------------------
 export const SectionDetailsStyle = styled(SectionDetailsComponent)`
-  > p {
-    margin-top: ${Margin.m16};
+  .detailsSolution {
+    margin-bottom: ${Margin.m32};
+
+    > p {
+      margin-top: ${Margin.m16};
+    }
   }
 `

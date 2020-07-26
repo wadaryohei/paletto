@@ -1,6 +1,8 @@
 import React from 'react'
 import { PagesLayout } from '../../../components/_shared/PagesLayout'
 import { PageDatas } from '../../../datas/_shared/PageDatas'
+import { Form } from '../../../components/Form'
+import { Wrapper } from '../../../components/Wrapper'
 
 //----------------------------------
 // props
@@ -20,9 +22,16 @@ const ContactContainer = (props: ContactProps) => {
     <PagesLayout
       className={props.className}
       pathname={PageDatas.contact.pathname}
-      pageHeaderBgPathname={PageDatas.contact.pageHeaderBgPathname}
       pageHeading={PageDatas.contact.pageHeading}
     >
+      <Wrapper>
+        {/** @section Form */}
+        <Form
+          className={'l-contact-form'}
+          formAction={'/'}
+          formName={'contact'}
+        />
+      </Wrapper>
     </PagesLayout>
   )
 }

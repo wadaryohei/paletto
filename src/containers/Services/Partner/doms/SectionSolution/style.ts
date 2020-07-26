@@ -72,7 +72,7 @@ export const SectionSolutionStyle = styled(SectionSolutionComponent)`
         }
 
         .servicesDesignSolutionListSubHeading {
-          font-weight: ${FontWeight.bold};
+          font-weight: ${FontWeight.normal};
           font-size: ${FontSize.sm};
         }
 
@@ -86,8 +86,6 @@ export const SectionSolutionStyle = styled(SectionSolutionComponent)`
           display: inline-block;
           margin-top: ${Margin.m32};
           padding-left: ${Padding.p32};
-          color: ${Colors.gray};
-          font-weight: ${FontWeight.bold};
           font-size: ${FontSize.md};
           font-family: 'Gilroy-Bold', sans-serif;
 
