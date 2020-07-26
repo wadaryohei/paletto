@@ -60,7 +60,7 @@ export const FormStyle = styled(FormComponent)`
       }
 
       .error {
-        display: none;
+        display: block;
         font-size: ${FontSize.sm};
         margin: ${Margin.m8} 0 ${Margin.m16};
         color: ${Colors.error};
