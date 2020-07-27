@@ -27,10 +27,9 @@ export const FormComponent = (componentProps: FormProps) => {
   return (
     <Formik
       initialValues={initValue}
-      onSubmit={(values, { resetForm }) => {
+      onSubmit={(values) => {
         console.log(values)
         componentProps.modal.formPassDatas(values)
-        // resetForm()
       }}
       validationSchema={validationSchema}
     >
