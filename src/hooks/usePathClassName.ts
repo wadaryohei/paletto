@@ -1,14 +1,14 @@
 //----------------------------------
 // types
 //----------------------------------
-export interface PathClassName {
+export interface typePathClassName {
   activePathClassName: () => string
 }
 
 //----------------------------------
 // custom hooks
 //----------------------------------
-export const usePathClassName = (pathName: string): PathClassName => {
+export const usePathClassName = (pathName: string): typePathClassName => {
   /**
    * 現在のアクティブなパスのスラッシュを削除してクラス名を付与する
    */

@@ -25,12 +25,17 @@ export const FormStyle = styled(FormComponent)`
     width: 100%;
     display: block;
     background-color: ${Colors.smokeGray};
+    border: solid 2px ${Colors.smokeGray};
     padding: ${Padding.p16} ${Padding.p16};
     border-radius: 4px;
     line-height: 1.6;
     font-size: 16px; /** スマホ時のスケールを防ぐために固定値を入れる */
     -webkit-appearance: none;
     appearance: none;
+
+    &:focus {
+      border: solid 2px ${Colors.primary};
+    }
   }
 
   ul {
@@ -58,14 +63,14 @@ export const FormStyle = styled(FormComponent)`
           color: ${Colors.black};
         }
       }
-
-      .error {
-        display: block;
-        font-size: ${FontSize.sm};
-        margin: ${Margin.m8} 0 ${Margin.m16};
-        color: ${Colors.error};
-      }
     }
+  }
+
+  .error {
+    display: block;
+    font-size: ${FontSize.sm};
+    margin: ${Margin.m8} 0 ${Margin.m16};
+    color: ${Colors.error};
   }
 
   .activeForm {

@@ -8,10 +8,11 @@ import { LinkComponentProps } from '../Link/dom'
 export interface ButtonProps {
   className?: string
   children?: React.ReactNode
-  color?: 'primary'
+  color?: 'primary' | 'border'
   size?: 'sm' | 'md' | 'lg'
+  type?: 'submit' | 'reset' | undefined
   disabled?: boolean
-  onClick: (event: React.FormEvent<HTMLFormElement>) => void
+  callback: () => void
 }
 
 export interface LinkButtonProps
@@ -20,7 +21,6 @@ export interface LinkButtonProps
   children?: React.ReactNode
   color?: 'primary'
   size?: 'sm' | 'md' | 'lg'
-  disabled?: boolean
 }
 
 //----------------------------------
@@ -28,6 +28,8 @@ export interface LinkButtonProps
 //----------------------------------
 export const ButtonComponent = (props: ButtonProps) => (
   <button
+    onClick={() => props.callback()}
+    type={props.type}
     className={`${props.className} ${props.color} ${props.size}`}
     disabled={props.disabled}
   >
@@ -42,11 +44,6 @@ export const LinkButtonComponent = (props: LinkButtonProps) => (
     target={props.target}
     routeMatch={false}
   >
-    <button
-      className={`${props.color} ${props.size}`}
-      disabled={props.disabled}
-    >
-      {props.children}
-    </button>
+    <button className={`${props.color} ${props.size}`}>{props.children}</button>
   </Link>
 )

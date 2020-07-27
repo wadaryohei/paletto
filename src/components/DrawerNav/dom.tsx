@@ -1,9 +1,10 @@
 import React from 'react'
 import { SwipeableDrawer } from '@material-ui/core'
 import { Link } from '../Link'
+import { Logo } from '../Logo'
 import { MenuIcon } from '../Icon/Menu'
-import { NavMenu } from '../../datas/_shared/NavMenuDatas'
 import { IconProps } from '../Icon/Menu/dom'
+import { NavMenu } from '../../datas/_shared/NavMenuDatas'
 
 //----------------------------------
 // props
@@ -28,6 +29,17 @@ export const DrawerNavComponent = (props: DrawerNavComponentProps) => (
     onClose={props.onCloseMenu}
   >
     <nav className={'drawerNav'}>
+      <div className={'drawerNavHeaderWrapper'}>
+        <Link href={'/'} routeMatch={false}>
+          <Logo />
+        </Link>
+
+        <MenuIcon
+          icon={props.icon}
+          callback={props.onCloseMenu}
+          className={props.icon}
+        />
+      </div>
       <ul>
         {props.navMenus.map((navMenu: NavMenu, index: number) => {
           return (
@@ -39,11 +51,6 @@ export const DrawerNavComponent = (props: DrawerNavComponentProps) => (
           )
         })}
       </ul>
-      <MenuIcon
-        icon={props.icon}
-        callback={props.onCloseMenu}
-        className={props.icon}
-      />
     </nav>
   </SwipeableDrawer>
 )

@@ -14,7 +14,7 @@ export const PagesServicesLayoutStyle = styled(PagesServicesLayoutComponent)`
   background-color: ${Colors.smokeGray};
 
   @media ${max(BreakPoints.md)} {
-    padding-top: ${Padding.p160};
+    padding-top: calc(${Padding.p160} + 80px);
   }
 
   .pageHeaderWrapper {

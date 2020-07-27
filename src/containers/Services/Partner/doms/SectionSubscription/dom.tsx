@@ -1,7 +1,7 @@
 import React from 'react'
 import { Section } from '../../../../../components/Section'
 import { Typography } from '../../../../../components/Typography'
-import { Button } from '../../../../../components/Button'
+import { LinkButton } from '../../../../../components/Button'
 
 //----------------------------------
 // props
@@ -19,24 +19,55 @@ export const SectionSubscriptionComponent = (
   <Section className={props.className}>
     <div className={'subscriptionWrapper'}>
       <div className={'subscriptionHeaderWrapper'}>
-        <Typography component={'h2'} variant={'heading'}>
-          Subscription
+        <Typography
+          component={'h2'}
+          variant={'heading'}
+          className={'subscriptionHeader'}
+        >
+          Standard / Subscription
         </Typography>
-        <Typography component={'p'} variant={'subheading'}>
-          サブスクリプションでのご依頼
+        <Typography
+          component={'p'}
+          variant={'subheading'}
+          className={'subscriptionSubheading'}
+        >
+          通常のパートナー依頼 / サブスクリプションでのパートナー依頼
         </Typography>
       </div>
       <div className={'subscriptionLeadWrapper'}>
+        <div className={'subscriptionSubheadingWrapper'}>
+          <Typography
+            component={'h3'}
+            variant={'subheading'}
+            className={'subscriptionSubheading'}
+          >
+            ご依頼について
+          </Typography>
+        </div>
+
+        <Typography component={'p'} variant={'lead'}>
+          私達は「デザイン・開発パートナーシップ」として事業のグロース支援や事業のブランディング支援を行なっています。
+        </Typography>
+
+        <Typography component={'p'} variant={'lead'}>
+          通常のデザイン会社/制作会社と同じ形式でのご依頼も承っていますが、他にもう一点ご依頼のタイプに「サブスクリプションでのパートナー依頼」を導入しています。
+        </Typography>
+        <Typography component={'p'} variant={'lead'}>
+          ご依頼されるパートナー様には「通常のパートナー依頼・サブスクリプションでのパートナー依頼」のいずれかをお選びになることが可能となっております。
+        </Typography>
+
+        <div className={'subscriptionSubheadingWrapper'}>
+          <Typography component={'h3'} variant={'subheading'}>
+            なぜサブスクリプションなのか？
+          </Typography>
+        </div>
+
         <Typography component={'p'} variant={'lead'}>
           格安でコストを下げて制作するためのサブスクリプションというわけではありません。
         </Typography>
 
         <Typography component={'p'} variant={'lead'}>
-          一度きりの制作・納品するだけの制作会社に何百万円という金額で制作してもらったがそのまま運用も改善もされないまま終わってしまうということはよくあると思います。
-        </Typography>
-
-        <Typography component={'p'} variant={'lead'}>
-          パートナーとしてのデザイン戦略では、クライアントと同じ熱量で長期戦略を実施していく必要があるため、私達はサブスク型のサービスで提供しています。
+          パートナーとしてのデザイン戦略では、クライアントと同じ熱量で長期戦略を実施していく必要があるため、私達はサブスクリプションでのサービスで提供しています。
         </Typography>
 
         <Typography component={'p'} variant={'lead'}>
@@ -49,9 +80,9 @@ export const SectionSubscriptionComponent = (
       </div>
 
       <div className={'subscriptionButtonWrapper'}>
-        <Button href={'/contact'} color={'primary'} size={'md'}>
+        <LinkButton href={'/contact'} color={'primary'} size={'md'}>
           こちらから依頼する
-        </Button>
+        </LinkButton>
       </div>
     </div>
   </Section>

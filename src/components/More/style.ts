@@ -10,13 +10,14 @@ import { FontSize } from '../../const/FontSize'
 export const MoreStyle = styled(MoreComponent)`
   display: flex;
   align-items: center;
+  justify-content: center;
 
   > span {
     font-size: ${FontSize.sm};
     font-family: 'Gilroy-Medium', sans-serif;
     line-height: 1.4;
     letter-spacing: 0;
-    color: ${Colors.black};
+    color: ${Colors.white};
     overflow: hidden;
     position: relative;
 
@@ -38,6 +39,6 @@ export const MoreStyle = styled(MoreComponent)`
     height: auto;
     margin-left: ${Margin.m8};
     fill: currentcolor;
-    color: ${Colors.primary};
+    color: ${Colors.white};
   }
 `

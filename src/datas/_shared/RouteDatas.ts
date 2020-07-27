@@ -29,6 +29,10 @@ export interface Route {
     pathname: string
     path: string
   }
+  thanks: {
+    pathname: string
+    path: string
+  }
 }
 
 export const RouteDatas: Route = {
@@ -81,5 +85,14 @@ export const RouteDatas: Route = {
   contact: {
     pathname: 'Contact',
     path: '/contact',
+  },
+
+  //----------------------------------
+  // Thanks Page
+  //----------------------------------
+  // @path ---- /thanks
+  thanks: {
+    pathname: 'Thanks',
+    path: '/thanks',
   },
 }

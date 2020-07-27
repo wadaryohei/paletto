@@ -20,6 +20,14 @@ export const DrawerNavStyle = styled(DrawerNavComponent)`
     width: 80vw;
     height: 100%;
 
+    .drawerNavHeaderWrapper {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: ${Margin.m32};
+    }
+
     ul {
       display: flex;
       justify-content: center;
@@ -40,12 +48,6 @@ export const DrawerNavStyle = styled(DrawerNavComponent)`
           padding: ${Padding.p16} 0;
         }
       }
-    }
-
-    .close {
-      position: absolute;
-      top: 24px;
-      right: 10px;
     }
   }
 `

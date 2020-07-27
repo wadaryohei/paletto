@@ -24,7 +24,10 @@ export interface Page {
   }
   contact: {
     pathname: string
-    pageHeaderBgPathname: string
+    pageHeading: string
+  }
+  thanks: {
+    pathname: string
     pageHeading: string
   }
 }
@@ -48,7 +51,10 @@ export const PageDatas: Page = {
   },
   contact: {
     pathname: RouteDatas.contact.pathname,
-    pageHeaderBgPathname: '/pages/contact.jpg',
     pageHeading: 'Request a business solution for a problem as a partner.',
+  },
+  thanks: {
+    pathname: RouteDatas.thanks.pathname,
+    pageHeading: 'Please wait for a few days. Thank you for your inquiry.',
   },
 }

@@ -3,7 +3,8 @@ import { Container } from '@material-ui/core'
 import { Section } from '../../../../components/Section'
 import { Typography } from '../../../../components/Typography'
 import { SectionHeadingDatas } from '../../../../datas/IndexDatas'
-import { Button } from '../../../../components/Button'
+import { LinkButton } from '../../../../components/Button'
+import { More } from '../../../../components/More'
 
 //----------------------------------
 // props
@@ -49,9 +50,9 @@ export const SectionVisionComponent = (props: SectionVisionProps) => (
         </div>
 
         <div className={'visionButtonWrapper'}>
-          <Button href={'/about'} color={'primary'} size={'md'}>
-            View More
-          </Button>
+          <LinkButton href={'/about'} color={'primary'} size={'md'}>
+            <More />
+          </LinkButton>
         </div>
       </Container>
     </div>
