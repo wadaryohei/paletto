@@ -2,6 +2,7 @@ import React from 'react'
 import { PagesLayout } from '../../../components/_shared/PagesLayout'
 import { PageDatas } from '../../../datas/_shared/PageDatas'
 import { Wrapper } from '../../../components/Wrapper'
+import { SectionHeader } from '../doms/SectionHeader'
 
 //----------------------------------
 // props
@@ -24,7 +25,8 @@ const ThanksContainer = (props: ThanksProps) => {
       pageHeading={PageDatas.thanks.pageHeading}
     >
       <Wrapper>
-        <h1>Thanks page</h1>
+        {/** @section Header */}
+        <SectionHeader className={'l-thanks-header'} />
       </Wrapper>
     </PagesLayout>
   )
