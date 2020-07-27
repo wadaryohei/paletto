@@ -2,6 +2,7 @@ import React from 'react'
 import { Section } from '../../../../../components/Section'
 import { Typography } from '../../../../../components/Typography'
 import { LinkButton } from '../../../../../components/Button'
+import { More } from '../../../../../components/More'
 
 //----------------------------------
 // props
@@ -81,7 +82,7 @@ export const SectionSubscriptionComponent = (
 
       <div className={'subscriptionButtonWrapper'}>
         <LinkButton href={'/contact'} color={'primary'} size={'md'}>
-          こちらから依頼する
+          <More>こちらから依頼する</More>
         </LinkButton>
       </div>
     </div>

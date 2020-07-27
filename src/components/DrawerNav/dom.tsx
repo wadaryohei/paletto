@@ -3,13 +3,12 @@ import { SwipeableDrawer } from '@material-ui/core'
 import { Link } from '../Link'
 import { Logo } from '../Logo'
 import { MenuIcon } from '../Icon/Menu'
-import { IconProps } from '../Icon/Menu/dom'
 import { NavMenu } from '../../datas/_shared/NavMenuDatas'
 
 //----------------------------------
 // props
 //----------------------------------
-export interface DrawerNavComponentProps extends IconProps {
+export interface DrawerNavComponentProps {
   className?: string
   navMenus: NavMenu[]
   isOpen: boolean
@@ -35,9 +34,9 @@ export const DrawerNavComponent = (props: DrawerNavComponentProps) => (
         </Link>
 
         <MenuIcon
-          icon={props.icon}
+          icon={'close'}
           callback={props.onCloseMenu}
-          className={props.icon}
+          className={'close'}
         />
       </div>
       <ul>

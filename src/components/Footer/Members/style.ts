@@ -23,13 +23,13 @@ export const MembersStyle = styled(MembersComponent)`
     align-items: center;
     justify-content: center;
     margin-left: ${Margin.m8};
-    line-height: 0.6px;
 
     > li {
       margin-right: ${Margin.m8};
-      > a {
+      line-height: 1;
+      a {
         color: ${Colors.white};
-        > svg {
+        svg {
           width: 16px;
           height: 16px;
         }

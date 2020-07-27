@@ -1,6 +1,6 @@
 import React from 'react'
-import Link from 'next/link'
 import { SocialIcon } from '../../Icon/Social'
+import { Link } from '../../Link'
 import { Member } from '../../../datas/_shared/MemberDatas'
 import { Social } from '../../../datas/_shared/SocialDatas'
 
@@ -22,10 +22,8 @@ export const MembersComponent = (props: MembersProps) => (
       {props.memberData.socials?.map((social: Social, index: number) => {
         return (
           <li key={index}>
-            <Link href={{ pathname: social.path }}>
-              <a target="_blank">
-                <SocialIcon icon={social.name} />
-              </a>
+            <Link target={true} href={social.path}>
+              <SocialIcon icon={social.name} />
             </Link>
           </li>
         )

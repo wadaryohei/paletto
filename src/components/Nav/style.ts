@@ -19,7 +19,7 @@ export const NavStyle = styled(NavComponent)`
     }
 
     > li {
-      > a {
+      a {
         font-size: ${FontSize.sm};
         color: ${Colors.black};
         margin-right: ${Margin.m16};

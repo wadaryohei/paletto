@@ -5,12 +5,9 @@ import CloseIcon from '@material-ui/icons/Close'
 //----------------------------------
 // props
 //----------------------------------
-export interface IconProps {
-  icon: 'menu' | 'close'
-}
-
-export interface MenuIconProps extends IconProps {
+export interface MenuIconProps {
   className?: string
+  icon: 'menu' | 'close'
   callback: () => void
 }
 

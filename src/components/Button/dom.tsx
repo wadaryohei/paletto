@@ -5,23 +5,22 @@ import { LinkComponentProps } from '../Link/dom'
 //----------------------------------
 // props
 //----------------------------------
-export interface ButtonProps {
+export interface ButtonBaseProps {
   className?: string
   children?: React.ReactNode
   color?: 'primary' | 'border'
   size?: 'sm' | 'md' | 'lg'
-  type?: 'submit' | 'reset' | undefined
+}
+
+export interface ButtonProps extends ButtonBaseProps {
+  type?: 'submit' | undefined
   disabled?: boolean
   callback: () => void
 }
 
 export interface LinkButtonProps
-  extends Pick<LinkComponentProps, 'href' | 'target' | 'routeMatch'> {
-  className?: string
-  children?: React.ReactNode
-  color?: 'primary'
-  size?: 'sm' | 'md' | 'lg'
-}
+  extends ButtonBaseProps,
+    Pick<LinkComponentProps, 'href' | 'target' | 'routeMatch'> {}
 
 //----------------------------------
 // component

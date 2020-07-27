@@ -7,7 +7,7 @@ import LanguageIcon from '@material-ui/icons/Language'
 // props
 //----------------------------------
 export interface SocialIconProps {
-  icon: string | undefined
+  icon: string
 }
 
 //----------------------------------
