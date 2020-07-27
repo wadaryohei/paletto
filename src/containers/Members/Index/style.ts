@@ -15,12 +15,12 @@ export const MembersContainerStyle = styled(MembersContainer)`
     padding: ${Padding.p160} 0;
 
     @media ${max(BreakPoints.md)} {
-      padding: ${Padding.p80} 0;
+      padding: 0 0 ${Padding.p80};
     }
 
     .membersGrid {
       @media ${max(BreakPoints.md)} {
-        margin-top: ${Margin.m64};
+        margin-bottom: ${Margin.m64};
       }
     }
 

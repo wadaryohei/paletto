@@ -7,7 +7,6 @@ import { Margin } from '../../../const/Margin'
 // Services/Designページ全体のスタイル
 //--------------------------------------
 export const ServicesPartnerStyle = styled(ServicesPartnerContainer)`
-  position: relative;
   background-color: ${Colors.smokeGray};
 
   .l-section-partner {

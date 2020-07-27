@@ -13,7 +13,7 @@ export const ServicesContainerStyle = styled(ServicesContainer)`
     background-color: ${Colors.white};
 
     @media ${max(BreakPoints.md)} {
-      padding: ${Padding.p80} 0;
+      padding: 0;
     }
   }
 

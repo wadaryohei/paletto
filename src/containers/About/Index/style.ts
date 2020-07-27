@@ -14,7 +14,7 @@ export const AboutContainerStyle = styled(AboutContainer)`
     background-color: ${Colors.white};
 
     @media ${max(BreakPoints.md)} {
-      padding: ${Padding.p80} 0;
+      padding: 0;
     }
   }
 
@@ -22,7 +22,7 @@ export const AboutContainerStyle = styled(AboutContainer)`
     margin-top: ${Margin.m104};
 
     @media ${max(BreakPoints.md)} {
-      margin-top: ${Margin.m64};
+      margin: ${Margin.m64} 0;
     }
   }
 `
