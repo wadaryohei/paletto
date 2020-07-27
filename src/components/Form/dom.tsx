@@ -5,6 +5,7 @@ import {
   initValue,
   validationSchema,
 } from '../../datas/_shared/ValidationDatas'
+import { useForm } from '../../hooks/useForm'
 
 //----------------------------------
 // props
@@ -23,23 +24,7 @@ export const FormComponent = (componentProps: FormProps) => {
    * セレクトで何番目を選んだかを変数として保持する（useStateは再レンダリングされるのでuseRefを使用）
    */
   const ref = useRef<number>(0)
-
-  /**
-   * セレクトで1番目と2番目のどちらかを選択している場合はTrueを返す
-   */
-  const showForm = (selectedindex: number): boolean | undefined => {
-    if (selectedindex === 1 || selectedindex === 2) {
-      return true
-    }
-    return
-  }
-
-  /**
-   * フォームをサブミットしたときの挙動
-   */
-  const onHandleSubmit = (): void => {
-    alert('フォームOK')
-  }
+  const form = useForm()
 
   return (
     <Formik
@@ -47,7 +32,7 @@ export const FormComponent = (componentProps: FormProps) => {
       onSubmit={(values, { resetForm }) => {
         console.log(values)
         resetForm()
-        onHandleSubmit()
+        form.onSubmitHandler('/thanks')
       }}
       validationSchema={validationSchema}
     >
@@ -225,7 +210,7 @@ export const FormComponent = (componentProps: FormProps) => {
               </li>
 
               {/** お問い合わせ種別の内容によって表示する */}
-              {showForm(ref.current) && (
+              {form.showActiveForm(ref.current) && (
                 <div className={'activeForm'}>
                   {/** @company - 会社名 */}
                   <li>
@@ -257,7 +242,9 @@ export const FormComponent = (componentProps: FormProps) => {
                         <option value="">選択してください</option>
                         <option value="検索で見つけた">検索で見つけた</option>
                         <option value="Twitterで知った">Twitterで知った</option>
-                        <option value="Facebookで知った">Facebookで知った</option>
+                        <option value="Facebookで知った">
+                          Facebookで知った
+                        </option>
                         <option value="知人の紹介で知った">
                           知人の紹介で知った
                         </option>
