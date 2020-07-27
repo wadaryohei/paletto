@@ -28,6 +28,19 @@ export const ButtonStyle = styled(ButtonComponent)`
     }
   }
 
+  &.border {
+    transition: ${unHover(200)};
+    color: ${Colors.gray};
+    border: solid 1px ${Colors.gray};
+    background-color: ${Colors.white};
+
+    &:hover {
+      background-color: ${Colors.gray};
+      color: ${Colors.white};
+      transition: ${hover(200)};
+    }
+  }
+
   &.lg {
     min-width: 320px;
     padding: ${Padding.p16} ${Padding.p32};

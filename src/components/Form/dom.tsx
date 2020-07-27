@@ -5,34 +5,32 @@ import {
   initValue,
   validationSchema,
 } from '../../datas/_shared/ValidationDatas'
-import { useForm } from '../../hooks/useForm'
+import { typeForm } from '../../hooks/useForm'
+import { typeModal } from '../../hooks/useModal'
 
 //----------------------------------
 // props
 //----------------------------------
 export interface FormProps {
   className?: string
-  formAction: string
-  formName: string
+  form: typeForm
+  modal: typeModal
 }
 
 //----------------------------------
 // component
 //----------------------------------
 export const FormComponent = (componentProps: FormProps) => {
-  /**
-   * セレクトで何番目を選んだかを変数として保持する（useStateは再レンダリングされるのでuseRefを使用）
-   */
+  // セレクトで何番目を選んだかを変数として保持する（useStateは再レンダリングされるのでuseRefを使用）
   const ref = useRef<number>(0)
-  const form = useForm()
 
   return (
     <Formik
       initialValues={initValue}
       onSubmit={(values, { resetForm }) => {
         console.log(values)
-        resetForm()
-        form.onSubmitHandler('/thanks')
+        componentProps.modal.formPassDatas(values)
+        // resetForm()
       }}
       validationSchema={validationSchema}
     >
@@ -40,10 +38,10 @@ export const FormComponent = (componentProps: FormProps) => {
         return (
           <Form
             name="palettoContactForm"
-            data-netlify="true"
-            className={componentProps.className}
             method="POST"
-            action={'/thanks'}
+            data-netlify="true"
+            action="/thanks"
+            className={componentProps.className}
           >
             <ul>
               <Field name="form" type="hidden" value="palettoContactForm" />
@@ -212,7 +210,7 @@ export const FormComponent = (componentProps: FormProps) => {
               </li>
 
               {/** お問い合わせ種別の内容によって表示する */}
-              {form.showActiveForm(ref.current) && (
+              {componentProps.form.showActiveForm(ref.current) && (
                 <div className={'activeForm'}>
                   {/** @company - 会社名 */}
                   <li>
@@ -310,12 +308,13 @@ export const FormComponent = (componentProps: FormProps) => {
 
             <div className={'formButton'}>
               <Button
+                callback={componentProps.modal.onOpenModalHandler}
                 type="submit"
                 color={'primary'}
                 size={'md'}
                 disabled={!(props.isValid && props.dirty)}
               >
-                この内容でお問い合わせする
+                この内容で送信
               </Button>
             </div>
           </Form>
