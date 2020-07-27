@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import { Button } from '../Button'
-import { Formik, Field, Form } from 'formik'
+import { Formik, Field, Form, ErrorMessage } from 'formik'
 import {
   initValue,
   validationSchema,
@@ -59,9 +59,9 @@ export const FormComponent = (componentProps: FormProps) => {
                     onBlur={props.handleBlur}
                     required
                   />
-                  {props.touched.firstName && props.errors.firstName && (
-                    <span className={'error'}>{props.errors.firstName}</span>
-                  )}
+                  <span className={'error'}>
+                    <ErrorMessage name={'firstName'} />
+                  </span>
                   <Field
                     name="lastName"
                     type="text"
@@ -69,9 +69,9 @@ export const FormComponent = (componentProps: FormProps) => {
                     onBlur={props.handleBlur}
                     required
                   />
-                  {props.touched.lastName && props.errors.lastName && (
-                    <span className={'error'}>{props.errors.lastName}</span>
-                  )}
+                  <span className={'error'}>
+                    <ErrorMessage name={'lastName'} />
+                  </span>
                 </fieldset>
               </li>
 
@@ -86,9 +86,9 @@ export const FormComponent = (componentProps: FormProps) => {
                     onBlur={props.handleBlur}
                     required
                   />
-                  {props.touched.email && props.errors.email && (
-                    <span className={'error'}>{props.errors.email}</span>
-                  )}
+                  <span className={'error'}>
+                    <ErrorMessage name={'email'} />
+                  </span>
                 </label>
               </li>
 
@@ -104,15 +104,17 @@ export const FormComponent = (componentProps: FormProps) => {
                   >
                     <option value="">選択してください</option>
                     <option value="デザインについて">デザインについて</option>
-                    <option value="開発・制作について">開発・制作について</option>
+                    <option value="開発・制作について">
+                      開発・制作について
+                    </option>
                     <option value="デザインと開発・制作について">
                       デザインと開発・制作について
                     </option>
                   </Field>
                 </label>
-                {props.touched.details && props.errors.details && (
-                  <span className={'error'}>{props.errors.details}</span>
-                )}
+                <span className={'error'}>
+                  <ErrorMessage name={'details'} />
+                </span>
               </li>
 
               {/** @budget 予算 */}
@@ -139,9 +141,9 @@ export const FormComponent = (componentProps: FormProps) => {
                     <option value="1000万円以上">1000万円以上</option>
                   </Field>
                 </label>
-                {props.touched.budget && props.errors.budget && (
-                  <span className={'error'}>{props.errors.budget}</span>
-                )}
+                <span className={'error'}>
+                  <ErrorMessage name={'budget'} />
+                </span>
               </li>
 
               {/** @contract - ご契約形態 */}
@@ -168,9 +170,9 @@ export const FormComponent = (componentProps: FormProps) => {
                     <option value="単発受注契約">単発受注契約</option>
                   </Field>
                 </label>
-                {props.touched.contract && props.errors.contract && (
-                  <span className={'error'}>{props.errors.contract}</span>
-                )}
+                <span className={'error'}>
+                  <ErrorMessage name={'contract'} />
+                </span>
               </li>
 
               {/** @categories - お問い合わせ種別 */}
@@ -204,9 +206,9 @@ export const FormComponent = (componentProps: FormProps) => {
                     </option>
                   </Field>
                 </label>
-                {props.touched.categories && props.errors.categories && (
-                  <span className={'error'}>{props.errors.categories}</span>
-                )}
+                <span className={'error'}>
+                  <ErrorMessage name={'categories'} />
+                </span>
               </li>
 
               {/** お問い合わせ種別の内容によって表示する */}
@@ -224,9 +226,9 @@ export const FormComponent = (componentProps: FormProps) => {
                         required
                       />
                     </label>
-                    {props.touched.company && props.errors.company && (
-                      <span className={'error'}>{props.errors.company}</span>
-                    )}
+                    <span className={'error'}>
+                      <ErrorMessage name={'company'} />
+                    </span>
                   </li>
 
                   {/** @background - 知った経緯 */}
@@ -250,9 +252,9 @@ export const FormComponent = (componentProps: FormProps) => {
                         </option>
                       </Field>
                     </label>
-                    {props.touched.background && props.errors.background && (
-                      <span className={'error'}>{props.errors.background}</span>
-                    )}
+                    <span className={'error'}>
+                      <ErrorMessage name={'background'} />
+                    </span>
                   </li>
 
                   {/** @request - ご依頼予定のWebサイト、またはアプリストアのURL */}
@@ -300,9 +302,9 @@ export const FormComponent = (componentProps: FormProps) => {
                     required
                   />
                 </label>
-                {props.touched.inquery && props.errors.inquery && (
-                  <span className={'error'}>{props.errors.inquery}</span>
-                )}
+                <span className={'error'}>
+                  <ErrorMessage name={'inquery'} />
+                </span>
               </li>
             </ul>
 
