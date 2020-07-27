@@ -10,8 +10,8 @@ export interface ButtonProps {
   children?: React.ReactNode
   color?: 'primary'
   size?: 'sm' | 'md' | 'lg'
+  type: 'submit' | 'reset'
   disabled?: boolean
-  onClick: (event: React.FormEvent<HTMLFormElement>) => void
 }
 
 export interface LinkButtonProps
@@ -28,6 +28,7 @@ export interface LinkButtonProps
 //----------------------------------
 export const ButtonComponent = (props: ButtonProps) => (
   <button
+    type={props.type}
     className={`${props.className} ${props.color} ${props.size}`}
     disabled={props.disabled}
   >
