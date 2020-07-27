@@ -6,6 +6,7 @@ import { Modal } from '../../../components/Modal'
 import { useModal } from '../../../hooks/useModal'
 import { useForm } from '../../../hooks/useForm'
 import { PageDatas } from '../../../datas/_shared/PageDatas'
+import { SectionHeader } from './doms/SectionHeader'
 
 //----------------------------------
 // props
@@ -42,6 +43,9 @@ const ContactContainer = (props: ContactProps) => {
       />
 
       <Wrapper>
+        {/** @section Header */}
+        <SectionHeader className={'l-contact-header'} />
+
         {/** @section Form */}
         <Form className={'l-contact-form'} form={form} modal={modal} />
       </Wrapper>
