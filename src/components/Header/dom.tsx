@@ -1,14 +1,15 @@
 import React from 'react'
 import { Container } from '@material-ui/core'
-import { MenuIcon } from '../Icon/Menu'
 import { useRouter } from 'next/router'
+import { MenuIcon } from '../Icon/Menu'
 import { Typography } from '../Typography'
 import { Nav } from '../Nav'
 import { Link } from '../Link'
+import { Logo } from '../Logo'
+import { DrawerNav } from '../DrawerNav'
 import { useShowMenu } from '../../hooks/useShowMenu'
 import { usePathClassName } from '../../hooks/usePathClassName'
 import { NavMenuDatas } from '../../datas/_shared/NavMenuDatas'
-import { DrawerNav } from '../DrawerNav'
 
 //----------------------------------
 // props
@@ -40,7 +41,7 @@ export const HeaderComponent = (props: HeaderProps) => {
           <div className={'headerLogo'}>
             <Typography component={'h1'}>
               <Link href={'/'} routeMatch={false}>
-                Paletto.
+                <Logo />
               </Link>
             </Typography>
           </div>
