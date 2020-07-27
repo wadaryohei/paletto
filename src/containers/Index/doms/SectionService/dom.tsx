@@ -2,13 +2,13 @@ import React from 'react'
 import { Grid, Container } from '@material-ui/core'
 import { Section } from '../../../../components/Section'
 import { Typography } from '../../../../components/Typography'
+import { LinkButton } from '../../../../components/Button'
 import { ServiceCard } from './ServiceCard'
 import { SectionHeadingDatas } from '../../../../datas/IndexDatas'
 import {
   Services,
   ServicesDatas,
 } from '../../../../datas/_shared/ServicesDatas'
-import { Button } from '../../../../components/Button'
 
 //----------------------------------
 // props
@@ -76,9 +76,9 @@ export const SectionServiceComponent = (props: SectionServiceProps) => (
         </Grid>
 
         <div className={'servicesButtonWrapper'}>
-          <Button href={'/services'} color={'primary'} size={'md'}>
+          <LinkButton href={'/services'} color={'primary'} size={'md'}>
             View More
-          </Button>
+          </LinkButton>
         </div>
       </Container>
     </div>

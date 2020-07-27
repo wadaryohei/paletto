@@ -1,7 +1,7 @@
 import React from 'react'
 import { Section } from '../../../../../components/Section'
 import { Typography } from '../../../../../components/Typography'
-import { Button } from '../../../../../components/Button'
+import { LinkButton } from '../../../../../components/Button'
 
 //----------------------------------
 // props
@@ -49,9 +49,9 @@ export const SectionSubscriptionComponent = (
       </div>
 
       <div className={'subscriptionButtonWrapper'}>
-        <Button href={'/contact'} color={'primary'} size={'md'}>
+        <LinkButton href={'/contact'} color={'primary'} size={'md'}>
           こちらから依頼する
-        </Button>
+        </LinkButton>
       </div>
     </div>
   </Section>
