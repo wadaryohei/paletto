@@ -3,6 +3,7 @@ import { Grid, Container } from '@material-ui/core'
 import { Section } from '../../../../components/Section'
 import { Typography } from '../../../../components/Typography'
 import { LinkButton } from '../../../../components/Button'
+import { More } from '../../../../components/More'
 import { ServiceCard } from './ServiceCard'
 import { SectionHeadingDatas } from '../../../../datas/IndexDatas'
 import {
@@ -77,7 +78,7 @@ export const SectionServiceComponent = (props: SectionServiceProps) => (
 
         <div className={'servicesButtonWrapper'}>
           <LinkButton href={'/services'} color={'primary'} size={'md'}>
-            View More
+            <More />
           </LinkButton>
         </div>
       </Container>

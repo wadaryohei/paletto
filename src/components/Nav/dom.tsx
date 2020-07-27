@@ -20,7 +20,7 @@ export const NavComponent = (props: NavProps) => (
       {props.navMenus.map((navMenu, index) => {
         return (
           <li key={index}>
-            <Link href={{ pathname: navMenu.path }}>
+            <Link href={navMenu.path}>
               <a>{navMenu.menuname}</a>
             </Link>
           </li>

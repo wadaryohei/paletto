@@ -4,6 +4,7 @@ import { Section } from '../../../../components/Section'
 import { Typography } from '../../../../components/Typography'
 import { SectionHeadingDatas } from '../../../../datas/IndexDatas'
 import { LinkButton } from '../../../../components/Button'
+import { More } from '../../../../components/More'
 
 //----------------------------------
 // props
@@ -50,7 +51,7 @@ export const SectionVisionComponent = (props: SectionVisionProps) => (
 
         <div className={'visionButtonWrapper'}>
           <LinkButton href={'/about'} color={'primary'} size={'md'}>
-            View More
+            <More />
           </LinkButton>
         </div>
       </Container>
