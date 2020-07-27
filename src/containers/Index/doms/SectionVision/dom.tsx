@@ -51,7 +51,7 @@ export const SectionVisionComponent = (props: SectionVisionProps) => (
 
         <div className={'visionButtonWrapper'}>
           <LinkButton href={'/about'} color={'primary'} size={'md'}>
-            <More />
+            <More>View More</More>
           </LinkButton>
         </div>
       </Container>

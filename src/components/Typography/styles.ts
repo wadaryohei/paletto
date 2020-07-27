@@ -4,7 +4,7 @@ import { Colors } from '../../const/Colors'
 import { Margin } from '../../const/Margin'
 import { FontSize } from '../../const/FontSize'
 import { FontWeight } from '../../const/FontWeight'
-import { BreakPoints, max, min } from '../../const/BreakPoints'
+import { BreakPoints, max } from '../../const/BreakPoints'
 
 //----------------------------------
 // styledComponent

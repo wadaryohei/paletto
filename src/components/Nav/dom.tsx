@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'next/link'
+import { Link } from '../Link'
 import { NavMenu } from '../../datas/_shared/NavMenuDatas'
 
 //----------------------------------
@@ -7,7 +7,6 @@ import { NavMenu } from '../../datas/_shared/NavMenuDatas'
 //----------------------------------
 export interface NavProps {
   navMenus: NavMenu[]
-  pathClassName?: string
   className?: string
 }
 
@@ -15,14 +14,12 @@ export interface NavProps {
 // component
 //----------------------------------
 export const NavComponent = (props: NavProps) => (
-  <nav className={`${props.className} ${props.pathClassName}`}>
+  <nav className={props.className}>
     <ul>
       {props.navMenus.map((navMenu, index) => {
         return (
           <li key={index}>
-            <Link href={navMenu.path}>
-              <a>{navMenu.menuname}</a>
-            </Link>
+            <Link href={navMenu.path}>{navMenu.menuname}</Link>
           </li>
         )
       })}

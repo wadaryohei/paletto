@@ -1,6 +1,5 @@
 import React from 'react'
 import { Container } from '@material-ui/core'
-import { useRouter } from 'next/router'
 import { MenuIcon } from '../Icon/Menu'
 import { Typography } from '../Typography'
 import { Nav } from '../Nav'
@@ -8,7 +7,6 @@ import { Link } from '../Link'
 import { Logo } from '../Logo'
 import { DrawerNav } from '../DrawerNav'
 import { useShowMenu } from '../../hooks/useShowMenu'
-import { usePathClassName } from '../../hooks/usePathClassName'
 import { NavMenuDatas } from '../../datas/_shared/NavMenuDatas'
 
 //----------------------------------
@@ -25,17 +23,13 @@ export const HeaderComponent = (props: HeaderProps) => {
   //----------------------------------
   // hooks
   //----------------------------------
-  const router = useRouter()
-  const pathClassName = usePathClassName(router.pathname)
   const callback = useShowMenu()
 
   //----------------------------------
   // render
   //----------------------------------
   return (
-    <header
-      className={`${props.className} ${pathClassName.activePathClassName()}`}
-    >
+    <header className={props.className}>
       <Container>
         <div className={'headerWrapper'}>
           <div className={'headerLogo'}>
@@ -50,13 +44,8 @@ export const HeaderComponent = (props: HeaderProps) => {
             callback={callback.onOpen}
             className={'headerNavIcon'}
           />
-          <Nav
-            navMenus={NavMenuDatas}
-            pathClassName={pathClassName.activePathClassName()}
-            className={'headerNav'}
-          />
+          <Nav navMenus={NavMenuDatas} className={'headerNav'} />
           <DrawerNav
-            icon={'close'}
             navMenus={NavMenuDatas}
             isOpen={callback.isOpen}
             onOpenMenu={callback.onOpen}

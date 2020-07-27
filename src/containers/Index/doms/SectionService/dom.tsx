@@ -78,7 +78,7 @@ export const SectionServiceComponent = (props: SectionServiceProps) => (
 
         <div className={'servicesButtonWrapper'}>
           <LinkButton href={'/services'} color={'primary'} size={'md'}>
-            <More />
+            <More>View More</More>
           </LinkButton>
         </div>
       </Container>
