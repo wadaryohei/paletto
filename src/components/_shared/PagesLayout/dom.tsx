@@ -24,16 +24,20 @@ export const PagesLayoutComponent = (props: PagesLayoutProps) => (
   <Section className={props.className}>
     <Header />
     <div className={'pageHeaderBgWrapper'}>
-      <div className={'pageHeaderBgInner'}>
-        <Parallax y={[30, -20]} tagOuter="figure">
-          <Up>
-            <figure
-              className={'pageHeaderBg'}
-              style={{ backgroundImage: `url(${props.pageHeaderBgPathname})` }}
-            ></figure>
-          </Up>
-        </Parallax>
-      </div>
+      {props.pageHeaderBgPathname && (
+        <div className={'pageHeaderBgInner'}>
+          <Parallax y={[30, -20]} tagOuter="figure">
+            <Up>
+              <figure
+                className={'pageHeaderBg'}
+                style={{
+                  backgroundImage: `url(${props.pageHeaderBgPathname})`,
+                }}
+              ></figure>
+            </Up>
+          </Parallax>
+        </div>
+      )}
       <Container>
         <div className={'pageHeaderWrapper'}>
           <Up>
