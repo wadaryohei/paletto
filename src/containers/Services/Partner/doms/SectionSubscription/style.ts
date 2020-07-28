@@ -4,6 +4,7 @@ import { Margin } from '../../../../../const/Margin'
 import { Colors } from '../../../../../const/Colors'
 import { Padding } from '../../../../../const/Padding'
 import { FontSize } from '../../../../../const/FontSize'
+import { BreakPoints, max } from '../../../../../const/BreakPoints'
 
 //----------------------------------
 // styledComponent
@@ -16,6 +17,10 @@ export const SectionSubscriptionStyle = styled(SectionSubscriptionComponent)`
 
     .subscriptionHeader {
       font-size: ${FontSize.xl};
+
+      @media ${max(BreakPoints.md)} {
+        font-size: ${FontSize.md};
+      }
     }
 
     .subscriptionSubheading {

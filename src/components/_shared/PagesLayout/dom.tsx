@@ -4,6 +4,7 @@ import { Header } from '../../Header'
 import { Footer } from '../../Footer'
 import { Section } from '../../Section'
 import { Up } from '../../InViewMonitor'
+import { Parallax } from 'react-scroll-parallax'
 
 //----------------------------------
 // props
@@ -23,10 +24,16 @@ export const PagesLayoutComponent = (props: PagesLayoutProps) => (
   <Section className={props.className}>
     <Header />
     <div className={'pageHeaderBgWrapper'}>
-      <figure
-        className={'pageHeaderBg'}
-        style={{ backgroundImage: `url(${props.pageHeaderBgPathname})` }}
-      ></figure>
+      <div className={'pageHeaderBgInner'}>
+        <Parallax y={[30, -20]} tagOuter="figure">
+          <Up>
+            <figure
+              className={'pageHeaderBg'}
+              style={{ backgroundImage: `url(${props.pageHeaderBgPathname})` }}
+            ></figure>
+          </Up>
+        </Parallax>
+      </div>
       <Container>
         <div className={'pageHeaderWrapper'}>
           <Up>

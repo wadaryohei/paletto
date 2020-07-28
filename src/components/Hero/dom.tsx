@@ -1,7 +1,6 @@
 import React from 'react'
 import { Typography } from '../Typography'
 import { Up } from '../InViewMonitor'
-import { HeroCavas } from './Canves'
 import { Parallax } from 'react-scroll-parallax'
 
 //----------------------------------
@@ -19,24 +18,6 @@ export interface HeroProps {
 //----------------------------------
 export const HeroComponent = (props: HeroProps) => (
   <div className={props.className}>
-    {/* <div className={'heroCanvasWrapper'}>
-      <div className={'heroCanvasInArea'}>
-        <Parallax className="parallaxWrapper" y={[0, -100]} tagOuter="figure">
-          <HeroCavas width={120} height={24} top={30} right={10} />
-        </Parallax>
-
-        <Parallax className="parallaxWrapper" y={[0, -100]} tagOuter="figure">
-          <HeroCavas width={180} height={80} top={16} left={5} />
-        </Parallax>
-
-        <Parallax className="parallaxWrapper" y={[0, -100]} tagOuter="figure">
-          <HeroCavas width={140} height={16} bottom={30} left={28} />
-        </Parallax>
-        <HeroCavas width={80} height={20} top={50} left={80} />
-        <HeroCavas width={60} height={32} bottom={50} left={10} />
-      </div>
-    </div> */}
-
     <div className={'heroWrapper'}>
       <div className={'hero'}>
         <Up>
