@@ -1,6 +1,6 @@
 import React from 'react'
 import { Head } from '../../components/Head'
-import { HeadDatas } from '../../datas/IndexDatas'
+import { HeadDatas } from '../../datas/_shared/HeadDatas'
 import { ServicesPartnerContainer } from '../../containers/Services/Partner/'
 
 //----------------------------------
@@ -9,9 +9,9 @@ import { ServicesPartnerContainer } from '../../containers/Services/Partner/'
 const Partner = () => (
   <>
     <Head
-      title={HeadDatas.title}
-      description={HeadDatas.description}
-      pathname={HeadDatas.pathname}
+      title={HeadDatas.servicesPartner.title}
+      description={HeadDatas.servicesPartner.description}
+      pathname={HeadDatas.servicesPartner.pathname}
     />
     <ServicesPartnerContainer />
   </>
