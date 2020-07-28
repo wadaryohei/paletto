@@ -19,7 +19,9 @@ export const NavComponent = (props: NavProps) => (
       {props.navMenus.map((navMenu, index) => {
         return (
           <li key={index}>
-            <Link href={navMenu.path}>{navMenu.menuname}</Link>
+            <Link routeMatch={false} href={navMenu.path}>
+              {navMenu.menuname}
+            </Link>
           </li>
         )
       })}

@@ -3,6 +3,7 @@ import { Container } from '@material-ui/core'
 import { Header } from '../../Header'
 import { Footer } from '../../Footer'
 import { Section } from '../../Section'
+import { Up } from '../../InViewMonitor'
 
 //----------------------------------
 // props
@@ -28,8 +29,12 @@ export const PagesLayoutComponent = (props: PagesLayoutProps) => (
       ></figure>
       <Container>
         <div className={'pageHeaderWrapper'}>
-          <p className={'pagename'}>{props.pathname}</p>
-          <p className={'pageHeader'}>{props.pageHeading}</p>
+          <Up>
+            <p className={'pagename'}>{props.pathname}</p>
+          </Up>
+          <Up delay={200}>
+            <p className={'pageHeader'}>{props.pageHeading}</p>
+          </Up>
         </div>
       </Container>
     </div>

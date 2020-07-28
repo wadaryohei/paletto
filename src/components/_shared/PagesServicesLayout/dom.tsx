@@ -4,6 +4,7 @@ import { Header } from '../../Header'
 import { Footer } from '../../Footer'
 import { Typography } from '../../Typography'
 import { Section } from '../../Section'
+import { Up } from '../../InViewMonitor'
 
 //----------------------------------
 // props
@@ -26,12 +27,16 @@ export const PagesServicesLayoutComponent = (
     <Header />
     <Container>
       <div className={'pageHeaderWrapper'}>
-        <Typography component={'h2'} variant={'heading'}>
-          {props.pageHeading}
-        </Typography>
-        <Typography component={'h3'} variant={'subheading'}>
-          {props.pageSubHeading}
-        </Typography>
+        <Up>
+          <Typography component={'h2'} variant={'heading'}>
+            {props.pageHeading}
+          </Typography>
+        </Up>
+        <Up delay={200}>
+          <Typography component={'h3'} variant={'subheading'}>
+            {props.pageSubHeading}
+          </Typography>
+        </Up>
       </div>
     </Container>
     <figure

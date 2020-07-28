@@ -29,7 +29,10 @@
     /* Additional Checks */
     "noImplicitReturns": true,
     "noUnusedLocals": true,
-    "noUnusedParameters": true
+    "noUnusedParameters": true,
+
+    /* Add .d.ts */
+    "typeRoots" : ["src/@types/"]
   },
   "exclude": [
     "node_modules"

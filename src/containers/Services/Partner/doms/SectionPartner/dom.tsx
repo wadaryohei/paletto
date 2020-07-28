@@ -5,6 +5,7 @@ import {
   ServicesDesignPartnersDatas,
   ServicesDesignPartners,
 } from '../../../../../datas/ServicesDatas'
+import { Up } from '../../../../../components/InViewMonitor'
 
 //----------------------------------
 // props
@@ -19,16 +20,20 @@ export interface SectionPartnerProps {
 export const SectionPartnerComponent = (props: SectionPartnerProps) => (
   <Section className={props.className}>
     <div className={'servicesDesignPartnerWrapper'}>
-      <Typography
-        component={'h2'}
-        variant={'heading'}
-        className={'servicesDesignPartnerHeading'}
-      >
-        How to work with partners.
-      </Typography>
-      <Typography component={'p'} variant={'subheading'}>
-        パートナーとの取り組み方
-      </Typography>
+      <Up>
+        <Typography
+          component={'h2'}
+          variant={'heading'}
+          className={'servicesDesignPartnerHeading'}
+        >
+          How to work with partners.
+        </Typography>
+      </Up>
+      <Up>
+        <Typography component={'p'} variant={'subheading'}>
+          パートナーとの取り組み方
+        </Typography>
+      </Up>
 
       <ul className={'servicesDesignPartnerList'}>
         {ServicesDesignPartnersDatas.map(
@@ -39,30 +44,38 @@ export const SectionPartnerComponent = (props: SectionPartnerProps) => (
             return (
               <li key={index}>
                 <span className={'servicesDesignPartnerListNum'}>
-                  {ServicesDesignPartnersData.num}
+                  <Up>{ServicesDesignPartnersData.num}</Up>
                 </span>
                 <div className={'servicesDesignPartnerListLeadWrapper'}>
-                  <Typography
-                    component={'h2'}
-                    variant={'heading'}
-                    className={'servicesDesignPartnerListHeading'}
-                  >
-                    {ServicesDesignPartnersData.copyEn}
-                  </Typography>
-                  <Typography
-                    component={'p'}
-                    variant={'subheading'}
-                    className={'servicesDesignPartnerListSubHeading'}
-                  >
-                    {ServicesDesignPartnersData.copyJp}
-                  </Typography>
-                  <Typography
-                    component={'p'}
-                    variant={'lead'}
-                    className={'servicesDesignPartnerListLead'}
-                  >
-                    {ServicesDesignPartnersData.lead}
-                  </Typography>
+                  <Up>
+                    <Typography
+                      component={'h2'}
+                      variant={'heading'}
+                      className={'servicesDesignPartnerListHeading'}
+                    >
+                      {ServicesDesignPartnersData.copyEn}
+                    </Typography>
+                  </Up>
+
+                  <Up>
+                    <Typography
+                      component={'p'}
+                      variant={'subheading'}
+                      className={'servicesDesignPartnerListSubHeading'}
+                    >
+                      {ServicesDesignPartnersData.copyJp}
+                    </Typography>
+                  </Up>
+
+                  <Up>
+                    <Typography
+                      component={'p'}
+                      variant={'lead'}
+                      className={'servicesDesignPartnerListLead'}
+                    >
+                      {ServicesDesignPartnersData.lead}
+                    </Typography>
+                  </Up>
                 </div>
               </li>
             )

@@ -5,7 +5,7 @@ import React from 'react'
 //----------------------------------
 export interface MoreProps {
   className?: string
-  children: React.ReactNode
+  children?: React.ReactNode
 }
 
 //----------------------------------

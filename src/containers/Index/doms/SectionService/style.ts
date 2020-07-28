@@ -13,6 +13,10 @@ export const SectionServiceStyle = styled(SectionServiceComponent)`
     padding: ${Padding.p96} 0;
   }
 
+  .serviceLeadInWrapper {
+    margin-top: ${Margin.m32};
+  }
+
   .serviceCardWrapper {
     position: relative;
     width: 100%;

@@ -10,6 +10,7 @@ import { MembersViewDatas } from './presenter/viewDatas/MembersViewDatas'
 import { MemberDatas } from '../../../datas/_shared/MemberDatas'
 import { PageDatas } from '../../../datas/_shared/PageDatas'
 import { Social } from '../../../datas/_shared/SocialDatas'
+import { Up } from '../../../components/InViewMonitor'
 
 //----------------------------------
 // props
@@ -46,42 +47,50 @@ const MembersContainer = (props: MembersProps) => {
               .map((membersViewData: MembersViewDatas, index: number) => {
                 return (
                   <Grid key={index} item md={6} className={'membersGrid'}>
-                    <figure className={'membersWrapepr'}>
-                      <div className={'membersImgWrapper'}>
-                        <img
-                          src={membersViewData.imgPathname}
-                          alt={membersViewData.name}
-                          width="120px"
-                          height="120px"
-                        />
-                      </div>
+                    <Up>
+                      <figure className={'membersWrapepr'}>
+                        <div className={'membersImgWrapper'}>
+                          <img
+                            src={membersViewData.imgPathname}
+                            alt={membersViewData.name}
+                            width="120px"
+                            height="120px"
+                          />
+                        </div>
 
-                      <div className={'membersSocialWrapper'}>
-                        <figcaption>{membersViewData.name}</figcaption>
-                        <ul className={'membersSocialList'}>
-                          {membersViewData.socials?.map(
-                            (social: Social, index: number) => {
-                              return (
-                                <li key={index}>
-                                  <Link href={social.path} target={true}>
-                                    <SocialIcon icon={social.name} />
-                                  </Link>
-                                </li>
-                              )
-                            },
-                          )}
-                        </ul>
-                      </div>
-                    </figure>
+                        <div className={'membersSocialWrapper'}>
+                          <Up>
+                            <figcaption>{membersViewData.name}</figcaption>
+                          </Up>
+                          <ul className={'membersSocialList'}>
+                            {membersViewData.socials?.map(
+                              (social: Social, index: number) => {
+                                return (
+                                  <Up key={index}>
+                                    <li>
+                                      <Link href={social.path} target={true}>
+                                        <SocialIcon icon={social.name} />
+                                      </Link>
+                                    </li>
+                                  </Up>
+                                )
+                              },
+                            )}
+                          </ul>
+                        </div>
+                      </figure>
+                    </Up>
 
                     <div className={'membersLeadWrapepr'}>
-                      <Typography component={'p'} variant={'lead'}>
-                        {membersViewData.introduce.map(
-                          (memberViewData: string, index: number) => {
-                            return <span key={index}>{memberViewData}</span>
-                          },
-                        )}
-                      </Typography>
+                      <Up>
+                        <Typography component={'p'} variant={'lead'}>
+                          {membersViewData.introduce.map(
+                            (memberViewData: string, index: number) => {
+                              return <span key={index}>{memberViewData}</span>
+                            },
+                          )}
+                        </Typography>
+                      </Up>
                     </div>
                   </Grid>
                 )

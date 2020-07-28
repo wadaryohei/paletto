@@ -9,11 +9,11 @@ import { Typography as Typo } from '@material-ui/core'
  * @see https://github.com/mui-org/material-ui/issues/19512
  */
 export interface TypographyProps {
-  component: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'p' | 'span' | 'figcaption'
-  align?: 'center' | 'right' | 'left'
-  variant?: 'heading' | 'subheading' | 'copy' | 'lead' | 'figcaption'
   className?: string
   children: React.ReactNode
+  component: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'p' | 'span' | 'figcaption'
+  variant: 'heading' | 'subheading' | 'copy' | 'lead' | 'figcaption'
+  align?: 'center' | 'right' | 'left'
 }
 
 //----------------------------------

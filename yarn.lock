@@ -3735,6 +3735,11 @@ internal-slot@^1.0.2:
     has "^1.0.3"
     side-channel "^1.0.2"
 
+intersection-observer@^0.11.0:
+  version "0.11.0"
+  resolved "https://registry.yarnpkg.com/intersection-observer/-/intersection-observer-0.11.0.tgz#f4ea067070326f68393ee161cc0a2ca4c0040c6f"
+  integrity sha512-KZArj2QVnmdud9zTpKf279m2bbGfG+4/kn16UU0NL3pTVl52ZHiJ9IRNSsnn6jaHrL9EGLFM5eWjTx2fz/+zoQ==
+
 invariant@^2.2.2, invariant@^2.2.4:
   version "2.2.4"
   resolved "https://registry.yarnpkg.com/invariant/-/invariant-2.2.4.tgz#610f3c92c9359ce1db616e538008d23ff35158e6"
@@ -5653,6 +5658,11 @@ react-fast-compare@^2.0.1:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-2.0.4.tgz#e84b4d455b0fec113e0402c329352715196f81f9"
   integrity sha512-suNP+J1VU1MWFKcyt7RtjiSWUjvidmQSlqu+eHslq+342xCbGTYmC0mEhPCOHxlW0CywylOC1u2DFAT+bv4dBw==
+
+react-inview-monitor@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/react-inview-monitor/-/react-inview-monitor-2.3.0.tgz#88f6add61f0db34bc93473ef65d1e9f7ee0abeb0"
+  integrity sha512-ljHhg8gLQnp753XXparU5MdPAfUWv3pRyo7Rwd2scdyB8zy1VgfvNxKAM8ZM2ueH03pvGmbeLA4ain+iFyYfPA==
 
 react-is@16.13.1, react-is@^16.7.0, react-is@^16.8.0, react-is@^16.8.1:
   version "16.13.1"

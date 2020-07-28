@@ -26,7 +26,7 @@ export const SectionPartnerStyle = styled(SectionPartnerComponent)`
     width: 100%;
     margin-top: ${Margin.m64};
 
-    > li {
+    li {
       display: flex;
       justify-content: flex-start;
       align-items: flex-start;
@@ -46,6 +46,7 @@ export const SectionPartnerStyle = styled(SectionPartnerComponent)`
       }
 
       .servicesDesignPartnerListNum {
+        display: block;
         color: ${Colors.primary};
         font-size: ${FontSize.lg};
         font-family: 'Gilroy-Bold', sans-serif;
@@ -55,6 +56,10 @@ export const SectionPartnerStyle = styled(SectionPartnerComponent)`
         max-width: 10%;
 
         @media ${max(BreakPoints.md)} {
+          display: block;
+          width: 100%;
+          max-width: 100%;
+          margin: auto;
           font-size: ${FontSize.sm};
         }
       }

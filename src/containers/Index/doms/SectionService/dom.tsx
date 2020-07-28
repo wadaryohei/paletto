@@ -10,6 +10,7 @@ import {
   Services,
   ServicesDatas,
 } from '../../../../datas/_shared/ServicesDatas'
+import { Up } from '../../../../components/InViewMonitor'
 
 //----------------------------------
 // props
@@ -24,34 +25,45 @@ export interface SectionServiceProps {
 export const SectionServiceComponent = (props: SectionServiceProps) => (
   <Section className={props.className}>
     <Container>
-      <Typography component={'h1'} variant={'heading'}>
-        {SectionHeadingDatas.sectionService.heading}
-      </Typography>
-      <Typography component={'p'} variant={'subheading'}>
-        {SectionHeadingDatas.sectionService.subHeading}
-      </Typography>
-
+      <Up>
+        <Typography component={'h1'} variant={'heading'}>
+          {SectionHeadingDatas.sectionService.heading}
+        </Typography>
+      </Up>
+      <Up>
+        <Typography component={'p'} variant={'subheading'}>
+          {SectionHeadingDatas.sectionService.subHeading}
+        </Typography>
+      </Up>
       <div className={'serviceLeadWrapper'}>
-        <Typography component={'p'} variant={'copy'}>
-          {SectionHeadingDatas.sectionService.copy}
-        </Typography>
-        <Typography component={'p'} variant={'lead'}>
-          <span>感情をデザインする上でビジネス課題の解決は勿論必要です。</span>
-          <span>
-            「Paletto.」が手掛けるデザインは、見た目を整えるだけのデザインではありません。
-          </span>
-          <span>
-            本来デザインが持つ「設計」にイチから取り組み、ビジネスにおける課題を解決し、それがユーザーの感情を動かすことです。
-          </span>
-        </Typography>
-        <Typography component={'p'} variant={'lead'}>
-          <span>
-            「Paletto.」ではデジタル領域の課題に対して、Webサイト/サービス、アプリの企画・制作、各種分析・改善活動を、
-          </span>
-          <span>
-            クライアントや事業パートナーのビジネスの成長の支援を「デザイン、制作・運用・保守」まで多岐にわたるサポートを行います。
-          </span>
-        </Typography>
+        <Up>
+          <Typography component={'p'} variant={'copy'}>
+            {SectionHeadingDatas.sectionService.copy}
+          </Typography>
+        </Up>
+        <div className={'serviceLeadInWrapper'}>
+          <Up>
+            <Typography component={'p'} variant={'lead'}>
+              <span>
+                感情をデザインする上でビジネス課題の解決は勿論必要です。
+              </span>
+              <span>
+                「Paletto.」が手掛けるデザインは、見た目を整えるだけのデザインではありません。
+              </span>
+              <span>
+                本来デザインが持つ「設計」にイチから取り組み、ビジネスにおける課題を解決し、それがユーザーの感情を動かすことです。
+              </span>
+            </Typography>
+            <Typography component={'p'} variant={'lead'}>
+              <span>
+                「Paletto.」ではデジタル領域の課題に対して、Webサイト/サービス、アプリの企画・制作、各種分析・改善活動を、
+              </span>
+              <span>
+                クライアントや事業パートナーのビジネスの成長の支援を「デザイン、制作・運用・保守」まで多岐にわたるサポートを行います。
+              </span>
+            </Typography>
+          </Up>
+        </div>
       </div>
     </Container>
 
@@ -67,10 +79,12 @@ export const SectionServiceComponent = (props: SectionServiceProps) => (
                 xs={12}
                 className={'serviceCardGrid'}
               >
-                <ServiceCard
-                  ServicesData={ServicesData}
-                  className={'serviceCard'}
-                />
+                <Up>
+                  <ServiceCard
+                    ServicesData={ServicesData}
+                    className={'serviceCard'}
+                  />
+                </Up>
               </Grid>
             )
           })}
