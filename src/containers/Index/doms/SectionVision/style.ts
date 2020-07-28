@@ -62,6 +62,10 @@ export const SectionVisionStyle = styled(SectionVisionComponent)`
       padding: ${Padding.p96} 0 0;
     }
 
+    .visionLeadInWrapper {
+      margin-top: ${Margin.m32};
+    }
+
     .visionButtonWrapper {
       margin-top: ${Margin.m32};
     }

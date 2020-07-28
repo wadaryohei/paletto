@@ -5,6 +5,7 @@ import {
   ServicesDesignSolutionDatas,
   ServicesDesignSolution,
 } from '../../../../../datas/ServicesDatas'
+import { Up } from '../../../../../components/InViewMonitor'
 
 //----------------------------------
 // props
@@ -18,16 +19,21 @@ export interface SectionSolutionProps {
 //----------------------------------
 export const SectionSolutionComponent = (props: SectionSolutionProps) => (
   <Section className={props.className}>
-    <Typography
-      component={'h2'}
-      variant={'heading'}
-      className={'servicesDesignPartnerHeading'}
-    >
-      What we can do for partners.
-    </Typography>
-    <Typography component={'p'} variant={'subheading'}>
-      私達がパートナーとしてできること
-    </Typography>
+    <Up>
+      <Typography
+        component={'h2'}
+        variant={'heading'}
+        className={'servicesDesignPartnerHeading'}
+      >
+        What we can do for partners.
+      </Typography>
+    </Up>
+
+    <Up>
+      <Typography component={'p'} variant={'subheading'}>
+        私達がパートナーとしてできること
+      </Typography>
+    </Up>
 
     <ul className={'servicesDesignSolutionList'}>
       {ServicesDesignSolutionDatas.map(
@@ -35,44 +41,58 @@ export const SectionSolutionComponent = (props: SectionSolutionProps) => (
           return (
             <li key={index}>
               <span className={'servicesDesignSolutionListNum'}>
-                {ServicesDesignSolutionData.num}
+                <Up>{ServicesDesignSolutionData.num}</Up>
               </span>
               <div className={'servicesDesignSolutionListWrapper'}>
-                <Typography
-                  component={'h2'}
-                  variant={'heading'}
-                  className={'servicesDesignSolutionListHeading'}
-                >
-                  {ServicesDesignSolutionData.copyEn}
-                </Typography>
-                <Typography
-                  component={'p'}
-                  variant={'subheading'}
-                  className={'servicesDesignSolutionListSubHeading'}
-                >
-                  {ServicesDesignSolutionData.copyJp}
-                </Typography>
-                <Typography
-                  component={'p'}
-                  variant={'lead'}
-                  className={'servicesDesignSolutionListLead'}
-                >
-                  {ServicesDesignSolutionData.lead}
-                </Typography>
+                <Up>
+                  <Typography
+                    component={'h2'}
+                    variant={'heading'}
+                    className={'servicesDesignSolutionListHeading'}
+                  >
+                    {ServicesDesignSolutionData.copyEn}
+                  </Typography>
+                </Up>
 
-                <Typography
-                  component={'h2'}
-                  className={'servicesDesignSolutionListDescription'}
-                >
-                  Design Solution.
-                </Typography>
-                <Typography
-                  component={'p'}
-                  variant={'lead'}
-                  className={'servicesDesignSolutionListNotes'}
-                >
-                  {ServicesDesignSolutionData.solution}
-                </Typography>
+                <Up>
+                  <Typography
+                    component={'p'}
+                    variant={'subheading'}
+                    className={'servicesDesignSolutionListSubHeading'}
+                  >
+                    {ServicesDesignSolutionData.copyJp}
+                  </Typography>
+                </Up>
+
+                <Up>
+                  <Typography
+                    component={'p'}
+                    variant={'lead'}
+                    className={'servicesDesignSolutionListLead'}
+                  >
+                    {ServicesDesignSolutionData.lead}
+                  </Typography>
+                </Up>
+
+                <Up>
+                  <Typography
+                    component={'h2'}
+                    className={'servicesDesignSolutionListDescription'}
+                    variant={'lead'}
+                  >
+                    Design Solution.
+                  </Typography>
+                </Up>
+
+                <Up>
+                  <Typography
+                    component={'p'}
+                    variant={'lead'}
+                    className={'servicesDesignSolutionListNotes'}
+                  >
+                    {ServicesDesignSolutionData.solution}
+                  </Typography>
+                </Up>
               </div>
             </li>
           )

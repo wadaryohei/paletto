@@ -8,6 +8,7 @@ import {
   ServicesDatas,
   Services,
 } from '../../../../../datas/_shared/ServicesDatas'
+import { Up } from '../../../../../components/InViewMonitor'
 
 //----------------------------------
 // props
@@ -33,13 +34,15 @@ export const SectionServicesComponent = (props: SectionServicesProps) => (
                 xs={12}
                 className={'servicesCardGrid'}
               >
-                <Link href={ServicesData.viewMorePath}>
-                  <ServiceCard
-                    ServicesData={ServicesData}
-                    className={'serviceCard'}
-                  />
-                  <More />
-                </Link>
+                <Up>
+                  <Link href={ServicesData.viewMorePath}>
+                    <ServiceCard
+                      ServicesData={ServicesData}
+                      className={'serviceCard'}
+                    />
+                    <More />
+                  </Link>
+                </Up>
               </Grid>
             )
           })}

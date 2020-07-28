@@ -4,6 +4,7 @@ import { Section } from '../../../../../components/Section'
 import { Link } from '../../../../../components/Link'
 import { Banner } from '../../../../../components/Banner'
 import { Typography } from '../../../../../components/Typography'
+import { Up } from '../../../../../components/InViewMonitor'
 
 //----------------------------------
 // props
@@ -18,26 +19,32 @@ export interface SectionFooterProps {
 export const SectionFooterComponent = (props: SectionFooterProps) => (
   <Section className={props.className}>
     <Container maxWidth={'md'}>
-      <div className={'aboutLinkWrapper'}>
-        <Link href={'/services'} routeMatch={false}>
-          <Banner imgPath={'pages/about/about_services_glows.jpg'}>
-            <span className={'aboutLinkCopy'}>私達ができること</span>
-            <span className={'aboutLinkHeading'}>SERVICES</span>
-          </Banner>
-        </Link>
-      </div>
+      <Up>
+        <div className={'aboutLinkWrapper'}>
+          <Link href={'/services'} routeMatch={false}>
+            <Banner imgPath={'pages/about/about_services_glows.jpg'}>
+              <span className={'aboutLinkCopy'}>私達ができること</span>
+              <span className={'aboutLinkHeading'}>SERVICES</span>
+            </Banner>
+          </Link>
+        </div>
+      </Up>
 
       <div className={'aboutContactWrapper'}>
-        <Typography component={'p'} variant={'lead'}>
-          <span>感情を揺さぶるデザインでこそ、人の心は動きます。</span>
-          <span>
-            「Paletto.」では課題の解決という当たり前のその先の、事業やサービスやプロダクトの思いをデザインでカタチにします。
-          </span>
-          <span>是非私達と一緒に思いをカタチにしませんか？</span>
-        </Typography>
-        <Link href={'/contact'} routeMatch={false}>
-          Contact
-        </Link>
+        <Up>
+          <Typography component={'p'} variant={'lead'}>
+            <span>感情を揺さぶるデザインでこそ、人の心は動きます。</span>
+            <span>
+              「Paletto.」では課題の解決という当たり前のその先の、事業やサービスやプロダクトの思いをデザインでカタチにします。
+            </span>
+            <span>是非私達と一緒に思いをカタチにしませんか？</span>
+          </Typography>
+        </Up>
+        <Up>
+          <Link href={'/contact'} routeMatch={false}>
+            Contact
+          </Link>
+        </Up>
       </div>
     </Container>
   </Section>

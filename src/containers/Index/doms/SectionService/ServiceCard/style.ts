@@ -9,8 +9,8 @@ import { FontSize } from '../../../../../const/FontSize'
 
 export const ServiceCardStyle = styled(ServiceCardComponent)`
   display: flex;
-  background-color: ${Colors.white};
   color: ${Colors.white};
+  background-color: transparent;
 
   .cardHeadingWrapper {
     position: relative;

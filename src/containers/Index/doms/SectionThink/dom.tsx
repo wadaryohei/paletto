@@ -8,6 +8,7 @@ import {
   Think,
   ThinkDatas,
 } from '../../../../datas/IndexDatas'
+import { Up } from '../../../../components/InViewMonitor'
 
 //----------------------------------
 // props
@@ -22,45 +23,55 @@ export interface SectionThinkProps {
 export const SectionThinkComponent = (props: SectionThinkProps) => (
   <Section className={props.className}>
     <Container>
-      <Typography
-        component={'h1'}
-        variant={'heading'}
-        className={'thinkHeading'}
-      >
-        {SectionHeadingDatas.sectionThink.heading}
-      </Typography>
+      <Up>
+        <Typography
+          component={'h1'}
+          variant={'heading'}
+          className={'thinkHeading'}
+        >
+          {SectionHeadingDatas.sectionThink.heading}
+        </Typography>
+      </Up>
 
-      <Typography
-        component={'p'}
-        variant={'subheading'}
-        className={'thinkSubheading'}
-      >
-        {SectionHeadingDatas.sectionThink.subHeading}
-      </Typography>
+      <Up>
+        <Typography
+          component={'p'}
+          variant={'subheading'}
+          className={'thinkSubheading'}
+        >
+          {SectionHeadingDatas.sectionThink.subHeading}
+        </Typography>
+      </Up>
 
       <div className={'thinkCopyWrapper'}>
-        <Typography component={'p'} variant={'copy'} className={'thinkCopy'}>
-          {SectionHeadingDatas.sectionThink.copy}
-        </Typography>
+        <Up>
+          <Typography component={'p'} variant={'copy'} className={'thinkCopy'}>
+            {SectionHeadingDatas.sectionThink.copy}
+          </Typography>
+        </Up>
       </div>
 
       <div className={'thinkLeadWrapper'}>
-        <Typography component={'p'} variant={'lead'}>
-          <span>
-            デザインは「課題解決」と「価値創造」の側面を持っています。
-          </span>
-          <span>
-            プロダクトやサービス、人や組織では継続的なデザイン戦略のアプローチが必要となります。
-          </span>
-        </Typography>
-        <Typography component={'p'} variant={'lead'}>
-          <span>
-            パートナーとしてのデザイン戦略では、クライアントと同じ熱量での長期戦略を実施していく必要があるため、私達はサブスク型のサービスを提供しています。
-          </span>
-          <span>
-            ご依頼されるパートナー様には「通常のパートナー依頼・サブスクリプションでのパートナー依頼」のいずれかをお選びになることが可能となっております。
-          </span>
-        </Typography>
+        <Up>
+          <Typography component={'p'} variant={'lead'}>
+            <span>
+              デザインは「課題解決」と「価値創造」の側面を持っています。
+            </span>
+            <span>
+              プロダクトやサービス、人や組織では継続的なデザイン戦略のアプローチが必要となります。
+            </span>
+          </Typography>
+        </Up>
+        <Up>
+          <Typography component={'p'} variant={'lead'}>
+            <span>
+              パートナーとしてのデザイン戦略では、クライアントと同じ熱量での長期戦略を実施していく必要があるため、私達はサブスク型のサービスを提供しています。
+            </span>
+            <span>
+              ご依頼されるパートナー様には「通常のパートナー依頼・サブスクリプションでのパートナー依頼」のいずれかをお選びになることが可能となっております。
+            </span>
+          </Typography>
+        </Up>
       </div>
     </Container>
 
@@ -70,7 +81,9 @@ export const SectionThinkComponent = (props: SectionThinkProps) => (
           {ThinkDatas.map((ThinkData: Think, index: number) => {
             return (
               <Grid key={index} item md={4} xs={12} className={'thinkCardGrid'}>
-                <ThinkCard ThinkData={ThinkData} className={'thinkCard'} />
+                <Up>
+                  <ThinkCard ThinkData={ThinkData} className={'thinkCard'} />
+                </Up>
               </Grid>
             )
           })}

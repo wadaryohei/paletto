@@ -14,23 +14,39 @@ export const PagesLayoutStyle = styled(PagesLayoutComponent)`
     height: 480px;
     max-height: 480px;
 
-    .pageHeaderBg {
+    figure {
+      display: block;
+      width: 100%;
+    }
+
+    .pageHeaderBgInner {
       position: fixed;
-      bottom: 0;
+      top: 0;
       right: 0;
       z-index: -1;
       width: 60%;
       height: 100vh;
       max-height: 600px;
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: cover;
 
       @media ${max(BreakPoints.md)} {
         top: 0;
         width: 100%;
         right: -40px;
         max-height: 260px;
+      }
+    }
+
+    .pageHeaderBg {
+      width: 100%;
+      height: 100vh;
+      max-height: 600px;
+      margin-left: auto;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      @media ${max(BreakPoints.md)} {
+        max-height: 340px;
       }
     }
   }

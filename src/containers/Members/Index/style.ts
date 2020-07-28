@@ -37,7 +37,11 @@ export const MembersContainerStyle = styled(MembersContainer)`
     }
 
     .membersImgWrapper {
-      margin-right: ${Margin.m32};
+      display: block;
+      width: auto;
+      max-width: 120px;
+      height: 120px;
+      margin: auto ${Margin.m32};
 
       @media ${max(BreakPoints.md)} {
         margin-right: 0;

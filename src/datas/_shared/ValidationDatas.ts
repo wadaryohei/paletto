@@ -43,7 +43,7 @@ export const initValue: Validation = {
  * 動的なフォームに対してvalidationする場合
  */
 
-export const validationSchema = Yup.lazy<Validation>((values) => {
+export const validationSchema = Yup.lazy<any>((values: any) => {
   if (
     values.categories === '新規事業立ち上げのご相談' ||
     values.categories === '既存サービスの改善のご相談'
