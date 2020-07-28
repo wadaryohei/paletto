@@ -1,22 +1,6 @@
 /**
  * Indexページで使用するデータ
  */
-import { RouteDatas } from './_shared/RouteDatas'
-
-//----------------------------------
-// HeadDatas
-//----------------------------------
-export interface Head {
-  title: string
-  description: string
-  pathname: string
-}
-
-export const HeadDatas: Head = {
-  title: 'Paletto',
-  description: '世界にエモーショナルなデザインを。',
-  pathname: RouteDatas.index.pathname,
-}
 
 //----------------------------------
 // HeroDatas
