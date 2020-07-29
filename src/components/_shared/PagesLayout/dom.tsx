@@ -4,7 +4,6 @@ import { Header } from '../../Header'
 import { Footer } from '../../Footer'
 import { Section } from '../../Section'
 import { Up } from '../../InViewMonitor'
-import { Parallax } from 'react-scroll-parallax'
 
 //----------------------------------
 // props
