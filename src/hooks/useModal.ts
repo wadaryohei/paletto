@@ -51,11 +51,25 @@ export const useModal = (): typeModal => {
   }
 
   /**
+   * フォームの値をオブジェクトでセットしてmodalをオープンするハンドラー
+   */
+  const formPassDatasHandler = (formDatas: Validation) => {
+    setFormContent(formDatas)
+    openModal()
+  }
+
+  /**
    * Formの値をPOSTしてモーダルをクローズしてお問い合わせを完了するハンドラー
    */
   const onInquiryEndHandler = (values: Validation): void => {
     onFormPost(values)
-    router.push('/thanks')
+      .then(() => {
+        router.push('/thanks')
+      })
+      .catch(() => {
+        alert('お問い合わせの送信に失敗しました、再度送信してください。')
+        router.push('/contact')
+      })
   }
 
   /**
@@ -92,14 +106,6 @@ export const useModal = (): typeModal => {
    */
   const closeModal = (): void => {
     setOpen(false)
-  }
-
-  /**
-   * フォームの値をオブジェクトでセットしてmodalをオープンする
-   */
-  const formPassDatasHandler = (formDatas: Validation) => {
-    setFormContent(formDatas)
-    openModal()
   }
 
   return {
