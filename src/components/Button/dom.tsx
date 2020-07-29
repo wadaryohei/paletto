@@ -13,9 +13,8 @@ export interface ButtonBaseProps {
 }
 
 export interface ButtonProps extends ButtonBaseProps {
-  type?: 'submit' | undefined
+  type?: 'submit'
   disabled?: boolean
-  callback: () => void
 }
 
 export interface LinkButtonProps
@@ -27,7 +26,6 @@ export interface LinkButtonProps
 //----------------------------------
 export const ButtonComponent = (props: ButtonProps) => (
   <button
-    onClick={() => props.callback()}
     type={props.type}
     className={`${props.className} ${props.color} ${props.size}`}
     disabled={props.disabled}

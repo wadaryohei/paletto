@@ -27,11 +27,14 @@ export const FormComponent = (componentProps: FormProps) => {
   return (
     <Formik
       initialValues={initValue}
-      onSubmit={(values) => {
-        console.log(values)
-        componentProps.modal.formPassDatas(values)
-      }}
       validationSchema={validationSchema}
+      onSubmit={() => {
+        /**
+         * @memo modalでの確認を一旦無しにする
+         */
+        // componentProps.modal.formPassDatas(values)
+        componentProps.modal.onInquiryEndHandler()
+      }}
     >
       {(props) => {
         return (
@@ -39,13 +42,10 @@ export const FormComponent = (componentProps: FormProps) => {
             name="contact"
             method="POST"
             data-netlify="true"
-            netlify-honeypot="bot-field"
-            action="/thanks"
             className={componentProps.className}
           >
             <ul>
               <Field type="hidden" name="form-name" value="contact" />
-              <Field type="hidden" name="bot-field" value="contact" />
 
               {/** @named お名前 */}
               <li>
@@ -309,8 +309,7 @@ export const FormComponent = (componentProps: FormProps) => {
 
             <div className={'formButton'}>
               <Button
-                callback={componentProps.modal.onOpenModalHandler}
-                type="submit"
+                type={'submit'}
                 color={'primary'}
                 size={'md'}
                 disabled={!(props.isValid && props.dirty)}

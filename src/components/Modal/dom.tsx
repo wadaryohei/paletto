@@ -104,10 +104,10 @@ export const ModalComponent = (props: ModalProps) => (
       </div>
 
       <div className={'modalFooterWrapepr'}>
-        <Button size={'md'} color={'border'} callback={props.onClose}>
+        <Button size={'md'} color={'border'}>
           Cancel
         </Button>
-        <Button size={'md'} color={'primary'} callback={props.onInquiryEnd}>
+        <Button size={'md'} color={'primary'}>
           OK
         </Button>
       </div>
