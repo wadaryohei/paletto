@@ -36,18 +36,14 @@ export const FormComponent = (componentProps: FormProps) => {
       {(props) => {
         return (
           <Form
-            name="palettoContactForm"
+            name="contact"
             method="POST"
             data-netlify="true"
             action="/thanks"
             className={componentProps.className}
           >
             <ul>
-              <Field
-                type="hidden"
-                name="form-name"
-                value="palettoContactForm"
-              />
+              <Field type="hidden" name="form-name" value="contact" />
 
               {/** @named お名前 */}
               <li>
