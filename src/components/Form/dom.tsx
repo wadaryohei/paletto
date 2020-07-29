@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import { Button } from '../Button'
-import { Formik, Field, ErrorMessage } from 'formik'
+import { Formik, Field, ErrorMessage, Form } from 'formik'
 import {
   initValue,
   validationSchema,
@@ -52,12 +52,9 @@ export const FormComponent = (componentProps: FormProps) => {
     >
       {(props) => {
         return (
-          <form
+          <Form
             name="contact"
-            method="POST"
-            action="/thanks"
             data-netlify="true"
-            onSubmit={props.handleSubmit}
             className={componentProps.className}
           >
             <ul>
@@ -333,7 +330,7 @@ export const FormComponent = (componentProps: FormProps) => {
                 この内容で送信
               </Button>
             </div>
-          </form>
+          </Form>
         )
       }}
     </Formik>
