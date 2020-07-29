@@ -329,6 +329,6 @@ export interface FormProps {
 //   )
 // }
 
-export const FormComponent = () => {
-  return <TestForm />
+export const FormComponent = (props: FormProps) => {
+  return <TestForm className={props.className} />
 }

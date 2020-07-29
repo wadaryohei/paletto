@@ -1,8 +1,18 @@
 import React from 'react'
 
-export const TestForm = () => {
+export interface TestFormProps {
+  className?: string
+}
+
+export const TestForm = (props: TestFormProps) => {
   return (
-    <form name="contact" method="POST" data-netlify="true" action="/thanks">
+    <form
+      className={props.className}
+      name="contact"
+      method="POST"
+      data-netlify="true"
+      action="/thanks"
+    >
       <input type="hidden" name="form-name" value="contact" />
 
       <input name="name" type="text" placeholder="name" required />
