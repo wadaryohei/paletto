@@ -43,7 +43,11 @@ export const FormComponent = (componentProps: FormProps) => {
             className={componentProps.className}
           >
             <ul>
-              <Field name="form" type="hidden" value="palettoContactForm" />
+              <Field
+                type="hidden"
+                name="form-name"
+                value="palettoContactForm"
+              />
 
               {/** @named お名前 */}
               <li>
