@@ -2,7 +2,6 @@ import React from 'react'
 import { Section } from '../../../../components/Section'
 import { Typography } from '../../../../components/Typography'
 import { LinkButton } from '../../../../components/Button'
-import { Link } from '../../../../components/Link'
 
 //----------------------------------
 // props

@@ -1,7 +1,6 @@
 import React from 'react'
 import { Container } from '@material-ui/core'
 import { MenuIcon } from '../Icon/Menu'
-import { Typography } from '../Typography'
 import { Nav } from '../Nav'
 import { Link } from '../Link'
 import { Logo } from '../Logo'
@@ -33,11 +32,11 @@ export const HeaderComponent = (props: HeaderProps) => {
       <Container>
         <div className={'headerWrapper'}>
           <div className={'headerLogo'}>
-            <Typography component={'h1'}>
+            <h1>
               <Link href={'/'} routeMatch={false}>
                 <Logo />
               </Link>
-            </Typography>
+            </h1>
           </div>
           <MenuIcon
             icon={'menu'}

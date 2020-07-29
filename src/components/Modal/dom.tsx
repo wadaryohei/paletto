@@ -1,5 +1,5 @@
 import React from 'react'
-import { Dialog, Slide } from '@material-ui/core'
+import { Dialog } from '@material-ui/core'
 import { Validation } from '../../datas/_shared/ValidationDatas'
 import { Typography } from '../Typography'
 import { Button } from '../Button'
