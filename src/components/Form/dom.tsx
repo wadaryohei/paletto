@@ -29,6 +29,10 @@ export const FormComponent = (componentProps: FormProps) => {
       initialValues={initValue}
       validationSchema={validationSchema}
       onSubmit={(values) => {
+        /**
+         * @see https://www.derekaspaulding.com/blog/simple-contact-form-with-gatsby-formik-and-netlify/
+         * FormikとNetlifyの併用時に自前でPOST処理しないといけないので注意
+         */
         componentProps.modal.formPassDatasHandler(values)
       }}
     >
