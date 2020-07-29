@@ -24,30 +24,15 @@ export const FormComponent = (componentProps: FormProps) => {
   // セレクトで何番目を選んだかを変数として保持する（useStateは再レンダリングされるのでuseRefを使用）
   const ref = useRef<number>(0)
 
-  const encode = (data: any) => {
-    return Object.keys(data)
-      .map(
-        (key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]),
-      )
-      .join('&')
-  }
-
   return (
     <Formik
       initialValues={initValue}
       validationSchema={validationSchema}
       onSubmit={(values) => {
-        fetch('/', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: encode({ 'form-name': 'contact', ...values }),
-        }).then(() => {
+        componentProps.form.formPost(values).then(() => {
+          // componentProps.modal.formPassDatas(values)
           componentProps.modal.onInquiryEndHandler()
         })
-        /**
-         * @memo modalでの確認を一旦無しにする
-         */
-        // componentProps.modal.formPassDatas(values)
       }}
     >
       {(props) => {

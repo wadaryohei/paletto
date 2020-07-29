@@ -1,8 +1,11 @@
+import { Validation } from '../datas/_shared/ValidationDatas'
+
 //----------------------------------
 // types
 //----------------------------------
 export interface typeForm {
   showActiveForm: (selectedindex: number) => boolean | undefined
+  formPost: (values: Validation) => Promise<Response>
 }
 
 //----------------------------------
@@ -19,5 +22,27 @@ export const useForm = (): typeForm => {
     return
   }
 
-  return { showActiveForm }
+  /**
+   * POSTする時のbodyパラメーター用エンコード
+   */
+  const bodyEncode = (data: any) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]),
+      )
+      .join('&')
+  }
+
+  /**
+   * FormikではonSubmit時にPOSTしないといけないのでPOSTする関数
+   */
+  const formPost = (values: Validation): Promise<Response> => {
+    return fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: bodyEncode({ 'form-name': 'contact', ...values }),
+    })
+  }
+
+  return { showActiveForm, formPost }
 }
