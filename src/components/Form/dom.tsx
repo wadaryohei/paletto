@@ -37,7 +37,7 @@ export const FormComponent = (componentProps: FormProps) => {
           method: 'POST',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
           body: componentProps.modal.bodyEncode({
-            'form-name': 'contact-demo',
+            'form-name': 'contact',
             ...values,
           }),
         })
