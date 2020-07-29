@@ -8,10 +8,11 @@ import { initValue, Validation } from '../datas/_shared/ValidationDatas'
 export interface typeModal {
   isOpen: () => boolean
   formContent: () => Validation
+  bodyEncode: (data: any) => any
   formPassDatasHandler: (formDatas: Validation) => void
   onOpenModalHandler: () => void
   onCloseModalHandler: () => void
-  onInquiryEndHandler: (values: Validation) => void
+  onInquiryEndHandler: (path: string) => void
 }
 
 //----------------------------------
@@ -61,31 +62,19 @@ export const useModal = (): typeModal => {
   /**
    * Formの値をPOSTしてモーダルをクローズしてお問い合わせを完了するハンドラー
    */
-  const onInquiryEndHandler = (values: Validation): void => {
-    onFormPost(values)
-    router.push('/thanks')
+  const onInquiryEndHandler = (path: string): void => {
+    router.push(path)
   }
 
   /**
    * POSTする時のbodyパラメーター用エンコード
    */
-  const bodyEncode = (data: any) => {
+  const bodyEncode = (data: any): any => {
     return Object.keys(data)
       .map(
         (key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]),
       )
       .join('&')
-  }
-
-  /**
-   * FormikではonSubmit時にPOSTしないといけないのでPOSTする関数
-   */
-  const onFormPost = (values: Validation): Promise<Response> => {
-    return fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: bodyEncode({ 'form-name': 'contact', ...values }),
-    })
   }
 
   /**
@@ -105,6 +94,7 @@ export const useModal = (): typeModal => {
   return {
     isOpen,
     formContent,
+    bodyEncode,
     formPassDatasHandler,
     onOpenModalHandler,
     onCloseModalHandler,

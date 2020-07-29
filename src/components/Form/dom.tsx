@@ -28,12 +28,28 @@ export const FormComponent = (componentProps: FormProps) => {
     <Formik
       initialValues={initValue}
       validationSchema={validationSchema}
-      onSubmit={(values) => {
+      onSubmit={(values, actions) => {
         /**
          * @see https://www.derekaspaulding.com/blog/simple-contact-form-with-gatsby-formik-and-netlify/
          * FormikとNetlifyの併用時に自前でPOST処理しないといけないので注意
          */
-        componentProps.modal.formPassDatasHandler(values)
+        fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: componentProps.modal.bodyEncode({
+            'form-name': 'contact-demo',
+            ...values,
+          }),
+        })
+          .then(() => {
+            actions.resetForm()
+            componentProps.modal.onInquiryEndHandler('/thanks')
+          })
+          .catch(() => {
+            alert('送信に失敗しました。再度送信お願い致します。')
+            componentProps.modal.onInquiryEndHandler('/contact')
+          })
+          .finally(() => actions.setSubmitting(false))
       }}
     >
       {(props) => {
