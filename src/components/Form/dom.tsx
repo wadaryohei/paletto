@@ -43,13 +43,13 @@ export const FormComponent = (componentProps: FormProps) => {
         })
           .then(() => {
             actions.resetForm()
-            componentProps.modal.onInquiryEndHandler('/thanks')
           })
           .catch(() => {
             alert('送信に失敗しました。再度送信お願い致します。')
             componentProps.modal.onInquiryEndHandler('/contact')
           })
           .finally(() => actions.setSubmitting(false))
+        componentProps.modal.onInquiryEndHandler('/thanks')
       }}
     >
       {(props) => {
