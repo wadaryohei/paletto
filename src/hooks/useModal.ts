@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 import { useState } from 'react'
 import { initValue, Validation } from '../datas/_shared/ValidationDatas'
+import { FormikHelpers } from 'formik'
 
 //----------------------------------
 // types
@@ -9,10 +10,13 @@ export interface typeModal {
   isOpen: () => boolean
   formContent: () => Validation
   bodyEncode: (data: any) => any
-  formPassDatasHandler: (formDatas: Validation) => void
+  formPassDatasHandler: (
+    formDatas: Validation,
+    actions: FormikHelpers<Validation>,
+  ) => void
   onOpenModalHandler: () => void
   onCloseModalHandler: () => void
-  onInquiryEndHandler: (path: string) => void
+  onInquiryEndHandler: (formBody: Validation) => void
 }
 
 //----------------------------------
@@ -22,6 +26,7 @@ export const useModal = (): typeModal => {
   const router = useRouter()
   const [_isOpen, setOpen] = useState<boolean>(false)
   const [_formContent, setFormContent] = useState<Validation>(initValue)
+  const [_formAction, setFormAction] = useState<FormikHelpers<Validation>>()
 
   /**
    * モーダルの開閉を管理するステート
@@ -54,7 +59,11 @@ export const useModal = (): typeModal => {
   /**
    * フォームの値をオブジェクトでセットしてmodalをオープンするハンドラー
    */
-  const formPassDatasHandler = (formDatas: Validation) => {
+  const formPassDatasHandler = (
+    formDatas: Validation,
+    actions: FormikHelpers<Validation>,
+  ) => {
+    setFormAction(actions)
     setFormContent(formDatas)
     openModal()
   }
@@ -62,8 +71,26 @@ export const useModal = (): typeModal => {
   /**
    * Formの値をPOSTしてモーダルをクローズしてお問い合わせを完了するハンドラー
    */
-  const onInquiryEndHandler = (path: string): void => {
-    router.push(path)
+  const onInquiryEndHandler = (formBody: Validation): void => {
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: bodyEncode({
+        'form-name': 'contact',
+        ...formBody,
+      }),
+    })
+      .then(() => {
+        _formAction?.resetForm()
+      })
+      .catch(() => {
+        alert('送信に失敗しました。再度送信お願い致します。')
+        router.push('/contact')
+      })
+      .finally(() => {
+        router.push('/thanks')
+        _formAction?.setSubmitting(false)
+      })
   }
 
   /**

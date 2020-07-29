@@ -3,6 +3,7 @@ import { Dialog } from '@material-ui/core'
 import { Validation } from '../../datas/_shared/ValidationDatas'
 import { Typography } from '../Typography'
 import { FormButton } from '../Button'
+// import { FormikHelpers } from 'formik'
 
 //----------------------------------
 // props
@@ -11,7 +12,7 @@ export interface ModalProps {
   className?: string
   open: boolean
   onClose: () => void
-  onInquiryEnd: (values: Validation) => void
+  onInquiryEnd: (formBody: Validation) => void
   formBody: Validation
 }
 

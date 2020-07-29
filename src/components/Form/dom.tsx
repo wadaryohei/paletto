@@ -33,23 +33,25 @@ export const FormComponent = (componentProps: FormProps) => {
          * @see https://www.derekaspaulding.com/blog/simple-contact-form-with-gatsby-formik-and-netlify/
          * FormikとNetlifyの併用時に自前でPOST処理しないといけないので注意
          */
-        fetch('/', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: componentProps.modal.bodyEncode({
-            'form-name': 'contact',
-            ...values,
-          }),
-        })
-          .then(() => {
-            actions.resetForm()
-          })
-          .catch(() => {
-            alert('送信に失敗しました。再度送信お願い致します。')
-            componentProps.modal.onInquiryEndHandler('/contact')
-          })
-          .finally(() => actions.setSubmitting(false))
-        componentProps.modal.onInquiryEndHandler('/thanks')
+
+        componentProps.modal.formPassDatasHandler(values, actions)
+        // fetch('/', {
+        //   method: 'POST',
+        //   headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        //   body: componentProps.modal.bodyEncode({
+        //     'form-name': 'contact',
+        //     ...values,
+        //   }),
+        // })
+        //   .then(() => {
+        //     actions.resetForm()
+        //   })
+        //   .catch(() => {
+        //     alert('送信に失敗しました。再度送信お願い致します。')
+        //     componentProps.modal.onInquiryEndHandler('/contact')
+        //   })
+        //   .finally(() => actions.setSubmitting(false))
+        // componentProps.modal.onInquiryEndHandler('/thanks')
       }}
     >
       {(props) => {
