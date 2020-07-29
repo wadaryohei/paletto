@@ -63,13 +63,7 @@ export const useModal = (): typeModal => {
    */
   const onInquiryEndHandler = (values: Validation): void => {
     onFormPost(values)
-      .then(() => {
-        router.push('/thanks')
-      })
-      .catch(() => {
-        alert('お問い合わせの送信に失敗しました、再度送信してください。')
-        router.push('/contact')
-      })
+    router.push('/thanks')
   }
 
   /**
