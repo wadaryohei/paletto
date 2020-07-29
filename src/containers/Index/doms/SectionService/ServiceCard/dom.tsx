@@ -23,10 +23,14 @@ export const ServiceCardComponent = (props: ServiceCardProps) => (
 
     <div className={'cardContentsWrapper'}>
       <div className={'cardContentsInner'}>
-        <Typography component={'p'} className={'cardCopyEn'}>
+        <Typography
+          component={'p'}
+          variant={'subheading'}
+          className={'cardCopyEn'}
+        >
           {props.ServicesData.copyEn}
         </Typography>
-        <Typography component={'p'} className={'cardCopyJp'}>
+        <Typography component={'p'} variant={'lead'} className={'cardCopyJp'}>
           {props.ServicesData.copyJp}
         </Typography>
         <Typography component={'p'} variant={'lead'} className={'cardLead'}>
