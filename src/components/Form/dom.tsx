@@ -39,11 +39,13 @@ export const FormComponent = (componentProps: FormProps) => {
             name="contact"
             method="POST"
             data-netlify="true"
+            netlify-honeypot="bot-field"
             action="/thanks"
             className={componentProps.className}
           >
             <ul>
               <Field type="hidden" name="form-name" value="contact" />
+              <Field type="hidden" name="bot-field" value="contact" />
 
               {/** @named お名前 */}
               <li>
