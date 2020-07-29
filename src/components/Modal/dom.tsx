@@ -2,7 +2,7 @@ import React from 'react'
 import { Dialog } from '@material-ui/core'
 import { Validation } from '../../datas/_shared/ValidationDatas'
 import { Typography } from '../Typography'
-import { Button } from '../Button'
+import { FormButton } from '../Button'
 
 //----------------------------------
 // props
@@ -11,8 +11,8 @@ export interface ModalProps {
   className?: string
   open: boolean
   onClose: () => void
-  onInquiryEnd: () => void
-  formBody: Validation | undefined
+  onInquiryEnd: (values: Validation) => void
+  formBody: Validation
 }
 
 //----------------------------------
@@ -104,12 +104,20 @@ export const ModalComponent = (props: ModalProps) => (
       </div>
 
       <div className={'modalFooterWrapepr'}>
-        <Button size={'md'} color={'border'}>
+        <FormButton
+          size={'md'}
+          color={'border'}
+          onClick={() => props.onClose()}
+        >
           Cancel
-        </Button>
-        <Button size={'md'} color={'primary'}>
+        </FormButton>
+        <FormButton
+          size={'md'}
+          color={'primary'}
+          onClick={() => props.onInquiryEnd(props.formBody)}
+        >
           OK
-        </Button>
+        </FormButton>
       </div>
     </div>
   </Dialog>

@@ -17,6 +17,12 @@ export interface ButtonProps extends ButtonBaseProps {
   disabled?: boolean
 }
 
+export interface FormButtonProps extends ButtonBaseProps {
+  type?: 'submit'
+  disabled?: boolean
+  onClick: () => void
+}
+
 export interface LinkButtonProps
   extends ButtonBaseProps,
     Pick<LinkComponentProps, 'href' | 'target' | 'routeMatch'> {}
@@ -26,6 +32,17 @@ export interface LinkButtonProps
 //----------------------------------
 export const ButtonComponent = (props: ButtonProps) => (
   <button
+    type={props.type}
+    className={`${props.className} ${props.color} ${props.size}`}
+    disabled={props.disabled}
+  >
+    {props.children}
+  </button>
+)
+
+export const FormButtonComponent = (props: FormButtonProps) => (
+  <button
+    onClick={() => props.onClick()}
     type={props.type}
     className={`${props.className} ${props.color} ${props.size}`}
     disabled={props.disabled}

@@ -1,5 +1,9 @@
 import styled, { css } from 'styled-components'
-import { ButtonComponent, LinkButtonComponent } from './dom'
+import {
+  ButtonComponent,
+  LinkButtonComponent,
+  FormButtonComponent,
+} from './dom'
 import { Colors } from '../../const/Colors'
 import { Padding } from '../../const/Padding'
 import { FontWeight } from '../../const/FontWeight'
@@ -75,6 +79,10 @@ export const ButtonBaseStyle = css`
 `
 
 export const ButtonStyle = styled(ButtonComponent)`
+  ${ButtonBaseStyle};
+`
+
+export const FormButtonStyle = styled(FormButtonComponent)`
   ${ButtonBaseStyle};
 `
 

@@ -29,10 +29,7 @@ export const FormComponent = (componentProps: FormProps) => {
       initialValues={initValue}
       validationSchema={validationSchema}
       onSubmit={(values) => {
-        componentProps.form.formPost(values).then(() => {
-          // componentProps.modal.formPassDatas(values)
-          componentProps.modal.onInquiryEndHandler()
-        })
+        componentProps.modal.formPassDatasHandler(values)
       }}
     >
       {(props) => {

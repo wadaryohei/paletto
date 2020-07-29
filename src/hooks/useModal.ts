@@ -1,17 +1,17 @@
 import { useRouter } from 'next/router'
 import { useState } from 'react'
-import { Validation } from '../datas/_shared/ValidationDatas'
+import { initValue, Validation } from '../datas/_shared/ValidationDatas'
 
 //----------------------------------
 // types
 //----------------------------------
 export interface typeModal {
   isOpen: () => boolean
-  formContent: () => Validation | undefined
-  formPassDatas: (formDatas: Validation) => void
+  formContent: () => Validation
+  formPassDatasHandler: (formDatas: Validation) => void
   onOpenModalHandler: () => void
   onCloseModalHandler: () => void
-  onInquiryEndHandler: () => void
+  onInquiryEndHandler: (values: Validation) => void
 }
 
 //----------------------------------
@@ -20,7 +20,7 @@ export interface typeModal {
 export const useModal = (): typeModal => {
   const router = useRouter()
   const [_isOpen, setOpen] = useState<boolean>(false)
-  const [_formContent, setFormContent] = useState<Validation>()
+  const [_formContent, setFormContent] = useState<Validation>(initValue)
 
   /**
    * モーダルの開閉を管理するステート
@@ -32,7 +32,7 @@ export const useModal = (): typeModal => {
   /**
    * フォームの値を管理するステート
    */
-  const formContent = (): Validation | undefined => {
+  const formContent = (): Validation => {
     return _formContent
   }
 
@@ -51,10 +51,33 @@ export const useModal = (): typeModal => {
   }
 
   /**
-   * モーダルをクローズしてお問い合わせを完了するハンドラー
+   * Formの値をPOSTしてモーダルをクローズしてお問い合わせを完了するハンドラー
    */
-  const onInquiryEndHandler = (): void => {
+  const onInquiryEndHandler = (values: Validation): void => {
+    onFormPost(values)
     router.push('/thanks')
+  }
+
+  /**
+   * POSTする時のbodyパラメーター用エンコード
+   */
+  const bodyEncode = (data: any) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]),
+      )
+      .join('&')
+  }
+
+  /**
+   * FormikではonSubmit時にPOSTしないといけないのでPOSTする関数
+   */
+  const onFormPost = (values: Validation): Promise<Response> => {
+    return fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: bodyEncode({ 'form-name': 'contact', ...values }),
+    })
   }
 
   /**
@@ -72,16 +95,17 @@ export const useModal = (): typeModal => {
   }
 
   /**
-   * フォームの値をオブジェクトでセット
+   * フォームの値をオブジェクトでセットしてmodalをオープンする
    */
-  const formPassDatas = (formDatas: Validation) => {
+  const formPassDatasHandler = (formDatas: Validation) => {
     setFormContent(formDatas)
+    openModal()
   }
 
   return {
     isOpen,
     formContent,
-    formPassDatas,
+    formPassDatasHandler,
     onOpenModalHandler,
     onCloseModalHandler,
     onInquiryEndHandler,
