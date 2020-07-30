@@ -48,16 +48,21 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="ja">
-        <Head />
-        <script
-          async
-          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_TRACKING_ID}`}
-        ></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(){ window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', '${process.env.GA_TRACKING_ID}');})`,
-          }}
-        />
+        <Head>
+          {/**
+           * @see https://stackoverflow.com/questions/60411351/how-to-use-google-analytics-with-next-js-app
+           * Googleトラッキングコード
+           */}
+          <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_TRACKING_ID}`}
+          ></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `(function(){ window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', '${process.env.GA_TRACKING_ID}');})`,
+            }}
+          />
+        </Head>
         <body>
           <Main />
           <NextScript />
