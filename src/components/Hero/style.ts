@@ -3,7 +3,6 @@ import { HeroComponent } from './dom'
 import { Colors } from '../../const/Colors'
 import { BreakPoints, max } from '../../const/BreakPoints'
 import { FontSize } from '../../const/FontSize'
-import { FontWeight } from '../../const/FontWeight'
 import { Padding } from '../../const/Padding'
 import { Margin } from '../../const/Margin'
 
