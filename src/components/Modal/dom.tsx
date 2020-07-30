@@ -3,7 +3,6 @@ import { Dialog } from '@material-ui/core'
 import { Validation } from '../../datas/_shared/ValidationDatas'
 import { Typography } from '../Typography'
 import { FormButton } from '../Button'
-// import { FormikHelpers } from 'formik'
 
 //----------------------------------
 // props
@@ -33,10 +32,12 @@ export const ModalComponent = (props: ModalProps) => (
     }}
   >
     <div className={'modalWrapper'}>
-      <div className={'modalHeaderWrapper'}>
+      <div>
         <Typography
           component={'h1'}
           variant={'heading'}
+          size={'sm'}
+          weight={'bold'}
           className={'modalHeader'}
         >
           この内容で送信しますか？
@@ -46,60 +47,180 @@ export const ModalComponent = (props: ModalProps) => (
       <div className={'modalContentsWrapper'}>
         <ul>
           <li>
-            <span>姓</span>
-            <p>{props.formBody?.firstName}</p>
+            <Typography
+              component={'span'}
+              variant={'subheading'}
+              size={'sm'}
+              colors={'black'}
+              weight={'bold'}
+            >
+              姓
+            </Typography>
+            <Typography component={'p'} variant={'lead'} size={'sm'}>
+              {props.formBody?.firstName}
+            </Typography>
           </li>
           <li>
-            <span>名</span>
-            <p>{props.formBody?.lastName}</p>
+            <Typography
+              component={'span'}
+              variant={'subheading'}
+              size={'sm'}
+              colors={'black'}
+              weight={'bold'}
+            >
+              名
+            </Typography>
+            <Typography component={'p'} variant={'lead'} size={'sm'}>
+              {props.formBody?.lastName}
+            </Typography>
           </li>
           <li>
-            <span>メールアドレス</span>
-            <p>{props.formBody?.email}</p>
+            <Typography
+              component={'span'}
+              variant={'subheading'}
+              size={'sm'}
+              colors={'black'}
+              weight={'bold'}
+            >
+              メールアドレス
+            </Typography>
+            <Typography component={'p'} variant={'lead'} size={'sm'}>
+              {props.formBody?.email}
+            </Typography>
           </li>
           <li>
-            <span>ご相談内容</span>
-            <p>{props.formBody?.details}</p>
+            <Typography
+              component={'span'}
+              variant={'subheading'}
+              size={'sm'}
+              colors={'black'}
+              weight={'bold'}
+            >
+              ご相談内容
+            </Typography>
+            <Typography component={'p'} variant={'lead'} size={'sm'}>
+              {props.formBody?.details}
+            </Typography>
           </li>
           <li>
-            <span>ご予算の上限</span>
-            <p>{props.formBody?.budget}</p>
+            <Typography
+              component={'span'}
+              variant={'subheading'}
+              size={'sm'}
+              colors={'black'}
+              weight={'bold'}
+            >
+              ご予算の上限
+            </Typography>
+            <Typography component={'p'} variant={'lead'} size={'sm'}>
+              {props.formBody?.budget}
+            </Typography>
           </li>
           <li>
-            <span>ご契約形態</span>
-            <p>{props.formBody?.contract}</p>
+            <Typography
+              component={'span'}
+              variant={'subheading'}
+              size={'sm'}
+              colors={'black'}
+              weight={'bold'}
+            >
+              ご契約形態
+            </Typography>
+            <Typography component={'p'} variant={'lead'} size={'sm'}>
+              {props.formBody?.contract}
+            </Typography>
           </li>
           <li>
-            <span>お問い合わせ種別</span>
-            <p>{props.formBody?.categories}</p>
+            <Typography
+              component={'span'}
+              variant={'subheading'}
+              size={'sm'}
+              colors={'black'}
+              weight={'bold'}
+            >
+              お問い合わせ種別
+            </Typography>
+            <Typography component={'p'} variant={'lead'} size={'sm'}>
+              {props.formBody?.categories}
+            </Typography>
           </li>
           {props.formBody?.company && (
             <li>
-              <span>会社名</span>
-              <p>{props.formBody?.company}</p>
+              <Typography
+                component={'span'}
+                variant={'subheading'}
+                size={'sm'}
+                colors={'black'}
+                weight={'bold'}
+              >
+                会社名
+              </Typography>
+              <Typography component={'p'} variant={'lead'} size={'sm'}>
+                {props.formBody?.company}
+              </Typography>
             </li>
           )}
           {props.formBody?.background && (
             <li>
-              <span>知った経緯</span>
-              <p>{props.formBody?.background}</p>
+              <Typography
+                component={'span'}
+                variant={'subheading'}
+                size={'sm'}
+                colors={'black'}
+                weight={'bold'}
+              >
+                知った経緯
+              </Typography>
+              <Typography component={'p'} variant={'lead'} size={'sm'}>
+                {props.formBody?.background}
+              </Typography>
             </li>
           )}
           {props.formBody?.request && (
             <li>
-              <span>ご依頼予定のWebサイト、またはアプリストアのURL ※任意</span>
-              <p>{props.formBody?.request}</p>
+              <Typography
+                component={'span'}
+                variant={'subheading'}
+                size={'sm'}
+                colors={'black'}
+                weight={'bold'}
+              >
+                ご依頼予定のWebサイト、またはアプリストアのURL ※任意
+              </Typography>
+              <Typography component={'p'} variant={'lead'} size={'sm'}>
+                {props.formBody?.request}
+              </Typography>
             </li>
           )}
           {props.formBody?.fixed && (
             <li>
-              <span>完了期日の目安(概ねで構いません) ※任意</span>
-              <p>{props.formBody?.fixed}</p>
+              <Typography
+                component={'span'}
+                variant={'subheading'}
+                size={'sm'}
+                colors={'black'}
+                weight={'bold'}
+              >
+                完了期日の目安(概ねで構いません) ※任意
+              </Typography>
+              <Typography component={'p'} variant={'lead'} size={'sm'}>
+                {props.formBody?.fixed}
+              </Typography>
             </li>
           )}
           <li>
-            <span>お問い合わせ内容</span>
-            <p>{props.formBody?.inquery}</p>
+            <Typography
+              component={'span'}
+              variant={'subheading'}
+              size={'sm'}
+              colors={'black'}
+              weight={'bold'}
+            >
+              お問い合わせ内容
+            </Typography>
+            <Typography component={'p'} variant={'lead'} size={'sm'}>
+              {props.formBody?.inquery}
+            </Typography>
           </li>
         </ul>
       </div>

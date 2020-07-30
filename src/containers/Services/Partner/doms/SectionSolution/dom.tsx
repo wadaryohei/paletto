@@ -23,6 +23,8 @@ export const SectionSolutionComponent = (props: SectionSolutionProps) => (
       <Typography
         component={'h2'}
         variant={'heading'}
+        size={'xxl'}
+        colors={'primary'}
         className={'servicesDesignPartnerHeading'}
       >
         What we can do for partners.
@@ -40,14 +42,23 @@ export const SectionSolutionComponent = (props: SectionSolutionProps) => (
         (ServicesDesignSolutionData: ServicesDesignSolution, index: number) => {
           return (
             <li key={index}>
-              <span className={'servicesDesignSolutionListNum'}>
+              <Typography
+                component={'span'}
+                variant={'subheading'}
+                colors={'primary'}
+                family={'en'}
+                weight={'bold'}
+                size={'lg'}
+                className={'servicesDesignSolutionListNum'}
+              >
                 <Up>{ServicesDesignSolutionData.num}</Up>
-              </span>
+              </Typography>
               <div className={'servicesDesignSolutionListWrapper'}>
                 <Up>
                   <Typography
                     component={'h2'}
                     variant={'heading'}
+                    size={'lg'}
                     className={'servicesDesignSolutionListHeading'}
                   >
                     {ServicesDesignSolutionData.copyEn}
@@ -58,7 +69,8 @@ export const SectionSolutionComponent = (props: SectionSolutionProps) => (
                   <Typography
                     component={'p'}
                     variant={'subheading'}
-                    className={'servicesDesignSolutionListSubHeading'}
+                    weight={'normal'}
+                    size={'sm'}
                   >
                     {ServicesDesignSolutionData.copyJp}
                   </Typography>
@@ -68,6 +80,7 @@ export const SectionSolutionComponent = (props: SectionSolutionProps) => (
                   <Typography
                     component={'p'}
                     variant={'lead'}
+                    weight={'bold'}
                     className={'servicesDesignSolutionListLead'}
                   >
                     {ServicesDesignSolutionData.lead}
@@ -77,8 +90,11 @@ export const SectionSolutionComponent = (props: SectionSolutionProps) => (
                 <Up>
                   <Typography
                     component={'h2'}
-                    className={'servicesDesignSolutionListDescription'}
                     variant={'lead'}
+                    size={'md'}
+                    weight={'bold'}
+                    family={'en'}
+                    className={'servicesDesignSolutionListDescription'}
                   >
                     Design Solution.
                   </Typography>
@@ -88,6 +104,8 @@ export const SectionSolutionComponent = (props: SectionSolutionProps) => (
                   <Typography
                     component={'p'}
                     variant={'lead'}
+                    size={'sm'}
+                    colors={'black'}
                     className={'servicesDesignSolutionListNotes'}
                   >
                     {ServicesDesignSolutionData.solution}

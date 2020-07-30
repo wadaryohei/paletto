@@ -39,14 +39,9 @@ export const FooterStyle = styled(FooterComponent)`
     .footerContactWrapper {
       position: relative;
       z-index: 1;
-      .footerContactHeading {
-        font-size: ${FontSize.lg};
-        font-family: 'Gilroy-Bold', sans-serif;
-      }
 
       .footerContactLead {
         margin-top: ${Margin.m16};
-        font-size: ${FontSize.xs};
         line-height: 1.6;
         span {
           display: block;
@@ -55,7 +50,8 @@ export const FooterStyle = styled(FooterComponent)`
     }
   }
 
-  .footerSocialWrapper {
+  /** @memo 一旦SNSは非表示にしておく */
+  /* .footerSocialWrapper {
     .footerSocials {
       display: flex;
       justify-content: space-between;
@@ -94,15 +90,10 @@ export const FooterStyle = styled(FooterComponent)`
         margin-left: ${Margin.m8};
       }
     }
-  }
+  } */
 
   .footerMembersWrapper {
-    color: ${Colors.white};
-
     .footerMembersHeading {
-      font-size: ${FontSize.sm};
-      font-weight: ${FontWeight.thin};
-      font-family: 'Gilroy-Bold', sans-serif;
       letter-spacing: 4px;
     }
 
@@ -134,10 +125,6 @@ export const FooterStyle = styled(FooterComponent)`
   .footerCopyWrapper {
     display: block;
     width: 100%;
-    font-size: ${FontSize.md};
-    font-family: 'Gilroy-Bold', sans-serif;
     margin-top: ${Margin.m24};
-    text-align: center;
-    color: ${Colors.white};
   }
 `

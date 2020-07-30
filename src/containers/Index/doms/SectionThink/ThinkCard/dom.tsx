@@ -17,8 +17,25 @@ export interface ThinkCardProps {
 export const ThinkCardComponent = (props: ThinkCardProps) => (
   <Card className={props.className}>
     <div className={'cardContentsWrapper'}>
-      <p className={'cardNum'}>{props.ThinkData.num}</p>
-      <p className={'cardCopy'}>{props.ThinkData.copy}</p>
+      <Typography
+        component={'p'}
+        variant={'lead'}
+        size={'xl'}
+        colors={'gray'}
+        family={'en'}
+        weight={'bold'}
+        className={'cardNum'}
+      >
+        {props.ThinkData.num}
+      </Typography>
+      <Typography
+        component={'p'}
+        variant={'lead'}
+        colors={'gray'}
+        className={'cardCopy'}
+      >
+        {props.ThinkData.copy}
+      </Typography>
       <figure className={'cardImg'}>
         <img
           src={props.ThinkData.imgPathname}

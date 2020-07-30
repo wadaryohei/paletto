@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import { SectionVisionComponent } from './dom'
 import { Padding } from '../../../../const/Padding'
-import { Colors } from '../../../../const/Colors'
 import { BreakPoints, max } from '../../../../const/BreakPoints'
 import { Margin } from '../../../../const/Margin'
 
@@ -15,13 +14,6 @@ export const SectionVisionStyle = styled(SectionVisionComponent)`
     padding: ${Padding.p80};
     margin-left: ${Margin.m56};
     overflow: hidden;
-
-    .heading,
-    .subheading,
-    .lead,
-    .copy {
-      color: ${Colors.white};
-    }
 
     @media ${max(BreakPoints.lg)} {
       max-width: calc(100% - 40px);

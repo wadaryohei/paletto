@@ -24,6 +24,8 @@ export const SectionPartnerComponent = (props: SectionPartnerProps) => (
         <Typography
           component={'h2'}
           variant={'heading'}
+          size={'xxl'}
+          colors={'primary'}
           className={'servicesDesignPartnerHeading'}
         >
           How to work with partners.
@@ -43,14 +45,23 @@ export const SectionPartnerComponent = (props: SectionPartnerProps) => (
           ) => {
             return (
               <li key={index}>
-                <span className={'servicesDesignPartnerListNum'}>
+                <Typography
+                  component={'span'}
+                  variant={'subheading'}
+                  colors={'primary'}
+                  family={'en'}
+                  weight={'bold'}
+                  size={'lg'}
+                  className={'servicesDesignPartnerListNum'}
+                >
                   <Up>{ServicesDesignPartnersData.num}</Up>
-                </span>
+                </Typography>
                 <div className={'servicesDesignPartnerListLeadWrapper'}>
                   <Up>
                     <Typography
                       component={'h2'}
                       variant={'heading'}
+                      size={'lg'}
                       className={'servicesDesignPartnerListHeading'}
                     >
                       {ServicesDesignPartnersData.copyEn}
@@ -61,7 +72,7 @@ export const SectionPartnerComponent = (props: SectionPartnerProps) => (
                     <Typography
                       component={'p'}
                       variant={'subheading'}
-                      className={'servicesDesignPartnerListSubHeading'}
+                      weight={'normal'}
                     >
                       {ServicesDesignPartnersData.copyJp}
                     </Typography>

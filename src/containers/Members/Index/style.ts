@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import MembersContainer from './container'
 import { Padding } from '../../../const/Padding'
 import { Margin } from '../../../const/Margin'
-import { FontSize } from '../../../const/FontSize'
 import { Colors } from '../../../const/Colors'
 import { BreakPoints, max } from '../../../const/BreakPoints'
 
@@ -57,13 +56,9 @@ export const MembersContainerStyle = styled(MembersContainer)`
     .membersSocialWrapper {
       figcaption {
         display: inline-block;
-        font-size: ${FontSize.sm};
-        font-family: 'Gilroy-Bold', sans-serif;
         background-color: ${Colors.black};
         padding: 8px ${Padding.p16} 6px;
-        color: ${Colors.white};
         text-indent: 6px;
-        text-align: left;
         letter-spacing: 8px;
         line-height: 2;
 
@@ -108,10 +103,6 @@ export const MembersContainerStyle = styled(MembersContainer)`
 
     .membersLeadWrapepr {
       margin-top: ${Margin.m32};
-
-      .membersLead {
-        font-size: ${FontSize.sm};
-      }
     }
   }
 `

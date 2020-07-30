@@ -18,11 +18,8 @@ export const SectionApproachStyle = styled(SectionApproachComponent)`
     .approachHeading {
       position: relative;
       z-index: 1;
-      color: ${Colors.white};
       padding: ${Padding.p96};
-      font-size: ${FontSize.xl};
       border: solid 1px ${Colors.white};
-      text-align: center;
 
       @media ${max(BreakPoints.md)} {
         padding: ${Padding.p96} 0;
@@ -31,10 +28,8 @@ export const SectionApproachStyle = styled(SectionApproachComponent)`
     }
 
     .approachCopy {
-      color: ${Colors.black};
       background-color: ${Colors.white};
       padding: ${Padding.p16};
-      font-size: ${FontSize.lg};
 
       @media ${max(BreakPoints.md)} {
         font-size: ${FontSize.md};
@@ -43,10 +38,6 @@ export const SectionApproachStyle = styled(SectionApproachComponent)`
 
     .approachLeadWrapper {
       margin-top: ${Margin.m32};
-    }
-
-    .approachLead {
-      color: ${Colors.white};
     }
   }
 `

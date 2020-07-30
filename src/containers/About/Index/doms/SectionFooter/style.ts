@@ -14,9 +14,6 @@ export const SectionFooterStyle = styled(SectionFooterComponent)`
     a {
       display: block;
       width: 100%;
-      font-family: 'Gilroy-Bold', sans-serif;
-      font-weight: ${FontWeight.bold};
-      color: ${Colors.black};
     }
 
     span {
@@ -32,7 +29,6 @@ export const SectionFooterStyle = styled(SectionFooterComponent)`
     }
 
     .aboutLinkHeading {
-      font-size: ${FontSize.xl};
       letter-spacing: 16px;
 
       @media ${max(BreakPoints.md)} {
@@ -44,10 +40,6 @@ export const SectionFooterStyle = styled(SectionFooterComponent)`
   .aboutContactWrapper {
     margin-top: ${Margin.m104};
     text-align: center;
-
-    p {
-      font-size: ${FontSize.xs};
-    }
 
     a {
       display: inline-block;

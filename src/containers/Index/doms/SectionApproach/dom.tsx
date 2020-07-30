@@ -24,6 +24,9 @@ export const SectionApproachComponent = (props: SectionApproachProps) => (
             <Typography
               component={'h1'}
               variant={'heading'}
+              colors={'white'}
+              size={'xl'}
+              align={'center'}
               className={'approachHeading'}
             >
               {SectionHeadingDatas.sectionApproach.heading}
@@ -35,6 +38,8 @@ export const SectionApproachComponent = (props: SectionApproachProps) => (
             <Typography
               component={'p'}
               variant={'copy'}
+              colors={'black'}
+              size={'lg'}
               className={'approachCopy'}
             >
               {SectionHeadingDatas.sectionApproach.copy}
@@ -42,11 +47,7 @@ export const SectionApproachComponent = (props: SectionApproachProps) => (
           </Up>
           <div className={'approachLeadWrapper'}>
             <Up>
-              <Typography
-                component={'p'}
-                variant={'lead'}
-                className={'approachLead'}
-              >
+              <Typography component={'p'} variant={'lead'} colors={'white'}>
                 <span>
                   デザイン会社や制作会社におけるビジネス的な課題解決はもはや当たり前の時代になりつつあります。
                 </span>

@@ -4,6 +4,7 @@ import { Header } from '../../Header'
 import { Footer } from '../../Footer'
 import { Section } from '../../Section'
 import { Up } from '../../InViewMonitor'
+import { Typography } from '../../Typography'
 
 //----------------------------------
 // props
@@ -38,10 +39,30 @@ export const PagesLayoutComponent = (props: PagesLayoutProps) => (
       <Container>
         <div className={'pageHeaderWrapper'}>
           <Up>
-            <p className={'pagename'}>{props.pathname}</p>
+            <Typography
+              component={'p'}
+              variant={'heading'}
+              size={'xxl'}
+              weight={'bold'}
+              colors={'black'}
+              family={'en'}
+              className={'pagename'}
+            >
+              {props.pathname}
+            </Typography>
           </Up>
           <Up delay={200}>
-            <p className={'pageHeader'}>{props.pageHeading}</p>
+            <Typography
+              component={'p'}
+              variant={'heading'}
+              size={'lg'}
+              weight={'bold'}
+              colors={'black'}
+              family={'en'}
+              className={'pageHeader'}
+            >
+              {props.pageHeading}
+            </Typography>
           </Up>
         </div>
       </Container>

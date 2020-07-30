@@ -16,15 +16,9 @@ export const SectionSubscriptionStyle = styled(SectionSubscriptionComponent)`
     padding: ${Padding.p32};
 
     .subscriptionHeader {
-      font-size: ${FontSize.xl};
-
       @media ${max(BreakPoints.md)} {
         font-size: ${FontSize.md};
       }
-    }
-
-    .subscriptionSubheading {
-      font-size: ${FontSize.sm};
     }
   }
 

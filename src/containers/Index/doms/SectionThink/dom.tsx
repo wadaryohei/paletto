@@ -45,7 +45,12 @@ export const SectionThinkComponent = (props: SectionThinkProps) => (
 
       <div className={'thinkCopyWrapper'}>
         <Up>
-          <Typography component={'p'} variant={'copy'} className={'thinkCopy'}>
+          <Typography
+            component={'p'}
+            variant={'copy'}
+            size={'lg'}
+            className={'thinkCopy'}
+          >
             {SectionHeadingDatas.sectionThink.copy}
           </Typography>
         </Up>
@@ -53,7 +58,7 @@ export const SectionThinkComponent = (props: SectionThinkProps) => (
 
       <div className={'thinkLeadWrapper'}>
         <Up>
-          <Typography component={'p'} variant={'lead'}>
+          <Typography component={'p'} variant={'lead'} colors={'white'}>
             <span>
               デザインは「課題解決」と「価値創造」の側面を持っています。
             </span>
@@ -63,7 +68,7 @@ export const SectionThinkComponent = (props: SectionThinkProps) => (
           </Typography>
         </Up>
         <Up>
-          <Typography component={'p'} variant={'lead'}>
+          <Typography component={'p'} variant={'lead'} colors={'white'}>
             <span>
               パートナーとしてのデザイン戦略では、クライアントと同じ熱量での長期戦略を実施していく必要があるため、私達はサブスク型のサービスを提供しています。
             </span>

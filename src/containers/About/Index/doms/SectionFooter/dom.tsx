@@ -23,8 +23,26 @@ export const SectionFooterComponent = (props: SectionFooterProps) => (
         <div className={'aboutLinkWrapper'}>
           <Link href={'/services'} routeMatch={false}>
             <Banner imgPath={'pages/about/about_services_glows.jpg'}>
-              <span className={'aboutLinkCopy'}>私達ができること</span>
-              <span className={'aboutLinkHeading'}>SERVICES</span>
+              <Typography
+                component={'p'}
+                variant={'subheading'}
+                weight={'bold'}
+                colors={'black'}
+                className={'aboutLinkCopy'}
+              >
+                私達ができること
+              </Typography>
+              <Typography
+                component={'p'}
+                variant={'heading'}
+                size={'xl'}
+                colors={'black'}
+                weight={'bold'}
+                family={'en'}
+                className={'aboutLinkHeading'}
+              >
+                SERVICES
+              </Typography>
             </Banner>
           </Link>
         </div>
@@ -32,7 +50,7 @@ export const SectionFooterComponent = (props: SectionFooterProps) => (
 
       <div className={'aboutContactWrapper'}>
         <Up>
-          <Typography component={'p'} variant={'lead'}>
+          <Typography component={'p'} variant={'lead'} size={'xs'}>
             <span>感情を揺さぶるデザインでこそ、人の心は動きます。</span>
             <span>
               「Paletto.」では課題の解決という当たり前のその先の、事業やサービスやプロダクトの思いをデザインでカタチにします。

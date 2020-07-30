@@ -8,7 +8,6 @@ import { FontSize } from '../../../../../const/FontSize'
 
 export const ThinkCardStyle = styled(ThinkCardComponent)`
   background-color: ${Colors.white};
-  color: ${Colors.white};
 
   .cardContentsWrapper {
     position: relative;
@@ -34,17 +33,11 @@ export const ThinkCardStyle = styled(ThinkCardComponent)`
     }
 
     .cardNum {
-      font-size: ${FontSize.xl};
-      font-family: 'Gilroy-Bold', sans-serif;
-      margin-bottom: ${Margin.m32};
-      color: ${Colors.gray};
+      margin-top: ${Margin.m24};
+      margin-bottom: ${Margin.m24};
     }
 
-    .cardCopy{
-      font-size: ${FontSize.sm};
-      font-family: 'Gilroy-Bold', sans-serif;
-      color: ${Colors.gray};
-
+    .cardCopy {
       @media ${max(BreakPoints.lg)} {
         font-size: ${FontSize.sm};
       }
@@ -52,6 +45,7 @@ export const ThinkCardStyle = styled(ThinkCardComponent)`
 
     .cardImg {
       text-align: center;
+
       img {
         width: 200px;
         height: 200px;

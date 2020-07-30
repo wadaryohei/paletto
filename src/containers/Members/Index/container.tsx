@@ -60,7 +60,16 @@ const MembersContainer = (props: MembersProps) => {
 
                         <div className={'membersSocialWrapper'}>
                           <Up>
-                            <figcaption>{membersViewData.name}</figcaption>
+                            <Typography
+                              component={'figcaption'}
+                              variant={'subheading'}
+                              size={'sm'}
+                              family={'en'}
+                              weight={'bold'}
+                              colors={'white'}
+                            >
+                              {membersViewData.name}
+                            </Typography>
                           </Up>
                           <ul className={'membersSocialList'}>
                             {membersViewData.socials?.map(

@@ -16,11 +16,7 @@ export interface SectionHeaderProps {
 export const SectionHeaderComponent = (props: SectionHeaderProps) => (
   <Section className={props.className}>
     <div className={'thanksHeaderWrapper'}>
-      <Typography
-        component={'h2'}
-        variant={'heading'}
-        className={'thanksHeader'}
-      >
+      <Typography component={'h2'} variant={'heading'} size={'md'}>
         Thanks
       </Typography>
       <Typography component={'p'} variant={'lead'}>
@@ -30,7 +26,7 @@ export const SectionHeaderComponent = (props: SectionHeaderProps) => (
         </span>
       </Typography>
 
-      <Typography component={'p'} variant={'lead'} className={'thanksNote'}>
+      <Typography component={'p'} variant={'lead'} size={'xs'}>
         ※2~3日経過しても返事が無い場合はお手数ですが再度ご連絡いただけますと幸いでございます。
       </Typography>
 

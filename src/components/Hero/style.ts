@@ -18,21 +18,6 @@ export const HeroStyle = styled(HeroComponent)`
   max-height: 100vh;
   overflow: hidden;
 
-  /* .heroCanvasWrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    width: 100%;
-    height: 100vh;
-  }
-
-  .heroCanvasInArea {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-  } */
-
   .heroWrapper {
     @media ${max(BreakPoints.lg)} {
       width: 100%;
@@ -114,14 +99,11 @@ export const HeroStyle = styled(HeroComponent)`
 
         .heroCopy {
           display: block;
-          color: ${Colors.black};
           margin: 0;
           line-height: 1.2;
 
           &.top {
             font-family: 'Helvetica neue', sans-serif;
-            font-weight: ${FontWeight.thin};
-            font-size: ${FontSize.xxl};
 
             @media ${max(BreakPoints.lg)} {
               font-size: ${FontSize.xxl};
@@ -133,9 +115,6 @@ export const HeroStyle = styled(HeroComponent)`
           }
 
           &.bottom {
-            font-family: 'Gilroy-Bold', sans-serif;
-            font-size: ${FontSize.xxxl};
-
             @media ${max(BreakPoints.lg)} {
               font-size: ${FontSize.xxxl};
             }
@@ -157,10 +136,7 @@ export const HeroStyle = styled(HeroComponent)`
           text-align: left;
         }
 
-        .desc {
-          font-size: ${FontSize.xs};
-          font-weight: ${FontWeight.light};
-          color: ${Colors.black};
+        .heroDesc {
           line-height: 1.8;
 
           &:nth-of-type(2) {

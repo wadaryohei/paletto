@@ -35,18 +35,24 @@ export const HeroComponent = (props: HeroProps) => (
             <div className={'heroCopyWrapper'}>
               <Up delay={100}>
                 <Typography
-                  className={'heroCopy top'}
                   component={'p'}
                   variant="copy"
+                  size={'xxl'}
+                  weight={'thin'}
+                  colors={'black'}
+                  className={'heroCopy top'}
                 >
                   Design To Moves
                 </Typography>
               </Up>
               <Up delay={100}>
                 <Typography
-                  className={'heroCopy bottom'}
                   component={'p'}
                   variant="copy"
+                  family={'en'}
+                  weight={'bold'}
+                  size={'xxxl'}
+                  className={'heroCopy bottom'}
                 >
                   Emotion.
                 </Typography>
@@ -63,7 +69,10 @@ export const HeroComponent = (props: HeroProps) => (
                       key={index}
                       component={'p'}
                       variant={'lead'}
-                      className="desc"
+                      size={'xs'}
+                      weight={'light'}
+                      colors={'black'}
+                      className={'heroDesc'}
                     >
                       {desc}
                     </Typography>

@@ -26,33 +26,33 @@ export const SectionVisionComponent = (props: SectionVisionProps) => (
       </figure>
       <Container>
         <Up>
-          <Typography component={'h1'} variant={'heading'}>
+          <Typography component={'h1'} variant={'heading'} colors={'white'}>
             {SectionHeadingDatas.SectionVision.heading}
           </Typography>
         </Up>
 
         <Up>
-          <Typography component={'p'} variant={'subheading'}>
+          <Typography component={'p'} variant={'subheading'} colors={'white'}>
             {SectionHeadingDatas.SectionVision.subHeading}
           </Typography>
         </Up>
 
         <div className={'visionLeadWrapper'}>
           <Up>
-            <Typography component={'p'} variant={'copy'}>
+            <Typography component={'p'} variant={'copy'} colors={'white'}>
               {SectionHeadingDatas.SectionVision.copy}
             </Typography>
           </Up>
 
           <div className={'visionLeadInWrapper'}>
             <Up>
-              <Typography component={'p'} variant={'lead'}>
+              <Typography component={'p'} variant={'lead'} colors={'white'}>
                 <span>人の感情に寄り添い、人の感情をデザインする。</span>
                 <span>
                   そんな「エモーショナルなデザイン」をすることが私達「Paletto.」のVisionです。
                 </span>
               </Typography>
-              <Typography component={'p'} variant={'lead'}>
+              <Typography component={'p'} variant={'lead'} colors={'white'}>
                 <span>感情を揺さぶるデザインでこそ、人の心は動きます。</span>
                 <span>
                   「Paletto.」では課題の解決の先の「事業やサービスやプロダクト」の思いをデザインでカタチにします。

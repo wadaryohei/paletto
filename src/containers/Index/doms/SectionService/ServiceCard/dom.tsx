@@ -26,14 +26,30 @@ export const ServiceCardComponent = (props: ServiceCardProps) => (
         <Typography
           component={'p'}
           variant={'subheading'}
+          colors={'primary'}
+          size={'lg'}
+          weight={'bold'}
+          family={'en'}
           className={'cardCopyEn'}
         >
           {props.ServicesData.copyEn}
         </Typography>
-        <Typography component={'p'} variant={'lead'} className={'cardCopyJp'}>
+        <Typography
+          component={'p'}
+          variant={'lead'}
+          colors={'gray'}
+          weight={'bold'}
+          size={'xs'}
+          className={'cardCopyJp'}
+        >
           {props.ServicesData.copyJp}
         </Typography>
-        <Typography component={'p'} variant={'lead'} className={'cardLead'}>
+        <Typography
+          component={'p'}
+          variant={'lead'}
+          size={'xs'}
+          className={'cardLead'}
+        >
           {props.ServicesData.lead}
         </Typography>
       </div>

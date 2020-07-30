@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import { PagesLayoutComponent } from './dom'
-import { Colors } from '../../../const/Colors'
 import { FontSize } from '../../../const/FontSize'
 import { BreakPoints, max } from '../../../const/BreakPoints'
 
@@ -56,9 +55,6 @@ export const PagesLayoutStyle = styled(PagesLayoutComponent)`
     top: calc(48%);
 
     .pagename {
-      color: ${Colors.black};
-      font-size: ${FontSize.xxl};
-      font-family: 'Gilroy-Bold', sans-serif;
       width: 100%;
       line-height: 1.4;
 
@@ -69,9 +65,6 @@ export const PagesLayoutStyle = styled(PagesLayoutComponent)`
     }
 
     .pageHeader {
-      color: ${Colors.black};
-      font-size: ${FontSize.lg};
-      font-family: 'Gilroy-Bold', sans-serif;
       width: 60%;
       line-height: 1.4;
 
