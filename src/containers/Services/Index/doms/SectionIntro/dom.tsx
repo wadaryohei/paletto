@@ -28,17 +28,18 @@ export const SectionIntroComponent = (props: SectionIntroProps) => (
             <Up>
               <Typography component={'p'} variant={'lead'}>
                 <span>
-                  私達の目指すコアである最高のユーザー体験を2つの事業を柱に提供します。
-                </span>
-                <span>
-                  クライアントの本質課題をデザインの力で解決する「デザインパートナー事業」と、その本質課題の解決における手段としての「制作パートナー事業」の2本柱があります。
+                  私達の目指すコアであるUXとしての「エモーショナルなデザイン」を実現する方法として「デザイン/開発パートナー事業」を1つの事業として提供しています。
                 </span>
               </Typography>
-            </Up>
-            <Up>
+
               <Typography component={'p'} variant={'lead'}>
                 <span>
-                  一貫した「デザインパートナー事業」と「制作パートナー事業」で、最高のUI/UXでビジネス課題を解決致します。
+                  クライアントの本質課題をデザインの力で解決することを前提とした「デザイン」と、本質課題を解決するための「開発」をワンストップで行うことが可能です。
+                </span>
+              </Typography>
+              <Typography component={'p'} variant={'lead'}>
+                <span>
+                  デザイン・開発いずれかのご依頼も可能となっており、事業のグロース支援から事業ブランディングにフルコミットし最高のUI/UXでビジネス課題を解決致します。
                 </span>
               </Typography>
             </Up>

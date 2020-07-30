@@ -1,14 +1,14 @@
 import React from 'react'
 import { Container, Grid } from '@material-ui/core'
 import { Section } from '../../../../../components/Section'
-import { Link } from '../../../../../components/Link'
 import { More } from '../../../../../components/More'
+import { Up } from '../../../../../components/InViewMonitor'
+import { LinkButton } from '../../../../../components/Button'
 import { ServiceCard } from '../../../../Index/doms/SectionService/ServiceCard'
 import {
   ServicesDatas,
   Services,
 } from '../../../../../datas/_shared/ServicesDatas'
-import { Up } from '../../../../../components/InViewMonitor'
 
 //----------------------------------
 // props
@@ -35,18 +35,22 @@ export const SectionServicesComponent = (props: SectionServicesProps) => (
                 className={'servicesCardGrid'}
               >
                 <Up>
-                  <Link href={ServicesData.viewMorePath}>
-                    <ServiceCard
-                      ServicesData={ServicesData}
-                      className={'serviceCard'}
-                    />
-                    <More />
-                  </Link>
+                  <ServiceCard
+                    ServicesData={ServicesData}
+                    className={'serviceCard'}
+                  />
+                  <More />
                 </Up>
               </Grid>
             )
           })}
         </Grid>
+
+        <div className={'servicesButtonWrapper'}>
+          <LinkButton href={'/services/partner'} color={'primary'} size={'md'}>
+            <More>View More</More>
+          </LinkButton>
+        </div>
       </Container>
     </div>
   </Section>

@@ -98,7 +98,6 @@ export const FooterStyle = styled(FooterComponent)`
 
   .footerMembersWrapper {
     color: ${Colors.white};
-    margin-top: ${Margin.m32};
 
     .footerMembersHeading {
       font-size: ${FontSize.sm};
@@ -137,6 +136,7 @@ export const FooterStyle = styled(FooterComponent)`
     width: 100%;
     font-size: ${FontSize.md};
     font-family: 'Gilroy-Bold', sans-serif;
+    margin-top: ${Margin.m24};
     text-align: center;
     color: ${Colors.white};
   }

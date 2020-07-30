@@ -83,7 +83,11 @@ const MembersContainer = (props: MembersProps) => {
 
                     <div className={'membersLeadWrapepr'}>
                       <Up>
-                        <Typography component={'p'} variant={'lead'}>
+                        <Typography
+                          component={'p'}
+                          variant={'lead'}
+                          className={'membersLead'}
+                        >
                           {membersViewData.introduce.map(
                             (memberViewData: string, index: number) => {
                               return <span key={index}>{memberViewData}</span>

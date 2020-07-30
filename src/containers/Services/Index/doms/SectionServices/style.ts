@@ -39,4 +39,14 @@ export const SectionServicesStyle = styled(SectionServicesComponent)`
   .serviceCard {
     height: 100%;
   }
+
+  .servicesButtonWrapper {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+
+    @media ${max(BreakPoints.md)} {
+      text-align: left;
+    }
+  }
 `
