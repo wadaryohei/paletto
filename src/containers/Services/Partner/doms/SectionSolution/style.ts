@@ -5,7 +5,6 @@ import { Margin } from '../../../../../const/Margin'
 import { Padding } from '../../../../../const/Padding'
 import { Colors } from '../../../../../const/Colors'
 import { FontSize } from '../../../../../const/FontSize'
-import { FontWeight } from '../../../../../const/FontWeight'
 
 //----------------------------------
 // styledComponent
