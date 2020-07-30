@@ -2,8 +2,6 @@ import styled from 'styled-components'
 import { ModalComponent } from './dom'
 import { Margin } from '../../const/Margin'
 import { Padding } from '../../const/Padding'
-import { FontSize } from '../../const/FontSize'
-import { FontWeight } from '../../const/FontWeight'
 import { BreakPoints, max } from '../../const/BreakPoints'
 
 //----------------------------------
@@ -22,13 +20,6 @@ export const ModalStyle = styled(ModalComponent)`
     }
   }
 
-  .modalHeaderWrapper {
-    .modalHeader {
-      font-size: ${FontSize.sm};
-      font-weight: ${FontWeight.bold};
-    }
-  }
-
   .modalContentsWrapper {
     ul {
       max-width: 720px;
@@ -39,16 +30,12 @@ export const ModalStyle = styled(ModalComponent)`
 
         span {
           display: block;
-          font-size: ${FontSize.sm};
-          font-weight: ${FontWeight.bold};
-          margin-bottom: ${Margin.m8};
           line-height: 1.6;
         }
 
         p {
           word-break: break-word;
-          font-size: ${FontSize.sm};
-          line-height: 1.6;
+          margin-top: ${Margin.m8};
         }
       }
     }

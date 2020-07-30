@@ -5,17 +5,13 @@ import { Margin } from '../../../../../const/Margin'
 import { Colors } from '../../../../../const/Colors'
 import { FontSize } from '../../../../../const/FontSize'
 import { BreakPoints, max } from '../../../../../const/BreakPoints'
-import { FontWeight } from '../../../../../const/FontWeight'
 
 //----------------------------------
 // styledComponent
 //----------------------------------
 export const SectionPartnerStyle = styled(SectionPartnerComponent)`
   .servicesDesignPartnerHeading {
-    font-size: ${FontSize.xxl};
-    text-align: left;
     line-height: 1;
-    color: ${Colors.primary};
 
     @media ${max(BreakPoints.md)} {
       font-size: ${FontSize.lg};
@@ -47,9 +43,6 @@ export const SectionPartnerStyle = styled(SectionPartnerComponent)`
 
       .servicesDesignPartnerListNum {
         display: block;
-        color: ${Colors.primary};
-        font-size: ${FontSize.lg};
-        font-family: 'Gilroy-Bold', sans-serif;
         line-height: 1.6;
         margin-right: auto;
         width: 10%;
@@ -73,11 +66,6 @@ export const SectionPartnerStyle = styled(SectionPartnerComponent)`
 
         .servicesDesignPartnerListHeading {
           width: auto;
-          font-size: ${FontSize.lg};
-        }
-
-        .servicesDesignPartnerListSubHeading {
-          font-weight: ${FontWeight.normal};
         }
 
         .servicesDesignPartnerListLead {

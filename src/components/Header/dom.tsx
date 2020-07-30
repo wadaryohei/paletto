@@ -4,6 +4,7 @@ import { MenuIcon } from '../Icon/Menu'
 import { Nav } from '../Nav'
 import { Link } from '../Link'
 import { Logo } from '../Logo'
+import { Typography } from '../Typography'
 import { DrawerNav } from '../DrawerNav'
 import { useShowMenu } from '../../hooks/useShowMenu'
 import { NavMenuDatas } from '../../datas/_shared/NavMenuDatas'
@@ -32,11 +33,11 @@ export const HeaderComponent = (props: HeaderProps) => {
       <Container>
         <div className={'headerWrapper'}>
           <div className={'headerLogo'}>
-            <h1>
+            <Typography component={'h1'} variant={'heading'}>
               <Link href={'/'} routeMatch={false}>
                 <Logo />
               </Link>
-            </h1>
+            </Typography>
           </div>
           <MenuIcon
             icon={'menu'}

@@ -21,7 +21,6 @@ export const SectionThinkStyle = styled(SectionThinkComponent)`
       color: ${Colors.black};
       background-color: ${Colors.white};
       padding: ${Padding.p16} ${Padding.p8};
-      font-size: ${FontSize.lg};
 
       @media ${max(BreakPoints.md)} {
         font-size: ${FontSize.md};
@@ -31,10 +30,6 @@ export const SectionThinkStyle = styled(SectionThinkComponent)`
 
   .thinkLeadWrapper {
     margin-top: ${Margin.m32};
-
-    p {
-      color: ${Colors.white};
-    }
   }
 
   .thinkCardWrapper {

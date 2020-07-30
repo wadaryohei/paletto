@@ -12,10 +12,7 @@ import { FontWeight } from '../../../../../const/FontWeight'
 //----------------------------------
 export const SectionSolutionStyle = styled(SectionSolutionComponent)`
   .servicesDesignPartnerHeading {
-    font-size: ${FontSize.xxl};
-    text-align: left;
     line-height: 1;
-    color: ${Colors.primary};
 
     @media ${max(BreakPoints.md)} {
       font-size: ${FontSize.lg};
@@ -68,17 +65,10 @@ export const SectionSolutionStyle = styled(SectionSolutionComponent)`
 
         .servicesDesignSolutionListHeading {
           width: auto;
-          font-size: ${FontSize.lg};
-        }
-
-        .servicesDesignSolutionListSubHeading {
-          font-weight: ${FontWeight.normal};
-          font-size: ${FontSize.sm};
         }
 
         .servicesDesignSolutionListLead {
           margin-top: ${Margin.m16};
-          font-weight: ${FontWeight.bold};
         }
 
         .servicesDesignSolutionListDescription {
@@ -86,8 +76,6 @@ export const SectionSolutionStyle = styled(SectionSolutionComponent)`
           display: inline-block;
           margin-top: ${Margin.m32};
           padding-left: ${Padding.p32};
-          font-size: ${FontSize.md};
-          font-family: 'Gilroy-Bold', sans-serif;
 
           &::before {
             content: '';
@@ -104,8 +92,6 @@ export const SectionSolutionStyle = styled(SectionSolutionComponent)`
 
         .servicesDesignSolutionListNotes {
           margin-top: ${Margin.m8};
-          font-size: ${FontSize.sm};
-          color: ${Colors.black};
 
           @media ${max(BreakPoints.md)} {
             font-size: ${FontSize.xs};

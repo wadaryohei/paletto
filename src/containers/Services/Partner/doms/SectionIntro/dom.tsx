@@ -18,7 +18,9 @@ export const SectionIntroComponent = (props: SectionIntroProps) => (
     <Up>
       <Typography
         component={'h2'}
+        size={'md'}
         variant={'heading'}
+        align={'center'}
         className={'servicesIntroHeader'}
       >
         We are design partners who change the world through design.

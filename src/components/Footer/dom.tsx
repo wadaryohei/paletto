@@ -3,6 +3,7 @@ import { Grid, Container } from '@material-ui/core'
 import { Link } from '../Link/'
 import { Members } from './Members'
 import { Member, MemberDatas } from '../../datas/_shared/MemberDatas'
+import { Typography } from '../Typography'
 
 //----------------------------------
 // props
@@ -25,13 +26,27 @@ export const FooterComponent = (props: FooterProps) => (
             className={'footerContactLink'}
           >
             <div className={'footerContactWrapper'}>
-              <h2 className={'footerContactHeading'}>Contact</h2>
-              <p className={'footerContactLead'}>
+              <Typography
+                component={'h2'}
+                variant={'subheading'}
+                colors={'black'}
+                size={'lg'}
+                weight={'bold'}
+                family={'en'}
+              >
+                Contact
+              </Typography>
+              <Typography
+                component={'p'}
+                variant={'lead'}
+                className={'footerContactLead'}
+                size={'xs'}
+              >
                 <span>ビジネス課題をお待ちしております。</span>
                 <span>
                   BtoB、BtoC、CtoC事業の皆様へ、パートナーとしてぜひお手伝い致しますますので、まずはご連絡くださいませ。
                 </span>
-              </p>
+              </Typography>
             </div>
           </Link>
         </Grid>
@@ -51,7 +66,16 @@ export const FooterComponent = (props: FooterProps) => (
           </div> */}
 
           <div className={'footerMembersWrapper'}>
-            <p className={'footerMembersHeading'}>Paletto Members</p>
+            <Typography
+              component={'p'}
+              variant={'lead'}
+              colors={'white'}
+              weight={'bold'}
+              family={'en'}
+              className={'footerMembersHeading'}
+            >
+              Paletto Members
+            </Typography>
             <div className={'footerMembers'}>
               {MemberDatas.map((MemberData: Member, index: number) => {
                 return <Members key={index} memberData={MemberData} />
@@ -61,7 +85,18 @@ export const FooterComponent = (props: FooterProps) => (
         </Grid>
 
         <div className={'footerCopyWrapper'}>
-          <p>2020 Paletto.</p>
+          <Typography
+            component={'p'}
+            variant={'lead'}
+            colors={'white'}
+            size={'md'}
+            align={'center'}
+            weight={'bold'}
+            family={'en'}
+            className={'footerCopyWrapper'}
+          >
+            2020 Paletto.
+          </Typography>
         </div>
       </Grid>
     </Container>

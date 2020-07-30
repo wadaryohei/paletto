@@ -15,11 +15,7 @@ export interface SectionHeaderProps {
 export const SectionHeaderComponent = (props: SectionHeaderProps) => (
   <Section className={props.className}>
     <div className={'contactHeaderWrapper'}>
-      <Typography
-        component={'h2'}
-        variant={'heading'}
-        className={'contactHeader'}
-      >
+      <Typography component={'h2'} variant={'heading'} size={'md'}>
         Contact
       </Typography>
       <Typography component={'p'} variant={'lead'}>

@@ -10,6 +10,11 @@ import { BreakPoints, max } from '../../const/BreakPoints'
 // styledComponent
 //----------------------------------
 export const TypographyStyle = styled(TypographyComponent)`
+  /**
+   * //----------------------------------
+   * variant
+   * //----------------------------------
+   */
   &.heading {
     font-size: ${FontSize.xxl};
     font-family: 'Gilroy-Bold', sans-serif;
@@ -66,6 +71,120 @@ export const TypographyStyle = styled(TypographyComponent)`
 
     span {
       display: block;
+    }
+  }
+
+  /**
+   * //----------------------------------
+   * colors
+   * //----------------------------------
+   */
+  &.primary {
+    color: ${Colors.primary};
+  }
+
+  &.gray {
+    color: ${Colors.gray};
+  }
+
+  &.white {
+    color: ${Colors.white};
+  }
+
+  &.black {
+    color: ${Colors.black};
+  }
+
+  /**
+   * //----------------------------------
+   * weight
+   * //----------------------------------
+   */
+  &.thin {
+    font-weight: ${FontWeight.thin};
+  }
+
+  &.light {
+    font-weight: ${FontWeight.light};
+  }
+
+  &.normal {
+    font-weight: ${FontWeight.normal};
+  }
+
+  &.bold {
+    font-weight: ${FontWeight.bold};
+  }
+
+  /**
+   * //----------------------------------
+   * size
+   * //----------------------------------
+   */
+  &.xs {
+    font-size: ${FontSize.xs};
+  }
+
+  &.sm {
+    font-size: ${FontSize.sm};
+  }
+
+  &.md {
+    font-size: ${FontSize.md};
+  }
+
+  &.lg {
+    font-size: ${FontSize.lg};
+  }
+
+  &.xl {
+    font-size: ${FontSize.xl};
+  }
+
+  &.xxl {
+    font-size: ${FontSize.xxl};
+  }
+
+  &.xxxl {
+    font-size: ${FontSize.xxxl};
+  }
+
+  /**
+   * //----------------------------------
+   * family
+   * //----------------------------------
+   */
+  &.en {
+    &.light {
+      font-family: 'Gilroy-Light', sans-serif;
+    }
+
+    &.normal {
+      font-family: 'Gilroy-Medium', sans-serif;
+    }
+
+    &.bold {
+      font-family: 'Gilroy-Bold', sans-serif;
+    }
+  }
+
+  &.jp {
+    font-family: '游ゴシック', YuGothic, sans-serif;
+
+    &.thin {
+      font-weight: ${FontWeight.thin};
+    }
+
+    &.light {
+      font-weight: ${FontWeight.light};
+    }
+
+    &.normal {
+      font-weight: ${FontWeight.normal};
+    }
+
+    &.bold {
+      font-weight: ${FontWeight.bold};
     }
   }
 `

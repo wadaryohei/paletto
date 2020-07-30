@@ -23,6 +23,10 @@ export const SectionMainComponent = (props: SectionMainProps) => (
           <Typography
             component={'h1'}
             variant={'heading'}
+            size={'xl'}
+            weight={'bold'}
+            family={'jp'}
+            align={'center'}
             className={'aboutHeading'}
           >
             Palettoが目指す未来
@@ -31,14 +35,23 @@ export const SectionMainComponent = (props: SectionMainProps) => (
         {AboutDatas.map((AboutData: About, index: number) => {
           return (
             <div key={index} className={'aboutGrid'}>
-              <div className={'aboutHeaderWrapper'}>
+              <div>
                 <Up>
-                  <p className={'aboutWrite'}>{AboutData.writing}​</p>
+                  <Typography
+                    component={'p'}
+                    variant={'lead'}
+                    size={'md'}
+                    colors={'gray'}
+                    className={'aboutWrite'}
+                  >
+                    {AboutData.writing}​
+                  </Typography>
                 </Up>
                 <Up>
                   <Typography
                     component={'h2'}
                     variant={'copy'}
+                    size={'md'}
                     className={'aboutCopy'}
                   >
                     {AboutData.heading}
