@@ -1,7 +1,5 @@
 import React from 'react'
 import { Grid, Container } from '@material-ui/core'
-import TwitterIcon from '@material-ui/icons/Twitter'
-import FacebookIcon from '@material-ui/icons/Facebook'
 import { Link } from '../Link/'
 import { Members } from './Members'
 import { Member, MemberDatas } from '../../datas/_shared/MemberDatas'
@@ -39,18 +37,18 @@ export const FooterComponent = (props: FooterProps) => (
         </Grid>
 
         <Grid item md={6} sm={12} xs={12}>
-          <div className={'footerSocialWrapper'}>
+          {/**@memo 一旦SNSは非表示にしておく */}
+          {/* <div className={'footerSocialWrapper'}>
             <div className={'footerSocials'}>
               <span className={'footerSocialsHeading'}>Social</span>
               <hr />
               <p className={'footerSocials'}>
                 <span className={'footerSocialIconsWrapper'}>
-                  <TwitterIcon className={'footerSocialsIcon'} />
                   <FacebookIcon className={'footerSocialsIcon'} />
                 </span>
               </p>
             </div>
-          </div>
+          </div> */}
 
           <div className={'footerMembersWrapper'}>
             <p className={'footerMembersHeading'}>Paletto Members</p>

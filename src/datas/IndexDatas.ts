@@ -57,7 +57,7 @@ export const SectionHeadingDatas: SectionHeading = {
   sectionService: {
     heading: 'OUR SERVICE.',
     subHeading: '私達ができること',
-    copy: 'デザインから制作まで幅広く',
+    copy: 'ビジネス課題の解決',
   },
   sectionThink: {
     heading: 'OUR THINK.',

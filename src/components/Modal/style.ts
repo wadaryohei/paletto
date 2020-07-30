@@ -42,12 +42,13 @@ export const ModalStyle = styled(ModalComponent)`
           font-size: ${FontSize.sm};
           font-weight: ${FontWeight.bold};
           margin-bottom: ${Margin.m8};
+          line-height: 1.6;
         }
 
         p {
-          line-height: 1.6;
           word-break: break-word;
           font-size: ${FontSize.sm};
+          line-height: 1.6;
         }
       }
     }

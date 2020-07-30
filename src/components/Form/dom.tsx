@@ -35,23 +35,6 @@ export const FormComponent = (componentProps: FormProps) => {
          */
 
         componentProps.modal.formPassDatasHandler(values, actions)
-        // fetch('/', {
-        //   method: 'POST',
-        //   headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        //   body: componentProps.modal.bodyEncode({
-        //     'form-name': 'contact',
-        //     ...values,
-        //   }),
-        // })
-        //   .then(() => {
-        //     actions.resetForm()
-        //   })
-        //   .catch(() => {
-        //     alert('送信に失敗しました。再度送信お願い致します。')
-        //     componentProps.modal.onInquiryEndHandler('/contact')
-        //   })
-        //   .finally(() => actions.setSubmitting(false))
-        // componentProps.modal.onInquiryEndHandler('/thanks')
       }}
     >
       {(props) => {
@@ -120,11 +103,11 @@ export const FormComponent = (componentProps: FormProps) => {
                   >
                     <option value="">選択してください</option>
                     <option value="デザインについて">デザインについて</option>
-                    <option value="開発・制作について">
-                      開発・制作について
+                    <option value="開発 / 制作について">
+                      開発 / 制作について
                     </option>
-                    <option value="デザインと開発・制作について">
-                      デザインと開発・制作について
+                    <option value="デザインと開発 / 制作について">
+                      デザインと開発 / 制作について
                     </option>
                   </Field>
                 </label>
@@ -169,9 +152,12 @@ export const FormComponent = (componentProps: FormProps) => {
                     ご契約形態
                     <span>
                       *
-                      サブスクリプション契約を採用の場合は「ご予算上限/月12回」を月々お支払いを目安とした契約となります。
+                      サブスクリプションでのパートナー契約の場合は「ご予算上限を人/日して更に年/月12回」を目安とした契約となります。
                     </span>
-                    <span>* 単発受注契約の場合は通常の契約となります。</span>
+                    <span>
+                      * 通常でのパートナー契約の場合は「ご予算上限を
+                      人/日」を目安とした契約となります。
+                    </span>
                   </p>
                   <Field
                     as="select"
@@ -180,10 +166,12 @@ export const FormComponent = (componentProps: FormProps) => {
                     onBlur={props.handleBlur}
                   >
                     <option value="">選択してください</option>
-                    <option value="サブスクリプション契約">
-                      サブスクリプション契約
+                    <option value="サブスクリプションでのパートナー契約">
+                      サブスクリプションでのパートナー契約
                     </option>
-                    <option value="単発受注契約">単発受注契約</option>
+                    <option value="通常でのパートナー契約">
+                      通常でのパートナー契約
+                    </option>
                   </Field>
                 </label>
                 <span className={'error'}>
@@ -211,14 +199,12 @@ export const FormComponent = (componentProps: FormProps) => {
                     <option value="新規事業立ち上げのご相談">
                       新規事業立ち上げのご相談
                     </option>
-                    <option value="既存サービスの改善のご相談">
-                      既存サービスの改善のご相談
+                    <option value="既存サービス改善のご相談">
+                      既存サービス改善のご相談
                     </option>
-                    <option value="業務提携・アライアンスのご相談">
-                      業務提携・アライアンスのご相談
-                    </option>
-                    <option value="取材・講演・イベント登壇などのご依頼">
-                      取材・講演・イベント登壇などのご依頼
+                    <option value="業務提携のご相談">業務提携のご相談</option>
+                    <option value="取材・講演・イベントなどのご依頼">
+                      取材・講演・イベントなどのご依頼
                     </option>
                   </Field>
                 </label>

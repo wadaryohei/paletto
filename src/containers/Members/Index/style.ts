@@ -60,7 +60,7 @@ export const MembersContainerStyle = styled(MembersContainer)`
         font-size: ${FontSize.sm};
         font-family: 'Gilroy-Bold', sans-serif;
         background-color: ${Colors.black};
-        padding: ${Padding.p8} ${Padding.p16};
+        padding: 8px ${Padding.p16} 6px;
         color: ${Colors.white};
         text-indent: 6px;
         text-align: left;
@@ -108,6 +108,10 @@ export const MembersContainerStyle = styled(MembersContainer)`
 
     .membersLeadWrapepr {
       margin-top: ${Margin.m32};
+
+      .membersLead {
+        font-size: ${FontSize.sm};
+      }
     }
   }
 `
