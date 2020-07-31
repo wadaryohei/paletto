@@ -39,10 +39,12 @@ export const PagesServicesLayoutComponent = (
         </Up>
       </div>
     </Container>
-    <figure
-      className={'pageHeaderBg'}
-      style={{ backgroundImage: `url(${props.pageHeaderBgPathname})` }}
-    ></figure>
+    <Up>
+      <figure
+        className={'pageHeaderBg'}
+        style={{ backgroundImage: `url(${props.pageHeaderBgPathname})` }}
+      ></figure>
+    </Up>
     <main>{props.children}</main>
     <Footer />
   </Section>
