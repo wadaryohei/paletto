@@ -46,11 +46,17 @@ export const SectionServicesComponent = (props: SectionServicesProps) => (
           })}
         </Grid>
 
-        <div className={'servicesButtonWrapper'}>
-          <LinkButton href={'/services/partner'} color={'primary'} size={'md'}>
-            <More>View More</More>
-          </LinkButton>
-        </div>
+        <Up>
+          <div className={'servicesButtonWrapper'}>
+            <LinkButton
+              href={'/services/partner'}
+              color={'primary'}
+              size={'md'}
+            >
+              <More>View More</More>
+            </LinkButton>
+          </div>
+        </Up>
       </Container>
     </div>
   </Section>

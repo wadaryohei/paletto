@@ -88,7 +88,9 @@ export const useModal = (): typeModal => {
         router.push('/contact')
       })
       .finally(() => {
-        router.push('/thanks')
+        router.push('/thanks').then(() => {
+          window.scroll(0, 0)
+        })
         _formAction?.setSubmitting(false)
       })
   }
