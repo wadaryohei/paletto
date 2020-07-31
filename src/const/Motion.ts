@@ -5,7 +5,7 @@ export const Motion = {
   animate: {
     opacity: 1,
     transition: {
-      duration: 1,
+      duration: 0.4,
       ease: [0.86, 0, 0.07, 1],
     },
   },
@@ -14,7 +14,7 @@ export const Motion = {
     scale: 0.98,
     opacity: 0,
     transition: {
-      duration: 0.4,
+      duration: 0.8,
       ease: [0.86, 0, 0.07, 1],
     },
   },

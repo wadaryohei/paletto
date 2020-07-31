@@ -38,7 +38,7 @@ export const LinkComponent = (props: LinkComponentProps) => {
               router.push(props.href).then(() => {
                 setTimeout(() => {
                   window.scroll(0, 0)
-                }, 800)
+                }, 900)
               })
             }
           >
@@ -55,7 +55,7 @@ export const LinkComponent = (props: LinkComponentProps) => {
               router.push(props.href).then(() => {
                 setTimeout(() => {
                   window.scroll(0, 0)
-                }, 800)
+                }, 900)
               })
             }
           >
