@@ -114,12 +114,13 @@ export const HeroStyle = styled(HeroComponent)`
           }
 
           &.bottom {
+            font-size: 104px;
             @media ${max(BreakPoints.lg)} {
-              font-size: ${FontSize.xxxl};
+              font-size: 88px;
             }
 
             @media ${max(BreakPoints.md)} {
-              font-size: ${FontSize.xl};
+              font-size: 56px;
             }
           }
         }
