@@ -236,7 +236,7 @@ export const FormComponent = (componentProps: FormProps) => {
                   {/** @background - 知った経緯 */}
                   <li>
                     <label>
-                      <p>弊社をお知りになった経緯を教えてください</p>
+                      <p>paletto.をお知りになった経緯を教えてください</p>
                       <Field
                         as="select"
                         name="background"
