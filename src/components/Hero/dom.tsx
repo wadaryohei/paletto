@@ -20,7 +20,7 @@ export const HeroComponent = (props: HeroProps) => (
   <div className={props.className}>
     <div className={'heroWrapper'}>
       <div className={'hero'}>
-        <Up>
+        <Up delay={300}>
           <div className={'heroImageWrapper'}>
             <div className={'heroImageInner'}>
               <Parallax y={[40, -10]} tagOuter="figure">
@@ -33,7 +33,7 @@ export const HeroComponent = (props: HeroProps) => (
         <div className={'heroContentWrapper'}>
           <Parallax y={[30, -40]} tagOuter="figure">
             <div className={'heroCopyWrapper'}>
-              <Up delay={100}>
+              <Up>
                 <Typography
                   component={'p'}
                   variant="copy"
@@ -51,7 +51,6 @@ export const HeroComponent = (props: HeroProps) => (
                   variant="copy"
                   family={'en'}
                   weight={'bold'}
-                  size={'xxxl'}
                   className={'heroCopy bottom'}
                 >
                   Emotion.
@@ -61,7 +60,7 @@ export const HeroComponent = (props: HeroProps) => (
           </Parallax>
 
           <Parallax y={[30, -100]} tagOuter="figure">
-            <Up>
+            <Up delay={150}>
               <div className={'heroDescWrapper'}>
                 {props.descs.map((desc: string, index: number) => {
                   return (
