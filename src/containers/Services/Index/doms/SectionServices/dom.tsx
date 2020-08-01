@@ -39,7 +39,6 @@ export const SectionServicesComponent = (props: SectionServicesProps) => (
                     ServicesData={ServicesData}
                     className={'serviceCard'}
                   />
-                  <More />
                 </Up>
               </Grid>
             )
