@@ -1,15 +1,15 @@
 import React from 'react'
 import { SocialIcon } from '../../Icon/Social'
 import { Link } from '../../Link'
-import { Member } from '../../../datas/_shared/MemberDatas'
-import { Social } from '../../../datas/_shared/SocialDatas'
 import { Typography } from '../../Typography'
+import { MemberType } from '../../../datas/_shared/MemberDatas'
+import { SocialType } from '../../../datas/_shared/SocialDatas'
 
 //----------------------------------
 // props
 //----------------------------------
 export interface MembersProps {
-  memberData: Member
+  memberData: MemberType
   className?: string
 }
 
@@ -28,7 +28,7 @@ export const MembersComponent = (props: MembersProps) => (
       {props.memberData.name}
     </Typography>
     <ul className={'membersSocialsList'}>
-      {props.memberData.socials?.map((social: Social, index: number) => {
+      {props.memberData.socials?.map((social: SocialType, index: number) => {
         return (
           <li key={index}>
             <Link target={true} href={social.path}>

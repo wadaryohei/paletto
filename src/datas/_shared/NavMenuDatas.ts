@@ -1,18 +1,11 @@
-/**
- * NavMenuで使用するデータ
- */
-
-//----------------------------------
-// NavMenuDatas
-//----------------------------------
 import { RouteDatas } from './RouteDatas'
 
-export interface NavMenu {
+export interface NavMenuType {
   path: string
   menuname: string
 }
 
-export const NavMenuDatas: NavMenu[] = [
+export const NavMenuDatas: NavMenuType[] = [
   {
     path: RouteDatas.about.path,
     menuname: RouteDatas.about.pathname,

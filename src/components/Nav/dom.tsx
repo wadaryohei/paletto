@@ -1,12 +1,12 @@
 import React from 'react'
 import { Link } from '../Link'
-import { NavMenu } from '../../datas/_shared/NavMenuDatas'
+import { NavMenuType } from '../../datas/_shared/NavMenuDatas'
 
 //----------------------------------
 // props
 //----------------------------------
 export interface NavProps {
-  navMenus: NavMenu[]
+  navMenus: NavMenuType[]
   className?: string
 }
 
@@ -16,7 +16,7 @@ export interface NavProps {
 export const NavComponent = (props: NavProps) => (
   <nav className={props.className}>
     <ul>
-      {props.navMenus.map((navMenu, index) => {
+      {props.navMenus.map((navMenu: NavMenuType, index: number) => {
         return (
           <li key={index}>
             <Link routeMatch={false} href={navMenu.path}>

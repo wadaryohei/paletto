@@ -2,7 +2,6 @@ import React from 'react'
 import { Container } from '@material-ui/core'
 import { Section } from '../../../../components/Section'
 import { Typography } from '../../../../components/Typography'
-import { SectionHeadingDatas } from '../../../../datas/IndexDatas'
 import { LinkButton } from '../../../../components/Button'
 import { More } from '../../../../components/More'
 import { Up } from '../../../../components/InViewMonitor'
@@ -27,20 +26,20 @@ export const SectionVisionComponent = (props: SectionVisionProps) => (
       <Container>
         <Up>
           <Typography component={'h1'} variant={'heading'} colors={'white'}>
-            {SectionHeadingDatas.SectionVision.heading}
+            OUR VISION.
           </Typography>
         </Up>
 
         <Up>
           <Typography component={'p'} variant={'subheading'} colors={'white'}>
-            {SectionHeadingDatas.SectionVision.subHeading}
+            私達のビジョン
           </Typography>
         </Up>
 
         <div className={'visionLeadWrapper'}>
           <Up>
             <Typography component={'p'} variant={'copy'} colors={'white'}>
-              {SectionHeadingDatas.SectionVision.copy}
+              感情を動かすデザインを
             </Typography>
           </Up>
 

@@ -2,7 +2,6 @@ import React from 'react'
 import { Grid, Container } from '@material-ui/core'
 import { Section } from '../../../../components/Section'
 import { Typography } from '../../../../components/Typography'
-import { SectionHeadingDatas } from '../../../../datas/IndexDatas'
 import { Up } from '../../../../components/InViewMonitor'
 
 //----------------------------------
@@ -29,7 +28,7 @@ export const SectionApproachComponent = (props: SectionApproachProps) => (
               align={'center'}
               className={'approachHeading'}
             >
-              {SectionHeadingDatas.sectionApproach.heading}
+              APPROACH.
             </Typography>
           </Up>
         </Grid>
@@ -42,17 +41,14 @@ export const SectionApproachComponent = (props: SectionApproachProps) => (
               size={'lg'}
               className={'approachCopy'}
             >
-              {SectionHeadingDatas.sectionApproach.copy}
+              当たり前のその先へ
             </Typography>
           </Up>
           <div className={'approachLeadWrapper'}>
             <Up>
               <Typography component={'p'} variant={'lead'} colors={'white'}>
                 <span>
-                  デザイン会社や制作会社におけるビジネス的な課題解決はもはや当たり前の時代になりつつあります。
-                </span>
-                <span>
-                  私達は「当たり前のその先」にあるユーザーの感情を動かすデザインに取り組みます。
+                  デザイン会社や制作会社におけるビジネス的な課題解決はもはや当たり前の時代になりつつあります。\n私達は「当たり前のその先」にあるユーザーの感情を動かすデザインに取り組みます。
                 </span>
                 <span>
                   このプロダクト、このお店、このサービスだからこそ使いたいと思えるデザインをカタチにしていくことに全力を注ぎます。

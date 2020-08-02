@@ -4,7 +4,7 @@
 //----------------------------------
 // RouteDatas
 //----------------------------------
-export interface Route {
+export interface RouteType {
   index: {
     pathname: string
     path: string
@@ -35,7 +35,7 @@ export interface Route {
   }
 }
 
-export const RouteDatas: Route = {
+export const RouteDatas: RouteType = {
   //----------------------------------
   // Index Page
   //----------------------------------

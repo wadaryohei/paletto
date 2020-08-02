@@ -6,9 +6,9 @@ import { Up } from '../../../../../components/InViewMonitor'
 import { LinkButton } from '../../../../../components/Button'
 import { ServiceCard } from '../../../../Index/doms/SectionService/ServiceCard'
 import {
-  ServicesDatas,
-  Services,
-} from '../../../../../datas/_shared/ServicesDatas'
+  ServicesCardDatas,
+  ServicesCardType,
+} from '../../../../../datas/_shared/CardDatas'
 
 //----------------------------------
 // props
@@ -25,24 +25,26 @@ export const SectionServicesComponent = (props: SectionServicesProps) => (
     <div className={'servicesCardWrapper'}>
       <Container disableGutters={true}>
         <Grid container spacing={4}>
-          {ServicesDatas.map((ServicesData: Services, index: number) => {
-            return (
-              <Grid
-                key={index}
-                item
-                md={8}
-                xs={12}
-                className={'servicesCardGrid'}
-              >
-                <Up>
-                  <ServiceCard
-                    ServicesData={ServicesData}
-                    className={'serviceCard'}
-                  />
-                </Up>
-              </Grid>
-            )
-          })}
+          {ServicesCardDatas.map(
+            (ServicesCardData: ServicesCardType, index: number) => {
+              return (
+                <Grid
+                  key={index}
+                  item
+                  md={8}
+                  xs={12}
+                  className={'servicesCardGrid'}
+                >
+                  <Up>
+                    <ServiceCard
+                      ServicesCardData={ServicesCardData}
+                      className={'serviceCard'}
+                    />
+                  </Up>
+                </Grid>
+              )
+            },
+          )}
         </Grid>
 
         <Up>

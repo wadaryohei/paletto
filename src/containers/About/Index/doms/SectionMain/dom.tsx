@@ -2,7 +2,11 @@ import React from 'react'
 import { Container } from '@material-ui/core'
 import { Section } from '../../../../../components/Section'
 import { Typography } from '../../../../../components/Typography'
-import { AboutDatas, About, AboutList } from '../../../../../datas/AboutDatas'
+import {
+  AboutDatas,
+  AboutType,
+  AboutListsType,
+} from '../../../../../datas/AboutDatas'
 import { Up } from '../../../../../components/InViewMonitor'
 
 //----------------------------------
@@ -32,7 +36,7 @@ export const SectionMainComponent = (props: SectionMainProps) => (
             Palettoが目指す未来
           </Typography>
         </Up>
-        {AboutDatas.map((AboutData: About, index: number) => {
+        {AboutDatas.map((AboutData: AboutType, index: number) => {
           return (
             <div key={index} className={'aboutGrid'}>
               <div>
@@ -65,7 +69,7 @@ export const SectionMainComponent = (props: SectionMainProps) => (
                     <span>{AboutData.lead}</span>
                   </Typography>
                 </Up>
-                {AboutData.lists?.map((list: AboutList, index: number) => {
+                {AboutData.lists?.map((list: AboutListsType, index: number) => {
                   return (
                     <Up key={index}>
                       <Typography component={'p'} variant={'lead'}>

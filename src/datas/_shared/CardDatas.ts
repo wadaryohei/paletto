@@ -1,12 +1,9 @@
-/**
- * Servicesで使用するデータ
- */
 import { RouteDatas } from './RouteDatas'
 
 //----------------------------------
 // ServicesDatas
 //----------------------------------
-export interface Services {
+export interface ServicesCardType {
   imgPathname: string
   copyEn: string
   copyJp: string
@@ -14,7 +11,7 @@ export interface Services {
   viewMorePath: string
 }
 
-export const ServicesDatas: Services[] = [
+export const ServicesCardDatas: ServicesCardType[] = [
   {
     imgPathname: '/top/services/cardbg_01.jpg',
     copyEn: 'Design/Development partnerShips',
@@ -35,4 +32,38 @@ export const ServicesDatas: Services[] = [
   //     'ビジネス課題の解決へ向けて行う「制作」をベースとした、「デザイン・開発」の両方もしくはそのいずれかをパートナーとしてサポートしていく事業です。コンテンツの制作やコンサルティング、開発から運用・保守までを幅広く対応して行う事業です。',
   //   viewMorePath: RouteDatas.servicesDevelopment.path,
   // },
+]
+
+//----------------------------------
+// ThinkCardDatas
+//----------------------------------
+export interface ThinkCardType {
+  num: string
+  copy: string
+  imgPathname: string
+  lead: string
+}
+
+export const ThinkCardDatas: ThinkCardType[] = [
+  {
+    num: '01',
+    copy: '長期的なパートナー戦略',
+    imgPathname: '/top/think/think_icn_01.svg',
+    lead:
+      '長期的なパートナーシップを取ることにより、戦略立案からプロダクト開発、グロースまで可能です。',
+  },
+  {
+    num: '02',
+    copy: 'デザイン戦略の調整',
+    imgPathname: '/top/think/think_icn_02.svg',
+    lead:
+      '目まぐるしく変わる状況に合わせて、課題解決や価値創造へのアプローチを的確に日々調整します。',
+  },
+  {
+    num: '03',
+    copy: '一貫したデザインと制作',
+    imgPathname: '/top/think/think_icn_03.svg',
+    lead:
+      'デザインから制作までを一気通貫で担当するので、クオリティの担保と運用・保守までを実現します。',
+  },
 ]

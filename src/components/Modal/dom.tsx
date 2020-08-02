@@ -1,8 +1,8 @@
 import React from 'react'
 import { Dialog } from '@material-ui/core'
-import { Validation } from '../../datas/_shared/ValidationDatas'
 import { Typography } from '../Typography'
 import { FormButton } from '../Button'
+import { initValueType } from '../../datas/_shared/ValidationDatas'
 
 //----------------------------------
 // props
@@ -11,8 +11,8 @@ export interface ModalProps {
   className?: string
   open: boolean
   onClose: () => void
-  onInquiryEnd: (formBody: Validation) => void
-  formBody: Validation
+  onInquiryEnd: (formBody: initValueType) => void
+  formBody: initValueType
 }
 
 //----------------------------------

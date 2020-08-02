@@ -1,11 +1,11 @@
 import React from 'react'
 import { Section } from '../../../../../components/Section'
 import { Typography } from '../../../../../components/Typography'
+import { Up } from '../../../../../components/InViewMonitor'
 import {
   ServicesDesignSolutionDatas,
-  ServicesDesignSolution,
+  ServicesDesignSolutionType,
 } from '../../../../../datas/ServicesDatas'
-import { Up } from '../../../../../components/InViewMonitor'
 
 //----------------------------------
 // props
@@ -39,7 +39,10 @@ export const SectionSolutionComponent = (props: SectionSolutionProps) => (
 
     <ul className={'servicesDesignSolutionList'}>
       {ServicesDesignSolutionDatas.map(
-        (ServicesDesignSolutionData: ServicesDesignSolution, index: number) => {
+        (
+          ServicesDesignSolutionData: ServicesDesignSolutionType,
+          index: number,
+        ) => {
           return (
             <li key={index}>
               <Typography

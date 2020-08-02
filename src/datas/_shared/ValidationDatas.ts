@@ -1,13 +1,6 @@
 import * as Yup from 'yup'
 
-/**
- * Form Validationで使用するデータ
- */
-
-//----------------------------------
-// ValidationDatas
-//----------------------------------
-export interface Validation {
+export interface initValueType {
   firstName: string
   lastName: string
   email: string
@@ -22,7 +15,7 @@ export interface Validation {
   inquery: string
 }
 
-export const initValue: Validation = {
+export const initValue: initValueType = {
   firstName: '',
   lastName: '',
   email: '',

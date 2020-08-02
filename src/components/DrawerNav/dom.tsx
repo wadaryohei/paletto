@@ -3,14 +3,14 @@ import { SwipeableDrawer } from '@material-ui/core'
 import { Link } from '../Link'
 import { Logo } from '../Logo'
 import { MenuIcon } from '../Icon/Menu'
-import { NavMenu } from '../../datas/_shared/NavMenuDatas'
+import { NavMenuType } from '../../datas/_shared/NavMenuDatas'
 
 //----------------------------------
 // props
 //----------------------------------
 export interface DrawerNavComponentProps {
   className?: string
-  navMenus: NavMenu[]
+  navMenus: NavMenuType[]
   isOpen: boolean
   onOpenMenu: () => void
   onCloseMenu: () => void
@@ -40,7 +40,7 @@ export const DrawerNavComponent = (props: DrawerNavComponentProps) => (
         />
       </div>
       <ul>
-        {props.navMenus.map((navMenu: NavMenu, index: number) => {
+        {props.navMenus.map((navMenu: NavMenuType, index: number) => {
           return (
             <li key={index}>
               <Link href={navMenu.path} routeMatch={false}>

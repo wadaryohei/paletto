@@ -8,8 +8,6 @@ import { Parallax } from 'react-scroll-parallax'
 //----------------------------------
 export interface HeroProps {
   imgPath: string
-  copies: string[]
-  descs: string[]
   className?: string
 }
 
@@ -24,7 +22,10 @@ export const HeroComponent = (props: HeroProps) => (
           <div className={'heroImageWrapper'}>
             <div className={'heroImageInner'}>
               <Parallax y={[40, -10]} tagOuter="figure">
-                <div className={'heroImage'} />
+                <div
+                  className={'heroImage'}
+                  style={{ backgroundImage: `url(${props.imgPath})` }}
+                />
               </Parallax>
             </div>
           </div>
@@ -62,21 +63,26 @@ export const HeroComponent = (props: HeroProps) => (
           <Parallax y={[30, -100]} tagOuter="figure">
             <Up delay={150}>
               <div className={'heroDescWrapper'}>
-                {props.descs.map((desc: string, index: number) => {
-                  return (
-                    <Typography
-                      key={index}
-                      component={'p'}
-                      variant={'lead'}
-                      size={'xs'}
-                      weight={'light'}
-                      colors={'black'}
-                      className={'heroDesc'}
-                    >
-                      {desc}
-                    </Typography>
-                  )
-                })}
+                <Typography
+                  component={'p'}
+                  variant={'lead'}
+                  size={'xs'}
+                  weight={'light'}
+                  colors={'black'}
+                  className={'heroDesc'}
+                >
+                  テクノロジーとデザインで、
+                </Typography>
+                <Typography
+                  component={'p'}
+                  variant={'lead'}
+                  size={'xs'}
+                  weight={'light'}
+                  colors={'black'}
+                  className={'heroDesc'}
+                >
+                  課題解決のその先の「感情を動かす」チームです
+                </Typography>
               </div>
             </Up>
           </Parallax>

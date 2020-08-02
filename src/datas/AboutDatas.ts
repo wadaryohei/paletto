@@ -1,16 +1,15 @@
 /**
  * Aboutページで使用するデータ
  */
-
 //----------------------------------
 // AboutListDatas
 //----------------------------------
-export interface AboutList {
+export interface AboutListsType {
   subHeading?: string
   lead: string
 }
 
-export const AboutListDatas: AboutList[] = [
+export const AboutListsDatas: AboutListsType[] = [
   {
     subHeading: '01.本質を突いたデザインを',
     lead:
@@ -31,14 +30,14 @@ export const AboutListDatas: AboutList[] = [
 //----------------------------------
 // AboutDatas
 //----------------------------------
-export interface About {
+export interface AboutType {
   writing: string
   heading: string
   lead?: string
-  lists?: AboutList[]
+  lists?: AboutListsType[]
 }
 
-export const AboutDatas: About[] = [
+export const AboutDatas: AboutType[] = [
   {
     writing: 'Creativity.​',
     heading: '私達が考えるデザイン',
@@ -54,6 +53,6 @@ export const AboutDatas: About[] = [
   {
     writing: 'Essence.​',
     heading: '私達が大切にしていること',
-    lists: AboutListDatas,
+    lists: AboutListsDatas,
   },
 ]

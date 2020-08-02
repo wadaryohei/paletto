@@ -4,13 +4,12 @@ import { Section } from '../../../../components/Section'
 import { Typography } from '../../../../components/Typography'
 import { LinkButton } from '../../../../components/Button'
 import { More } from '../../../../components/More'
-import { ServiceCard } from './ServiceCard'
-import { SectionHeadingDatas } from '../../../../datas/IndexDatas'
-import {
-  Services,
-  ServicesDatas,
-} from '../../../../datas/_shared/ServicesDatas'
 import { Up } from '../../../../components/InViewMonitor'
+import { ServiceCard } from './ServiceCard'
+import {
+  ServicesCardDatas,
+  ServicesCardType,
+} from '../../../../datas/_shared/CardDatas'
 
 //----------------------------------
 // props
@@ -27,18 +26,18 @@ export const SectionServiceComponent = (props: SectionServiceProps) => (
     <Container>
       <Up>
         <Typography component={'h1'} variant={'heading'}>
-          {SectionHeadingDatas.sectionService.heading}
+          OUR SERVICE.
         </Typography>
       </Up>
       <Up>
         <Typography component={'p'} variant={'subheading'}>
-          {SectionHeadingDatas.sectionService.subHeading}
+          私達ができること
         </Typography>
       </Up>
       <div className={'serviceLeadWrapper'}>
         <Up>
           <Typography component={'p'} variant={'copy'}>
-            {SectionHeadingDatas.sectionService.copy}
+            ビジネス課題の解決
           </Typography>
         </Up>
         <div className={'serviceLeadInWrapper'}>
@@ -70,24 +69,26 @@ export const SectionServiceComponent = (props: SectionServiceProps) => (
     <div className={'serviceCardWrapper'}>
       <Container>
         <Grid container spacing={4}>
-          {ServicesDatas.map((ServicesData: Services, index: number) => {
-            return (
-              <Grid
-                key={index}
-                item
-                md={8}
-                xs={12}
-                className={'serviceCardGrid'}
-              >
-                <Up>
-                  <ServiceCard
-                    ServicesData={ServicesData}
-                    className={'serviceCard'}
-                  />
-                </Up>
-              </Grid>
-            )
-          })}
+          {ServicesCardDatas.map(
+            (ServicesCardData: ServicesCardType, index: number) => {
+              return (
+                <Grid
+                  key={index}
+                  item
+                  md={8}
+                  xs={12}
+                  className={'serviceCardGrid'}
+                >
+                  <Up>
+                    <ServiceCard
+                      ServicesCardData={ServicesCardData}
+                      className={'serviceCard'}
+                    />
+                  </Up>
+                </Grid>
+              )
+            },
+          )}
         </Grid>
 
         <Up>

@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import { useState } from 'react'
-import { initValue, Validation } from '../datas/_shared/ValidationDatas'
+import { initValue, initValueType } from '../datas/_shared/ValidationDatas'
 import { FormikHelpers } from 'formik'
 
 //----------------------------------
@@ -8,15 +8,15 @@ import { FormikHelpers } from 'formik'
 //----------------------------------
 export interface typeModal {
   isOpen: () => boolean
-  formContent: () => Validation
+  formContent: () => initValueType
   bodyEncode: (data: any) => any
   formPassDatasHandler: (
-    formDatas: Validation,
-    actions: FormikHelpers<Validation>,
+    formDatas: initValueType,
+    actions: FormikHelpers<initValueType>,
   ) => void
   onOpenModalHandler: () => void
   onCloseModalHandler: () => void
-  onInquiryEndHandler: (formBody: Validation) => void
+  onInquiryEndHandler: (formBody: initValueType) => void
 }
 
 //----------------------------------
@@ -25,8 +25,8 @@ export interface typeModal {
 export const useModal = (): typeModal => {
   const router = useRouter()
   const [_isOpen, setOpen] = useState<boolean>(false)
-  const [_formContent, setFormContent] = useState<Validation>(initValue)
-  const [_formAction, setFormAction] = useState<FormikHelpers<Validation>>()
+  const [_formContent, setFormContent] = useState<initValueType>(initValue)
+  const [_formAction, setFormAction] = useState<FormikHelpers<initValueType>>()
 
   /**
    * モーダルの開閉を管理するステート
@@ -38,7 +38,7 @@ export const useModal = (): typeModal => {
   /**
    * フォームの値を管理するステート
    */
-  const formContent = (): Validation => {
+  const formContent = (): initValueType => {
     return _formContent
   }
 
@@ -60,8 +60,8 @@ export const useModal = (): typeModal => {
    * フォームの値をオブジェクトでセットしてmodalをオープンするハンドラー
    */
   const formPassDatasHandler = (
-    formDatas: Validation,
-    actions: FormikHelpers<Validation>,
+    formDatas: initValueType,
+    actions: FormikHelpers<initValueType>,
   ) => {
     setFormAction(actions)
     setFormContent(formDatas)
@@ -71,7 +71,7 @@ export const useModal = (): typeModal => {
   /**
    * Formの値をPOSTしてモーダルをクローズしてお問い合わせを完了するハンドラー
    */
-  const onInquiryEndHandler = (formBody: Validation): void => {
+  const onInquiryEndHandler = (formBody: initValueType): void => {
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },

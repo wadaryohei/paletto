@@ -1,20 +1,13 @@
-/**
- * Membersで使用するデータ
- */
+import { SocialType } from './SocialDatas'
 
-import { Social } from './SocialDatas'
-
-//----------------------------------
-// MemberDatas
-//----------------------------------
-export interface Member {
+export interface MemberType {
   name: string
   imgPathname: string
-  socials: Social[]
+  socials: SocialType[]
   introduce: string
 }
 
-export const MemberDatas: Member[] = [
+export const MemberDatas: MemberType[] = [
   {
     name: 'RYOHEI WADA',
     imgPathname: '/pages/members/ryohei_wada.jpg',

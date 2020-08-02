@@ -2,8 +2,8 @@ import React from 'react'
 import { Grid, Container } from '@material-ui/core'
 import { Link } from '../Link/'
 import { Members } from './Members'
-import { Member, MemberDatas } from '../../datas/_shared/MemberDatas'
 import { Typography } from '../Typography'
+import { MemberDatas, MemberType } from '../../datas/_shared/MemberDatas'
 
 //----------------------------------
 // props
@@ -77,7 +77,7 @@ export const FooterComponent = (props: FooterProps) => (
               Paletto Members
             </Typography>
             <div className={'footerMembers'}>
-              {MemberDatas.map((MemberData: Member, index: number) => {
+              {MemberDatas.map((MemberData: MemberType, index: number) => {
                 return <Members key={index} memberData={MemberData} />
               })}
             </div>

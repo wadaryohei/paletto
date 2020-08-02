@@ -5,12 +5,11 @@ import { Section } from '../../../components/Section'
 import { SocialIcon } from '../../../components/Icon/Social'
 import { Link } from '../../../components/Link'
 import { Typography } from '../../../components/Typography'
-import { useMembersPresenter } from './presenter/useMembersPresenter'
-import { MembersViewDatas } from './presenter/viewDatas/MembersViewDatas'
-import { MemberDatas } from '../../../datas/_shared/MemberDatas'
-import { PageDatas } from '../../../datas/_shared/PageDatas'
-import { Social } from '../../../datas/_shared/SocialDatas'
 import { Up } from '../../../components/InViewMonitor'
+import { MemberDatas, MemberType } from '../../../datas/_shared/MemberDatas'
+import { PageDatas } from '../../../datas/_shared/PageDatas'
+import { SocialType } from '../../../datas/_shared/SocialDatas'
+import { useStringProcessing } from '../../../hooks/useStringProcessing'
 
 //----------------------------------
 // props
@@ -23,11 +22,7 @@ export interface MembersProps {
 // component
 //----------------------------------
 const MembersContainer = (props: MembersProps) => {
-  //----------------------------------
-  // hooks
-  //----------------------------------
-  const presenter = useMembersPresenter(MemberDatas)
-
+  const stringProcessing = useStringProcessing()
   //----------------------------------
   // render
   //----------------------------------
@@ -42,72 +37,70 @@ const MembersContainer = (props: MembersProps) => {
       <Section className={'l-members'}>
         <Container>
           <Grid container spacing={4}>
-            {presenter
-              .membersViewDatas()
-              .map((membersViewData: MembersViewDatas, index: number) => {
-                return (
-                  <Grid key={index} item md={6} className={'membersGrid'}>
-                    <Up>
-                      <figure className={'membersWrapepr'}>
-                        <div className={'membersImgWrapper'}>
-                          <img
-                            src={membersViewData.imgPathname}
-                            alt={membersViewData.name}
-                            width="120px"
-                            height="120px"
-                          />
-                        </div>
+            {MemberDatas.map((MemberData: MemberType, index: number) => {
+              return (
+                <Grid key={index} item md={6} className={'membersGrid'}>
+                  <Up>
+                    <figure className={'membersWrapepr'}>
+                      <div className={'membersImgWrapper'}>
+                        <img
+                          src={MemberData.imgPathname}
+                          alt={MemberData.name}
+                          width="120px"
+                          height="120px"
+                        />
+                      </div>
 
-                        <div className={'membersSocialWrapper'}>
-                          <Up>
-                            <Typography
-                              component={'figcaption'}
-                              variant={'subheading'}
-                              size={'sm'}
-                              family={'en'}
-                              weight={'bold'}
-                              colors={'white'}
-                            >
-                              {membersViewData.name}
-                            </Typography>
-                          </Up>
-                          <ul className={'membersSocialList'}>
-                            {membersViewData.socials?.map(
-                              (social: Social, index: number) => {
-                                return (
-                                  <Up key={index}>
-                                    <li>
-                                      <Link href={social.path} target={true}>
-                                        <SocialIcon icon={social.name} />
-                                      </Link>
-                                    </li>
-                                  </Up>
-                                )
-                              },
-                            )}
-                          </ul>
-                        </div>
-                      </figure>
-                    </Up>
-
-                    <div className={'membersLeadWrapepr'}>
-                      <Up>
-                        <Typography
-                          component={'p'}
-                          variant={'lead'}
-                          className={'membersLead'}
-                        >
-                          {membersViewData.introduce.map(
-                            (memberViewData: string, index: number) => {
-                              return <span key={index}>{memberViewData}</span>
+                      <div className={'membersSocialWrapper'}>
+                        <Up>
+                          <Typography
+                            component={'figcaption'}
+                            variant={'subheading'}
+                            size={'sm'}
+                            family={'en'}
+                            weight={'bold'}
+                            colors={'white'}
+                          >
+                            {MemberData.name}
+                          </Typography>
+                        </Up>
+                        <ul className={'membersSocialList'}>
+                          {MemberData.socials?.map(
+                            (social: SocialType, index: number) => {
+                              return (
+                                <Up key={index}>
+                                  <li>
+                                    <Link href={social.path} target={true}>
+                                      <SocialIcon icon={social.name} />
+                                    </Link>
+                                  </li>
+                                </Up>
+                              )
                             },
                           )}
-                        </Typography>
-                      </Up>
-                    </div>
-                  </Grid>
-                )
-              })}
+                        </ul>
+                      </div>
+                    </figure>
+                  </Up>
+
+                  <div className={'membersLeadWrapepr'}>
+                    <Up>
+                      <Typography
+                        component={'p'}
+                        variant={'lead'}
+                        className={'membersLead'}
+                      >
+                        {stringProcessing
+                          .strToSplit(MemberData.introduce)
+                          .map((MemberData: string, index: number) => {
+                            return <span key={index}>{MemberData}</span>
+                          })}
+                      </Typography>
+                    </Up>
+                  </div>
+                </Grid>
+              )
+            })}
           </Grid>
         </Container>
       </Section>

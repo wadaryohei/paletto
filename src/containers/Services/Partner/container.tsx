@@ -6,7 +6,6 @@ import { SectionPartner } from './doms/SectionPartner'
 import { SectionSolution } from './doms/SectionSolution'
 import { SectionDetails } from './doms/SectionDetails'
 import { SectionSubscription } from './doms/SectionSubscription'
-import { ServicesDesignDatas } from '../../../datas/ServicesDatas'
 
 //----------------------------------
 // props
@@ -25,9 +24,9 @@ const ServicesPartnerContainer = (props: ServicesPartnerProps) => {
   return (
     <PagesServicesLayout
       className={props.className}
-      pageHeaderBgPathname={ServicesDesignDatas.bgPathName}
-      pageHeading={ServicesDesignDatas.heading}
-      pageSubHeading={ServicesDesignDatas.subHeading}
+      pageHeaderBgPathname={'/top/services/cardbg_01.jpg'}
+      pageHeading={'Design/Development partnerShips'}
+      pageSubHeading={'デザイン/開発パートナー事業'}
     >
       <Wrapper>
         {/** @section Intro */}

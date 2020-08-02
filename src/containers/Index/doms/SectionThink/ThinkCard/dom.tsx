@@ -1,14 +1,14 @@
 import React from 'react'
-import { Think } from '../../../../../datas/IndexDatas'
 import { Typography } from '../../../../../components/Typography'
 import { Card } from '../../../../../components/Card'
+import { ThinkCardType } from '../../../../../datas/_shared/CardDatas'
 
 //----------------------------------
 // props
 //----------------------------------
 export interface ThinkCardProps {
   className?: string
-  ThinkData: Think
+  ThinkCardData: ThinkCardType
 }
 
 //----------------------------------
@@ -26,7 +26,7 @@ export const ThinkCardComponent = (props: ThinkCardProps) => (
         weight={'bold'}
         className={'cardNum'}
       >
-        {props.ThinkData.num}
+        {props.ThinkCardData.num}
       </Typography>
       <Typography
         component={'p'}
@@ -34,17 +34,17 @@ export const ThinkCardComponent = (props: ThinkCardProps) => (
         colors={'gray'}
         className={'cardCopy'}
       >
-        {props.ThinkData.copy}
+        {props.ThinkCardData.copy}
       </Typography>
       <figure className={'cardImg'}>
         <img
-          src={props.ThinkData.imgPathname}
-          alt={props.ThinkData.copy}
+          src={props.ThinkCardData.imgPathname}
+          alt={props.ThinkCardData.copy}
           width={200}
           height={200}
         />
         <Typography component={'p'} variant={'lead'}>
-          {props.ThinkData.lead}
+          {props.ThinkCardData.lead}
         </Typography>
       </figure>
     </div>

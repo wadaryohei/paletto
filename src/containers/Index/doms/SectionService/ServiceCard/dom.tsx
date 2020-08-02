@@ -1,14 +1,14 @@
 import React from 'react'
 import { Card } from '../../../../../components/Card'
 import { Typography } from '../../../../../components/Typography'
-import { Services } from '../../../../../datas/_shared/ServicesDatas'
+import { ServicesCardType } from '../../../../../datas/_shared/CardDatas'
 
 //----------------------------------
 // props
 //----------------------------------
 export interface ServiceCardProps {
   className?: string
-  ServicesData: Services
+  ServicesCardData: ServicesCardType
 }
 
 //----------------------------------
@@ -18,7 +18,7 @@ export const ServiceCardComponent = (props: ServiceCardProps) => (
   <Card className={props.className}>
     <div
       className={'cardHeadingWrapper'}
-      style={{ backgroundImage: `url(${props.ServicesData.imgPathname})` }}
+      style={{ backgroundImage: `url(${props.ServicesCardData.imgPathname})` }}
     ></div>
 
     <div className={'cardContentsWrapper'}>
@@ -32,7 +32,7 @@ export const ServiceCardComponent = (props: ServiceCardProps) => (
           family={'en'}
           className={'cardCopyEn'}
         >
-          {props.ServicesData.copyEn}
+          {props.ServicesCardData.copyEn}
         </Typography>
         <Typography
           component={'p'}
@@ -42,7 +42,7 @@ export const ServiceCardComponent = (props: ServiceCardProps) => (
           size={'xs'}
           className={'cardCopyJp'}
         >
-          {props.ServicesData.copyJp}
+          {props.ServicesCardData.copyJp}
         </Typography>
         <Typography
           component={'p'}
@@ -50,7 +50,7 @@ export const ServiceCardComponent = (props: ServiceCardProps) => (
           size={'xs'}
           className={'cardLead'}
         >
-          {props.ServicesData.lead}
+          {props.ServicesCardData.lead}
         </Typography>
       </div>
     </div>
