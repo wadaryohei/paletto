@@ -1,11 +1,4 @@
-/**
- * Socialで使用するデータ
- */
-
-//----------------------------------
-// SocialDatas
-//----------------------------------
-export interface Social {
+export interface SocialType {
   name: string
   path: string
 }

@@ -2,13 +2,12 @@ import React from 'react'
 import { Container, Grid } from '@material-ui/core'
 import { Section } from '../../../../components/Section'
 import { Typography } from '../../../../components/Typography'
+import { Up } from '../../../../components/InViewMonitor'
 import { ThinkCard } from './ThinkCard'
 import {
-  SectionHeadingDatas,
-  Think,
-  ThinkDatas,
-} from '../../../../datas/IndexDatas'
-import { Up } from '../../../../components/InViewMonitor'
+  ThinkCardDatas,
+  ThinkCardType,
+} from '../../../../datas/_shared/CardDatas'
 
 //----------------------------------
 // props
@@ -29,7 +28,7 @@ export const SectionThinkComponent = (props: SectionThinkProps) => (
           variant={'heading'}
           className={'thinkHeading'}
         >
-          {SectionHeadingDatas.sectionThink.heading}
+          OUR THINK.
         </Typography>
       </Up>
 
@@ -39,7 +38,7 @@ export const SectionThinkComponent = (props: SectionThinkProps) => (
           variant={'subheading'}
           className={'thinkSubheading'}
         >
-          {SectionHeadingDatas.sectionThink.subHeading}
+          私達の考え
         </Typography>
       </Up>
 
@@ -51,7 +50,7 @@ export const SectionThinkComponent = (props: SectionThinkProps) => (
             size={'lg'}
             className={'thinkCopy'}
           >
-            {SectionHeadingDatas.sectionThink.copy}
+            サブスクリプションを採用
           </Typography>
         </Up>
       </div>
@@ -63,14 +62,7 @@ export const SectionThinkComponent = (props: SectionThinkProps) => (
               デザインは「課題解決」と「価値創造」の側面を持っています。
             </span>
             <span>
-              プロダクトやサービス、人や組織では継続的なデザイン戦略のアプローチが必要となります。
-            </span>
-          </Typography>
-        </Up>
-        <Up>
-          <Typography component={'p'} variant={'lead'} colors={'white'}>
-            <span>
-              パートナーとしてのデザイン戦略では、クライアントと同じ熱量での長期戦略を実施していく必要があるため、私達はサブスク型のサービスを提供しています。
+              プロダクトやサービス、人や組織では継続的なデザイン戦略のアプローチが必要となります。\nパートナーとしてのデザイン戦略では、クライアントと同じ熱量での長期戦略を実施していく必要があるため、私達はサブスク型のサービスを提供しています。
             </span>
             <span>
               ご依頼されるパートナー様には「通常のパートナー依頼・サブスクリプションでのパートナー依頼」のいずれかをお選びになることが可能となっております。
@@ -83,11 +75,14 @@ export const SectionThinkComponent = (props: SectionThinkProps) => (
     <div className={'thinkCardWrapper'}>
       <Container>
         <Grid container spacing={4}>
-          {ThinkDatas.map((ThinkData: Think, index: number) => {
+          {ThinkCardDatas.map((ThinkCardData: ThinkCardType, index: number) => {
             return (
               <Grid key={index} item md={4} xs={12} className={'thinkCardGrid'}>
                 <Up>
-                  <ThinkCard ThinkData={ThinkData} className={'thinkCard'} />
+                  <ThinkCard
+                    ThinkCardData={ThinkCardData}
+                    className={'thinkCard'}
+                  />
                 </Up>
               </Grid>
             )

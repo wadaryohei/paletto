@@ -5,7 +5,6 @@ import { SectionVision } from './doms/SectionVision'
 import { SectionApproach } from './doms/SectionApproach'
 import { SectionService } from './doms/SectionService'
 import { SectionThink } from './doms/SectionThink'
-import { useIndexPresenter } from './presenter/useIndexPresenter'
 
 //----------------------------------
 // props
@@ -19,21 +18,12 @@ export interface IndexProps {
 //----------------------------------
 const IndexContainer = (props: IndexProps) => {
   //----------------------------------
-  // hooks
-  //----------------------------------
-  const presenter = useIndexPresenter()
-
-  //----------------------------------
   // render
   //----------------------------------
   return (
     <BaseLayout className={props.className}>
       {/** @section Hero */}
-      <Hero
-        imgPath={presenter.heroViewDatas().heroImgPath}
-        copies={presenter.heroViewDatas().heroCopy}
-        descs={presenter.heroViewDatas().heroDesc}
-      />
+      <Hero imgPath={'/top/hero.jpg'} />
 
       {/** @section Vision */}
       <SectionVision

@@ -1,12 +1,6 @@
-/**
- * 固定ページで使用するデータ
- */
 import { RouteDatas } from './RouteDatas'
 
-//----------------------------------
-// PageDatas
-//----------------------------------
-export interface Page {
+export interface PageType {
   about: {
     pathname: string
     pageHeaderBgPathname: string
@@ -32,7 +26,7 @@ export interface Page {
   }
 }
 
-export const PageDatas: Page = {
+export const PageDatas: PageType = {
   about: {
     pathname: RouteDatas.about.pathname,
     pageHeaderBgPathname: '/pages/about.jpg',

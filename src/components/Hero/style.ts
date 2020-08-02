@@ -48,7 +48,6 @@ export const HeroStyle = styled(HeroComponent)`
             width: 420px;
             height: 86vh;
             margin: 0 auto;
-            background-image: url('./top/hero.jpg');
             background-position: center left;
             background-repeat: no-repeat;
             background-size: cover;

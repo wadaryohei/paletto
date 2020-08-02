@@ -1,12 +1,6 @@
-/**
- * Head情報で使用するデータ
- */
 import { RouteDatas } from './RouteDatas'
 
-//----------------------------------
-// HeadDatas
-//----------------------------------
-export interface Head {
+export interface HeadType {
   top: {
     title: string
     description: string
@@ -44,7 +38,7 @@ export interface Head {
   }
 }
 
-export const HeadDatas: Head = {
+export const HeadDatas: HeadType = {
   top: {
     title: 'Paletto. パレット｜世界にエモーショナルなデザインを',
     description:

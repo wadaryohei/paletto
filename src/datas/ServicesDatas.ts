@@ -1,33 +1,14 @@
-/**
- * Servicesページで使用するデータ
- */
-
 //----------------------------------
-// ServicesDesignDatas
+// ServicesDesignPartners
 //----------------------------------
-export interface ServicesDesign {
-  bgPathName: string
-  heading: string
-  subHeading: string
-}
-
-export const ServicesDesignDatas = {
-  bgPathName: '/top/services/cardbg_01.jpg',
-  heading: 'Design/Development partnerShips',
-  subHeading: 'デザイン/開発パートナー事業',
-}
-
-//----------------------------------
-// ServicesDesignPartnersDatas
-//----------------------------------
-export interface ServicesDesignPartners {
+export interface ServicesDesignPartnersType {
   num: string
   copyEn: string
   copyJp: string
   lead: string
 }
 
-export const ServicesDesignPartnersDatas: ServicesDesignPartners[] = [
+export const ServicesDesignPartnersDatas: ServicesDesignPartnersType[] = [
   {
     num: '01',
     copyEn: 'Having ownership.',
@@ -61,7 +42,7 @@ export const ServicesDesignPartnersDatas: ServicesDesignPartners[] = [
 //----------------------------------
 // ServicesDesignSolutionDatas
 //----------------------------------
-export interface ServicesDesignSolution {
+export interface ServicesDesignSolutionType {
   num: string
   copyEn: string
   copyJp: string
@@ -69,7 +50,7 @@ export interface ServicesDesignSolution {
   solution: string
 }
 
-export const ServicesDesignSolutionDatas: ServicesDesignSolution[] = [
+export const ServicesDesignSolutionDatas: ServicesDesignSolutionType[] = [
   {
     num: '01',
     copyEn: 'Glow up.',

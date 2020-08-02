@@ -15,5 +15,6 @@ export const useStringProcessing = (): typeStringProcessing => {
   const strToSplit = (str: string): string[] => {
     return str.split('\n')
   }
+
   return { strToSplit }
 }
