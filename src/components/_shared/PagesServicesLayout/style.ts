@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 import { PagesServicesLayoutComponent } from './dom'
 import { Margin } from '../../../const/Margin'
-import { Padding } from '../../../const/Padding';
+import { Padding } from '../../../const/Padding'
 import { Colors } from '../../../const/Colors'
-import { BreakPoints, max } from '../../../const/BreakPoints';
+import { BreakPoints, max } from '../../../const/BreakPoints'
 
 //----------------------------------
 // styledComponent
