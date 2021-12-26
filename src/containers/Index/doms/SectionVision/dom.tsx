@@ -59,7 +59,7 @@ export const SectionVisionComponent = (props: SectionVisionProps) => (
 
         <Up>
           <div className={'visionButtonWrapper'}>
-            <LinkButton href={'/about'} color={'primary'} size={'md'}>
+            <LinkButton href={'/services'} color={'primary'} size={'md'}>
               <More>View More</More>
             </LinkButton>
           </div>
