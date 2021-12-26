@@ -78,9 +78,7 @@ export const useModal = (): typeModal => {
         router.push('/contact')
       })
       .finally(() => {
-        router.replace('/thanks').then(() => {
-          window.scroll(0, 0)
-        })
+        router.replace('/thanks')
         _formAction?.setSubmitting(false)
       })
   }

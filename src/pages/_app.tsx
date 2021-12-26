@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { AppProps } from 'next/app'
 import { AnimatePresence, motion } from 'framer-motion'
 import { ParallaxProvider } from 'react-scroll-parallax'
@@ -9,6 +9,10 @@ import '../shared/styles/style.css'
 import { Motion } from '../const/Motion'
 
 const MyApp = ({ Component, pageProps, router }: AppProps) => {
+  useEffect(() => {
+    window.scroll(0, 0)
+  }, [router])
+
   return (
     <ParallaxProvider>
       <GlobalStyle />
