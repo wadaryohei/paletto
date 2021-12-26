@@ -16,11 +16,7 @@ export interface MenuIconProps {
 //----------------------------------
 export const MenuIconComponent = (props: MenuIconProps) => (
   <div className={props.className}>
-    {props.icon === 'menu' && (
-      <MenuIcon className={props.icon} onClick={() => props.callback()} />
-    )}
-    {props.icon === 'close' && (
-      <CloseIcon className={props.icon} onClick={() => props.callback()} />
-    )}
+    {props.icon === 'menu' && <MenuIcon className={props.icon} onClick={() => props.callback()} />}
+    {props.icon === 'close' && <CloseIcon className={props.icon} onClick={() => props.callback()} />}
   </div>
 )

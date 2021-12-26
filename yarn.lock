@@ -1142,6 +1142,20 @@
     style-value-types "^3.1.7"
     tslib "^1.10.0"
 
+"@slack/types@^1.2.1":
+  version "1.10.0"
+  resolved "https://registry.yarnpkg.com/@slack/types/-/types-1.10.0.tgz#cbf7d83e1027f4cbfd13d6b429f120c7fb09127a"
+  integrity sha512-tA7GG7Tj479vojfV3AoxbckalA48aK6giGjNtgH6ihpLwTyHE3fIgRrvt8TWfLwW8X8dyu7vgmAsGLRG7hWWOg==
+
+"@slack/webhook@^6.0.0":
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/@slack/webhook/-/webhook-6.0.0.tgz#844593c1e864a966e549f60bb640586628f3c1c4"
+  integrity sha512-2fohfhLI9lkAmOSWt1R457JBsB3iFNqahu4GqdFZRtcp/bT+xeG/kPn/hQa78JS74poRjWTt5G/qJjNaWMGOEQ==
+  dependencies:
+    "@slack/types" "^1.2.1"
+    "@types/node" ">=12.0.0"
+    axios "^0.21.1"
+
 "@types/color-name@^1.1.1":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@types/color-name/-/color-name-1.1.1.tgz#1c1261bbeaa10a8055bbc5d8ab84b7b2afc846a0"
@@ -1164,6 +1178,11 @@
   version "7.0.5"
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.5.tgz#dcce4430e64b443ba8945f0290fb564ad5bac6dd"
   integrity sha512-7+2BITlgjgDhH0vvwZU/HZJVyk+2XUlvxXe8dFMedNX/aMkaOq++rMAFXc0tM7ij15QaWlbdQASBR9dihi+bDQ==
+
+"@types/node@>=12.0.0":
+  version "17.0.4"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.4.tgz#fec0ce0526abb6062fd206d72a642811b887a111"
+  integrity sha512-6xwbrW4JJiJLgF+zNypN5wr2ykM9/jHcL7rQ8fZe2vuftggjzZeRSM4OwRc6Xk8qWjwJ99qVHo/JgOGmomWRog==
 
 "@types/node@^14.0.20":
   version "14.0.20"
@@ -1698,6 +1717,13 @@ atob@^2.1.2:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
+
+axios@^0.21.1:
+  version "0.21.4"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.21.4.tgz#c67b90dc0568e5c1cf2b0b858c43ba28e2eda575"
+  integrity sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==
+  dependencies:
+    follow-redirects "^1.14.0"
 
 babel-code-frame@^6.22.0:
   version "6.26.0"
@@ -3347,6 +3373,11 @@ fn-name@~3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/fn-name/-/fn-name-3.0.0.tgz#0596707f635929634d791f452309ab41558e3c5c"
   integrity sha512-eNMNr5exLoavuAMhIUVsOKF79SWd/zG104ef6sxBTSw+cZc6BXdQXDvYcGvp0VbxVVSp1XDUNoz7mg1xMtSznA==
+
+follow-redirects@^1.14.0:
+  version "1.14.6"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.6.tgz#8cfb281bbc035b3c067d6cd975b0f6ade6e855cd"
+  integrity sha512-fhUl5EwSJbbl8AR+uYL2KQDxLkdSjZGR36xy46AO7cOMTrCMON6Sa28FmAnC2tRTDbd/Uuzz3aJBv7EBN7JH8A==
 
 for-in@^1.0.2:
   version "1.0.2"

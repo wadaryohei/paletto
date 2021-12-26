@@ -1,11 +1,5 @@
 import React from 'react'
-import Document, {
-  Html,
-  Head,
-  Main,
-  NextScript,
-  DocumentContext,
-} from 'next/document'
+import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document'
 import { ServerStyleSheet as StyledComponentSheet } from 'styled-components'
 import { ServerStyleSheets as MaterialUiStyleSheets } from '@material-ui/styles'
 
@@ -25,20 +19,13 @@ class MyDocument extends Document {
     try {
       ctx.renderPage = () =>
         originalRenderPage({
-          enhanceApp: (App) => (props) =>
-            styledComponentSheet.collectStyles(
-              materialUiStyleSheets.collect(<App {...props} />),
-            ),
+          enhanceApp: (App) => (props) => styledComponentSheet.collectStyles(materialUiStyleSheets.collect(<App {...props} />)),
         })
 
       const initialProps = await Document.getInitialProps(ctx)
       return {
         ...initialProps,
-        styles: [
-          initialProps.styles,
-          styledComponentSheet.getStyleElement(),
-          materialUiStyleSheets.getStyleElement(),
-        ],
+        styles: [initialProps.styles, styledComponentSheet.getStyleElement(), materialUiStyleSheets.getStyleElement()],
       }
     } finally {
       styledComponentSheet.seal()

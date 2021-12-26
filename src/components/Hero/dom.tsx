@@ -22,10 +22,7 @@ export const HeroComponent = (props: HeroProps) => (
           <div className={'heroImageWrapper'}>
             <div className={'heroImageInner'}>
               <Parallax y={[40, -10]} tagOuter="figure">
-                <div
-                  className={'heroImage'}
-                  style={{ backgroundImage: `url(${props.imgPath})` }}
-                />
+                <div className={'heroImage'} style={{ backgroundImage: `url(${props.imgPath})` }} />
               </Parallax>
             </div>
           </div>
@@ -35,25 +32,12 @@ export const HeroComponent = (props: HeroProps) => (
           <Parallax y={[30, -40]} tagOuter="figure">
             <div className={'heroCopyWrapper'}>
               <Up>
-                <Typography
-                  component={'p'}
-                  variant="copy"
-                  size={'xxl'}
-                  weight={'thin'}
-                  colors={'black'}
-                  className={'heroCopy top'}
-                >
+                <Typography component={'p'} variant="copy" size={'xxl'} weight={'thin'} colors={'black'} className={'heroCopy top'}>
                   Design To Moves
                 </Typography>
               </Up>
               <Up delay={100}>
-                <Typography
-                  component={'p'}
-                  variant="copy"
-                  family={'en'}
-                  weight={'bold'}
-                  className={'heroCopy bottom'}
-                >
+                <Typography component={'p'} variant="copy" family={'en'} weight={'bold'} className={'heroCopy bottom'}>
                   Emotion.
                 </Typography>
               </Up>
@@ -63,24 +47,10 @@ export const HeroComponent = (props: HeroProps) => (
           <Parallax y={[30, -100]} tagOuter="figure">
             <Up delay={150}>
               <div className={'heroDescWrapper'}>
-                <Typography
-                  component={'p'}
-                  variant={'lead'}
-                  size={'xs'}
-                  weight={'light'}
-                  colors={'black'}
-                  className={'heroDesc'}
-                >
+                <Typography component={'p'} variant={'lead'} size={'xs'} weight={'light'} colors={'black'} className={'heroDesc'}>
                   テクノロジーとデザインで、
                 </Typography>
-                <Typography
-                  component={'p'}
-                  variant={'lead'}
-                  size={'xs'}
-                  weight={'light'}
-                  colors={'black'}
-                  className={'heroDesc'}
-                >
+                <Typography component={'p'} variant={'lead'} size={'xs'} weight={'light'} colors={'black'} className={'heroDesc'}>
                   課題解決のその先の「感情を動かす」チームです
                 </Typography>
               </div>

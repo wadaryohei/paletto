@@ -11,6 +11,4 @@ export interface CardProps {
 //----------------------------------
 // component
 //----------------------------------
-export const CardComponent = (props: CardProps) => (
-  <div className={`${props.className}`}>{props.children}</div>
-)
+export const CardComponent = (props: CardProps) => <div className={`${props.className}`}>{props.children}</div>

@@ -12,6 +12,4 @@ export interface WrapperProps {
 //----------------------------------
 // component
 //----------------------------------
-export const WrapperComponent = (props: WrapperProps) => (
-  <Section className={props.className}>{props.children}</Section>
-)
+export const WrapperComponent = (props: WrapperProps) => <Section className={props.className}>{props.children}</Section>

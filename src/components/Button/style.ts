@@ -1,9 +1,5 @@
 import styled, { css } from 'styled-components'
-import {
-  ButtonComponent,
-  LinkButtonComponent,
-  FormButtonComponent,
-} from './dom'
+import { ButtonComponent, LinkButtonComponent, FormButtonComponent } from './dom'
 import { Colors } from '../../const/Colors'
 import { Padding } from '../../const/Padding'
 import { FontWeight } from '../../const/FontWeight'

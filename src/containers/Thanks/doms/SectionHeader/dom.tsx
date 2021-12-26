@@ -21,9 +21,7 @@ export const SectionHeaderComponent = (props: SectionHeaderProps) => (
       </Typography>
       <Typography component={'p'} variant={'lead'}>
         <span>お問い合わせありがとうございます。</span>
-        <span>
-          2~3日以内にお返事致しますのでもうしばらくお待ちくださいませ。
-        </span>
+        <span>2~3日以内にお返事致しますのでもうしばらくお待ちくださいませ。</span>
       </Typography>
 
       <Typography component={'p'} variant={'lead'} size={'xs'}>

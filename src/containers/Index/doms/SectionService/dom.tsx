@@ -6,10 +6,7 @@ import { LinkButton } from '../../../../components/Button'
 import { More } from '../../../../components/More'
 import { Up } from '../../../../components/InViewMonitor'
 import { ServiceCard } from './ServiceCard'
-import {
-  ServicesCardDatas,
-  ServicesCardType,
-} from '../../../../datas/_shared/CardDatas'
+import { ServicesCardDatas, ServicesCardType } from '../../../../datas/_shared/CardDatas'
 
 //----------------------------------
 // props
@@ -43,20 +40,14 @@ export const SectionServiceComponent = (props: SectionServiceProps) => (
         <div className={'serviceLeadInWrapper'}>
           <Up>
             <Typography component={'p'} variant={'lead'}>
-              <span>
-                感情をデザインする上でビジネス課題の解決は勿論必要です。
-              </span>
-              <span>
-                「Paletto.」が手掛けるデザインは、見た目を整えるだけのデザインではありません。
-              </span>
+              <span>感情をデザインする上でビジネス課題の解決は勿論必要です。</span>
+              <span>「Paletto.」が手掛けるデザインは、見た目を整えるだけのデザインではありません。</span>
               <span>
                 本来デザインが持つ「設計」にイチから取り組み、ビジネスにおける課題を解決し、それがユーザーの感情を動かすことです。
               </span>
             </Typography>
             <Typography component={'p'} variant={'lead'}>
-              <span>
-                「Paletto.」ではデジタル領域の課題に対して、Webサイト/サービス、アプリの企画・制作、各種分析・改善活動を、
-              </span>
+              <span>「Paletto.」ではデジタル領域の課題に対して、Webサイト/サービス、アプリの企画・制作、各種分析・改善活動を、</span>
               <span>
                 クライアントや事業パートナーのビジネスの成長の支援を「デザイン、制作・運用・保守」まで多岐にわたるサポートを行います。
               </span>
@@ -69,26 +60,15 @@ export const SectionServiceComponent = (props: SectionServiceProps) => (
     <div className={'serviceCardWrapper'}>
       <Container>
         <Grid container spacing={4}>
-          {ServicesCardDatas.map(
-            (ServicesCardData: ServicesCardType, index: number) => {
-              return (
-                <Grid
-                  key={index}
-                  item
-                  md={8}
-                  xs={12}
-                  className={'serviceCardGrid'}
-                >
-                  <Up>
-                    <ServiceCard
-                      ServicesCardData={ServicesCardData}
-                      className={'serviceCard'}
-                    />
-                  </Up>
-                </Grid>
-              )
-            },
-          )}
+          {ServicesCardDatas.map((ServicesCardData: ServicesCardType, index: number) => {
+            return (
+              <Grid key={index} item md={8} xs={12} className={'serviceCardGrid'}>
+                <Up>
+                  <ServiceCard ServicesCardData={ServicesCardData} className={'serviceCard'} />
+                </Up>
+              </Grid>
+            )
+          })}
         </Grid>
 
         <Up>

@@ -26,10 +26,7 @@ const IndexContainer = (props: IndexProps) => {
       <Hero imgPath={'/top/hero.jpg'} />
 
       {/** @section Vision */}
-      <SectionVision
-        className={'l-vision'}
-        imgPath={'/top/vision/vision.jpg'}
-      />
+      <SectionVision className={'l-vision'} imgPath={'/top/vision/vision.jpg'} />
 
       {/** @section Approach */}
       <SectionApproach className={'l-approach'} />

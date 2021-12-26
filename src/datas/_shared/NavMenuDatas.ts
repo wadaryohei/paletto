@@ -7,10 +7,6 @@ export interface NavMenuType {
 
 export const NavMenuDatas: NavMenuType[] = [
   {
-    path: RouteDatas.about.path,
-    menuname: RouteDatas.about.pathname,
-  },
-  {
     path: RouteDatas.services.path,
     menuname: RouteDatas.services.pathname,
   },

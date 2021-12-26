@@ -39,18 +39,9 @@ export const HeaderComponent = (props: HeaderProps) => {
               </Link>
             </Typography>
           </div>
-          <MenuIcon
-            icon={'menu'}
-            callback={callback.onOpen}
-            className={'headerNavIcon'}
-          />
+          <MenuIcon icon={'menu'} callback={callback.onOpen} className={'headerNavIcon'} />
           <Nav navMenus={NavMenuDatas} className={'headerNav'} />
-          <DrawerNav
-            navMenus={NavMenuDatas}
-            isOpen={callback.isOpen}
-            onOpenMenu={callback.onOpen}
-            onCloseMenu={callback.onClose}
-          />
+          <DrawerNav navMenus={NavMenuDatas} isOpen={callback.isOpen} onOpenMenu={callback.onOpen} onCloseMenu={callback.onClose} />
         </div>
       </Container>
     </header>

@@ -8,11 +8,7 @@ import { ThanksContainer } from '../containers/Thanks/Index'
 //----------------------------------
 const Thanks = () => (
   <>
-    <Head
-      title={HeadDatas.thanks.title}
-      description={HeadDatas.thanks.description}
-      pathname={HeadDatas.thanks.pathname}
-    />
+    <Head title={HeadDatas.thanks.title} description={HeadDatas.thanks.description} pathname={HeadDatas.thanks.pathname} />
     <ThanksContainer />
   </>
 )

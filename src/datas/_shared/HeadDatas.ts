@@ -21,11 +21,6 @@ export interface HeadType {
     description: string
     pathname: string
   }
-  about: {
-    title: string
-    description: string
-    pathname: string
-  }
   contact: {
     title: string
     description: string
@@ -41,8 +36,7 @@ export interface HeadType {
 export const HeadDatas: HeadType = {
   top: {
     title: 'Paletto. パレット｜世界にエモーショナルなデザインを',
-    description:
-      '「Paletto.」では課題の解決の先の「事業やサービスやプロダクト」の思いをデザインでカタチにします。',
+    description: '「Paletto.」では課題の解決の先の「事業やサービスやプロダクト」の思いをデザインでカタチにします。',
     pathname: RouteDatas.index.path,
   },
   services: {
@@ -59,15 +53,8 @@ export const HeadDatas: HeadType = {
   },
   members: {
     title: 'Members｜Paletto. パレット',
-    description:
-      '数々の制作やサービスのグロースを経験してきたPalettoチームのメンバーです。',
+    description: '数々の制作やサービスのグロースを経験してきたPalettoチームのメンバーです。',
     pathname: RouteDatas.members.path,
-  },
-  about: {
-    title: 'About｜Paletto. パレット',
-    description:
-      '「Paletto.」が考えるデザインとは？なぜ感情をデザインするのか？「Paletto.」が目指す未来について。',
-    pathname: RouteDatas.about.path,
   },
   contact: {
     title: 'Contact｜Paletto. パレット',
@@ -76,8 +63,7 @@ export const HeadDatas: HeadType = {
   },
   thanks: {
     title: 'Thanks｜Paletto. パレット',
-    description:
-      'お問い合わせありがとうございます。2~3日以内にお返事致しますのでもうしばらくお待ちくださいませ。',
+    description: 'お問い合わせありがとうございます。2~3日以内にお返事致しますのでもうしばらくお待ちくださいませ。',
     pathname: RouteDatas.thanks.path,
   },
 }

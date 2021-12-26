@@ -29,11 +29,7 @@ const ContactContainer = (props: ContactProps) => {
   // render
   //----------------------------------
   return (
-    <PagesLayout
-      className={props.className}
-      pathname={PageDatas.contact.pathname}
-      pageHeading={PageDatas.contact.pageHeading}
-    >
+    <PagesLayout className={props.className} pathname={PageDatas.contact.pathname} pageHeading={PageDatas.contact.pageHeading}>
       {/** @section Modal */}
       <Modal
         open={modal.isOpen()}

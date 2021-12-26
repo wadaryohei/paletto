@@ -8,11 +8,7 @@ import { AboutContainer } from '../containers/About/Index'
 //----------------------------------
 const About = () => (
   <>
-    <Head
-      title={HeadDatas.about.title}
-      description={HeadDatas.about.description}
-      pathname={HeadDatas.about.pathname}
-    />
+    <Head title={HeadDatas.about.title} description={HeadDatas.about.description} pathname={HeadDatas.about.pathname} />
     <AboutContainer />
   </>
 )

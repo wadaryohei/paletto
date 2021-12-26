@@ -20,24 +20,14 @@ export interface DrawerNavComponentProps {
 // component
 //----------------------------------
 export const DrawerNavComponent = (props: DrawerNavComponentProps) => (
-  <SwipeableDrawer
-    anchor={'right'}
-    className={props.className}
-    open={props.isOpen}
-    onOpen={props.onOpenMenu}
-    onClose={props.onCloseMenu}
-  >
+  <SwipeableDrawer anchor={'right'} className={props.className} open={props.isOpen} onOpen={props.onOpenMenu} onClose={props.onCloseMenu}>
     <nav className={'drawerNav'}>
       <div className={'drawerNavHeaderWrapper'}>
         <Link href={'/'} routeMatch={false}>
           <Logo />
         </Link>
 
-        <MenuIcon
-          icon={'close'}
-          callback={props.onCloseMenu}
-          className={'close'}
-        />
+        <MenuIcon icon={'close'} callback={props.onCloseMenu} className={'close'} />
       </div>
       <ul>
         {props.navMenus.map((navMenu: NavMenuType, index: number) => {

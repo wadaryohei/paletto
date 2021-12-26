@@ -18,13 +18,7 @@ export interface MembersProps {
 //----------------------------------
 export const MembersComponent = (props: MembersProps) => (
   <div className={props.className}>
-    <Typography
-      component={'p'}
-      variant={'lead'}
-      colors={'white'}
-      weight={'bold'}
-      family={'en'}
-    >
+    <Typography component={'p'} variant={'lead'} colors={'white'} weight={'bold'} family={'en'}>
       {props.memberData.name}
     </Typography>
     <ul className={'membersSocialsList'}>

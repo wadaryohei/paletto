@@ -20,27 +20,14 @@ export const SectionApproachComponent = (props: SectionApproachProps) => (
       <Grid container spacing={4} className={'approachWrapper'}>
         <Grid item md={6} sm={12} xs={12}>
           <Up>
-            <Typography
-              component={'h1'}
-              variant={'heading'}
-              colors={'white'}
-              size={'xl'}
-              align={'center'}
-              className={'approachHeading'}
-            >
+            <Typography component={'h1'} variant={'heading'} colors={'white'} size={'xl'} align={'center'} className={'approachHeading'}>
               APPROACH.
             </Typography>
           </Up>
         </Grid>
         <Grid item md={6} sm={12} xs={12}>
           <Up>
-            <Typography
-              component={'p'}
-              variant={'copy'}
-              colors={'black'}
-              size={'lg'}
-              className={'approachCopy'}
-            >
+            <Typography component={'p'} variant={'copy'} colors={'black'} size={'lg'} className={'approachCopy'}>
               当たり前のその先へ
             </Typography>
           </Up>

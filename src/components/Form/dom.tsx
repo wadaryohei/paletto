@@ -1,10 +1,7 @@
 import React, { useRef } from 'react'
 import { Button } from '../Button'
 import { Formik, Field, ErrorMessage, Form } from 'formik'
-import {
-  initValue,
-  validationSchema,
-} from '../../datas/_shared/ValidationDatas'
+import { initValue, validationSchema } from '../../datas/_shared/ValidationDatas'
 import { typeForm } from '../../hooks/useForm'
 import { typeModal } from '../../hooks/useModal'
 
@@ -39,11 +36,7 @@ export const FormComponent = (componentProps: FormProps) => {
     >
       {(props) => {
         return (
-          <Form
-            name="contact"
-            data-netlify="true"
-            className={componentProps.className}
-          >
+          <Form name="contact" data-netlify="true" className={componentProps.className}>
             <ul>
               <Field type="hidden" name="form-name" value="contact" />
 
@@ -51,23 +44,11 @@ export const FormComponent = (componentProps: FormProps) => {
               <li>
                 <fieldset>
                   <p>お名前</p>
-                  <Field
-                    name="firstName"
-                    type="text"
-                    placeholder="姓"
-                    onBlur={props.handleBlur}
-                    required
-                  />
+                  <Field name="firstName" type="text" placeholder="姓" onBlur={props.handleBlur} required />
                   <span className={'error'}>
                     <ErrorMessage name={'firstName'} />
                   </span>
-                  <Field
-                    name="lastName"
-                    type="text"
-                    placeholder="名"
-                    onBlur={props.handleBlur}
-                    required
-                  />
+                  <Field name="lastName" type="text" placeholder="名" onBlur={props.handleBlur} required />
                   <span className={'error'}>
                     <ErrorMessage name={'lastName'} />
                   </span>
@@ -78,13 +59,7 @@ export const FormComponent = (componentProps: FormProps) => {
               <li>
                 <label>
                   <p>メールアドレス</p>
-                  <Field
-                    name="email"
-                    type="email"
-                    placeholder="yourmail@example.com"
-                    onBlur={props.handleBlur}
-                    required
-                  />
+                  <Field name="email" type="email" placeholder="yourmail@example.com" onBlur={props.handleBlur} required />
                   <span className={'error'}>
                     <ErrorMessage name={'email'} />
                   </span>
@@ -95,20 +70,11 @@ export const FormComponent = (componentProps: FormProps) => {
               <li>
                 <label>
                   <p>ご相談内容</p>
-                  <Field
-                    as="select"
-                    name="details"
-                    onChange={props.handleChange}
-                    onBlur={props.handleBlur}
-                  >
+                  <Field as="select" name="details" onChange={props.handleChange} onBlur={props.handleBlur}>
                     <option value="">選択してください</option>
                     <option value="デザインについて">デザインについて</option>
-                    <option value="開発 / 制作について">
-                      開発 / 制作について
-                    </option>
-                    <option value="デザインと開発 / 制作について">
-                      デザインと開発 / 制作について
-                    </option>
+                    <option value="開発 / 制作について">開発 / 制作について</option>
+                    <option value="デザインと開発 / 制作について">デザインと開発 / 制作について</option>
                   </Field>
                 </label>
                 <span className={'error'}>
@@ -120,12 +86,7 @@ export const FormComponent = (componentProps: FormProps) => {
               <li>
                 <label>
                   <p>ご予算の上限</p>
-                  <Field
-                    as="select"
-                    name="budget"
-                    onChange={props.handleChange}
-                    onBlur={props.handleBlur}
-                  >
+                  <Field as="select" name="budget" onChange={props.handleChange} onBlur={props.handleBlur}>
                     <option value="">選択してください</option>
                     <option value="100万円未満">100万円未満</option>
                     <option value="100万円">100万円</option>
@@ -151,27 +112,14 @@ export const FormComponent = (componentProps: FormProps) => {
                   <p>
                     ご契約形態
                     <span>
-                      *
-                      サブスクリプションでのパートナー契約の場合は「ご予算上限を人/日して更に年/月12回」を目安とした契約となります。
+                      * サブスクリプションでのパートナー契約の場合は「ご予算上限を人/日して更に年/月12回」を目安とした契約となります。
                     </span>
-                    <span>
-                      * 通常でのパートナー契約の場合は「ご予算上限を
-                      人/日」を目安とした契約となります。
-                    </span>
+                    <span>* 通常でのパートナー契約の場合は「ご予算上限を 人/日」を目安とした契約となります。</span>
                   </p>
-                  <Field
-                    as="select"
-                    name="contract"
-                    onChange={props.handleChange}
-                    onBlur={props.handleBlur}
-                  >
+                  <Field as="select" name="contract" onChange={props.handleChange} onBlur={props.handleBlur}>
                     <option value="">選択してください</option>
-                    <option value="サブスクリプションでのパートナー契約">
-                      サブスクリプションでのパートナー契約
-                    </option>
-                    <option value="通常でのパートナー契約">
-                      通常でのパートナー契約
-                    </option>
+                    <option value="サブスクリプションでのパートナー契約">サブスクリプションでのパートナー契約</option>
+                    <option value="通常でのパートナー契約">通常でのパートナー契約</option>
                   </Field>
                 </label>
                 <span className={'error'}>
@@ -196,16 +144,10 @@ export const FormComponent = (componentProps: FormProps) => {
                     onBlur={props.handleBlur}
                   >
                     <option value="">選択してください</option>
-                    <option value="新規事業立ち上げのご相談">
-                      新規事業立ち上げのご相談
-                    </option>
-                    <option value="既存サービス改善のご相談">
-                      既存サービス改善のご相談
-                    </option>
+                    <option value="新規事業立ち上げのご相談">新規事業立ち上げのご相談</option>
+                    <option value="既存サービス改善のご相談">既存サービス改善のご相談</option>
                     <option value="業務提携のご相談">業務提携のご相談</option>
-                    <option value="取材・講演・イベントなどのご依頼">
-                      取材・講演・イベントなどのご依頼
-                    </option>
+                    <option value="取材・講演・イベントなどのご依頼">取材・講演・イベントなどのご依頼</option>
                   </Field>
                 </label>
                 <span className={'error'}>
@@ -220,13 +162,7 @@ export const FormComponent = (componentProps: FormProps) => {
                   <li>
                     <label>
                       <p>会社名</p>
-                      <Field
-                        name="company"
-                        type="text"
-                        placeholder="株式会社〇〇〇〇"
-                        onChange={props.handleChange}
-                        required
-                      />
+                      <Field name="company" type="text" placeholder="株式会社〇〇〇〇" onChange={props.handleChange} required />
                     </label>
                     <span className={'error'}>
                       <ErrorMessage name={'company'} />
@@ -237,21 +173,12 @@ export const FormComponent = (componentProps: FormProps) => {
                   <li>
                     <label>
                       <p>paletto.をお知りになった経緯を教えてください</p>
-                      <Field
-                        as="select"
-                        name="background"
-                        onChange={props.handleChange}
-                        onBlur={props.handleBlur}
-                      >
+                      <Field as="select" name="background" onChange={props.handleChange} onBlur={props.handleBlur}>
                         <option value="">選択してください</option>
                         <option value="検索で見つけた">検索で見つけた</option>
                         <option value="Twitterで知った">Twitterで知った</option>
-                        <option value="Facebookで知った">
-                          Facebookで知った
-                        </option>
-                        <option value="知人の紹介で知った">
-                          知人の紹介で知った
-                        </option>
+                        <option value="Facebookで知った">Facebookで知った</option>
+                        <option value="知人の紹介で知った">知人の紹介で知った</option>
                       </Field>
                     </label>
                     <span className={'error'}>
@@ -262,16 +189,8 @@ export const FormComponent = (componentProps: FormProps) => {
                   {/** @request - ご依頼予定のWebサイト、またはアプリストアのURL */}
                   <li>
                     <label>
-                      <p>
-                        ご依頼予定のWebサイトやサービス、またはアプリストアのURL
-                        ※任意
-                      </p>
-                      <Field
-                        name="request"
-                        type="text"
-                        placeholder="https://"
-                        onChange={props.handleChange}
-                      />
+                      <p>ご依頼予定のWebサイトやサービス、またはアプリストアのURL ※任意</p>
+                      <Field name="request" type="text" placeholder="https://" onChange={props.handleChange} />
                     </label>
                   </li>
 
@@ -279,12 +198,7 @@ export const FormComponent = (componentProps: FormProps) => {
                   <li>
                     <label>
                       <p>完了期日の目安(概ねで構いません) ※任意</p>
-                      <Field
-                        name="fixed"
-                        type="text"
-                        placeholder="20xx年 xx月 xx日"
-                        onChange={props.handleChange}
-                      />
+                      <Field name="fixed" type="text" placeholder="20xx年 xx月 xx日" onChange={props.handleChange} />
                     </label>
                   </li>
                 </div>
@@ -311,12 +225,7 @@ export const FormComponent = (componentProps: FormProps) => {
             </ul>
 
             <div className={'formButton'}>
-              <Button
-                type={'submit'}
-                color={'primary'}
-                size={'md'}
-                disabled={!(props.isValid && props.dirty)}
-              >
+              <Button type={'submit'} color={'primary'} size={'md'} disabled={!(props.isValid && props.dirty)}>
                 この内容で送信
               </Button>
             </div>

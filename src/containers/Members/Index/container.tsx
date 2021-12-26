@@ -43,12 +43,7 @@ const MembersContainer = (props: MembersProps) => {
                   <Up>
                     <figure className={'membersWrapepr'}>
                       <div className={'membersImgWrapper'}>
-                        <img
-                          src={MemberData.imgPathname}
-                          alt={MemberData.name}
-                          width="120px"
-                          height="120px"
-                        />
+                        <img src={MemberData.imgPathname} alt={MemberData.name} width="120px" height="120px" />
                       </div>
 
                       <div className={'membersSocialWrapper'}>
@@ -65,19 +60,17 @@ const MembersContainer = (props: MembersProps) => {
                           </Typography>
                         </Up>
                         <ul className={'membersSocialList'}>
-                          {MemberData.socials?.map(
-                            (social: SocialType, index: number) => {
-                              return (
-                                <Up key={index}>
-                                  <li>
-                                    <Link href={social.path} target={true}>
-                                      <SocialIcon icon={social.name} />
-                                    </Link>
-                                  </li>
-                                </Up>
-                              )
-                            },
-                          )}
+                          {MemberData.socials?.map((social: SocialType, index: number) => {
+                            return (
+                              <Up key={index}>
+                                <li>
+                                  <Link href={social.path} target={true}>
+                                    <SocialIcon icon={social.name} />
+                                  </Link>
+                                </li>
+                              </Up>
+                            )
+                          })}
                         </ul>
                       </div>
                     </figure>
@@ -85,16 +78,10 @@ const MembersContainer = (props: MembersProps) => {
 
                   <div className={'membersLeadWrapepr'}>
                     <Up>
-                      <Typography
-                        component={'p'}
-                        variant={'lead'}
-                        className={'membersLead'}
-                      >
-                        {stringProcessing
-                          .strToSplit(MemberData.introduce)
-                          .map((MemberData: string, index: number) => {
-                            return <span key={index}>{MemberData}</span>
-                          })}
+                      <Typography component={'p'} variant={'lead'} className={'membersLead'}>
+                        {stringProcessing.strToSplit(MemberData.introduce).map((MemberData: string, index: number) => {
+                          return <span key={index}>{MemberData}</span>
+                        })}
                       </Typography>
                     </Up>
                   </div>

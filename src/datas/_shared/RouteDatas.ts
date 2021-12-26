@@ -9,10 +9,6 @@ export interface RouteType {
     pathname: string
     path: string
   }
-  about: {
-    pathname: string
-    path: string
-  }
   services: {
     pathname: string
     path: string
@@ -43,15 +39,6 @@ export const RouteDatas: RouteType = {
   index: {
     pathname: 'Index',
     path: '/',
-  },
-
-  //----------------------------------
-  // About Page
-  //----------------------------------
-  // @path ---- /about
-  about: {
-    pathname: 'About',
-    path: '/about',
   },
 
   //----------------------------------

@@ -13,10 +13,7 @@ export interface BannerProps {
 // component
 //----------------------------------
 export const BannerComponent = (props: BannerProps) => (
-  <figure
-    className={props.className}
-    style={{ backgroundImage: `url(${props.imgPath})` }}
-  >
+  <figure className={props.className} style={{ backgroundImage: `url(${props.imgPath})` }}>
     {props.children}
   </figure>
 )

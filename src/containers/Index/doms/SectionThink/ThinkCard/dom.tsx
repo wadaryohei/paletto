@@ -17,32 +17,14 @@ export interface ThinkCardProps {
 export const ThinkCardComponent = (props: ThinkCardProps) => (
   <Card className={props.className}>
     <div className={'cardContentsWrapper'}>
-      <Typography
-        component={'p'}
-        variant={'lead'}
-        size={'xl'}
-        colors={'gray'}
-        family={'en'}
-        weight={'bold'}
-        className={'cardNum'}
-      >
+      <Typography component={'p'} variant={'lead'} size={'xl'} colors={'gray'} family={'en'} weight={'bold'} className={'cardNum'}>
         {props.ThinkCardData.num}
       </Typography>
-      <Typography
-        component={'p'}
-        variant={'lead'}
-        colors={'gray'}
-        className={'cardCopy'}
-      >
+      <Typography component={'p'} variant={'lead'} colors={'gray'} className={'cardCopy'}>
         {props.ThinkCardData.copy}
       </Typography>
       <figure className={'cardImg'}>
-        <img
-          src={props.ThinkCardData.imgPathname}
-          alt={props.ThinkCardData.copy}
-          width={200}
-          height={200}
-        />
+        <img src={props.ThinkCardData.imgPathname} alt={props.ThinkCardData.copy} width={200} height={200} />
         <Typography component={'p'} variant={'lead'}>
           {props.ThinkCardData.lead}
         </Typography>

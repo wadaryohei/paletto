@@ -14,11 +14,7 @@ export interface InViewMonitorProps {
 // component
 //----------------------------------
 export const Up = (props: InViewMonitorProps) => (
-  <InViewMonitor
-    classNameInView={'fadeInUp'}
-    childPropsInView={{ isActive: true }}
-    intoViewMargin={'-20%'}
-  >
+  <InViewMonitor classNameInView={'fadeInUp'} childPropsInView={{ isActive: true }} intoViewMargin={'-20%'}>
     <FadeInUp isActive={false} delay={props.delay}>
       {props.children}
     </FadeInUp>
@@ -26,11 +22,7 @@ export const Up = (props: InViewMonitorProps) => (
 )
 
 export const Down = (props: InViewMonitorProps) => (
-  <InViewMonitor
-    classNameInView={'fadeInDown'}
-    childPropsInView={{ isActive: true }}
-    intoViewMargin={'-20%'}
-  >
+  <InViewMonitor classNameInView={'fadeInDown'} childPropsInView={{ isActive: true }} intoViewMargin={'-20%'}>
     <FadeInDown isActive={false} delay={props.delay}>
       {props.children}
     </FadeInDown>
@@ -38,11 +30,7 @@ export const Down = (props: InViewMonitorProps) => (
 )
 
 export const Left = (props: InViewMonitorProps) => (
-  <InViewMonitor
-    classNameInView={'fadeInLeft'}
-    childPropsInView={{ isActive: true }}
-    intoViewMargin={'-20%'}
-  >
+  <InViewMonitor classNameInView={'fadeInLeft'} childPropsInView={{ isActive: true }} intoViewMargin={'-20%'}>
     <FadeInLeft isActive={false} delay={props.delay}>
       {props.children}
     </FadeInLeft>
@@ -50,11 +38,7 @@ export const Left = (props: InViewMonitorProps) => (
 )
 
 export const Right = (props: InViewMonitorProps) => (
-  <InViewMonitor
-    classNameInView={'fadeInRight'}
-    childPropsInView={{ isActive: true }}
-    intoViewMargin={'-20%'}
-  >
+  <InViewMonitor classNameInView={'fadeInRight'} childPropsInView={{ isActive: true }} intoViewMargin={'-20%'}>
     <FadeInRight isActive={false} delay={props.delay}>
       {props.children}
     </FadeInRight>

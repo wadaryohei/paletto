@@ -11,6 +11,4 @@ export interface SectionProps {
 //----------------------------------
 // component
 //----------------------------------
-export const SectionComponent = (props: SectionProps) => (
-  <section className={props.className}>{props.children}</section>
-)
+export const SectionComponent = (props: SectionProps) => <section className={props.className}>{props.children}</section>
