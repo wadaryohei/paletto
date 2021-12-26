@@ -1,59 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
-<!--  created with free sitemap generation system www.sitemapxml.jp  --> 
+<!--  created with free sitemap generation system www.sitemapxml.jp  -->
 <url>
-  <loc>https://paletto.jp/</loc>
+  <loc>https://paletto.design/</loc>
   <priority>1.0</priority>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://paletto.jp/about</loc>
+  <loc>https://paletto.design/services</loc>
   <priority>0.8</priority>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://paletto.jp/services</loc>
+  <loc>https://paletto.design/members</loc>
   <priority>0.8</priority>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://paletto.jp/members</loc>
-  <priority>0.8</priority>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>https://paletto.jp/contact</loc>
-  <priority>0.8</priority>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>https://paletto.jp//twitter.com/ryoppei_/</loc>
-  <priority>0.8</priority>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>https://paletto.jp//www.facebook.com/wada.ryohei.3/</loc>
-  <priority>0.8</priority>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>https://paletto.jp//yu-ra-gi.com/</loc>
-  <priority>0.8</priority>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>https://paletto.jp//twitter.com/_masatojpn/</loc>
-  <priority>0.8</priority>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>https://paletto.jp//www.facebook.com/masato.nakamura.jpn/</loc>
-  <priority>0.8</priority>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>https://paletto.jp//masatonakamura.work/</loc>
+  <loc>https://paletto.design/contact</loc>
   <priority>0.8</priority>
   <changefreq>monthly</changefreq>
 </url>
