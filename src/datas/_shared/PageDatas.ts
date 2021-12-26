@@ -1,11 +1,6 @@
 import { RouteDatas } from './RouteDatas'
 
 export interface PageType {
-  about: {
-    pathname: string
-    pageHeaderBgPathname: string
-    pageHeading: string
-  }
   services: {
     pathname: string
     pageHeaderBgPathname: string
@@ -27,11 +22,6 @@ export interface PageType {
 }
 
 export const PageDatas: PageType = {
-  about: {
-    pathname: RouteDatas.about.pathname,
-    pageHeaderBgPathname: '/pages/about.jpg',
-    pageHeading: 'Designing emotions and expressing a unique world view.',
-  },
   services: {
     pathname: RouteDatas.services.pathname,
     pageHeaderBgPathname: '/pages/services.jpg',
@@ -40,8 +30,7 @@ export const PageDatas: PageType = {
   members: {
     pathname: RouteDatas.members.pathname,
     pageHeaderBgPathname: '/pages/members.jpg',
-    pageHeading:
-      'Solve business problems with members from diverse backgrounds.',
+    pageHeading: 'Solve business problems with members from diverse backgrounds.',
   },
   contact: {
     pathname: RouteDatas.contact.pathname,

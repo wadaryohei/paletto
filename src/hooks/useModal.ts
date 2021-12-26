@@ -10,10 +10,7 @@ export interface typeModal {
   isOpen: () => boolean
   formContent: () => initValueType
   bodyEncode: (data: any) => any
-  formPassDatasHandler: (
-    formDatas: initValueType,
-    actions: FormikHelpers<initValueType>,
-  ) => void
+  formPassDatasHandler: (formDatas: initValueType, actions: FormikHelpers<initValueType>) => void
   onOpenModalHandler: () => void
   onCloseModalHandler: () => void
   onInquiryEndHandler: (formBody: initValueType) => void
@@ -59,10 +56,7 @@ export const useModal = (): typeModal => {
   /**
    * フォームの値をオブジェクトでセットしてmodalをオープンするハンドラー
    */
-  const formPassDatasHandler = (
-    formDatas: initValueType,
-    actions: FormikHelpers<initValueType>,
-  ) => {
+  const formPassDatasHandler = (formDatas: initValueType, actions: FormikHelpers<initValueType>) => {
     setFormAction(actions)
     setFormContent(formDatas)
     openModal()
@@ -72,23 +66,19 @@ export const useModal = (): typeModal => {
    * Formの値をPOSTしてモーダルをクローズしてお問い合わせを完了するハンドラー
    */
   const onInquiryEndHandler = (formBody: initValueType): void => {
-    fetch('/', {
+    fetch('/api/slack', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: bodyEncode({
-        'form-name': 'contact',
-        ...formBody,
-      }),
+      mode: 'same-origin',
+      credentials: 'same-origin',
+      headers: { 'Content-Type': 'application/json; charset=utf-8' },
+      body: JSON.stringify(formBody),
     })
-      .then(() => {
-        _formAction?.resetForm()
-      })
       .catch(() => {
         alert('送信に失敗しました。再度送信お願い致します。')
         router.push('/contact')
       })
       .finally(() => {
-        router.push('/thanks').then(() => {
+        router.replace('/thanks').then(() => {
           window.scroll(0, 0)
         })
         _formAction?.setSubmitting(false)
@@ -100,9 +90,7 @@ export const useModal = (): typeModal => {
    */
   const bodyEncode = (data: any): any => {
     return Object.keys(data)
-      .map(
-        (key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]),
-      )
+      .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
       .join('&')
   }
 

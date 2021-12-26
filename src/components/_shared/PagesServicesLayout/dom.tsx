@@ -20,9 +20,7 @@ export interface PagesServicesLayoutProps {
 //----------------------------------
 // component
 //----------------------------------
-export const PagesServicesLayoutComponent = (
-  props: PagesServicesLayoutProps,
-) => (
+export const PagesServicesLayoutComponent = (props: PagesServicesLayoutProps) => (
   <Section className={props.className}>
     <Header />
     <Container>
@@ -40,10 +38,7 @@ export const PagesServicesLayoutComponent = (
       </div>
     </Container>
     <Up>
-      <figure
-        className={'pageHeaderBg'}
-        style={{ backgroundImage: `url(${props.pageHeaderBgPathname})` }}
-      ></figure>
+      <figure className={'pageHeaderBg'} style={{ backgroundImage: `url(${props.pageHeaderBgPathname})` }}></figure>
     </Up>
     <main>{props.children}</main>
     <Footer />

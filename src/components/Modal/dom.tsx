@@ -33,13 +33,7 @@ export const ModalComponent = (props: ModalProps) => (
   >
     <div className={'modalWrapper'}>
       <div>
-        <Typography
-          component={'h1'}
-          variant={'heading'}
-          size={'sm'}
-          weight={'bold'}
-          className={'modalHeader'}
-        >
+        <Typography component={'h1'} variant={'heading'} size={'sm'} weight={'bold'} className={'modalHeader'}>
           この内容で送信しますか？
         </Typography>
       </div>
@@ -47,13 +41,7 @@ export const ModalComponent = (props: ModalProps) => (
       <div className={'modalContentsWrapper'}>
         <ul>
           <li>
-            <Typography
-              component={'span'}
-              variant={'subheading'}
-              size={'sm'}
-              colors={'black'}
-              weight={'bold'}
-            >
+            <Typography component={'span'} variant={'subheading'} size={'sm'} colors={'black'} weight={'bold'}>
               姓
             </Typography>
             <Typography component={'p'} variant={'lead'} size={'sm'}>
@@ -61,13 +49,7 @@ export const ModalComponent = (props: ModalProps) => (
             </Typography>
           </li>
           <li>
-            <Typography
-              component={'span'}
-              variant={'subheading'}
-              size={'sm'}
-              colors={'black'}
-              weight={'bold'}
-            >
+            <Typography component={'span'} variant={'subheading'} size={'sm'} colors={'black'} weight={'bold'}>
               名
             </Typography>
             <Typography component={'p'} variant={'lead'} size={'sm'}>
@@ -75,13 +57,7 @@ export const ModalComponent = (props: ModalProps) => (
             </Typography>
           </li>
           <li>
-            <Typography
-              component={'span'}
-              variant={'subheading'}
-              size={'sm'}
-              colors={'black'}
-              weight={'bold'}
-            >
+            <Typography component={'span'} variant={'subheading'} size={'sm'} colors={'black'} weight={'bold'}>
               メールアドレス
             </Typography>
             <Typography component={'p'} variant={'lead'} size={'sm'}>
@@ -89,13 +65,7 @@ export const ModalComponent = (props: ModalProps) => (
             </Typography>
           </li>
           <li>
-            <Typography
-              component={'span'}
-              variant={'subheading'}
-              size={'sm'}
-              colors={'black'}
-              weight={'bold'}
-            >
+            <Typography component={'span'} variant={'subheading'} size={'sm'} colors={'black'} weight={'bold'}>
               ご相談内容
             </Typography>
             <Typography component={'p'} variant={'lead'} size={'sm'}>
@@ -103,13 +73,7 @@ export const ModalComponent = (props: ModalProps) => (
             </Typography>
           </li>
           <li>
-            <Typography
-              component={'span'}
-              variant={'subheading'}
-              size={'sm'}
-              colors={'black'}
-              weight={'bold'}
-            >
+            <Typography component={'span'} variant={'subheading'} size={'sm'} colors={'black'} weight={'bold'}>
               ご予算の上限
             </Typography>
             <Typography component={'p'} variant={'lead'} size={'sm'}>
@@ -117,13 +81,7 @@ export const ModalComponent = (props: ModalProps) => (
             </Typography>
           </li>
           <li>
-            <Typography
-              component={'span'}
-              variant={'subheading'}
-              size={'sm'}
-              colors={'black'}
-              weight={'bold'}
-            >
+            <Typography component={'span'} variant={'subheading'} size={'sm'} colors={'black'} weight={'bold'}>
               ご契約形態
             </Typography>
             <Typography component={'p'} variant={'lead'} size={'sm'}>
@@ -131,13 +89,7 @@ export const ModalComponent = (props: ModalProps) => (
             </Typography>
           </li>
           <li>
-            <Typography
-              component={'span'}
-              variant={'subheading'}
-              size={'sm'}
-              colors={'black'}
-              weight={'bold'}
-            >
+            <Typography component={'span'} variant={'subheading'} size={'sm'} colors={'black'} weight={'bold'}>
               お問い合わせ種別
             </Typography>
             <Typography component={'p'} variant={'lead'} size={'sm'}>
@@ -146,13 +98,7 @@ export const ModalComponent = (props: ModalProps) => (
           </li>
           {props.formBody?.company && (
             <li>
-              <Typography
-                component={'span'}
-                variant={'subheading'}
-                size={'sm'}
-                colors={'black'}
-                weight={'bold'}
-              >
+              <Typography component={'span'} variant={'subheading'} size={'sm'} colors={'black'} weight={'bold'}>
                 会社名
               </Typography>
               <Typography component={'p'} variant={'lead'} size={'sm'}>
@@ -162,13 +108,7 @@ export const ModalComponent = (props: ModalProps) => (
           )}
           {props.formBody?.background && (
             <li>
-              <Typography
-                component={'span'}
-                variant={'subheading'}
-                size={'sm'}
-                colors={'black'}
-                weight={'bold'}
-              >
+              <Typography component={'span'} variant={'subheading'} size={'sm'} colors={'black'} weight={'bold'}>
                 知った経緯
               </Typography>
               <Typography component={'p'} variant={'lead'} size={'sm'}>
@@ -178,13 +118,7 @@ export const ModalComponent = (props: ModalProps) => (
           )}
           {props.formBody?.request && (
             <li>
-              <Typography
-                component={'span'}
-                variant={'subheading'}
-                size={'sm'}
-                colors={'black'}
-                weight={'bold'}
-              >
+              <Typography component={'span'} variant={'subheading'} size={'sm'} colors={'black'} weight={'bold'}>
                 ご依頼予定のWebサイト、またはアプリストアのURL ※任意
               </Typography>
               <Typography component={'p'} variant={'lead'} size={'sm'}>
@@ -194,13 +128,7 @@ export const ModalComponent = (props: ModalProps) => (
           )}
           {props.formBody?.fixed && (
             <li>
-              <Typography
-                component={'span'}
-                variant={'subheading'}
-                size={'sm'}
-                colors={'black'}
-                weight={'bold'}
-              >
+              <Typography component={'span'} variant={'subheading'} size={'sm'} colors={'black'} weight={'bold'}>
                 完了期日の目安(概ねで構いません) ※任意
               </Typography>
               <Typography component={'p'} variant={'lead'} size={'sm'}>
@@ -209,13 +137,7 @@ export const ModalComponent = (props: ModalProps) => (
             </li>
           )}
           <li>
-            <Typography
-              component={'span'}
-              variant={'subheading'}
-              size={'sm'}
-              colors={'black'}
-              weight={'bold'}
-            >
+            <Typography component={'span'} variant={'subheading'} size={'sm'} colors={'black'} weight={'bold'}>
               お問い合わせ内容
             </Typography>
             <Typography component={'p'} variant={'lead'} size={'sm'}>
@@ -226,18 +148,10 @@ export const ModalComponent = (props: ModalProps) => (
       </div>
 
       <div className={'modalFooterWrapepr'}>
-        <FormButton
-          size={'md'}
-          color={'border'}
-          onClick={() => props.onClose()}
-        >
+        <FormButton size={'md'} color={'border'} onClick={() => props.onClose()}>
           Cancel
         </FormButton>
-        <FormButton
-          size={'md'}
-          color={'primary'}
-          onClick={() => props.onInquiryEnd(props.formBody)}
-        >
+        <FormButton size={'md'} color={'primary'} onClick={() => props.onInquiryEnd(props.formBody)}>
           OK
         </FormButton>
       </div>

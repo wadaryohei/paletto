@@ -8,11 +8,7 @@ import { ContactContainer } from '../containers/Contact/Index'
 //----------------------------------
 const Contact = () => (
   <>
-    <Head
-      title={HeadDatas.contact.title}
-      description={HeadDatas.contact.description}
-      pathname={HeadDatas.contact.pathname}
-    />
+    <Head title={HeadDatas.contact.title} description={HeadDatas.contact.description} pathname={HeadDatas.contact.pathname} />
     <ContactContainer />
   </>
 )

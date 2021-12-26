@@ -14,12 +14,7 @@ const MyApp = ({ Component, pageProps, router }: AppProps) => {
       <GlobalStyle />
       <ThemeProvider theme={MuiGlobalStyle}>
         <AnimatePresence exitBeforeEnter initial={false}>
-          <motion.div
-            key={router.route}
-            initial={Motion.initial}
-            animate={Motion.animate}
-            exit={Motion.exit}
-          >
+          <motion.div key={router.route} initial={Motion.initial} animate={Motion.animate} exit={Motion.exit}>
             <Component {...pageProps} key={router.route} />
           </motion.div>
         </AnimatePresence>

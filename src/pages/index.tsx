@@ -8,11 +8,7 @@ import { IndexContainer } from '../containers/Index'
 //----------------------------------
 const Index = () => (
   <>
-    <Head
-      title={HeadDatas.top.title}
-      description={HeadDatas.top.description}
-      pathname={HeadDatas.top.pathname}
-    />
+    <Head title={HeadDatas.top.title} description={HeadDatas.top.description} pathname={HeadDatas.top.pathname} />
     <IndexContainer />
   </>
 )

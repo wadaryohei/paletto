@@ -52,5 +52,8 @@
     "*.{ts,tsx}": [
       "eslint './src/**/*.{ts,tsx}'"
     ]
+  },
+  "devDependencies": {
+    "@slack/webhook": "^6.0.0"
   }
 }

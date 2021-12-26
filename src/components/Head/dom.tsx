@@ -22,26 +22,17 @@ export const HeadComponent = (props: HeadProps) => (
     }
     <title>{props.title}</title>
     <meta name="description" content={props.description} />
-    <meta
-      name="viewport"
-      content="minimum-scale=1, initial-scale=1, width=device-width"
-    />
+    <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
     <meta name="format-detection" content="telephone=no" />
     <meta property="og:title" content={props.title} />
     <meta property="og:description" content={props.description} />
     <meta property="og:type" content="website" />
-    <meta
-      property="og:url"
-      content={`${process.env.BASE_URL}${props.pathname}`}
-    />
+    <meta property="og:url" content={`${process.env.BASE_URL}${props.pathname}`} />
     <meta property="og:image" content={`${process.env.BASE_URL}/og.png`} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={props.title} />
     <meta name="twitter:description" content={props.description} />
-    <meta
-      name="twitter:url"
-      content={`${process.env.BASE_URL}${props.pathname}`}
-    />
+    <meta name="twitter:url" content={`${process.env.BASE_URL}${props.pathname}`} />
     <meta name="twitter:image" content={`${process.env.BASE_URL}/og.png`} />
 
     {

@@ -8,11 +8,7 @@ import { MembersContainer } from '../containers/Members/Index'
 //----------------------------------
 const Members = () => (
   <>
-    <Head
-      title={HeadDatas.members.title}
-      description={HeadDatas.members.description}
-      pathname={HeadDatas.members.pathname}
-    />
+    <Head title={HeadDatas.members.title} description={HeadDatas.members.description} pathname={HeadDatas.members.pathname} />
     <MembersContainer />
   </>
 )

@@ -47,15 +47,11 @@ export const SectionVisionComponent = (props: SectionVisionProps) => (
             <Up>
               <Typography component={'p'} variant={'lead'} colors={'white'}>
                 <span>人の感情に寄り添い、人の感情をデザインする。</span>
-                <span>
-                  そんな「エモーショナルなデザイン」をすることが私達「Paletto.」のVisionです。
-                </span>
+                <span>そんな「エモーショナルなデザイン」をすることが私達「Paletto.」のVisionです。</span>
               </Typography>
               <Typography component={'p'} variant={'lead'} colors={'white'}>
                 <span>感情を揺さぶるデザインでこそ、人の心は動きます。</span>
-                <span>
-                  「Paletto.」では課題の解決の先の「事業やサービスやプロダクト」の思いをデザインでカタチにします。
-                </span>
+                <span>「Paletto.」では課題の解決の先の「事業やサービスやプロダクト」の思いをデザインでカタチにします。</span>
               </Typography>
             </Up>
           </div>

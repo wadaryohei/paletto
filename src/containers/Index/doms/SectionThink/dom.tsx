@@ -4,10 +4,7 @@ import { Section } from '../../../../components/Section'
 import { Typography } from '../../../../components/Typography'
 import { Up } from '../../../../components/InViewMonitor'
 import { ThinkCard } from './ThinkCard'
-import {
-  ThinkCardDatas,
-  ThinkCardType,
-} from '../../../../datas/_shared/CardDatas'
+import { ThinkCardDatas, ThinkCardType } from '../../../../datas/_shared/CardDatas'
 
 //----------------------------------
 // props
@@ -23,33 +20,20 @@ export const SectionThinkComponent = (props: SectionThinkProps) => (
   <Section className={props.className}>
     <Container>
       <Up>
-        <Typography
-          component={'h1'}
-          variant={'heading'}
-          className={'thinkHeading'}
-        >
+        <Typography component={'h1'} variant={'heading'} className={'thinkHeading'}>
           OUR THINK.
         </Typography>
       </Up>
 
       <Up>
-        <Typography
-          component={'p'}
-          variant={'subheading'}
-          className={'thinkSubheading'}
-        >
+        <Typography component={'p'} variant={'subheading'} className={'thinkSubheading'}>
           私達の考え
         </Typography>
       </Up>
 
       <div className={'thinkCopyWrapper'}>
         <Up>
-          <Typography
-            component={'p'}
-            variant={'copy'}
-            size={'lg'}
-            className={'thinkCopy'}
-          >
+          <Typography component={'p'} variant={'copy'} size={'lg'} className={'thinkCopy'}>
             サブスクリプションを採用
           </Typography>
         </Up>
@@ -58,9 +42,7 @@ export const SectionThinkComponent = (props: SectionThinkProps) => (
       <div className={'thinkLeadWrapper'}>
         <Up>
           <Typography component={'p'} variant={'lead'} colors={'white'}>
-            <span>
-              デザインは「課題解決」と「価値創造」の側面を持っています。
-            </span>
+            <span>デザインは「課題解決」と「価値創造」の側面を持っています。</span>
             <span>
               プロダクトやサービス、人や組織では継続的なデザイン戦略のアプローチが必要となります。パートナーとしてのデザイン戦略では、クライアントと同じ熱量での長期戦略を実施していく必要があるため、私達はサブスク型のサービスを提供しています。
             </span>
@@ -79,10 +61,7 @@ export const SectionThinkComponent = (props: SectionThinkProps) => (
             return (
               <Grid key={index} item md={4} xs={12} className={'thinkCardGrid'}>
                 <Up>
-                  <ThinkCard
-                    ThinkCardData={ThinkCardData}
-                    className={'thinkCard'}
-                  />
+                  <ThinkCard ThinkCardData={ThinkCardData} className={'thinkCard'} />
                 </Up>
               </Grid>
             )

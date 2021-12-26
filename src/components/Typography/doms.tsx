@@ -27,11 +27,9 @@ export const TypographyComponent = (props: TypographyProps) => (
   <Typo
     component={props.component}
     align={props.align}
-    className={`${props.className} ${props.variant} ${
-      props.colors ? props.colors : ''
-    } ${props.weight ? props.weight : ''} ${props.size ? props.size : ''} ${
-      props.family ? props.family : ''
-    }
+    className={`${props.className} ${props.variant} ${props.colors ? props.colors : ''} ${props.weight ? props.weight : ''} ${
+      props.size ? props.size : ''
+    } ${props.family ? props.family : ''}
     `}
   >
     <span>{props.children}</span>

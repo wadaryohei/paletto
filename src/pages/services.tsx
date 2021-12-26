@@ -8,11 +8,7 @@ import { ServicesContainer } from '../containers/Services/Index'
 //----------------------------------
 const Services = () => (
   <>
-    <Head
-      title={HeadDatas.services.title}
-      description={HeadDatas.services.description}
-      pathname={HeadDatas.services.pathname}
-    />
+    <Head title={HeadDatas.services.title} description={HeadDatas.services.description} pathname={HeadDatas.services.pathname} />
     <ServicesContainer />
   </>
 )

@@ -16,13 +16,7 @@ export interface SectionIntroProps {
 export const SectionIntroComponent = (props: SectionIntroProps) => (
   <Section className={props.className}>
     <Up>
-      <Typography
-        component={'h2'}
-        size={'md'}
-        variant={'heading'}
-        align={'center'}
-        className={'servicesIntroHeader'}
-      >
+      <Typography component={'h2'} size={'md'} variant={'heading'} align={'center'} className={'servicesIntroHeader'}>
         We are design partners who change the world through design.
       </Typography>
     </Up>

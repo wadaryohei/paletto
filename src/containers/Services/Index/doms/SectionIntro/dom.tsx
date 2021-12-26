@@ -45,18 +45,6 @@ export const SectionIntroComponent = (props: SectionIntroProps) => (
             </Up>
           </div>
         </Grid>
-        <Grid item md={6} className={'servicesIntroGrid'}>
-          <div className={'servicesIntroImageWrapper'}>
-            <Up delay={200}>
-              <figure
-                className={'servicesIntroImage'}
-                style={{
-                  backgroundImage: `url(/pages/services/intro.svg)`,
-                }}
-              ></figure>
-            </Up>
-          </div>
-        </Grid>
       </Grid>
     </Container>
   </Section>
