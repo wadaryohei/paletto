@@ -43,6 +43,7 @@ export const Style = styled(Index)`
 
   .modalFooterWrapepr {
     width: 100%;
+    text-align: center;
 
     @media ${max(BreakPoints.md)} {
       text-align: center;

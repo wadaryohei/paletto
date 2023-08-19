@@ -58,7 +58,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
               type: 'mrkdwn',
               text: `*お問い合わせ種別:*\n - ${body['categories']}`,
             },
-            { type: 'mrkdwn', text: `*会社名:*\n - ${body['categories'] ?? 'Empty'}` },
+            { type: 'mrkdwn', text: `*会社名:*\n - ${body['company'] ?? 'Empty'}` },
             {
               type: 'mrkdwn',
               text: `*paletto.をお知りになった経緯を教えてください:*\n - ${body['background'] ?? 'Empty'}`,
