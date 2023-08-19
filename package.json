@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": "18.x"
+    "node": "18.16.1"
   },
   "scripts": {
     "dev": "next dev",
@@ -58,5 +58,8 @@
   },
   "devDependencies": {
     "@slack/webhook": "^6.0.0"
+  },
+  "volta": {
+    "node": "18.16.1"
   }
 }
