@@ -36,23 +36,24 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="ja">
-        <Head />
-        {/* Google Analytics 本番環境のみ動作する。ローカル環境で確認したいときは、{process~  をコメントアウトして確認する */}
-        {process.env.NODE_ENV === 'production' && (
-          <>
-            <script async src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS_ID}`} />
-            <script
-              dangerouslySetInnerHTML={{
-                __html: `
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-                    gtag('config', '${GOOGLE_ANALYTICS_ID}');
-                  `,
-              }}
-            />
-          </>
-        )}
+        <Head>
+          {/* Google Analytics 本番環境のみ動作する。ローカル環境で確認したいときは、{process~  をコメントアウトして確認する */}
+          {process.env.NODE_ENV === 'production' && (
+            <>
+              <script async src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS_ID}`} />
+              <script
+                dangerouslySetInnerHTML={{
+                  __html: `
+                      window.dataLayer = window.dataLayer || [];
+                      function gtag(){dataLayer.push(arguments);}
+                      gtag('js', new Date());
+                      gtag('config', '${GOOGLE_ANALYTICS_ID}');
+                    `,
+                }}
+              />
+            </>
+          )}
+        </Head>
         <body>
           <Main />
           <NextScript />
