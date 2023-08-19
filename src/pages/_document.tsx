@@ -2,6 +2,7 @@ import React from 'react'
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document'
 import { ServerStyleSheet as StyledComponentSheet } from 'styled-components'
 import { ServerStyleSheets as MaterialUiStyleSheets } from '@material-ui/styles'
+import { GOOGLE_ANALYTICS_ID } from '@/constants/GA'
 
 class MyDocument extends Document {
   /**
@@ -36,6 +37,22 @@ class MyDocument extends Document {
     return (
       <Html lang="ja">
         <Head />
+        {/* Google Analytics 本番環境のみ動作する。ローカル環境で確認したいときは、{process~  をコメントアウトして確認する */}
+        {process.env.NODE_ENV === 'production' && (
+          <>
+            <script async src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS_ID}`} />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', '${GOOGLE_ANALYTICS_ID}');
+                  `,
+              }}
+            />
+          </>
+        )}
         <body>
           <Main />
           <NextScript />
