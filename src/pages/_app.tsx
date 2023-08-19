@@ -3,10 +3,10 @@ import { AppProps } from 'next/app'
 import { AnimatePresence, motion } from 'framer-motion'
 import { ParallaxProvider } from 'react-scroll-parallax'
 import { ThemeProvider } from '@material-ui/core/styles'
-import { GlobalStyle } from '../shared/GlobalStyle'
-import { MuiGlobalStyle } from '../shared/MuiGlobalStyle'
-import '../shared/styles/style.css'
-import { Motion } from '../const/Motion'
+import { GlobalStyle } from '@/shared/GlobalStyle'
+import { MuiGlobalStyle } from '@/shared/MuiGlobalStyle'
+import { Motion } from '@/constants/Motion'
+import '@/shared/styles/style.css'
 
 const MyApp = ({ Component, pageProps, router }: AppProps) => {
   useEffect(() => {

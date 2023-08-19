@@ -1,14 +1,14 @@
 //----------------------------------
 // types
 //----------------------------------
-export interface typeForm {
+export interface IForm {
   showActiveForm: (selectedindex: number) => boolean | undefined
 }
 
 //----------------------------------
 // custom hooks
 //----------------------------------
-export const useForm = (): typeForm => {
+export const useForm = (): IForm => {
   /**
    * セレクトで1番目と2番目のどちらかを選択している場合はTrueを返す
    */

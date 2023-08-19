@@ -32,7 +32,13 @@
     "noUnusedParameters": true,
 
     /* Add .d.ts */
-    "typeRoots" : ["src/@types/"]
+    "typeRoots" : ["src/@types/"],
+
+    /* Base Paths */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
   "exclude": [
     "node_modules"

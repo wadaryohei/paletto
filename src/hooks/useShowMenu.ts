@@ -3,7 +3,7 @@ import { useState } from 'react'
 //----------------------------------
 // types
 //----------------------------------
-export interface typeShowMenu {
+export interface IShowMenu {
   isOpen: boolean
   onOpen: () => void
   onClose: () => void
@@ -12,7 +12,7 @@ export interface typeShowMenu {
 //----------------------------------
 // custom hooks
 //----------------------------------
-export const useShowMenu = (): typeShowMenu => {
+export const useShowMenu = (): IShowMenu => {
   const [isOpen, setOpen] = useState<boolean>(false)
 
   /**

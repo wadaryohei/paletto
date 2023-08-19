@@ -1,12 +1,12 @@
 import { useRouter } from 'next/router'
 import { useState } from 'react'
-import { initValue, initValueType } from '../datas/_shared/ValidationDatas'
+import { initValue, initValueType } from '@/datas/ValidationDatas'
 import { FormikHelpers } from 'formik'
 
 //----------------------------------
 // types
 //----------------------------------
-export interface typeModal {
+export interface IModal {
   isOpen: () => boolean
   formContent: () => initValueType
   bodyEncode: (data: any) => any
@@ -19,7 +19,7 @@ export interface typeModal {
 //----------------------------------
 // custom hooks
 //----------------------------------
-export const useModal = (): typeModal => {
+export const useModal = (): IModal => {
   const router = useRouter()
   const [_isOpen, setOpen] = useState<boolean>(false)
   const [_formContent, setFormContent] = useState<initValueType>(initValue)
