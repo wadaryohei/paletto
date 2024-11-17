@@ -11,10 +11,6 @@ export const NavMenuDatas: NavMenuType[] = [
     menuname: RouteDatas.services.pathname,
   },
   {
-    path: RouteDatas.members.path,
-    menuname: RouteDatas.members.pathname,
-  },
-  {
     path: RouteDatas.contact.path,
     menuname: RouteDatas.contact.pathname,
   },

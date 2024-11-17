@@ -17,10 +17,6 @@ export interface RouteType {
     pathname: string
     path: string
   }
-  members: {
-    pathname: string
-    path: string
-  }
   contact: {
     pathname: string
     path: string
@@ -54,15 +50,6 @@ export const RouteDatas: RouteType = {
   servicesPartner: {
     pathname: 'Partner',
     path: '/partner',
-  },
-
-  //----------------------------------
-  // Members Page
-  //----------------------------------
-  // @path ---- /members
-  members: {
-    pathname: 'Members',
-    path: '/members',
   },
 
   //----------------------------------

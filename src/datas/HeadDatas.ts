@@ -16,11 +16,6 @@ export interface HeadType {
     description: string
     pathname: string
   }
-  members: {
-    title: string
-    description: string
-    pathname: string
-  }
   contact: {
     title: string
     description: string
@@ -50,11 +45,6 @@ export const HeadDatas: HeadType = {
     description:
       'デジタルプロダクト開発（UI/UXデザイン）をベースに、既存事業の改善、新規事業立ち上げ、ブランド構築、デザイン組織支援、そしてあらゆるビジネス課題の解決を実現する「戦略〜開発〜改善」のサイクルをワンストップでフルコミット・フルスクラッチで行う事業です。',
     pathname: RouteDatas.servicesPartner.path,
-  },
-  members: {
-    title: 'Members｜Paletto. パレット',
-    description: '数々の制作やサービスのグロースを経験してきたPalettoチームのメンバーです。',
-    pathname: RouteDatas.members.path,
   },
   contact: {
     title: 'Contact｜Paletto. パレット',

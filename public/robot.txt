@@ -1,3 +1,3 @@
 User-Agent: *
 Allow: /
-Sitemap: https://paletto.design/sitemap.xml
+Sitemap: https://paletto-inc.com/sitemap.xml

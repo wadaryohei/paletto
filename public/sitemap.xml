@@ -13,11 +13,6 @@
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://paletto.tokyo/members</loc>
-  <priority>0.8</priority>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
   <loc>https://paletto.tokyo/contact</loc>
   <priority>0.8</priority>
   <changefreq>monthly</changefreq>

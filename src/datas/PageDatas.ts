@@ -6,11 +6,6 @@ export interface PageType {
     pageHeaderBgPathname: string
     pageHeading: string
   }
-  members: {
-    pathname: string
-    pageHeaderBgPathname: string
-    pageHeading: string
-  }
   contact: {
     pathname: string
     pageHeading: string
@@ -26,11 +21,6 @@ export const PageDatas: PageType = {
     pathname: RouteDatas.services.pathname,
     pageHeaderBgPathname: '/pages/services.jpg',
     pageHeading: 'We solve problems through UI/UX and create new value.',
-  },
-  members: {
-    pathname: RouteDatas.members.pathname,
-    pageHeaderBgPathname: '/pages/members.jpg',
-    pageHeading: 'Solve business problems with members from diverse backgrounds.',
   },
   contact: {
     pathname: RouteDatas.contact.pathname,
